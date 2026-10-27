@@ -365,10 +365,10 @@ const nameCases: Array<{
     expectedHours: 0,
   },
   {
-    label: 'Ciências do Ambiente não é o curso de energia/ambiente',
+    label: 'Ciências do Ambiente casa com o curso de energia/ambiente',
     target: ['Ciências do Ambiente', 30],
     source: ['Energia, Meio Ambiente e Sustentabilidade', 60],
-    expectedHours: 0,
+    expectedHours: 30,
   },
   {
     label: 'Análise de Sinais casa com Sistemas e Sinais',

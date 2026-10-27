@@ -11,7 +11,7 @@ const GENERIC_NAME_TOKENS = new Set([
   'sistema', 'sistemas', 'introducao', 'fundamento', 'fundamentos',
   'basico', 'basica', 'aplicado', 'aplicada', 'teoria', 'pratica', 'geral',
   'digital', 'linear', 'processamento', 'computacao', 'engenharia', 'eletrica',
-  'programacao', 'ambiente', 'meio',
+  'programacao',
   'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
 ])
