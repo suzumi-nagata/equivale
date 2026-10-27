@@ -1,0 +1,306 @@
+{
+  "id": "usp-poli-3152-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia Ambiental",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 2415,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3152&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3152&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 705,
+      "disciplinas": [
+        {
+          "codigo": "MAT2453",
+          "nome": "Cálculo Diferencial e Integral I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "2000101",
+          "nome": "Fundamentos Científicos e Modelagem para Engenharia I",
+          "horas": 345,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PHA3101",
+          "nome": "Introdução à Engenharia Ambiental",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3130",
+          "nome": "Química dos Materiais Aplicada às Engenharias Civil e Ambiental",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3100",
+          "nome": "Representação Gráfica para Projeto",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT3457",
+          "nome": "Álgebra Linear I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 330,
+      "disciplinas": [
+        {
+          "codigo": "MAT2454",
+          "nome": "Cálculo Diferencial e Integral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3100",
+          "nome": "Fundamentos de Ciência e Engenharia dos Materiais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3821",
+          "nome": "Fundamentos de Economia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0100",
+          "nome": "Mecânica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PHA3220",
+          "nome": "Métodos Numéricos para Engenharia Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT3458",
+          "nome": "Álgebra Linear II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 330,
+      "disciplinas": [
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME3238",
+          "nome": "Fenômenos de Transporte",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GMG3201",
+          "nome": "Fundamentos de Geologia e Mineralogia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0303200",
+          "nome": "Probabilidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3207",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 330,
+      "disciplinas": [
+        {
+          "codigo": "PQI3221",
+          "nome": "Cinética Química e Processos Ambientais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT2456",
+          "nome": "Cálculo Diferencial e Integral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3200",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PHA3338",
+          "nome": "Exploração de Recursos Naturais Renováveis e Não Renováveis",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323202",
+          "nome": "Física Experimental B",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PHA3201",
+          "nome": "Hidráulica Ambiental 1",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 360,
+      "disciplinas": [
+        {
+          "codigo": "PEA3290",
+          "nome": "Eletrotécnica Aplicada I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3309",
+          "nome": "Mecânica dos Solos Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "BMM0122",
+          "nome": "Microbiologia Aplicada para Engenheiros Ambientais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3222",
+          "nome": "Química Ambiental e Fundamentos de Termodinâmica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "HSA0142",
+          "nome": "Saúde Ambiental I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FBC0210",
+          "nome": "Toxicologia Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 360,
+      "disciplinas": [
+        {
+          "codigo": "PHA3343",
+          "nome": "Análise de Sistemas Ambientais",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ACA0220",
+          "nome": "Climatologia e Hidrometeorologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PHA3300",
+          "nome": "Desenvolvimento de projetos de engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PTR3313",
+          "nome": "Fundamentos de Geoprocessamento para Engenharia Ambiental",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3304",
+          "nome": "Poluição do Solo",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "HSA0143",
+          "nome": "Saúde Ambiental II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

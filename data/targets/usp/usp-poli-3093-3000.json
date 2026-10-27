@@ -1,0 +1,264 @@
+{
+  "id": "usp-poli-3093-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia Química",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 2250,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3093&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3093&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 540,
+      "disciplinas": [
+        {
+          "codigo": "2000101",
+          "nome": "Fundamentos Científicos e Modelagem para Engenharia I",
+          "horas": 345,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3111",
+          "nome": "Introdução à Engenharia Química",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2131",
+          "nome": "Química Geral I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3100",
+          "nome": "Representação Gráfica para Projeto",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 210,
+      "disciplinas": [
+        {
+          "codigo": "PQI3210",
+          "nome": "Conservação de Massa e Energia I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2132",
+          "nome": "Química Geral II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "PMT3112",
+          "nome": "Ciência dos Materiais para Engenharia Química",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3310",
+          "nome": "Conservação de Massa e Energia II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2430",
+          "nome": "Físico-Química de Superfícies",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "MAT2456",
+          "nome": "Cálculo Diferencial e Integral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323202",
+          "nome": "Física Experimental B",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323204",
+          "nome": "Física IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2310",
+          "nome": "Química Orgânica e Analítica",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3207",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3420",
+          "nome": "Termodinâmica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 360,
+      "disciplinas": [
+        {
+          "codigo": "PQI3550",
+          "nome": "Atividades práticas em Engenharia Química I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3530",
+          "nome": "Fenômenos e Operações de Transporte I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3570",
+          "nome": "Fundamentos de Biologia para a Engenharia Química",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAP3121",
+          "nome": "Métodos Numéricos e Aplicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO1300",
+          "nome": "Probabilidade e estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3520",
+          "nome": "Termodinâmica II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 360,
+      "disciplinas": [
+        {
+          "codigo": "PQI3650",
+          "nome": "Atividades práticas em Engenharia Química I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEA3392",
+          "nome": "Eletricidade Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3660",
+          "nome": "Eletroquímica e corrosão",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3640",
+          "nome": "Engenharia das Reações Químicas I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3630",
+          "nome": "Fenômenos e Operações de Transporte II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3631",
+          "nome": "Fenômenos e Operações de Transporte III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

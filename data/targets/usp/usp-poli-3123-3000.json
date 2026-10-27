@@ -1,0 +1,331 @@
+{
+  "id": "usp-poli-3123-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia de Computação",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3255,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3123&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3123&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 630,
+      "disciplinas": [
+        {
+          "codigo": "2000101",
+          "nome": "Fundamentos Científicos e Modelagem para Engenharia I",
+          "horas": 345,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3100",
+          "nome": "Fundamentos de Ciência e Engenharia dos Materiais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3100",
+          "nome": "Introdução à Engenharia de Computação",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3131",
+          "nome": "Química dos Materiais Aplicada à Engenharia Elétrica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3100",
+          "nome": "Representação Gráfica para Projeto",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 270,
+      "disciplinas": [
+        {
+          "codigo": "PEA3100",
+          "nome": "Energia, Meio Ambiente e Sustentabilidade",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0100",
+          "nome": "Mecânica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC0122",
+          "nome": "Princípios de Desenvolvimento de Algoritmos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3115",
+          "nome": "Sistemas Digitais I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 480,
+      "disciplinas": [
+        {
+          "codigo": "PSI3211",
+          "nome": "Circuitos Elétricos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3208",
+          "nome": "Fundamentos de Mecânica das Estruturas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC0321",
+          "nome": "Laboratório de Programação Orientada a Objetos",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME3033",
+          "nome": "Noções de Mecânica dos Fluidos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0303200",
+          "nome": "Probabilidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3225",
+          "nome": "Sistemas Digitais II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 420,
+      "disciplinas": [
+        {
+          "codigo": "PSI3213",
+          "nome": "Circuitos Elétricos II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT2456",
+          "nome": "Cálculo Diferencial e Integral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PSI3024",
+          "nome": "Eletrônica",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3213",
+          "nome": "Engenharia de Software",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3200",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323202",
+          "nome": "Física Experimental B",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323204",
+          "nome": "Física IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 480,
+      "disciplinas": [
+        {
+          "codigo": "PCS3623",
+          "nome": "Banco de Dados I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323303",
+          "nome": "Física Experimental C",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PSI3031",
+          "nome": "Laboratório de Circuitos Elétricos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3635",
+          "nome": "Laboratório de Projeto de Sistemas Digitais I",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAP3122",
+          "nome": "Métodos Numéricos e Aplicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3616",
+          "nome": "Sistemas de Programação",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PTC3007",
+          "nome": "Sistemas e Sinais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 495,
+      "disciplinas": [
+        {
+          "codigo": "PCS3617",
+          "nome": "Estágio Cooperativo I",
+          "horas": 495,
+          "tipo": "estagio"
+        }
+      ]
+    },
+    {
+      "ordem": 7,
+      "nome": "7º período",
+      "horas": 480,
+      "disciplinas": [
+        {
+          "codigo": "PEA3399",
+          "nome": "Conversão Eletromecânica de Energia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PTC3019",
+          "nome": "Engenharia de Comunicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PSI3032",
+          "nome": "Laboratório de Eletrônica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3643",
+          "nome": "Laboratório de Engenharia de Software I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3645",
+          "nome": "Laboratório de Projeto de Sistemas Digitais II",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3612",
+          "nome": "Organização e Arquitetura de Computadores I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCS3614",
+          "nome": "Redes de Computadores I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

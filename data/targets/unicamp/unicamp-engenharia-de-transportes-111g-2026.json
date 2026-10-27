@@ -1,0 +1,463 @@
+{
+  "id": "unicamp-engenharia-de-transportes-111g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Transportes",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3780,
+  "curriculo_versao": "2026",
+  "habilitacao": "111G — Currículo pleno (Noturno)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/111g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/111g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/111g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3630,
+      "disciplinas": [
+        {
+          "codigo": "EB101",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB102",
+          "nome": "Geometria Analítica e Álgebra Linear",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB103",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB104",
+          "nome": "Laboratório de Física I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB201",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB203",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB204",
+          "nome": "Laboratório de Física II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB205",
+          "nome": "Metodologia Científica e Tecnológica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB301",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB308",
+          "nome": "Introdução à Extensão Universitária",
+          "horas": 30,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "EB402",
+          "nome": "Fenômenos de Transporte",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB403",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB405",
+          "nome": "Mecânica dos Sólidos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB406",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB501",
+          "nome": "Hidráulica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB504",
+          "nome": "Resistência dos Materiais I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB608",
+          "nome": "Ciência e Tecnologia dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB801",
+          "nome": "Sistemas de Informações Geográficas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB807",
+          "nome": "Introdução à Administração de Organizações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB931",
+          "nome": "Fundamentos da Engenharia de Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB932",
+          "nome": "Química Geral Aplicada à Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB933",
+          "nome": "Representação Gráfica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB935",
+          "nome": "Topografia I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB937",
+          "nome": "Introdução às Ciências Ambientais Voltada aos Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB938",
+          "nome": "Topografia II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB939",
+          "nome": "Grafos e Redes",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB941",
+          "nome": "Hidrologia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB942",
+          "nome": "Engenharia de Tráfego",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB945",
+          "nome": "Sistemas de Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB946",
+          "nome": "Projeto e Construção de Estradas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB947",
+          "nome": "Transporte Hidroviário",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB948",
+          "nome": "Pesquisa Operacional",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB949",
+          "nome": "Drenagem de Estradas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB951",
+          "nome": "Demanda de Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB952",
+          "nome": "Logística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB953",
+          "nome": "Pavimentação I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB954",
+          "nome": "Ferrovias",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB956",
+          "nome": "Movimento de Terra",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB958",
+          "nome": "Planejamento de Transporte Urbano e Uso do Solo",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB959",
+          "nome": "Sistemas de Monitoramento e Controle de Tráfego",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB960",
+          "nome": "Pavimentação II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB962",
+          "nome": "Planejamento Estratégico de Transportes",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB963",
+          "nome": "Modelagem Econômica de Transportes",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB964",
+          "nome": "Pavimento Rígido",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB965",
+          "nome": "Impactos Ambientais dos Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB966",
+          "nome": "Ergonomia e Segurança do Trabalho",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB967",
+          "nome": "Introdução ao Trabalho de Conclusão de Curso",
+          "horas": 30,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "EB968",
+          "nome": "Conservação e Manutenção de Pavimentos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB969",
+          "nome": "Segurança de Vias",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB970",
+          "nome": "Atividades Complementares",
+          "horas": 60,
+          "tipo": "complementar"
+        },
+        {
+          "codigo": "EB971",
+          "nome": "Trabalho de Conclusão de Curso",
+          "horas": 60,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "EB972",
+          "nome": "Estágio Supervisionado",
+          "horas": 180,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "EB987",
+          "nome": "Transporte Público Urbano",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB988",
+          "nome": "Terminais e Operação de Transporte Intermodal",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB989",
+          "nome": "Planejamento e Operação de Portos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB990",
+          "nome": "Planejamento e Operação de Aeroportos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB991",
+          "nome": "Projeto Integrador I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB992",
+          "nome": "Projeto Integrador II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB993",
+          "nome": "Projeto Integrador III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB994",
+          "nome": "Atividades Complementares de Extensão",
+          "horas": 30,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "EB998",
+          "nome": "Estruturas de Concreto",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "SI100",
+          "nome": "Algoritmos e Programação de Computadores I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ST216",
+          "nome": "Geologia Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ST410",
+          "nome": "Mecânica dos Solos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ST423",
+          "nome": "Resistência dos Materiais II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ST529",
+          "nome": "Mecânica dos Solos II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT219",
+          "nome": "Fundamentos de Eletricidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (10 créditos)",
+      "horas": 150,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 150,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-10-creditos-1",
+          "livre": true
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-10-creditos-1": [
+      "Qualquer disciplina elegível"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

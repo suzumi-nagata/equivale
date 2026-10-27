@@ -24,13 +24,12 @@ para nenhum servidor.
   Computação (habilitações AA/AB) e Engenharia Elétrica (41G), com classificação
   de obrigatórias/eletivas/ênfases. Ver
   [`data/sources/unicamp/README.md`](data/sources/unicamp/README.md).
-- **Dados-alvo:** conversão dos currículos UNICAMP 2026 para o schema do site,
-  incluindo grupos de eletivas por crédito. Ver
-  [`data/targets/unicamp/README.md`](data/targets/unicamp/README.md).
-- **Alvos USP:** Engenharia Elétrica (ênfase Automação e Controle, ciclo básico
-  + ênfase) e Engenharia de Computação (currículo 2012 disponível no
-  Jupiterweb), da Poli-USP. Ver
-  [`data/targets/usp/README.md`](data/targets/usp/README.md).
+- **Dados-alvo:** 36 alvos no seletor — os 7 currículos manualmente convertidos
+  e auditados (UNINTER, UNICAMP EC/EE e Poli-USP EE/EC) mais 29 alvos de
+  engenharia gerados automaticamente a partir do catálogo. Ver
+  [`data/targets/unicamp/README.md`](data/targets/unicamp/README.md),
+  [`data/targets/usp/README.md`](data/targets/usp/README.md) e
+  [`tools/build_targets_from_catalog.py`](tools/build_targets_from_catalog.py).
 - **Catálogo de cursos e disciplinas:** crawler persistente coleta cursos,
   currículos, propostas de cumprimento, disciplinas, cargas, ementas,
   pré-requisitos e URLs dos catálogos UNICAMP 2026 e Jupiterweb. O cache HTTP
@@ -78,6 +77,7 @@ tools/
   build_course_embeddings.py # gera vetores estáticos de ementas/títulos
   extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
   build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
+  build_targets_from_catalog.py # currículos de engenharia -> alvos automáticos
   build_unicamp_cobertura.py # extrai ementas e gera cobertura temática UNICAMP
   build_usp_cobertura.py    # gera cobertura temática USP -> alvos UNICAMP
   extract_usp_poli.py       # extrai alvos EE/EC da Poli-USP (Jupiterweb)
@@ -90,10 +90,12 @@ data/targets/unicamp/
   unicamp-ec-2026-aa.json
   unicamp-ec-2026-ab.json
   unicamp-ee-2026.json
+  unicamp-engenharia-*.json # alvos gerados do catálogo
 data/targets/usp/
   README.md              # proveniência e limitações das grades Poli-USP
   usp-poli-ee-ac-2027.json
   usp-poli-ec-2012.json
+  usp-poli-<codcur>-<codhab>.json # alvos gerados do catálogo
 data/ontology/
   README.md              # regras de cobertura temática por ementa
   unicamp_2026_regras.json
@@ -175,6 +177,9 @@ python3 -I tools/crawl_catalogos.py --no-cursos
 
 # Gera o índice estático de vetores usado pelo site
 python3 -I tools/build_course_embeddings.py
+
+# Converte os cursos de engenharia do catálogo em alvos do site
+python3 -I tools/build_targets_from_catalog.py
 ```
 
 O crawler guarda o cache HTTP em `~/.cache/equivale/crawler` e só reescreve os

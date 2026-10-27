@@ -1,0 +1,300 @@
+{
+  "id": "usp-poli-3113-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia Mecatrônica",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 2445,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3113&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3113&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 420,
+      "disciplinas": [
+        {
+          "codigo": "PMT3100",
+          "nome": "Fundamentos de Ciência e Engenharia dos Materiais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "2000121",
+          "nome": "Fundamentos e Modelagem para Engenharia I",
+          "horas": 210,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3103",
+          "nome": "Geometria e Representação Gráficas para Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0180",
+          "nome": "Introdução a Engenharia Mecatrônica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3131",
+          "nome": "Química dos Materiais Aplicada à Engenharia Elétrica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 420,
+      "disciplinas": [
+        {
+          "codigo": "PRO3811",
+          "nome": "Fundamentos de Administração",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3821",
+          "nome": "Fundamentos de Economia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "2000122",
+          "nome": "Fundamentos e Modelagem para Engenharia II",
+          "horas": 165,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0120",
+          "nome": "Introdução a Sistemas Embarcados",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0100",
+          "nome": "Mecânica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0100",
+          "nome": "Processos de Fabricação Convencionais e Avançados I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 405,
+      "disciplinas": [
+        {
+          "codigo": "PMR0901",
+          "nome": "Complementos de Cálculo e Física 3",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0240",
+          "nome": "Computação para Automação",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0202",
+          "nome": "Introdução ao Projeto de Sistemas Mecânicos",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0303200",
+          "nome": "Probabilidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0201",
+          "nome": "Processos de Fabricação Convencionais e Avançados II",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "PMR0241",
+          "nome": "Ciência de Dados",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0221",
+          "nome": "Eletrônica Analógica para Mecatrônica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "2000222",
+          "nome": "Fundamentos e Modelagem para Engenharia IV",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323202",
+          "nome": "Física Experimental B",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3202",
+          "nome": "Introdução à Mecânica dos Sólidos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0200",
+          "nome": "Mecânica II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 420,
+      "disciplinas": [
+        {
+          "codigo": "PMR0342",
+          "nome": "Data Mining",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0322",
+          "nome": "Eletrônica Digital para Mecatrônica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0381",
+          "nome": "Metodologia de Projeto em Engenharia Mecatrônica",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0360",
+          "nome": "Sistemas Dinâmicos I para Mecatrônica",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0360",
+          "nome": "Sistemas Termofluidos I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3306",
+          "nome": "Tópicos de Mecânica dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "PMR0343",
+          "nome": "Aprendizado de Máquina e Reconhecimento de Padrões",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0300323",
+          "nome": "Atuadores, Sensores e Circuitos de Acionamento e Condicionamento",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0382",
+          "nome": "Gestão de Operações Industriais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR0361",
+          "nome": "Sistemas Dinâmicos II para Mecatrônica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0362",
+          "nome": "Sistemas Termofluidos II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

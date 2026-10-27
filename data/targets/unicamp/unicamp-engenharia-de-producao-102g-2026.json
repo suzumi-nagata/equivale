@@ -1,0 +1,513 @@
+{
+  "id": "unicamp-engenharia-de-producao-102g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Produção",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3840,
+  "curriculo_versao": "2026",
+  "habilitacao": "102G — Currículo pleno (Integral)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/102g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/102g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/102g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3300,
+      "disciplinas": [
+        {
+          "codigo": "ER201",
+          "nome": "Gestão Sustentável",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER402",
+          "nome": "Economia para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER603",
+          "nome": "Noções Gerais dos Processos de Manufatura",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER701",
+          "nome": "Simulação de Sistemas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER704",
+          "nome": "Engenharia Econômica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER808",
+          "nome": "Projeto de Fábrica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER903",
+          "nome": "Controle Estatístico da Qualidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER904",
+          "nome": "Inteligência Artificial Aplicada à Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ER905",
+          "nome": "Aplicação dos Materiais em Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GL601",
+          "nome": "Estratégia e Planejamento",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE012",
+          "nome": "Manutenção Industrial",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE014",
+          "nome": "Trabalho de Conclusão de Curso",
+          "horas": 120,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "LE100",
+          "nome": "Desenho Técnico Assistido por Computador",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE101",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE103",
+          "nome": "Oficinas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE105",
+          "nome": "Introdução à Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE106",
+          "nome": "Geometria Analítica e Álgebra Linear",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE200",
+          "nome": "Química Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE201",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE202",
+          "nome": "Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE203",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE207",
+          "nome": "Laboratório de Fluidos e Transferência de Calor",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE300",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE301",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE302",
+          "nome": "Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE303",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE400",
+          "nome": "Mecânica Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE401",
+          "nome": "Estrutura e Propriedade dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE402",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE404",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE405",
+          "nome": "Física Experimental III",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE406",
+          "nome": "Eletrotécnica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE408",
+          "nome": "Termodinâmica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE409",
+          "nome": "Estatística e Probabilidade para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE500",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE501",
+          "nome": "Fenômenos de Transporte",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE503",
+          "nome": "Tecnologia Mecânica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE504",
+          "nome": "Termodinâmica II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE505",
+          "nome": "Pesquisa Operacional I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE609",
+          "nome": "Fundamentos de Finanças e Custos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE611",
+          "nome": "Pesquisa Operacional II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE619",
+          "nome": "Gestão da Qualidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE690",
+          "nome": "Metrologia Industrial",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE691",
+          "nome": "Ergonomia e Saúde no Trabalho",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE699",
+          "nome": "Operações Unitárias",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE701",
+          "nome": "Gestão de Projetos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE703",
+          "nome": "Sistemas Produtivos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE801",
+          "nome": "Planejamento e Controle de Produção",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE905",
+          "nome": "Planejamento de Experimento e Otimização de Processos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE906",
+          "nome": "Gestão do Desenvolvimento de Produto",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE907",
+          "nome": "Estágio em Engenharia I",
+          "horas": 120,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "LE917",
+          "nome": "Estágio em Engenharia II",
+          "horas": 150,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "MG600",
+          "nome": "Gestão da Cadeia de Suprimentos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "NC103",
+          "nome": "Natureza e Tecnologia na Sociedade Contemporânea",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "NC104",
+          "nome": "Introdução à Ciência dos Dados e à Informação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "NC301",
+          "nome": "Filosofia e Ciências Humanas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "NC400",
+          "nome": "Noções de Administração e Gestão",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (4 créditos)",
+      "horas": 60,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 60,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-4-creditos-1",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Disciplinas Eletivas (8 créditos) · 2",
+      "horas": 120,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 120,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-8-creditos-2-2",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Disciplinas Eletivas (8 créditos) · 3",
+      "horas": 120,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 120,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-8-creditos-3-3",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Disciplinas Eletivas (16 créditos) · 4",
+      "horas": 240,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 240,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-16-creditos-4-4",
+          "livre": false
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-4-creditos-1": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-8-creditos-2-2": [
+      "Tópicos Especiais em Humanidades I",
+      "Tópicos Especiais em Humanidades III",
+      "Tópicos Especiais em Humanidades V",
+      "Tópicos Especiais em Humanidades VII",
+      "Ética e Cidadania",
+      "Linguagens e discursividades",
+      "Sociedade e Ambiente",
+      "Ciência e sociedade",
+      "Tecnologia e sociedade",
+      "Biologia e cultura"
+    ],
+    "auto-disciplinas-eletivas-8-creditos-3-3": [
+      "Tópicos Especiais em Humanidades II",
+      "Tópicos Especiais em Humanidades IV",
+      "Tópicos Especiais em Humanidades VI",
+      "Tópicos Especiais em Humanidades VIII",
+      "Cinema e Percepção Pública da Ciência",
+      "Fenomenologia, Ciência e Geografia",
+      "Aplicações em Ciências Humanas e Sociais",
+      "Urbanização e Dinâmicas de Uso e Cobertura de Terra",
+      "Sociedade da Informação",
+      "O Utilitarismo e seus Críticos",
+      "Etnografia e Interdisciplinaridade",
+      "Quartas Interdisciplinares: Seminários de Pesquisa",
+      "Estudos de Laboratório",
+      "Fundamentos e Metodologias de Extensão Universitária",
+      "Lógica",
+      "Debates Interdisciplinares em metabolismo, movimento e alimentação",
+      "Debates Interdisciplinares em políticas, institucionalidades e inovação",
+      "Debates Interdisciplinares em processos técnicos e tecnologias"
+    ],
+    "auto-disciplinas-eletivas-16-creditos-4-4": [
+      "Engenharias de Portas Abertas-I",
+      "Engenharias de Portas Abertas-II",
+      "Extensão na Equipe BAJA-I",
+      "Extensão na Equipe BAJA-II",
+      "Extensão na Unicamp de Portas Abertas",
+      "Jornal das Engenharias da Faculdade de Ciências Aplicadas",
+      "Portal das Engenharias da Faculdade de Ciências Aplicadas",
+      "Projeto Integrador I",
+      "Projeto Integrador II",
+      "Projeto de Extensão Aplicado",
+      "Ensino no Cursinho Colmeia I",
+      "Ensino no Cursinho Colmeia II",
+      "Extensão na Equipe BAJA-III",
+      "Extensão na INTEGRA-Consultoria em Engenharia e Gestão I",
+      "Extensão na INTEGRA-Consultoria em Engenharia e Gestão II",
+      "Extensão na INTEGRA-Consultoria em Engenharia e Gestão III",
+      "Extensão na Liga do Mercado Financeiro I",
+      "Extensão na Liga do Mercado Financeiro II",
+      "Extensão na Liga do Mercado Financeiro III",
+      "Extensão no Engenheiros Sem Fronteiras I",
+      "Extensão no Engenheiros Sem Fronteiras II",
+      "Extensão no Engenheiros Sem Fronteiras III",
+      "Extensão no Manofatour I",
+      "Extensão no Manofatour II",
+      "Extensão no Manofatour III",
+      "Extensão no Mercado de Trabalho em Engenharia I",
+      "Extensão no Mercado de Trabalho em Engenharia II",
+      "Extensão no Mercado de Trabalho em Engenharia III",
+      "Extensão na Liga de Marketing I",
+      "Extensão na Liga de Marketing II",
+      "Extensão na Liga de Marketing III",
+      "Extensão na Enactus UNICAMP I",
+      "Extensão na Enactus UNICAMP II",
+      "Extensão na Enactus UNICAMP III"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "id": "usp-poli-3053-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia de Minas",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 2535,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3053&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3053&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 555,
+      "disciplinas": [
+        {
+          "codigo": "2000101",
+          "nome": "Fundamentos Científicos e Modelagem para Engenharia I",
+          "horas": 345,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3101",
+          "nome": "Fundamentos das Transformações Químicas",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0111",
+          "nome": "INTRODUÇÃO À ENGENHARIA DE MINAS",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3100",
+          "nome": "Representação Gráfica para Projeto",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 270,
+      "disciplinas": [
+        {
+          "codigo": "PQI3103",
+          "nome": "Conservação de Massa e Energia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0122",
+          "nome": "Desenho e Representação Geométrica Aplicada",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3100",
+          "nome": "Fundamentos de Ciência e Engenharia dos Materiais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0121",
+          "nome": "Introdução à Engenharia de Petróleo",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0100",
+          "nome": "Mecânica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 480,
+      "disciplinas": [
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3203",
+          "nome": "Fenômenos de Transporte I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PTR3111",
+          "nome": "Geomática I",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0440208",
+          "nome": "Introdução à Geologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0131",
+          "nome": "Matérias Primas Minerais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0303200",
+          "nome": "Probabilidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2129",
+          "nome": "Química Inorgânica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "MAT2456",
+          "nome": "Cálculo Diferencial e Integral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3200",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323202",
+          "nome": "Física Experimental B",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323204",
+          "nome": "Física IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2426",
+          "nome": "Físico - Química X V I I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GMG0207",
+          "nome": "Introdução aos Minerais e Rochas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QFL2308",
+          "nome": "Introdução à Química Orgânica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0141",
+          "nome": "Técnicas de caracterização de materiais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 435,
+      "disciplinas": [
+        {
+          "codigo": "PMI0517",
+          "nome": "Caracterização Tecnológica de Matérias Primas Minerais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GMG0615",
+          "nome": "Elementos de Geologia Estrutural",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3811",
+          "nome": "Fundamentos de Administração",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PTR3311",
+          "nome": "Geomática II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GAA0602",
+          "nome": "Introdução à Geoestatística",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0518",
+          "nome": "Mecânica das Rochas Aplicada à Lavra de Minas e ao Desmonte de Rochas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAP3121",
+          "nome": "Métodos Numéricos e Aplicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEF3307",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 405,
+      "disciplinas": [
+        {
+          "codigo": "PMI0615",
+          "nome": "Economia Mineral - Avaliação de Projetos Mineiros",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR3320",
+          "nome": "Introdução aos Elementos de Máquinas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0616",
+          "nome": "Lavra a Céu Aberto e Planejamento de Lavra de Minas",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0617",
+          "nome": "Métodos de Lavra Subterrânea",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0618",
+          "nome": "Perfuração e Desmonte de Rochas - Projeto e Controle Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GAA0302",
+          "nome": "Processos Formadores de Depósitos Minerais",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0344",
+          "nome": "Termodinâmica Aplicada",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMI0619",
+          "nome": "Tratamento de Minérios Cominuição e Classificação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

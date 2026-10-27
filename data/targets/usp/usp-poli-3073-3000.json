@@ -1,0 +1,282 @@
+{
+  "id": "usp-poli-3073-3000",
+  "instituicao": "USP",
+  "curso": "Engenharia Naval e Oceânica",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 2685,
+  "curriculo_versao": "Jupiterweb 2026",
+  "habilitacao": null,
+  "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3073&codhab=3000&tipo=N",
+  "proposta_fonte": null,
+  "coletado_em": "2026-10-27T11:35:32+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3073&codhab=3000&tipo=N"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "1º período",
+      "horas": 615,
+      "disciplinas": [
+        {
+          "codigo": "2000101",
+          "nome": "Fundamentos Científicos e Modelagem para Engenharia I",
+          "horas": 345,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PCC3103",
+          "nome": "Geometria e Representação Gráficas para Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1100",
+          "nome": "Introdução ao Projeto de Engenharia",
+          "horas": 150,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAC2166",
+          "nome": "Introdução à Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PQI3140",
+          "nome": "Laboratório de Fundamentos das Transformações Químicas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "2º período",
+      "horas": 210,
+      "disciplinas": [
+        {
+          "codigo": "PHA3001",
+          "nome": "Engenharia e Meio Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMT3110",
+          "nome": "Introdução à Ciência dos Materiais para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1120",
+          "nome": "Introdução à Engenharia Naval e Oceânica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "2100106",
+          "nome": "Sistema Oceano",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "3º período",
+      "horas": 390,
+      "disciplinas": [
+        {
+          "codigo": "MAT2455",
+          "nome": "Cálculo Diferencial e Integral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1211",
+          "nome": "Desafios Atuais na Engenharia Naval e Oceânica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323201",
+          "nome": "Física Experimental A",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "4323203",
+          "nome": "Física III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PMR3203",
+          "nome": "Introdução à Manufatura Mecânica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0100",
+          "nome": "Mecânica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "0303200",
+          "nome": "Probabilidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "4º período",
+      "horas": 360,
+      "disciplinas": [
+        {
+          "codigo": "MAT2456",
+          "nome": "Cálculo Diferencial e Integral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PEA3288",
+          "nome": "Eletricidade I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PRO3200",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1221",
+          "nome": "Fundamentos de Mecânica dos Sólidos e Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1222",
+          "nome": "Hidrostática e Estabilidade",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0200",
+          "nome": "Mecânica II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "5º período",
+      "horas": 540,
+      "disciplinas": [
+        {
+          "codigo": "PNV1314",
+          "nome": "Dinâmica Aplicada à Veículos Marítimos e Sistemas Oceânica",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0231",
+          "nome": "Dinâmica dos Fluidos",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PME0398",
+          "nome": "Fundamentos de Termodinâmica e Transferência de Calor",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1391",
+          "nome": "Metodologia de Projeto I",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MAP3121",
+          "nome": "Métodos Numéricos e Aplicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1395",
+          "nome": "Projeto de Extensão I",
+          "horas": 120,
+          "tipo": "extensao"
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "6º período",
+      "horas": 570,
+      "disciplinas": [
+        {
+          "codigo": "PNV1322",
+          "nome": "Análise Estrutural de Navios e Sistemas Oceânicos",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1324",
+          "nome": "Fundamentos de Controle em Engenharia",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1323",
+          "nome": "Hidrodinâmica I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1392",
+          "nome": "Metodologia de Projeto II",
+          "horas": 120,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1321",
+          "nome": "Métodos de Otimização Aplicados a Sistemas de Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "PNV1396",
+          "nome": "Projeto de Extensão II",
+          "horas": 120,
+          "tipo": "extensao"
+        }
+      ]
+    }
+  ],
+  "eletivas": {},
+  "observacoes": [
+    "Alvo gerado automaticamente a partir da grade pública do Jupiterweb.",
+    "A grade pode estar em construção ou conter apenas o ciclo básico; confira a fonte.",
+    "A decisão de equivalência continua sendo da instituição."
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "id": "unicamp-engenharia-ambiental-89g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia Ambiental",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3630,
+  "curriculo_versao": "2026",
+  "habilitacao": "89G — Currículo pleno (Noturno)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/89g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/89g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/89g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3480,
+      "disciplinas": [
+        {
+          "codigo": "EB101",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB102",
+          "nome": "Geometria Analítica e Álgebra Linear",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB103",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB104",
+          "nome": "Laboratório de Física I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB105",
+          "nome": "Biologia Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB106",
+          "nome": "Introdução à Engenharia Ambiental",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB201",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB202",
+          "nome": "Química Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB203",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB204",
+          "nome": "Laboratório de Física II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB205",
+          "nome": "Metodologia Científica e Tecnológica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB207",
+          "nome": "Microbiologia Aplicada",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB301",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB302",
+          "nome": "Algoritmos e Programação e Computadores I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB303",
+          "nome": "Expressão Gráfica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB305",
+          "nome": "Química Orgânica Aplicada",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB306",
+          "nome": "Ética, Educação e Ambiente",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB307",
+          "nome": "Química Sanitária e Experimental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB308",
+          "nome": "Introdução à Extensão Universitária",
+          "horas": 30,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "EB402",
+          "nome": "Fenômenos de Transporte",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB403",
+          "nome": "Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB404",
+          "nome": "Geologia e Pedologia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB405",
+          "nome": "Mecânica dos Sólidos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB406",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB407",
+          "nome": "Climatologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB501",
+          "nome": "Hidráulica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB502",
+          "nome": "Topografia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB503",
+          "nome": "Mecânica dos Solos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB504",
+          "nome": "Resistência dos Materiais I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB505",
+          "nome": "Ecologia Geral e Aplicada",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB506",
+          "nome": "Saúde Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB601",
+          "nome": "Hidráulica II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB602",
+          "nome": "Operações Unitárias",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB604",
+          "nome": "Toxicologia Regulatória",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB607",
+          "nome": "Gerenciamento de Resíduos Sólidos",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB705",
+          "nome": "Recursos Energéticos e Meio Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB706",
+          "nome": "Recuperação de Áreas Degradadas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB707",
+          "nome": "Sistemas de Abastecimento e Tratamento de Água",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB708",
+          "nome": "Introdução à Economia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB709",
+          "nome": "Atmosfera: Qualidade e Monitoramento",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB801",
+          "nome": "Sistemas de Informações Geográficas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB803",
+          "nome": "Controle da Poluição do Ar",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB806",
+          "nome": "Sistemas de Esgotamento e Tratamento de Águas Residuárias",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB807",
+          "nome": "Introdução à Administração de Organizações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB808",
+          "nome": "Qualidade do Solo e gerenciamento de áreas contaminadas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB810",
+          "nome": "Hidrogeologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB901",
+          "nome": "Modelos Computacionais para Sistemas Ambientais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB902",
+          "nome": "Direito e Legislação Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB903",
+          "nome": "Avaliação dos Impactos Ambientais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB904",
+          "nome": "Planejamento e Gestão Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB905",
+          "nome": "Introdução ao Trabalho de Conclusão de Curso",
+          "horas": 30,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "EB906",
+          "nome": "Ergonomia e Segurança do Trabalho",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB907",
+          "nome": "Produção Mais Limpa",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB908",
+          "nome": "Projeto Integrador",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB910",
+          "nome": "Trabalho de Conclusão de Curso",
+          "horas": 60,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "EB920",
+          "nome": "Estágio Supervisionado",
+          "horas": 180,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "EB928",
+          "nome": "Atividades Complementares: Extensão",
+          "horas": 30,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "EB930",
+          "nome": "Atividades Complementares",
+          "horas": 60,
+          "tipo": "complementar"
+        },
+        {
+          "codigo": "EB941",
+          "nome": "Hidrologia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB973",
+          "nome": "Drenagem Urbana",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT219",
+          "nome": "Fundamentos de Eletricidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (10 créditos)",
+      "horas": 150,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 150,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-10-creditos-1",
+          "livre": true
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-10-creditos-1": [
+      "Qualquer disciplina elegível"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

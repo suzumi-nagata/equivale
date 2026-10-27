@@ -5,10 +5,22 @@ foi feita em 2026-10-27; a grade pode mudar.
 
 ## Arquivos
 
+Alvos manualmente convertidos:
+
 - [`usp-poli-ee-ac-2027.json`](usp-poli-ee-ac-2027.json) — Engenharia Elétrica,
   ênfase **Automação e Controle**, ciclo básico + ênfase.
 - [`usp-poli-ec-2012.json`](usp-poli-ec-2012.json) — Engenharia de Computação,
   currículo **2012** (tabela disponível no Jupiterweb).
+
+Alvos de engenharia gerados automaticamente:
+
+- 13 arquivos `usp-poli-<codcur>-<codhab>.json`, cobrindo as habilitações de
+  engenharia da Poli com grade publicada. A conversão é feita por
+  [`tools/build_targets_from_catalog.py`](../../../tools/build_targets_from_catalog.py).
+- O ciclo básico 3033, os ciclos 3201/3251 e o currículo antigo 3121 são
+  preservados como alvos manuais; o gerador não os sobrescreve.
+- A grade da página pode estar em construção e, em algumas habilitações, cobrir
+  apenas o ciclo básico; confira `observacoes` e a fonte.
 
 ## Fontes
 
@@ -30,9 +42,9 @@ foi feita em 2026-10-27; a grade pode mudar.
   registrado em `observacoes`.
 - Engenharia Elétrica: ciclo básico 1º–6º + ênfase 7º–10º (2027).
 - Engenharia de Computação: tabela profissional 5º–13º (2012) + base comum
-  1º–4º do ciclo básico disponível no Jupiterweb. O currículo atual
-  (3122/3000) tem resumo público, mas a tabela de disciplinas não estava
-  disponível na página consultada.
+  1º–4º do ciclo básico disponível no Jupiterweb. O currículo atual aparece como
+  `usp-poli-3123-3000.json`, gerado a partir da grade pública do Jupiterweb;
+  ele é separado do alvo histórico 2012.
 - MEC: USP é universidade pública; o ato de reconhecimento não foi consultado
   no e-MEC. O site mostra “ato não consultado” + “instituição pública”, não
   “não reconhecido”.
@@ -40,9 +52,12 @@ foi feita em 2026-10-27; a grade pode mudar.
 ## Regenerar
 
 ```bash
+# Os dois alvos manuais (EE AC 2027 e EC 2012)
 python3 -I tools/extract_usp_poli.py
-# ou usando páginas já baixadas:
-python3 -I tools/extract_usp_poli.py --html-dir /tmp/usp-poli-cache
+
+# As demais habilitações de engenharia com grade no catálogo
+python3 -I tools/build_targets_from_catalog.py --only-usp
 ```
 
-O script usa apenas a biblioteca padrão. Ele não lê históricos escolares.
+Os scripts usam apenas a biblioteca padrão e não leem históricos escolares. O
+segundo preserva os alvos 3033/3201/3251 e o currículo antigo 3121.

@@ -1,0 +1,574 @@
+{
+  "id": "unicamp-engenharia-agricola-8g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia Agrícola",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 4005,
+  "curriculo_versao": "2026",
+  "habilitacao": "8G — Currículo pleno (Integral)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/8g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/8g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/8g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3645,
+      "disciplinas": [
+        {
+          "codigo": "BT330",
+          "nome": "Botânica Básica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV323",
+          "nome": "Topografia",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM306",
+          "nome": "Estática",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM406",
+          "nome": "Resistência dos Materiais I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM506",
+          "nome": "Resistência dos Materiais II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ET016",
+          "nome": "Eletrotécnica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 128",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 159",
+          "nome": "Introdução à Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 259",
+          "nome": "Introdução à Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 328",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA070",
+          "nome": "Estágio Supervisionado",
+          "horas": 180,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "FA100",
+          "nome": "Engenharia Agrícola: Curso e Profissão",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA153",
+          "nome": "Desenho Técnico e Civil Assistidos por Computador",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA251",
+          "nome": "Metodologia Científica e Filosofia da Ciência",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA253",
+          "nome": "Pedologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA340",
+          "nome": "Mecânica dos Fluidos para Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA341",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA342",
+          "nome": "Termodinâmica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA343",
+          "nome": "Características e Propriedades do Solo",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA344",
+          "nome": "Meteorologia Agrícola",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA345",
+          "nome": "História e Desenvolvimento da Agricultura Brasileira",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA440",
+          "nome": "Instrumentação Básica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA441",
+          "nome": "Dinâmica de Corpos Rígidos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA442",
+          "nome": "Dinâmica de Sistemas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA443",
+          "nome": "Barragens e Estradas de Terra",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA444",
+          "nome": "Materiais de Construção Civil",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA445",
+          "nome": "Sistema Solo-Planta-Atmosfera",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA446",
+          "nome": "Geotecnologias I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA447",
+          "nome": "Manejo e Conservação do Solo",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA540",
+          "nome": "Sistemas de Produção Vegetal",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA541",
+          "nome": "Propriedades Físicas e Mecânicas de Materiais Biológicos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA542",
+          "nome": "Materiais e Tecnologia Mecânica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA543",
+          "nome": "Hidráulica Geral",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA544",
+          "nome": "Princípios de Bioquímica e Microbiologia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA545",
+          "nome": "Hidrologia: Ciência e Aplicação",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA640",
+          "nome": "Transferência de Calor e Massa",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA641",
+          "nome": "Tecnologia de Processos Pós-Colheita I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA642",
+          "nome": "Modelagem Estrutural Aplicada",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA643",
+          "nome": "Instalações Elétricas para Sistemas Agroindustriais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA644",
+          "nome": "Elementos de Máquinas para Engenharia Agrícola",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA645",
+          "nome": "Saneamento Ambiental",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA646",
+          "nome": "Técnicas de Irrigação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA647",
+          "nome": "Drenagem de Solos Agrícolas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA648",
+          "nome": "Agricultura de Precisão",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA740",
+          "nome": "Economia e Engenharia Econômica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA741",
+          "nome": "Sistemas e Instalações para a Produção Animal",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA742",
+          "nome": "Tecnologia de Resfriamento para Produtos Hortícolas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA743",
+          "nome": "Princípios, Projetos e Laboratório de Máquinas Agrícolas",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA744",
+          "nome": "Dimensionamento de Estruturas de Concreto",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA745",
+          "nome": "Introdução ao Gerenciamento de Projetos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA746",
+          "nome": "Tecnologia de Processos Pós-Colheita II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA747",
+          "nome": "Sociologia e Extensão Rural",
+          "horas": 60,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "FA840",
+          "nome": "Dimensionamento de Estruturas de Madeira",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA841",
+          "nome": "Ambientes para Animais e Plantas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA842",
+          "nome": "Planejamento Agrícola",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA843",
+          "nome": "Logística dos Sistemas Agroindustriais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA844",
+          "nome": "Tecnologia de Processos Pós-Colheita III",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FA886",
+          "nome": "Práticas Integradoras de Extensão I",
+          "horas": 120,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "FA984",
+          "nome": "Introdução ao Trabalho de Conclusão de Curso",
+          "horas": 30,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "FA985",
+          "nome": "Trabalho de Conclusão de Curso",
+          "horas": 30,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "FA986",
+          "nome": "Práticas Integradoras de Extensão II",
+          "horas": 120,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "MA111",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA141",
+          "nome": "Geometria Analítica e Vetores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA211",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA311",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC102",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ME414",
+          "nome": "Estatística para Experimentalistas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG101",
+          "nome": "Química I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG102",
+          "nome": "Química Experimental I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (15 créditos)",
+      "horas": 225,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 225,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-15-creditos-1",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Disciplinas Eletivas (4 créditos) · 2",
+      "horas": 60,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 60,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-4-creditos-2-2",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Disciplinas Eletivas (5 créditos) · 3",
+      "horas": 75,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 75,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-5-creditos-3-3",
+          "livre": false
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-15-creditos-1": [
+      "Integralização de Estudos",
+      "Integralização de Estudos",
+      "Integralização de Estudos",
+      "Integralização de Estudos",
+      "Saneamento Rural",
+      "Engenharia de Irrigação",
+      "Projetos Especiais de Ambientes Controlados",
+      "Tecnologia de Produção de Rações",
+      "Tópicos Especiais em Tecnologia Pós-Colheita",
+      "Tecnologia de Sementes",
+      "Teorias Avançadas do Processo de Secagem",
+      "Gerenciamento de Recursos Hídricos",
+      "Projeto Estrutural de Máquinas Agrícolas",
+      "Ergonomia Aplicada à Engenharia Agrícola",
+      "Avaliação do Desempenho de Máquinas Agrícolas e Qualidade de Operação",
+      "Estradas Vicinais",
+      "Fontes Alternativas de Energia",
+      "Estruturas Metálicas",
+      "Pesquisa Operacional Aplicada à Agricultura",
+      "Aproveitamentos Hidroenergéticos no Meio Rural: Micro, Mini e Pequenas Usinas",
+      "Hidráulica Básica Aplicada à Máquinas Agrícolas",
+      "Qualidade e Segurança de Frutas e Hortaliças Frescas",
+      "Processamento Mínimo de Frutas e Hortaliças",
+      "Introdução à Administração de Empresas do Agronegócio",
+      "Gestão Ambiental no Agronegócio",
+      "Projeto e Desenvolvimento de Embalagens para Produtos Agrícolas",
+      "Geotecnologias II",
+      "Práticas de Hidráulica Aplicadas à Engenharia",
+      "Agroecologia e Extensão Rural",
+      "Técnicas Construtivas",
+      "Avaliação de Terras para Fins Agrícolas",
+      "Fertilidade do Solo e Adubação",
+      "Erosão Acelerada do Solo e seu Controle",
+      "Organização e Análise Ergonômica do Trabalho",
+      "Interação Mecânica Máquina-Planta",
+      "Teoria de Controle Aplicada",
+      "Automação de Processos",
+      "Mecanização Agrícola Aplicada a Culturas Comerciais",
+      "Estratégia e Gestão de Empresas Agropecuárias",
+      "Gestão de Processos no Agronegócio",
+      "Introdução à Mineração de Dados: Conceitos e Aplicações na Agricultura",
+      "Zootecnia de Precisão",
+      "Gestão de Responsabilidade Social e Sustentabilidade no Agronegócio",
+      "Marketing Rural",
+      "Introdução ao Mercado de Capitais e de Commodities Agrícolas",
+      "Segurança do Trabalho Rural",
+      "Biotecnologia I: Fundamentos",
+      "Internet das Coisas na Agricultura",
+      "Análise de Imagens Aplicada a Produtos Agrícolas e Alimentos",
+      "Práticas Laboratoriais para Pesquisa Ambiental",
+      "Comercialização Agrícola",
+      "Tópicos especiais em biotecnologia, agricultura e meio ambiente I",
+      "Tópicos especiais em biotecnologia, agricultura e meio ambiente II",
+      "Tratamento de Águas Residuárias",
+      "Análise Espacial de Dados Aplicada à Agricultura",
+      "Fundamentos em Robótica na Agricultura",
+      "Dinâmica de Sistemas Mecânicos",
+      "Introdução ao Método dos Elementos Finitos",
+      "Manejo e Produção da Cana-de-Açúcar",
+      "Ultrassom Aplicado à Caracterização de Materiais",
+      "Comercialização das Cadeias Agroindustriais",
+      "Reúso de Água Residuárias na Agricultura",
+      "Compactação do Solo Induzida por Tráfego Agrícola",
+      "Gestão de Produtos no Agronegócio"
+    ],
+    "auto-disciplinas-eletivas-4-creditos-2-2": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-5-creditos-3-3": [
+      "Tópicos de Extensão I",
+      "Tópicos de Extensão II",
+      "Atividades Complementares de Extensão em Engenharia Agrícola"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

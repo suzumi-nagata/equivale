@@ -31,10 +31,10 @@ npm test
 
 ## O que já funciona
 
-- Seleção de curso alvo: UNINTER ADS/Engenharia de Software, UNICAMP 2026
-  (Engenharia de Computação AA/AB e Engenharia Elétrica 41G) e Poli-USP
-  (Engenharia Elétrica Automação e Controle 2027 e Engenharia de Computação
-  2012). O seletor tem busca e filtros por instituição, modalidade e grau.
+- Seleção de curso alvo: 36 currículos — os 7 alvos auditados (UNINTER,
+  UNICAMP EC AA/AB e EE 41G, Poli-USP EE AC 2027 e EC 2012) e 29 alvos de
+  engenharia gerados automaticamente do catálogo UNICAMP/Poli. O seletor tem
+  busca e filtros por instituição, modalidade e grau.
 - Importação de histórico em **JSON** (saída do parser local) ou **CSV**.
 - Histórico fictício de demonstração.
 - Matcher **max-cost flow m-para-n** por nome + carga horária: uma origem pode

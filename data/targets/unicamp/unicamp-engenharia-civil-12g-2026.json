@@ -1,0 +1,748 @@
+{
+  "id": "unicamp-engenharia-civil-12g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia Civil",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 4125,
+  "curriculo_versao": "2026",
+  "habilitacao": "12G — Currículo pleno (Integral)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/12g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/12g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/12g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3555,
+      "disciplinas": [
+        {
+          "codigo": "CV050",
+          "nome": "Atividades Complementares",
+          "horas": 60,
+          "tipo": "complementar"
+        },
+        {
+          "codigo": "CV105",
+          "nome": "Desenho Técnico Projetivo de Edificações",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV142",
+          "nome": "Sustentabilidade e Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV143",
+          "nome": "Química para Engenharia Civil",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV150",
+          "nome": "Introdução à Engenharia Civil",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV204",
+          "nome": "Materiais de Construção Civil I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV225",
+          "nome": "Topografia e Geodésia I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV250",
+          "nome": "Atividades de Extensão",
+          "horas": 60,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "CV301",
+          "nome": "Física para Engenharia Civil",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV304",
+          "nome": "Materiais de Construção Civil II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV305",
+          "nome": "Projeto Arquitetônico",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV314",
+          "nome": "Isostática de Estruturas Planas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV325",
+          "nome": "Topografia e Geodésia II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV355",
+          "nome": "Projeto Integrador em Aplicação em Engenharia Civil",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV414",
+          "nome": "Mecânica dos Sólidos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV423",
+          "nome": "Introdução à Economia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV432",
+          "nome": "Mecânica dos Fluidos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV441",
+          "nome": "Planejamento e Gestão Ambiental",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV450",
+          "nome": "Metodologia Científica e Redação Científica",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV502",
+          "nome": "Administração Aplicada à Empresas de Construção",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV504",
+          "nome": "Técnicas Construtivas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV505",
+          "nome": "Modelagem da Informação da Construção (BIM)",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV514",
+          "nome": "Mecânica dos Sólidos II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV523",
+          "nome": "Técnica dos Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV527",
+          "nome": "Geotecnia I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV533",
+          "nome": "Engenharia Hidráulica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV543",
+          "nome": "Qualidade Sanitária do Meio",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV614",
+          "nome": "Estruturas de Madeira",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV615",
+          "nome": "Teoria das Estruturas I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV625",
+          "nome": "Geometria de Vias e Terraplenagem",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV627",
+          "nome": "Geotecnia II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV632",
+          "nome": "Hidrologia Básica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV634",
+          "nome": "Eletrotécnica Aplicada à Engenharia Civil",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV635",
+          "nome": "Planejamento Urbano",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV636",
+          "nome": "Hidráulica Aplicada",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV645",
+          "nome": "Sistema de Abastecimento de Água",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV655",
+          "nome": "Projeto Integrador em Cidades Sustentáveis",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV704",
+          "nome": "Planejamento e Controle de Empreendimentos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV715",
+          "nome": "Teoria das Estruturas II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV716",
+          "nome": "Estruturas de Concreto Armado I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV717",
+          "nome": "Estruturas Metálicas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV727",
+          "nome": "Engenharia de Fundações",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV731",
+          "nome": "Sistemas Prediais Elétricos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV732",
+          "nome": "Sistemas Prediais Hidráulicos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV745",
+          "nome": "Sistema de Coleta e Tratamento de Esgoto",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV755",
+          "nome": "Projeto Integrador em Edificações",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV815",
+          "nome": "Estruturas de Concreto Protendido",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV816",
+          "nome": "Estruturas de Concreto Armado II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV817",
+          "nome": "Estruturas de Pontes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV821",
+          "nome": "Economia dos Transportes",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV823",
+          "nome": "Aeroportos",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV825",
+          "nome": "Drenagem e Pavimentação",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV832",
+          "nome": "Portos, Rios e Canais",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV843",
+          "nome": "Sistemas de Gestão em Resíduo Sólido",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV855",
+          "nome": "Projeto Integrador em Inovação em Infraestrutura",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV856",
+          "nome": "Infraestrutura em Energia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV958",
+          "nome": "Projeto de Final de Curso I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CV959",
+          "nome": "Estágio Supervisionado",
+          "horas": 165,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "CV968",
+          "nome": "Projeto de Final de Curso II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 128",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 159",
+          "nome": "Introdução à Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 259",
+          "nome": "Introdução à Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 328",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "GM430",
+          "nome": "Geologia Aplicada à Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA111",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA141",
+          "nome": "Geometria Analítica e Vetores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA211",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA311",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA327",
+          "nome": "Álgebra Linear",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC102",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ME414",
+          "nome": "Estatística para Experimentalistas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MS211",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG102",
+          "nome": "Química Experimental I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (6 créditos)",
+      "horas": 90,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 90,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-6-creditos-1",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Disciplinas Eletivas (2 créditos) · 2",
+      "horas": 30,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 30,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-2-creditos-2-2",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Disciplinas Eletivas (6 créditos) · 3",
+      "horas": 90,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 90,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-6-creditos-3-3",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Disciplinas Eletivas (24 créditos) · 4",
+      "horas": 360,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 360,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-24-creditos-4-4",
+          "livre": true
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-6-creditos-1": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-2-creditos-2-2": [
+      "Tópicos Especiais de Humanidades I",
+      "Tópicos Especiais de Humanidades II",
+      "Tópicos Especiais de Humanidades III"
+    ],
+    "auto-disciplinas-eletivas-6-creditos-3-3": [
+      "Planejamento e Logística de Canteiro de Obras",
+      "Tecnologia de Argamassas e Revestimento",
+      "Tópicos Especiais em Gestão do Projeto e da Construção I",
+      "Tópicos Especiais em Gestão do Projeto e da Construção II",
+      "Conforto Térmico e Eficiência Energética em Edificações",
+      "Gestão da Qualidade e Sistemas de Gestão Integrados",
+      "Dinâmica das Estruturas",
+      "Tópicos Especiais em Concreto I",
+      "Laboratório de Mecânica dos Solos",
+      "Complementos de Aeroportos",
+      "Barragens de Terra",
+      "Introdução ao Planejamento Energético",
+      "Análise Multicriterial em Tomada de Decisão",
+      "Tópicos em Saneamento Ambiental I",
+      "Tópicos em Saneamento Ambiental II",
+      "Reuso de Águas",
+      "Tratamento de Lodo de ETE e ETA",
+      "Tópicos em Gestão Ambiental I",
+      "Tópicos em Gestão Ambiental II",
+      "Tópicos em Geotecnia e Transportes I",
+      "Tópicos em Geotecnia e Transportes II",
+      "Concretos Especiais",
+      "Tópicos Especiais em Concreto II",
+      "Tópicos em Engenharia de Estruturas I",
+      "Tópicos em Engenharia de Estruturas II",
+      "Técnicas Construtivas II",
+      "Eficiência Energética na Engenharia Civil",
+      "Equipamentos Hidráulicos: Fundamentos e Aplicações",
+      "Hidráulica Marítima e Obras Costeiras",
+      "Hidráulica Fluvial e Obras Fluviais",
+      "Sistema de Informação Geográfica",
+      "Cadastro Técnico Multifinalitário",
+      "Instabilidade e Flexo-Torção em Elementos de Estruturas Metálicas",
+      "Introdução à Automação em Sistemas Elétricos Prediais",
+      "Modelos de Otimização em Engenharia Civil",
+      "Otimização Aplicada à Engenharia Civil",
+      "GERENCIAMENTO DE PERDAS EM SISTEMAS DE ABASTECIMENTO DE ÁGUA",
+      "Seminários sobre Recursos Hídricos, Energéticos e Ambientais",
+      "Modelos de auxílio à Tomada de Decisão",
+      "Obras e equipamentos hidráulicos: histórico e desenvolvimento",
+      "Ordenamento Territorial",
+      "Introdução à Fluidodinâmica Computacional",
+      "Tópicos em Recursos Hídricos, Energéticos e Ambientais I",
+      "Tópicos em Recursos Hídricos, Energéticos e Ambientais II",
+      "Métodos Numéricos e Computacionais em Engenharia Hidráulica",
+      "Características Gerais de um Aproveitamento Hidroelétrico",
+      "Concreto Reforçado com Fibras",
+      "Seminários em Engenharia Geotécnica",
+      "Ensaios de Laboratório de Mecânica dos Solos",
+      "Ensaios de Campo de Mecânica dos Solos",
+      "Geotecnia Aplicada",
+      "Gerenciamento de Recursos Hídricos Urbanos",
+      "Planejamento de Recursos Hídricos",
+      "Complementos de Hidrologia",
+      "Simulação Hidrológica",
+      "Máquinas Elétricas Manuais para Construção Civil",
+      "Orientações no uso de máquinas elétricas manuais",
+      "Transientes Hidráulicos",
+      "Sistemas para Transporte de Líquido: Adutoras e Bombas",
+      "Cavitação em Estruturas e Equipamentos Hidráulicos",
+      "Complementos de Hidráulica",
+      "Complementos de Mecânica dos Fluidos",
+      "Complementos de Obras Hidráulicas",
+      "Ensino e Aprendizagem em Engenharia",
+      "Hidráulica de Canais",
+      "Sistemas Prediais, Hidráulico-Sanitários e Gás II",
+      "Gestão Financeira, Econômica e Riscos de Empreendimentos",
+      "Projeto e Construção Sustentável",
+      "Conforto Acústico de Ambientes",
+      "Estruturas de Concreto Armado III",
+      "Projeto Estrutural de Edifício de Concreto Armado",
+      "Estruturas Metálicas Compostas de Chapas Dobradas",
+      "Estruturas Metálicas dos Edifícios Industriais",
+      "Complementos de Teoria das Estruturas",
+      "Introdução ao Método dos Elementos Finitos",
+      "Projeto de Estruturas de Concreto Armado Assistido por Computador",
+      "Estruturas em Situação de Incêndio",
+      "Geomática",
+      "Superestrutura Ferroviária",
+      "Serviços Logísticos: Gestão e Projeto",
+      "Geotecnia III",
+      "Complementos de Fundações",
+      "Terminais de Transporte",
+      "Apoio à Tomada de Decisão",
+      "Engenharia de Tráfego",
+      "Laboratório de Aprendizagem em Logística e Transportes",
+      "Transporte Público Urbano",
+      "Práticas e Projetos em Drenagem Urbana",
+      "Engenharia Hidráulica Aplicada a Sistemas de Transportes Fluidos",
+      "Gerenciamento de Recursos Hídricos",
+      "Impactos Ambientais Resultantes de Obras Hidráulicas",
+      "Gestão Ambiental por Bacias",
+      "Laboratório de Saneamento",
+      "Tratamento de Águas para Abastecimento",
+      "Gestão em Saneamento Ambiental",
+      "Química Sanitária e Ambiental",
+      "Saneamento de Pequenas Comunidades",
+      "Aspectos Legais e Institucionais em Saneamento e Ambiente",
+      "Iniciação Científica em Engenharia Civil I",
+      "Iniciação Científica em Engenharia Civil II",
+      "Tópicos Avançados em Engenharia Civil I",
+      "Tópicos Avançados em Engenharia Civil II",
+      "Tópicos Especiais em Gestão do Projeto e da Construção III",
+      "Tópicos Especiais em Gestão do Projeto e da Construção IV",
+      "Tópicos Especiais em Gestão do Projeto e da Construção V",
+      "Tópicos Especiais em Gestão do Projeto e da Construção VI",
+      "Tópicos Especiais em Concreto III",
+      "Tópicos Especiais em Concreto IV",
+      "Tópicos Especiais em Concreto V",
+      "Tópicos em Engenharia de Estruturas III",
+      "Tópicos em Engenharia de Estruturas IV",
+      "Tópicos em Engenharia de Estruturas V",
+      "Tópicos em Engenharia de Estruturas VI",
+      "Tópicos em Geotecnia e Transportes III",
+      "Tópicos em Geotecnia e Transportes IV",
+      "Tópicos em Geotecnia e Transportes V",
+      "Tópicos em Geotecnia e Transportes VI",
+      "Tópicos em Recursos Hídricos, Energéticos e Ambientais III",
+      "Tópicos em Recursos Hídricos, Energéticos e Ambientais IV",
+      "Tópicos em Saneamento Ambiental III",
+      "Tópicos em Gestão Ambiental III",
+      "Seminário em Gestão e Saneamento Ambiental II",
+      "Gestão e Gerenciamento Integrado de Resíduo Sólido",
+      "Tratamento Biológico Avançado de Águas Residuais",
+      "Tratamento Avançado de Resíduo Sólido",
+      "O Comportamento Pró-Ambiental e o Processo de Tomada de Decisão",
+      "Análise de Ciclo de Vida",
+      "Seminários em Saneamento e Ambiente",
+      "Projetos em Infraestrutura e Ambiente",
+      "Avaliação de Impacto Ambiental",
+      "Tratamento de Águas Residuais",
+      "Gestão do processo de projeto com metodologia BIM",
+      "Tecnologia Construtiva Industrializada",
+      "Gestão Lean na construção",
+      "MOBILIDADE SUSTENTÁVEL"
+    ],
+    "auto-disciplinas-eletivas-24-creditos-4-4": [
+      "Atividades complementares de Integração Ensino e Extensão I",
+      "Atividades complementares de Integração Ensino e Extensão II",
+      "Atividades complementares de Integração Ensino e Extensão III",
+      "Tópicos Especiais em Extensão 1",
+      "Tópicos Especiais em Extensão 2",
+      "Tópicos Especiais em Extensão 3",
+      "Tópicos Especiais em Extensão 4",
+      "Tópicos Especiais em Extensão 5",
+      "Tópicos Especiais em Extensão 6",
+      "Tópicos Especiais em Extensão 7",
+      "Tópicos Especiais em Extensão 8",
+      "Tópicos Especiais em Extensão 9",
+      "Tópicos Especiais em Extensão 10",
+      "Tópicos Especiais em Extensão 11",
+      "Tópicos Especiais em Extensão 12",
+      "Tópicos Especiais em Extensão 13",
+      "Tópicos Especiais em Extensão 14",
+      "Tópicos Especiais em Extensão 15",
+      "Tópicos Especiais em Extensão 16",
+      "Tópicos Especiais em Extensão 17",
+      "Tópicos Especiais em Extensão 18",
+      "Tópicos Especiais em Extensão 19",
+      "Tópicos Especiais em Extensão 20",
+      "Tópicos Especiais em Extensão 21",
+      "Tópicos Especiais em Extensão 22",
+      "Tópicos Especiais em Extensão 23",
+      "Tópicos Especiais em Extensão 24",
+      "Tópicos Especiais em Extensão 25",
+      "Tópicos Especiais em Extensão 26",
+      "Tópicos Especiais em Extensão 27",
+      "Tópicos Especiais em Extensão 28",
+      "Tópicos Especiais em Extensão 29",
+      "Tópicos Especiais em Extensão 30",
+      "Tópicos Especiais em Extensão 31",
+      "Tópicos Especiais em Extensão 32",
+      "Tópicos Especiais em Extensão 33",
+      "Tópicos Especiais em Extensão 34",
+      "Tópicos Especiais em Extensão 35",
+      "Tópicos Especiais em Extensão 36",
+      "Tópicos Especiais em Extensão 37",
+      "Tópicos Especiais em Extensão 38",
+      "Tópicos Especiais em Extensão 39",
+      "Tópicos Especiais em Extensão 40",
+      "Tópicos Especiais em Extensão 41",
+      "Tópicos Especiais em Extensão 42",
+      "Tópicos Especiais em Extensão 43",
+      "Tópicos Especiais em Extensão 44",
+      "Tópicos Especiais em Extensão 45",
+      "Tópicos Especiais em Extensão 46",
+      "Tópicos Especiais em Extensão 47",
+      "Tópicos Especiais em Extensão 48",
+      "Tópicos Especiais em Extensão 49",
+      "Tópicos Especiais em Extensão 50",
+      "Tópicos Especiais em Extensão 51",
+      "Tópicos Especiais em Extensão 52",
+      "Tópicos Especiais em Extensão 53",
+      "Tópicos Especiais em Extensão 54",
+      "Tópicos Especiais em Extensão 55",
+      "Tópicos Especiais em Extensão 56",
+      "Tópicos Especiais em Extensão 57",
+      "Tópicos Especiais em Extensão 58",
+      "Tópicos Especiais em Extensão 59",
+      "Tópicos Especiais em Extensão 60"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

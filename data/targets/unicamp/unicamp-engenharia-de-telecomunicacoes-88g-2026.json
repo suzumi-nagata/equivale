@@ -1,0 +1,419 @@
+{
+  "id": "unicamp-engenharia-de-telecomunicacoes-88g-2026",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Telecomunicações",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3855,
+  "curriculo_versao": "2026",
+  "habilitacao": "88G — Currículo pleno (Integral)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/88g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/88g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/88g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 3390,
+      "disciplinas": [
+        {
+          "codigo": "EB101",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB102",
+          "nome": "Geometria Analítica e Álgebra Linear",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB103",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB104",
+          "nome": "Laboratório de Física I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB201",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB203",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB204",
+          "nome": "Laboratório de Física II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB301",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB308",
+          "nome": "Introdução à Extensão Universitária",
+          "horas": 30,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "EB402",
+          "nome": "Fenômenos de Transporte",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB405",
+          "nome": "Mecânica dos Sólidos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB406",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB708",
+          "nome": "Introdução à Economia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EB807",
+          "nome": "Introdução à Administração de Organizações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "SI100",
+          "nome": "Algoritmos e Programação de Computadores I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT108",
+          "nome": "Fundamentos para Telecomunicações",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT114",
+          "nome": "Expressão Gráfica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT217",
+          "nome": "Química Aplicada",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT219",
+          "nome": "Fundamentos de Eletricidade",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT227",
+          "nome": "METODOLOGIA DO TRABALHO CIENTÍFICO",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT302",
+          "nome": "Circuitos Digitais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT310",
+          "nome": "Redes de Comunicação I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT313",
+          "nome": "Física Aplicada III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT314",
+          "nome": "Orientação a Objetos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT317",
+          "nome": "CIRCUITOS ELÉTRICOS I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT318",
+          "nome": "Introdução à Programação em Python",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT413",
+          "nome": "Métodos Matemáticos para Telecomunicacões",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT414",
+          "nome": "Redes de Comunicação II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT422",
+          "nome": "CIRCUITOS ELÉTRICOS II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT423",
+          "nome": "PROBABILIDADE E PROCESSOS ALEATÓRIOS",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT429",
+          "nome": "Programação de Dispositivos Móveis",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT431",
+          "nome": "CIRCUITOS DIGITAIS II",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT511",
+          "nome": "Eletromagnetismo Aplicado",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT514",
+          "nome": "Sinais e Sistemas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT518",
+          "nome": "ÓPTICA E CIÊNCIA DOS MATERIAIS",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT525",
+          "nome": "ELETRÔNICA ANALÓGICA I",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT526",
+          "nome": "MICROCONTROLADORES I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT606",
+          "nome": "Ondas Guiadas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT607",
+          "nome": "Laboratório de Ondas Guiadas",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT608",
+          "nome": "Laboratório de Sistemas de Telecomunicações",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT609",
+          "nome": "Sistemas de Telecomunicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT624",
+          "nome": "PROCESSAMENTO DIGITAL DE SINAIS",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT625",
+          "nome": "ELETRÔNICA ANALÓGICA II",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT635",
+          "nome": "MICROCONTROLADORES II",
+          "horas": 45,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT704",
+          "nome": "Comunicações Móveis",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT710",
+          "nome": "Tecnologias de Radiofrequência e Micro-Ondas",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT711",
+          "nome": "PROPAGAÇÃO DE ONDAS ELETROMAGNÉTICAS - ANTENAS",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT717",
+          "nome": "Princípios de Comunicações Ópticas",
+          "horas": 75,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT811",
+          "nome": "REDES AVANÇADAS",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT901",
+          "nome": "Transmissão de Sinais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT902",
+          "nome": "Introdução ao Trabalho de Conclusão de Curso",
+          "horas": 30,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "TT905",
+          "nome": "Programação Web",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT907",
+          "nome": "Trabalho de Conclusão de Curso",
+          "horas": 60,
+          "tipo": "tcc"
+        },
+        {
+          "codigo": "TT909",
+          "nome": "Ciências do Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "TT914",
+          "nome": "Estágio Supervisionado",
+          "horas": 180,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "TT935",
+          "nome": "Atividades Complementares",
+          "horas": 60,
+          "tipo": "complementar"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (12 créditos)",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-12-creditos-1",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Disciplinas Eletivas (19 créditos) · 2",
+      "horas": 285,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 285,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-19-creditos-2-2",
+          "livre": true
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-12-creditos-1": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-19-creditos-2-2": [
+      "Projeto Integrador",
+      "Tópicos em Extensão Universitária",
+      "Projetos de Extensão Comunitária",
+      "Trabalho de Conclusão de Curso com Extensão",
+      "Iniciação Científica com Extensão",
+      "Projetos de Extensão Comunitária II"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "id": "unicamp-engenharia-fisica-108g-2026-aa",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia Física",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3750,
+  "curriculo_versao": "2026",
+  "habilitacao": "AA — Ênfase em Optoeletrônica (Integral)",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/108g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/108g/sugestao.html",
+  "coletado_em": "2026-10-27T11:35:21+00:00",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/108g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 2940,
+      "disciplinas": [
+        {
+          "codigo": "BE310",
+          "nome": "Ciências do Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE304",
+          "nome": "Direito",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE738",
+          "nome": "Economia para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA513",
+          "nome": "Circuitos Elétricos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE533",
+          "nome": "Eletrônica Básica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM424",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 128",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 159",
+          "nome": "Introdução à Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 228",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 259",
+          "nome": "Introdução à Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 315",
+          "nome": "Mecânica Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 320",
+          "nome": "Termodinâmica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 328",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 359",
+          "nome": "Introdução à Física Experimental III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 428",
+          "nome": "Física Geral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 449",
+          "nome": "Lasers e Aplicações",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 502",
+          "nome": "Eletromagnetismo I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 520",
+          "nome": "Métodos Matemáticos da Física I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 589",
+          "nome": "Estrutura da Matéria",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 602",
+          "nome": "Eletromagnetismo II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 604",
+          "nome": "Física Estatística",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 689",
+          "nome": "Mecânica Quântica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 740",
+          "nome": "Métodos da Física Experimental III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 888",
+          "nome": "Física do Estado Sólido",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 894",
+          "nome": "Projeto de Curso em Engenharia Física",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 949",
+          "nome": "Estágio em Engenharia Física",
+          "horas": 180,
+          "tipo": "estagio"
+        },
+        {
+          "codigo": "FM003",
+          "nome": "Seminários sobre a Profissão",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FM449",
+          "nome": "Projetos Integrados em Engenharia Física I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FM649",
+          "nome": "Projetos Integrados em Engenharia Física II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FM849",
+          "nome": "Projetos Integrados em Engenharia Física III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FM901",
+          "nome": "Formação Profissional I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "FX949",
+          "nome": "Atividades supervisionadas em Engenharia Física I (Extensão)",
+          "horas": 120,
+          "tipo": "extensao"
+        },
+        {
+          "codigo": "LE100",
+          "nome": "Desenho Técnico Assistido por Computador",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LE401",
+          "nome": "Estrutura e Propriedade dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA044",
+          "nome": "Matemática IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA111",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA141",
+          "nome": "Geometria Analítica e Vetores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA211",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA311",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA327",
+          "nome": "Álgebra Linear",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC102",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC202",
+          "nome": "Estruturas de Dados",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ME210",
+          "nome": "Probabilidade I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MS149",
+          "nome": "Complementos de Matemática",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MS211",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG101",
+          "nome": "Química I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Disciplinas Eletivas (2 créditos)",
+      "horas": 30,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 30,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-2-creditos-1",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Disciplinas Eletivas (16 créditos) · 2",
+      "horas": 240,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 240,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-16-creditos-2-2",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Disciplinas Eletivas (4 créditos) · 3",
+      "horas": 60,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 60,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-4-creditos-3-3",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Disciplinas Eletivas (2 créditos) · 4",
+      "horas": 30,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 30,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-2-creditos-4-4",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "Disciplinas Eletivas (10 créditos) · 5",
+      "horas": 150,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 150,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-10-creditos-5-5",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 7,
+      "nome": "Disciplinas Eletivas (8 créditos) · 6",
+      "horas": 120,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 120,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-8-creditos-6-6",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 8,
+      "nome": "Disciplinas Eletivas (12 créditos) · 7",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Disciplinas Eletivas",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "auto-disciplinas-eletivas-12-creditos-7-7",
+          "livre": false
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "auto-disciplinas-eletivas-2-creditos-1": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-16-creditos-2-2": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-4-creditos-3-3": [
+      "Instrumentação I",
+      "Iniciação Científica I",
+      "Instrumentação II",
+      "Iniciação Científica II",
+      "Práticas de Engenharia Física I",
+      "Práticas de Engenharia Física II",
+      "Práticas em Empresa Júnior"
+    ],
+    "auto-disciplinas-eletivas-2-creditos-4-4": [
+      "Física e Sociedade",
+      "Ciência, Tecnologia e Sociedade",
+      "Tópicos Especiais de Humanidades I",
+      "Tópicos Especiais de Humanidades II",
+      "Tópicos Especiais de Humanidades III"
+    ],
+    "auto-disciplinas-eletivas-10-creditos-5-5": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-8-creditos-6-6": [
+      "Qualquer disciplina elegível"
+    ],
+    "auto-disciplinas-eletivas-12-creditos-7-7": [
+      "Análise de Sinais",
+      "Circuitos Lógicos",
+      "Eletrônica Digital I",
+      "Eletrônica Básica II",
+      "Ondas Guiadas",
+      "Comunicações Ópticas",
+      "Tecnologia Eletrônica I",
+      "Enlaces Ópticos",
+      "Redes Ópticas",
+      "Tecnologia de Circuitos Integrados",
+      "Sensores Microeletrônicos",
+      "Óptica Aplicada",
+      "Introdução à Teoria de Informação: Aspectos Clássicos e Quânticos",
+      "Mecânica Quântica II",
+      "Métodos da Física Experimental VI"
+    ]
+  },
+  "observacoes": [
+    "Alvo gerado automaticamente a partir do currículo público UNICAMP 2026.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não disciplinas únicas.",
+    "A conversão automatiza o schema; a decisão de equivalência continua sendo da instituição."
+  ]
+}

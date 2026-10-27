@@ -7,12 +7,23 @@ apenas os alvos que o site carrega.
 
 ## Arquivos
 
+Alvos manualmente convertidos e auditados:
+
 - [`unicamp-ec-2026-aa.json`](unicamp-ec-2026-aa.json) — Engenharia de
   Computação, habilitação **AA — Sistemas de Computação**.
 - [`unicamp-ec-2026-ab.json`](unicamp-ec-2026-ab.json) — Engenharia de
   Computação, habilitação **AB — Sistemas e Processos Industriais**.
 - [`unicamp-ee-2026.json`](unicamp-ee-2026.json) — Engenharia Elétrica, currículo
   pleno **41G**.
+
+Alvos de engenharia gerados automaticamente pelo catálogo:
+
+- 16 arquivos `unicamp-engenharia-*-2026*.json`, cobrindo os demais cursos de
+  engenharia do catálogo 2026, incluindo as duas ênfases de Engenharia Física.
+- A conversão é feita por
+  [`tools/build_targets_from_catalog.py`](../../../tools/build_targets_from_catalog.py);
+  os arquivos gerados não passaram pela mesma auditoria manual dos três alvos
+  acima.
 
 AA e AB são habilitações distintas e aparecem como alvos separados. A variante
 AX (matrícula antes da opção) não é oferecida como alvo.
@@ -45,11 +56,16 @@ AX (matrícula antes da opção) não é oferecida como alvo.
 ## Regenerar
 
 ```bash
+# Os três alvos manuais (AA/AB/41G)
 python3 -I tools/build_unicamp_targets.py
+
+# Os alvos de engenharia gerados a partir do catálogo
+python3 -I tools/build_targets_from_catalog.py --only-unicamp
 ```
 
-O script lê `data/sources/unicamp/*.json` e reescreve os três JSONs. Ele não
-baixa nada e não usa dados de histórico.
+O primeiro script lê `data/sources/unicamp/*.json`; o segundo lê
+`data/catalog/unicamp_2026_cursos.json` e nunca sobrescreve 34G/41G. Nenhum
+dos dois baixa dados ou usa histórico escolar.
 
 ## Limitações
 
