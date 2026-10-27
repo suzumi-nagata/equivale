@@ -38,6 +38,13 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+TOOLS_DIR = Path(__file__).resolve().parent
+if str(TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(TOOLS_DIR))
+
+from extract_unicamp_2026 import CurriculumParser, parse_rows  # noqa: E402
+from extract_usp_poli import parse_page as parse_usp_grade_rows  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUT_DIR = ROOT / "data" / "catalog"
 DEFAULT_CACHE_DIR = (
@@ -45,9 +52,8 @@ DEFAULT_CACHE_DIR = (
     / "equivale"
     / "crawler"
 )
-UNICAMP_INDEX = (
-    "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/"
-)
+UNICAMP_ROOT = "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/"
+UNICAMP_INDEX = f"{UNICAMP_ROOT}disciplinas/"
 USP_BASE = "https://uspdigital.usp.br/jupiterweb/"
 USP_UNITS_URL = urllib.parse.urljoin(USP_BASE, "jupColegiadoLista?tipo=D")
 USP_POLI_COD = "3"
@@ -448,6 +454,187 @@ def crawl_unicamp(cache: DiskHttpCache) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Cursos da UNICAMP
+
+
+def unicamp_course_links(index_html: str) -> dict[str, str]:
+    links: dict[str, str] = {}
+    for href in href_values(index_html):
+        match = re.search(r"(?:^|/)cursos/([a-z0-9]+)/index\.html$", href, flags=re.I)
+        if not match:
+            continue
+        code = match.group(1).upper()
+        links[code] = safe_url(urllib.parse.urljoin(UNICAMP_ROOT, href))
+    return dict(sorted(links.items()))
+
+
+def parse_unicamp_course_index(page_html: str, code: str, page_url: str) -> dict:
+    headings = [
+        clean_html(value)
+        for value in re.findall(r"<h1[^>]*>(.*?)</h1>", page_html, flags=re.S | re.I)
+    ]
+    name = next(
+        (value for value in headings if re.match(r"^Curso\s+\S+\s*-\s*", value)),
+        code,
+    )
+    name = re.sub(r"^Curso\s+\S+\s*-\s*", "", name).strip() or code
+    unit_match = re.search(
+        r'<a\b[^>]*href=["\'][^"\']*membros\.html["\'][^>]*>(.*?)</a>',
+        page_html,
+        flags=re.S | re.I,
+    )
+    unit = clean_html(unit_match.group(1)) if unit_match else None
+    if unit:
+        unit = re.sub(r"\s*-\s*Membros da Comiss[aã]o.*$", "", unit, flags=re.I).strip()
+    turno_match = re.search(r"<h2[^>]*>\s*Turno:\s*(.*?)</h2>", page_html, flags=re.S | re.I)
+    turno = clean_html(turno_match.group(1)) if turno_match else None
+    habilitacoes = []
+    seen = set()
+    for h3 in re.findall(r"<h3[^>]*>(.*?)</h3>", page_html, flags=re.S | re.I):
+        text = clean_html(h3)
+        match = re.match(r"^([A-Z]{2})\s*-\s*(.+)$", text)
+        if not match:
+            continue
+        hab_code, hab_name = match.groups()
+        if hab_code in seen:
+            continue
+        seen.add(hab_code)
+        habilitacoes.append({"codigo": hab_code, "nome": hab_name.strip()})
+    return {
+        "codigo": code,
+        "nome": name,
+        "unidade": unit,
+        "turno": turno,
+        "habilitacoes": habilitacoes,
+        "fonte_index": page_url,
+    }
+
+
+def parse_unicamp_curriculum(page_html: str) -> list[dict]:
+    parser = CurriculumParser()
+    parser.feed(page_html)
+    groups = []
+    for table in parser.tables:
+        h3 = table.get("h3") or ""
+        if "Núcleo Comum" in h3:
+            tipo = "obrigatoria_comum"
+        elif "Obrigat" in h3:
+            tipo = "obrigatoria_habilitacao"
+        elif "Eletiv" in h3:
+            tipo = "eletiva"
+        else:
+            tipo = "outra"
+        disciplines, notes = parse_rows(table.get("rows", []), tipo)
+        if not disciplines and not notes:
+            continue
+        groups.append(
+            {
+                "secao_h2": table.get("h2"),
+                "secao_h3": h3 or None,
+                "grupo": table.get("group"),
+                "creditos_exigidos": table.get("credits"),
+                "tipo": tipo,
+                "disciplinas": disciplines,
+                "observacoes": notes,
+            }
+        )
+    return groups
+
+
+def parse_unicamp_proposal(page_html: str) -> list[dict]:
+    headings = list(
+        re.finditer(r"<h([123])\b[^>]*>(.*?)</h\1>", page_html, flags=re.S | re.I)
+    )
+    habilitacoes: list[dict] = []
+    current: dict | None = None
+    for index, heading in enumerate(headings):
+        level = int(heading.group(1))
+        title = clean_html(heading.group(2))
+        content_end = (
+            headings[index + 1].start() if index + 1 < len(headings) else len(page_html)
+        )
+        content = clean_html(page_html[heading.end() : content_end])
+        variant_match = re.match(r"^([A-Z]{2})\s*-\s*(.+)$", title)
+        if level == 2 and variant_match:
+            code, name = variant_match.groups()
+            current = {"codigo": code, "nome": name.strip(), "semestres": []}
+            habilitacoes.append(current)
+            continue
+        if level == 2:
+            current = None
+            continue
+        if level != 3 or current is None:
+            continue
+        semester_match = re.match(
+            r"^(\d+)\s*[º°o]\s*Semestre\s*-\s*(\d+)\s*cr[eé]ditos",
+            title,
+            flags=re.I,
+        )
+        if not semester_match:
+            continue
+        items = [
+            {"codigo": code, "creditos": int(credits), "tipo": "disciplina"}
+            for code, credits in re.findall(
+                r"\b((?:[A-Z]{2,4}\d{3,4})|(?:EX|MX|IX)---)\s*\((\d+)\)",
+                content,
+            )
+        ]
+        elective_match = re.search(r"(\d+)\s*cr[eé]ditos?\s+eletivos?", content, re.I)
+        if elective_match:
+            items.append(
+                {
+                    "codigo": "ELETIVA",
+                    "creditos": int(elective_match.group(1)),
+                    "tipo": "eletiva",
+                }
+            )
+        current["semestres"].append(
+            {
+                "numero": int(semester_match.group(1)),
+                "creditos": int(semester_match.group(2)),
+                "itens": items,
+                "texto": content,
+            }
+        )
+    return habilitacoes
+
+
+def crawl_unicamp_courses(cache: DiskHttpCache) -> list[dict]:
+    index = cache.fetch(UNICAMP_ROOT).text
+    if index is None:
+        raise SystemExit("Não foi possível obter o índice de cursos da UNICAMP.")
+    links = unicamp_course_links(index)
+    if not links:
+        raise SystemExit("O índice da UNICAMP não contém cursos reconhecíveis.")
+    print(f"UNICAMP: {len(links)} cursos", file=sys.stderr)
+    courses = []
+    for index_number, (code, index_url) in enumerate(links.items(), start=1):
+        base_url = index_url.rsplit("/", 1)[0] + "/"
+        curriculum_url = safe_url(urllib.parse.urljoin(base_url, "curriculo.html"))
+        proposal_url = safe_url(urllib.parse.urljoin(base_url, "sugestao.html"))
+        index_html = cache.fetch(index_url).text
+        curriculum_html = cache.fetch(curriculum_url).text
+        proposal_html = cache.fetch(proposal_url).text
+        metadata = (
+            parse_unicamp_course_index(index_html, code, index_url)
+            if index_html
+            else {"codigo": code, "nome": code}
+        )
+        metadata["fonte_curriculo"] = curriculum_url
+        metadata["fonte_sugestao"] = proposal_url
+        metadata["curriculo"] = parse_unicamp_curriculum(curriculum_html) if curriculum_html else []
+        metadata["proposta"] = parse_unicamp_proposal(proposal_html) if proposal_html else []
+        metadata["grade_disponivel"] = bool(metadata["curriculo"])
+        courses.append(metadata)
+        if index_number % 10 == 0 or index_number == len(links):
+            print(
+                f"UNICAMP cursos: {index_number}/{len(links)}",
+                file=sys.stderr,
+            )
+    return courses
+
+
+# ---------------------------------------------------------------------------
 # USP
 
 
@@ -685,6 +872,130 @@ def crawl_usp(
 
 
 # ---------------------------------------------------------------------------
+# Cursos da USP
+
+
+def parse_usp_course_rows(list_html: str, codcg: str, unit_name: str) -> list[dict]:
+    rows: list[dict] = []
+    for row_html in re.findall(r"<tr\b.*?</tr>", list_html, flags=re.S | re.I):
+        hrefs = [
+            href
+            for href in href_values(row_html)
+            if "listarGradeCurricular" in href
+        ]
+        if not hrefs:
+            continue
+        href = hrefs[0]
+        query = urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+        codcur = (query.get("codcur") or [""])[0]
+        codhab = (query.get("codhab") or [""])[0]
+        tipo = (query.get("tipo") or ["N"])[0]
+        if not codcur:
+            continue
+        cells = [
+            clean_html(cell)
+            for cell in re.findall(r"<t[dh]\b.*?</t[dh]>", row_html, flags=re.S | re.I)
+        ]
+        name = cells[1] if len(cells) > 1 else ""
+        period = cells[2] if len(cells) > 2 else None
+        if not name or re.fullmatch(r"[\d\s]+", name):
+            continue
+        rows.append(
+            {
+                "codcg": codcg,
+                "codcur": codcur,
+                "codhab": codhab,
+                "tipo": tipo,
+                "curso": name.strip(),
+                "periodo": clean_optional(period),
+                "unidade": unit_name,
+                "url": safe_url(urllib.parse.urljoin(USP_BASE, href)),
+            }
+        )
+    # Uma linha por combinação curso/habilitação.
+    unique: dict[tuple[str, str], dict] = {}
+    for row in rows:
+        unique[(row["codcur"], row["codhab"])] = row
+    return sorted(unique.values(), key=lambda row: (row["codcur"], row["codhab"]))
+
+
+def parse_usp_course_metadata(page_html: str, row: dict) -> dict:
+    text = clean_html(page_html)
+    course_names = re.findall(
+        r"Curso:\s*(.*?)\s+(?=Curso:|Informa(?:ç|c)[oõ]es B[aá]sicas|Data de In[íi]cio)",
+        text,
+        flags=re.I,
+    )
+    duration_ideal = re.search(r"Dura(?:ç|c)[aã]o Ideal\s*(\d+)\s*semestres", text, re.I)
+    duration_min = re.search(r"M[íi]nima\s*(\d+)\s*semestres", text, re.I)
+    duration_max = re.search(r"M[aá]xima\s*(\d+)\s*semestres", text, re.I)
+    start = re.search(r"Data de In[íi]cio:\s*([0-9/]+)", text, re.I)
+    unit = re.search(r"Grade Curricular.*?Preparar para impressão\s+(.*?)\s+Curso:", text, re.I)
+    grade = parse_usp_grade_rows(page_html)
+    return {
+        **row,
+        "unidade": clean_optional(unit.group(1)) if unit else row.get("unidade"),
+        "curso_pagina": course_names,
+        "data_inicio": start.group(1) if start else None,
+        "duracao_ideal_semestres": int(duration_ideal.group(1)) if duration_ideal else None,
+        "duracao_minima_semestres": int(duration_min.group(1)) if duration_min else None,
+        "duracao_maxima_semestres": int(duration_max.group(1)) if duration_max else None,
+        "fonte": row["url"],
+        "grade_disponivel": bool(grade),
+        "carga_horaria_total": sum(int(item["horas"] or 0) for item in grade),
+        "grade": grade,
+    }
+
+
+def crawl_usp_courses(
+    cache: DiskHttpCache,
+    *,
+    scope: str,
+    extra_units: list[str],
+) -> list[dict]:
+    units_html = cache.fetch(USP_UNITS_URL).text
+    if units_html is None:
+        raise SystemExit("Não foi possível obter a lista de unidades da USP.")
+    all_units = parse_usp_units(units_html)
+    by_codcg = {unit["codcg"]: unit for unit in all_units}
+    selected: list[dict] = []
+    if scope == "all":
+        selected = all_units
+    elif scope == "poli":
+        selected = [by_codcg.get(USP_POLI_COD)] if USP_POLI_COD in by_codcg else []
+    for codcg in extra_units:
+        unit = by_codcg.get(str(codcg))
+        if unit and unit not in selected:
+            selected.append(unit)
+        elif not unit:
+            print(f"aviso: unidade USP codcg={codcg} não encontrada", file=sys.stderr)
+
+    courses: dict[tuple[str, str], dict] = {}
+    for unit in selected:
+        list_url = safe_url(
+            urllib.parse.urljoin(
+                USP_BASE,
+                f"jupCursoLista?codcg={urllib.parse.quote(unit['codcg'])}&tipo=N",
+            )
+        )
+        list_html = cache.fetch(list_url, encoding="latin-1").text
+        if list_html is None:
+            print(f"aviso: unidade USP sem lista de cursos: {unit['nome']}", file=sys.stderr)
+            continue
+        rows = parse_usp_course_rows(list_html, unit["codcg"], unit["nome"])
+        print(f"USP {unit['nome']}: {len(rows)} cursos/habilitações", file=sys.stderr)
+        for row in rows:
+            page = cache.fetch(row["url"], encoding="latin-1").text
+            if page is None:
+                continue
+            courses[(row["codcur"], row["codhab"])] = parse_usp_course_metadata(page, row)
+    return sorted(
+        courses.values(),
+        key=lambda row: (row.get("codcur", ""), row.get("codhab", "")),
+    )
+
+
+# ---------------------------------------------------------------------------
 # Saída
 
 
@@ -712,6 +1023,31 @@ def catalog_payload(
         "sem_ementa": without,
         "hash_disciplinas": digest,
         "disciplinas": disciplines,
+    }
+
+
+def course_payload(
+    institution: str,
+    catalog: str,
+    source: str,
+    scope: str,
+    courses: list[dict],
+) -> dict:
+    with_grade = [course for course in courses if course.get("grade_disponivel")]
+    digest = hashlib.sha256(
+        json.dumps(courses, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    ).hexdigest()
+    return {
+        "schema_version": 1,
+        "instituicao": institution,
+        "catalogo": catalog,
+        "fonte": source,
+        "escopo": scope,
+        "coletado_em": now_iso(),
+        "total": len(courses),
+        "com_grade": len(with_grade),
+        "hash_cursos": digest,
+        "cursos": courses,
     }
 
 
@@ -760,11 +1096,23 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="não inclui códigos citados em data/targets/usp",
     )
+    parser.add_argument(
+        "--no-cursos",
+        action="store_true",
+        help="não coleta cursos/currículos",
+    )
+    parser.add_argument(
+        "--no-disciplinas",
+        action="store_true",
+        help="não coleta o catálogo de disciplinas",
+    )
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
+    if args.no_cursos and args.no_disciplinas:
+        raise SystemExit("Nada a coletar: --no-cursos e --no-disciplinas juntos.")
     cache = DiskHttpCache(
         args.cache_dir,
         max_age_days=args.cache_max_age_days,
@@ -776,47 +1124,85 @@ def main() -> int:
     args.out_dir.mkdir(parents=True, exist_ok=True)
     try:
         if args.scope in {"all", "unicamp"}:
-            disciplines = crawl_unicamp(cache)
-            payload = catalog_payload(
-                "UNICAMP",
-                "Catálogo dos Cursos de Graduação 2026",
-                UNICAMP_INDEX,
-                "todos os componentes das páginas de disciplinas do catálogo",
-                disciplines,
-            )
-            output = args.out_dir / "unicamp_2026_disciplinas.json"
-            atomic_write_json(output, payload)
-            print(
-                f"{output}: {payload['total']} disciplinas, "
-                f"{payload['com_ementa']} com ementa"
-            )
+            if not args.no_cursos:
+                courses = crawl_unicamp_courses(cache)
+                payload = course_payload(
+                    "UNICAMP",
+                    "Catálogo dos Cursos de Graduação 2026",
+                    UNICAMP_ROOT,
+                    "todos os cursos, currículos plenos e propostas do catálogo",
+                    courses,
+                )
+                output = args.out_dir / "unicamp_2026_cursos.json"
+                atomic_write_json(output, payload)
+                print(
+                    f"{output}: {payload['total']} cursos, "
+                    f"{payload['com_grade']} com currículo"
+                )
+
+            if not args.no_disciplinas:
+                disciplines = crawl_unicamp(cache)
+                payload = catalog_payload(
+                    "UNICAMP",
+                    "Catálogo dos Cursos de Graduação 2026",
+                    UNICAMP_INDEX,
+                    "todos os componentes das páginas de disciplinas do catálogo",
+                    disciplines,
+                )
+                output = args.out_dir / "unicamp_2026_disciplinas.json"
+                atomic_write_json(output, payload)
+                print(
+                    f"{output}: {payload['total']} disciplinas, "
+                    f"{payload['com_ementa']} com ementa"
+                )
 
         if args.scope in {"all", "usp"} and args.usp_scope != "none":
-            disciplines = crawl_usp(
-                cache,
-                scope=args.usp_scope,
-                extra_units=args.usp_unit,
-                extra_codes=args.usp_code,
-                seed_targets=not args.no_seed_usp_targets,
-            )
             scope_label = (
                 "todas as unidades do Jupiterweb"
                 if args.usp_scope == "all"
                 else "Poli-USP + disciplinas citadas nas grades-alvo"
             )
-            payload = catalog_payload(
-                "USP",
-                "Jupiterweb",
-                USP_UNITS_URL,
-                scope_label,
-                disciplines,
-            )
-            output = args.out_dir / "usp_jupiterweb_disciplinas.json"
-            atomic_write_json(output, payload)
-            print(
-                f"{output}: {payload['total']} disciplinas, "
-                f"{payload['com_ementa']} com ementa"
-            )
+            if not args.no_cursos:
+                courses = crawl_usp_courses(
+                    cache,
+                    scope=args.usp_scope,
+                    extra_units=args.usp_unit,
+                )
+                payload = course_payload(
+                    "USP",
+                    "Jupiterweb",
+                    USP_UNITS_URL,
+                    scope_label,
+                    courses,
+                )
+                output = args.out_dir / "usp_jupiterweb_cursos.json"
+                atomic_write_json(output, payload)
+                print(
+                    f"{output}: {payload['total']} cursos/habilitações, "
+                    f"{payload['com_grade']} com grade"
+                )
+
+            if not args.no_disciplinas:
+                disciplines = crawl_usp(
+                    cache,
+                    scope=args.usp_scope,
+                    extra_units=args.usp_unit,
+                    extra_codes=args.usp_code,
+                    seed_targets=not args.no_seed_usp_targets,
+                )
+                payload = catalog_payload(
+                    "USP",
+                    "Jupiterweb",
+                    USP_UNITS_URL,
+                    scope_label,
+                    disciplines,
+                )
+                output = args.out_dir / "usp_jupiterweb_disciplinas.json"
+                atomic_write_json(output, payload)
+                print(
+                    f"{output}: {payload['total']} disciplinas, "
+                    f"{payload['com_ementa']} com ementa"
+                )
     finally:
         cache.flush()
     return 0

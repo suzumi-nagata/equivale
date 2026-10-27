@@ -1,29 +1,47 @@
-# Catálogo de disciplinas e ementas
+# Catálogo de cursos, disciplinas e ementas
 
-Dados públicos extraídos **uma vez** pelos scripts de crawl e usados para gerar
-as regras de cobertura e os vetores de ementa. O crawler não infere
-equivalências, não lê históricos e não usa LLM.
+Dados públicos extraídos **uma vez** pelo crawler e usados para gerar regras de
+cobertura, vetores de ementa e, no futuro, novos cursos-alvo. O crawler não
+infere equivalências, não lê históricos e não usa LLM.
 
 ## Arquivos
 
+Cursos e seus currículos:
+
+- [`unicamp_2026_cursos.json`](unicamp_2026_cursos.json) — **66 cursos** do
+  Catálogo 2026 da UNICAMP, com metadados, currículo pleno e proposta de
+  cumprimento por habilitação.
+- [`usp_jupiterweb_cursos.json`](usp_jupiterweb_cursos.json) — **23 cursos e
+  habilitações** da Poli-USP; 20 com grade curricular publicada no Jupiterweb.
+
+Disciplinas e ementas:
+
 - [`unicamp_2026_disciplinas.json`](unicamp_2026_disciplinas.json) — todas as
-  disciplinas das páginas de letras do Catálogo dos Cursos de Graduação 2026 da
-  UNICAMP (DAC), com código, nome, horas, créditos, período de oferecimento,
-  pré-requisitos, ementa e URL da fonte.
+  disciplinas das páginas de letras do Catálogo 2026 da UNICAMP (DAC), com
+  código, nome, horas, créditos, período de oferecimento, pré-requisitos,
+  ementa e URL da fonte.
 - [`usp_jupiterweb_disciplinas.json`](usp_jupiterweb_disciplinas.json) —
   disciplinas ativas/inativas da Poli-USP e códigos citados nas grades-alvo da
   USP no Jupiterweb, com ementa, objetivos, conteúdo programático, créditos e
   URL da fonte.
 
-Cada arquivo tem `schema_version`, `coletado_em`, contagens (`total`,
-`com_ementa`, `sem_ementa`) e `hash_disciplinas` para verificar a integridade
-do conteúdo. A ausência de ementa não remove a disciplina: o gerador de
-embeddings cai para o título.
+Cada arquivo tem `schema_version`, `coletado_em`, contagens e hash de
+integridade. Nos catálogos de disciplinas as contagens são `com_ementa` e
+`sem_ementa`; nos de cursos são `com_grade`. A ausência de ementa não remove a
+disciplina: o gerador de embeddings cai para o título. Curso e disciplina são
+coisas diferentes: um curso-alvo precisa de grade completa; uma disciplina
+isolada pode não ter currículo associado.
+
+O catálogo de cursos é a base para novos alvos. O seletor do site continua
+mostrando apenas os cursos convertidos e auditados em `data/targets/`; os 66 +
+23 cursos deste diretório ainda não são todos alvos do site.
 
 ## Fontes
 
-- UNICAMP: <https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/>
-- USP: <https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D&codmnu=6755>
+- UNICAMP, cursos: <https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/>
+- UNICAMP, disciplinas: <https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/>
+- USP, cursos e grades: <https://uspdigital.usp.br/jupiterweb/jupCarreira.jsp?codmnu=8275>
+- USP, disciplinas: <https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D&codmnu=6755>
 - Cada registro contém a URL exata da página de origem.
 
 ## Crawler
@@ -31,8 +49,11 @@ embeddings cai para o título.
 [`tools/crawl_catalogos.py`](../../tools/crawl_catalogos.py) usa apenas a
 biblioteca padrão. Ele:
 
-- descobre as páginas de letras da UNICAMP a partir do índice oficial;
-- descobre as unidades e as páginas de disciplinas no Jupiterweb;
+- descobre os cursos e as páginas de letras da UNICAMP a partir do índice
+  oficial;
+- descobre as unidades, cursos/habilitações e disciplinas no Jupiterweb;
+- coleta currículo pleno e proposta de cumprimento dos cursos da UNICAMP;
+- coleta a grade curricular dos cursos/habilitações da USP;
 - inclui os códigos citados em `data/targets/usp`, mesmo quando a disciplina é
   de outra unidade da USP;
 - mantém cache HTTP persistente, com `ETag`/`Last-Modified`, retry e fallback
@@ -45,8 +66,14 @@ O cache fica fora do repositório, por padrão em
 ### Comandos
 
 ```bash
-# Catálogo completo (UNICAMP + Poli-USP + códigos das grades-alvo)
+# Cursos + disciplinas (UNICAMP + Poli-USP + códigos das grades-alvo)
 python3 -I tools/crawl_catalogos.py
+
+# Só cursos/currículos
+python3 -I tools/crawl_catalogos.py --no-disciplinas
+
+# Só disciplinas/ementas
+python3 -I tools/crawl_catalogos.py --no-cursos
 
 # Só a UNICAMP
 python3 -I tools/crawl_catalogos.py --scope unicamp
@@ -98,8 +125,16 @@ Eles não acessam a rede. A coleta real é validada pelas contagens de
 
 - O catálogo da UNICAMP é uma fotografia do ano letivo 2026; disciplinas antigas
   podem não estar nele.
-- A USP usa a lista da Poli mais os códigos das grades-alvo; uma disciplina de
-  outra unidade que não apareça nessas grades não é coletada por padrão.
+- A USP usa a lista da Poli mais os códigos das grades-alvo; uma disciplina ou
+  curso de outra unidade que não apareça nessas grades não é coletado por
+  padrão. Use `--usp-scope all` para varrer todas as unidades.
+- Alguns cursos/habilitações da USP não têm grade publicada na página
+  consultada; eles entram com `grade_disponivel: false` para não sumirem do
+  catálogo. Em algumas habilitações o Jupiterweb devolve apenas o ciclo básico;
+  o campo `grade_disponivel` não garante que todos os períodos da ênfase
+  estejam presentes.
+- A proposta de cumprimento é uma sugestão da instituição, não uma regra
+  obrigatória.
 - A ementa publicada pode estar desatualizada em relação ao PPC vigente.
 - O crawler não decide equivalência; ele apenas coleta o que a instituição
   publica.

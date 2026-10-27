@@ -31,10 +31,10 @@ para nenhum servidor.
   + ênfase) e Engenharia de Computação (currículo 2012 disponível no
   Jupiterweb), da Poli-USP. Ver
   [`data/targets/usp/README.md`](data/targets/usp/README.md).
-- **Catálogo de disciplinas:** crawler persistente coleta nome, carga, ementa,
-  créditos, pré-requisitos e URL de todas as disciplinas do catálogo UNICAMP 2026
-  e das disciplinas da Poli-USP/códigos das grades-alvo no Jupiterweb. O cache
-  HTTP fica fora do repositório; o JSON extraído é versionado. Ver
+- **Catálogo de cursos e disciplinas:** crawler persistente coleta cursos,
+  currículos, propostas de cumprimento, disciplinas, cargas, ementas,
+  pré-requisitos e URLs dos catálogos UNICAMP 2026 e Jupiterweb. O cache HTTP
+  fica fora do repositório; os JSONs extraídos são versionados. Ver
   [`data/catalog/README.md`](data/catalog/README.md).
 - **Vetores de ementa:** índice estático pré-computado com TF-IDF + SVD
   truncado (LSA), sem LLM; NumPy é usado só na regeneração. O matcher usa
@@ -99,8 +99,10 @@ data/ontology/
   unicamp_2026_regras.json
   usp_2026_regras.json
 data/catalog/
-  README.md              # crawler e proveniência do catálogo de disciplinas
+  README.md              # crawler e proveniência de cursos e disciplinas
+  unicamp_2026_cursos.json
   unicamp_2026_disciplinas.json
+  usp_jupiterweb_cursos.json
   usp_jupiterweb_disciplinas.json
 data/embeddings/
   README.md              # método e regeneração dos vetores
@@ -164,8 +166,12 @@ O parser usa `pdftotext` (poppler). Nenhum pacote Python externo é necessário.
 ### Catálogo e vetores
 
 ```bash
-# Coleta persistente (UNICAMP + Poli-USP + códigos das grades-alvo)
+# Coleta persistente: cursos + currículos + disciplinas/ementas
 python3 -I tools/crawl_catalogos.py
+
+# Só cursos/currículos, ou só disciplinas/ementas
+python3 -I tools/crawl_catalogos.py --no-disciplinas
+python3 -I tools/crawl_catalogos.py --no-cursos
 
 # Gera o índice estático de vetores usado pelo site
 python3 -I tools/build_course_embeddings.py

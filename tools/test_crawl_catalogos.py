@@ -60,6 +60,139 @@ Bibliografia Referências públicas.
 """
 
 
+COURSE_ROOT_FIXTURE = """
+<html><body>
+<a href="./cursos/99g/index.html">Curso 99</a>
+<a href="./cursos/99g/curriculo.html">Currículo</a>
+<a href="./cursos/99g/sugestao.html">Proposta</a>
+<a href="./cursos/99g/membros.html">Membros</a>
+</body></html>
+"""
+
+COURSE_INDEX_FIXTURE = """
+<html><body>
+<h1>Catálogo dos Cursos de Graduação - UNICAMP - 2026</h1>
+<h1>Curso 99 - Curso de Teste</h1>
+<li><a href="../../cursos/99g/membros.html">Instituto de Teste - Membros da Comissão</a></li>
+<h2>Turno: Integral</h2>
+<h3>AA - Bacharelado em Teste</h3>
+<h3>AB - Licenciatura em Teste</h3>
+</body></html>
+"""
+
+COURSE_CURRICULUM_FIXTURE = """
+<html><body>
+<h2>99 - Curso de Teste - Currículo Pleno</h2>
+<h3>Núcleo Comum ao Curso</h3>
+<table>
+<tr><td>AA001</td><td>60</td><td>4</td><td>Disciplina Comum</td></tr>
+</table>
+<h2>AB - Licenciatura em Teste</h2>
+<h3>Disciplinas Obrigatórias</h3>
+<table>
+<tr><td>AB001</td><td>30</td><td>2</td><td>Disciplina da Habilitação</td></tr>
+</table>
+<h3>Disciplinas Eletivas</h3>
+<p>Disciplinas eletivas I: 2 créditos</p>
+<table>
+<tr><td>EX---</td><td>30</td><td>2</td><td>Qualquer disciplina</td></tr>
+</table>
+</body></html>
+"""
+
+COURSE_PROPOSAL_FIXTURE = """
+<html><body>
+<h1>Curso 99G - Curso de Teste - Proposta para Cumprimento de Currículo</h1>
+<h2>AA - Bacharelado em Teste</h2>
+<h3>1º Semestre - 4 créditos</h3>
+<p>AA001 (4) e 2 créditos eletivos</p>
+<h2>AB - Licenciatura em Teste</h2>
+<h3>1º Semestre - 6 créditos</h3>
+<p>AA001 (4) e AB001 (2)</p>
+</body></html>
+"""
+
+USP_COURSE_LIST_FIXTURE = """
+<html><body><table>
+<tr><td>3033 0</td><td>Ciclo Básico - Engenharia Elétrica</td><td>integral</td>
+<td><a href="listarGradeCurricular?codcg=3&codcur=3033&codhab=0&tipo=N">grade</a></td></tr>
+<tr><td>3033 3150</td><td>Habilitação: Automação e Controle</td><td>integral</td>
+<td><a href="listarGradeCurricular?codcg=3&codcur=3033&codhab=3150&tipo=N">grade</a></td></tr>
+</table></body></html>
+"""
+
+USP_COURSE_GRADE_FIXTURE = """
+<html><body>
+<h1>Grade Curricular</h1>
+Curso: Engenharia Curso: Ciclo Básico - Engenharia Elétrica
+Data de Início: 01/01/2027
+Duração Ideal 10 semestres Mínima 8 semestres Máxima 15 semestres
+<table>
+<tr><td>Disciplinas Obrigatórias</td></tr>
+<tr><td>1º Período Ideal</td></tr>
+<tr><td>ABC123</td><td>Disciplina de Teste</td><td>4</td><td>0</td><td>60</td></tr>
+</table>
+</body></html>
+"""
+
+
+class UnicampCourseCrawlerTest(unittest.TestCase):
+    def test_discovers_course_pages(self) -> None:
+        links = crawler.unicamp_course_links(COURSE_ROOT_FIXTURE)
+        self.assertEqual(list(links), ["99G"])
+        self.assertTrue(links["99G"].endswith("/cursos/99g/index.html"))
+
+    def test_parses_course_metadata(self) -> None:
+        metadata = crawler.parse_unicamp_course_index(
+            COURSE_INDEX_FIXTURE,
+            "99G",
+            "https://example.test/cursos/99g/index.html",
+        )
+        self.assertEqual(metadata["nome"], "Curso de Teste")
+        self.assertEqual(metadata["unidade"], "Instituto de Teste")
+        self.assertEqual(metadata["turno"], "Integral")
+        self.assertEqual(
+            [item["codigo"] for item in metadata["habilitacoes"]], ["AA", "AB"]
+        )
+
+    def test_parses_curriculum_and_proposal(self) -> None:
+        groups = crawler.parse_unicamp_curriculum(COURSE_CURRICULUM_FIXTURE)
+        self.assertEqual(len(groups), 3)
+        self.assertEqual(groups[0]["tipo"], "obrigatoria_comum")
+        self.assertEqual(groups[0]["disciplinas"][0]["codigo"], "AA001")
+        self.assertEqual(groups[1]["tipo"], "obrigatoria_habilitacao")
+        self.assertEqual(groups[2]["tipo"], "eletiva")
+
+        proposal = crawler.parse_unicamp_proposal(COURSE_PROPOSAL_FIXTURE)
+        self.assertEqual([item["codigo"] for item in proposal], ["AA", "AB"])
+        self.assertEqual(proposal[0]["semestres"][0]["creditos"], 4)
+        self.assertEqual(
+            [item["codigo"] for item in proposal[0]["semestres"][0]["itens"]],
+            ["AA001", "ELETIVA"],
+        )
+
+
+class UspCourseCrawlerTest(unittest.TestCase):
+    def test_parses_course_rows(self) -> None:
+        rows = crawler.parse_usp_course_rows(
+            USP_COURSE_LIST_FIXTURE, "3", "Escola Politécnica"
+        )
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]["codcur"], "3033")
+        self.assertEqual(rows[0]["codhab"], "0")
+        self.assertEqual(rows[1]["curso"], "Habilitação: Automação e Controle")
+
+    def test_parses_grade_metadata(self) -> None:
+        row = crawler.parse_usp_course_rows(
+            USP_COURSE_LIST_FIXTURE, "3", "Escola Politécnica"
+        )[0]
+        metadata = crawler.parse_usp_course_metadata(USP_COURSE_GRADE_FIXTURE, row)
+        self.assertTrue(metadata["grade_disponivel"])
+        self.assertEqual(metadata["carga_horaria_total"], 60)
+        self.assertEqual(metadata["duracao_ideal_semestres"], 10)
+        self.assertEqual(metadata["grade"][0]["codigo"], "ABC123")
+
+
 class UnicampCrawlerTest(unittest.TestCase):
     def test_discovers_letter_pages(self) -> None:
         html = """
