@@ -244,10 +244,10 @@ modelo cai para nome + carga e a confiança é menor. Nesse caso:
 
 ## Plano de implementação
 
-1. **Parcial:** extrair tópicos/cobertura das ementas (TF-IDF e NLP clássico;
-   LLM apenas offline, uma vez, com revisão humana). O pipeline já gera
-   cobertura automática para a UNICAMP e para as disciplinas da Poli-USP; falta
-   ampliar a base de ementas e calibrar limiares.
+1. **Feito (calibração contínua):** crawler persistente dos catálogos UNICAMP e
+   Jupiterweb, cobertura automática para a UNICAMP e para as disciplinas da
+   Poli-USP, e vetores LSA pré-computados. Falta calibrar limiares e ampliar a
+   cobertura para outras IES.
 2. Definir `origem.tipo` e `curriculo_versao` no schema.
 3. **Feito:** implementar max-cost flow no app TypeScript, com fixtures
    sintéticas e testes de regressão.
