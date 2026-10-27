@@ -365,10 +365,10 @@ const nameCases: Array<{
     expectedHours: 0,
   },
   {
-    label: 'Ciências do Ambiente casa com o curso de energia/ambiente',
+    label: 'Ciências do Ambiente não é o curso de energia/ambiente',
     target: ['Ciências do Ambiente', 30],
     source: ['Energia, Meio Ambiente e Sustentabilidade', 60],
-    expectedHours: 30,
+    expectedHours: 0,
   },
   {
     label: 'Análise de Sinais casa com Sistemas e Sinais',
@@ -381,6 +381,12 @@ const nameCases: Array<{
     target: ['Cálculo Numérico', 60],
     source: ['Métodos Numéricos', 60],
     expectedHours: 60,
+  },
+  {
+    label: 'Resistência dos Materiais casa com Engenharia dos Materiais',
+    target: ['Resistência dos Materiais', 60],
+    source: ['Fundamentos de Ciência e Engenharia dos Materiais', 30],
+    expectedHours: 30,
   },
   {
     label: 'Física Experimental I casa com Física Experimental A',

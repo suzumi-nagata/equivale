@@ -11,7 +11,7 @@ const GENERIC_NAME_TOKENS = new Set([
   'sistema', 'sistemas', 'introducao', 'fundamento', 'fundamentos',
   'basico', 'basica', 'aplicado', 'aplicada', 'teoria', 'pratica', 'geral',
   'digital', 'linear', 'processamento', 'computacao', 'engenharia', 'eletrica',
-  'programacao',
+  'programacao', 'ambiente', 'meio',
   'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
 ])
@@ -33,6 +33,7 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'geometria_analitica', patterns: [/\bgeometria analitica\b/] },
   { concept: 'probabilidade', patterns: [/\bprobabilidade\b/, /\bprocessos estocasticos\b/, /\bprobabilisticos?\b/] },
   { concept: 'controle', patterns: [/\bcontrole\b/, /\bservomecanismo\b/] },
+  { concept: 'resistencia_materiais', patterns: [/\bresistencia dos materiais\b/, /\bengenharia dos materiais\b/, /\bciencia e engenharia dos materiais\b/] },
   { concept: 'sinais', patterns: [/\bsinais\b/] },
   { concept: 'estatistica', patterns: [/\bestatistica\b/] },
   { concept: 'pre_calculo', patterns: [/\bpre calculo\b/, /\bmatematica elementar\b/] },
