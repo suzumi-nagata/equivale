@@ -12,5 +12,9 @@ out/
 __pycache__/
 *.pyc
 
+# Cache bruto do crawler (o padrão fica em ~/.cache/equivale/crawler)
+.cache/
+data/catalog/cache/
+
 # Sistema
 .DS_Store

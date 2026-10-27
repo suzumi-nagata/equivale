@@ -31,6 +31,15 @@ para nenhum servidor.
   + ênfase) e Engenharia de Computação (currículo 2012 disponível no
   Jupiterweb), da Poli-USP. Ver
   [`data/targets/usp/README.md`](data/targets/usp/README.md).
+- **Catálogo de disciplinas:** crawler persistente coleta nome, carga, ementa,
+  créditos, pré-requisitos e URL de todas as disciplinas do catálogo UNICAMP 2026
+  e das disciplinas da Poli-USP/códigos das grades-alvo no Jupiterweb. O cache
+  HTTP fica fora do repositório; o JSON extraído é versionado. Ver
+  [`data/catalog/README.md`](data/catalog/README.md).
+- **Vetores de ementa:** índice estático pré-computado com TF-IDF + SVD
+  truncado (LSA), sem LLM; NumPy é usado só na regeneração. O matcher usa
+  cosseno entre vetores para complementar nome e regras. Ver
+  [`data/embeddings/README.md`](data/embeddings/README.md).
 - **Cobertura temática:** regras geradas automaticamente a partir das ementas
   públicas da UNICAMP e da Poli-USP (TF-IDF + similaridade de nomes, sem LLM em
   runtime). As regras da UNICAMP ligam componentes da EC/EE a disciplinas do
@@ -65,6 +74,8 @@ prototype/
   parse_transcripts.py   # parser UNICAMP/USP -> JSON normalizado
   match_curricula.py     # matcher PoC 1-para-1 (húngaro)
 tools/
+  crawl_catalogos.py        # crawler persistente UNICAMP + Jupiterweb
+  build_course_embeddings.py # gera vetores estáticos de ementas/títulos
   extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
   build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
   build_unicamp_cobertura.py # extrai ementas e gera cobertura temática UNICAMP
@@ -87,12 +98,20 @@ data/ontology/
   README.md              # regras de cobertura temática por ementa
   unicamp_2026_regras.json
   usp_2026_regras.json
+data/catalog/
+  README.md              # crawler e proveniência do catálogo de disciplinas
+  unicamp_2026_disciplinas.json
+  usp_jupiterweb_disciplinas.json
+data/embeddings/
+  README.md              # método e regeneração dos vetores
+  cursos.json            # vetores int8/base64 usados pelo site
 data/spike/
   README.md              # spike de IES privadas EAD
   cursos.json            # 8 cursos com status MEC, grade/PPC, ingresso etc.
   curriculos/            # grades públicas (UNINTER ADS e Eng. Software)
 docs/
   MATCHING.md            # 1-para-1, max-cost flow e desenho do modelo
+requirements-embeddings.txt # NumPy só para regenerar os vetores LSA
 .github/workflows/
   ci.yml                 # lint + testes + build em PRs
   deploy.yml             # build + deploy do site no GitHub Pages
@@ -110,16 +129,20 @@ npm run build     # gera site/dist
 ```
 
 O `predev`/`prebuild` copia os currículos públicos de
-`data/spike/curriculos`, `data/targets/unicamp` e `data/targets/usp`, além das
-regras de `data/ontology`, para `site/public/data` (gerado; não versionado). O
-site importa histórico em JSON/CSV e já abre com um histórico fictício de
-demonstração.
+`data/spike/curriculos`, `data/targets/unicamp` e `data/targets/usp`, as regras
+de `data/ontology` e o índice de vetores de `data/embeddings` para
+`site/public/data` (gerado; não versionado). O site importa histórico em
+JSON/CSV e já abre com um histórico fictício de demonstração.
 
-### Testes do matcher
+### Testes
 
 ```bash
+# matcher e vetores no site
 cd site
 npm test
+
+# crawler e gerador de embeddings
+python3 -I -m unittest discover -s tools -p 'test_*.py' -v
 ```
 
 ### Parser e matcher Python
@@ -137,6 +160,22 @@ python3 -I prototype/match_curricula.py \
 ```
 
 O parser usa `pdftotext` (poppler). Nenhum pacote Python externo é necessário.
+
+### Catálogo e vetores
+
+```bash
+# Coleta persistente (UNICAMP + Poli-USP + códigos das grades-alvo)
+python3 -I tools/crawl_catalogos.py
+
+# Gera o índice estático de vetores usado pelo site
+python3 -I tools/build_course_embeddings.py
+```
+
+O crawler guarda o cache HTTP em `~/.cache/equivale/crawler` e só reescreve os
+JSONs de `data/catalog` quando termina. Use `--refresh` para revalidar as fontes
+e `--offline` para reprocessar o cache. Ver
+[`data/catalog/README.md`](data/catalog/README.md) e
+[`data/embeddings/README.md`](data/embeddings/README.md).
 
 ## Deploy
 

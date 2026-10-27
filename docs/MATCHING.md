@@ -100,6 +100,31 @@ computacional. Teoria e laboratório também não se misturam: “Laboratório d
 Análise Linear” só casa com outra disciplina de laboratório/experimental, e
 “Análise Linear de Sistemas” só com teoria.
 
+### Similaridade por vetores de ementa
+
+Além das regras de cobertura, o site baixa `data/embeddings/cursos.json`, gerado
+por `tools/build_course_embeddings.py`. Cada disciplina vira um vetor denso de
+256 dimensões (TF-IDF de ementa/título + feature hashing com BLAKE2b,
+quantizado em int8/base64). O cálculo é offline, determinístico e sem LLM.
+
+No matching, o site procura o vetor do slot-alvo pelo código (ou pelo nome,
+quando não há código) e o vetor da origem pelo código/nome. Se ambos existirem:
+
+- calcula o cosseno;
+- exige cosseno >= 0.38;
+- aplica as mesmas guardas de sequência, teoria × laboratório e conceito
+  específico;
+- exige um token específico do nome ou um conceito específico compartilhado;
+- cria uma aresta `metodo: "vetor"` com score `0.48 + 0.38 × cosseno`, limitada
+  pela carga real da origem (o modo “ignorar carga” continua valendo só para
+  slots fixos);
+- só adiciona pares que ainda não têm aresta de nome/regra; vetores
+  complementam, não substituem a cobertura existente.
+
+Os vetores são decodificados sob demanda, não todos na inicialização. Se o
+arquivo faltar ou estiver corrompido, o matching continua por nome + regras. A
+cobertura por vetor é uma aproximação lexical, não uma equivalência oficial.
+
 
 ## Por que 1-para-1 é insuficiente
 

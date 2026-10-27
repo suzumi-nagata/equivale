@@ -76,4 +76,13 @@ await writeFile(
   `${JSON.stringify({ regras }, null, 2)}\n`,
 )
 
+try {
+  await cp(
+    join(repoRoot, 'data', 'embeddings', 'cursos.json'),
+    join(targetDir, 'embeddings.json'),
+  )
+} catch {
+  // O site continua funcionando com nome + regras se o índice não existir.
+}
+
 console.log(`Dados públicos sincronizados em ${targetDir}`)

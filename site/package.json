@@ -10,7 +10,7 @@
     "prebuild": "npm run sync:data",
     "build": "tsc -b && vite build",
     "lint": "oxlint src",
-    "test": "tsx --test src/lib/match.test.ts",
+    "test": "tsx --test src/lib/*.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {

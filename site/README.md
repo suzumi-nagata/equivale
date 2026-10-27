@@ -12,8 +12,9 @@ npm run dev
 ```
 
 O `predev` copia os currículos públicos de `../data/spike/curriculos`,
-`../data/targets/unicamp` e `../data/targets/usp`, o `cursos.json` e as regras
-de `../data/ontology` para `public/data/` (gerado; não versionado).
+`../data/targets/unicamp` e `../data/targets/usp`, o `cursos.json`, as regras de
+`../data/ontology` e o índice `../data/embeddings/cursos.json` para
+`public/data/` (gerado; não versionado).
 
 Build de produção:
 
@@ -45,6 +46,11 @@ npm test
   `../tools/build_usp_cobertura.py`), com termos compartilhados, confiança e URL
   da ementa. As regras são aplicadas apenas a históricos da mesma instituição
   de origem.
+- **Similaridade por vetores de ementa:** o site baixa um índice estático
+  (`../data/embeddings/cursos.json`, TF-IDF + SVD truncado/LSA, int8/base64) e
+  adiciona arestas por cosseno quando nome/regra não bastam. O índice é
+  decodificado sob demanda e o matching continua local; se faltar, o site cai
+  para nome + regras.
 - Modo opcional **“Ignorar diferença de carga horária”** no seletor: quando
   ligado, uma origem de 30h pode cobrir um componente de 90h por conteúdo. O
   padrão continua conservador.
@@ -58,8 +64,9 @@ npm test
 Ainda não incluso:
 
 - Adaptador PDF no navegador (por enquanto, use o parser em `../prototype`).
-- Ementas para outras IES e matching semântico mais profundo; o pipeline atual
-  é TF-IDF para a UNICAMP e para as disciplinas da Poli-USP.
+- Ementas para outras IES; o pipeline atual cobre a UNICAMP e as disciplinas da
+  Poli-USP/códigos das grades-alvo da USP. O matching vetorial é lexical
+  (TF-IDF + hashing), não um modelo neural.
 - Upload local de PPC/ementa pelo usuário.
 - Regras por IES (teto de aproveitamento, optativa livre específica,
   pré-requisitos, nota mínima, validade temporal).
@@ -97,8 +104,10 @@ src/
     ResultLedger.tsx       # tabela de matches, lacunas, não abatíveis
   lib/
     normalize.ts           # normalização, conceitos, score
-    match.ts               # max-cost flow m-para-n
+    embeddings.ts          # decodifica vetores e calcula cosseno
+    match.ts               # max-cost flow m-para-n + arestas de vetor
     match.test.ts          # testes sintéticos do matcher
+    embeddings.test.ts     # testes de decodificação e similaridade
     transcript.ts          # parse JSON/CSV
     types.ts
   data/demo.ts             # histórico fictício

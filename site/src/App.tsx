@@ -4,6 +4,7 @@ import { SummaryPanel } from './components/SummaryPanel'
 import { TargetPicker } from './components/TargetPicker'
 import { TranscriptPanel } from './components/TranscriptPanel'
 import { DEMO_TRANSCRIPT } from './data/demo'
+import { decodeEmbeddingFile } from './lib/embeddings'
 import { matchCurriculum } from './lib/match'
 import { parseTranscriptFile } from './lib/transcript'
 import type {
@@ -11,6 +12,8 @@ import type {
   CoursesFile,
   Curriculum,
   CurriculumIndexFile,
+  EmbeddingIndex,
+  EmbeddingsFile,
   EquivalenceRule,
   RulesFile,
   Transcript,
@@ -32,6 +35,7 @@ export default function App() {
   const [targets, setTargets] = useState<Curriculum[]>([])
   const [courses, setCourses] = useState<CourseRecord[]>([])
   const [rules, setRules] = useState<EquivalenceRule[]>([])
+  const [embeddings, setEmbeddings] = useState<EmbeddingIndex | null>(null)
   const [selectedId, setSelectedId] = useState('uninter-ads')
   const [ignoreWorkload, setIgnoreWorkload] = useState(false)
   const [transcript, setTranscript] = useState<Transcript | null>(null)
@@ -70,6 +74,13 @@ export default function App() {
         setTranscriptLabel('Histórico fictício')
         setIsDemo(true)
         setLoading(false)
+        void fetchJson<EmbeddingsFile>('embeddings.json')
+          .then((file) => {
+            if (!cancelled) setEmbeddings(decodeEmbeddingFile(file))
+          })
+          .catch(() => {
+            // O site continua funcionando por nome + regras se o índice faltar.
+          })
       } catch (loadFailure) {
         if (cancelled) return
         setLoadError(
@@ -90,9 +101,12 @@ export default function App() {
   const selectedTarget = targets.find((target) => target.id === selectedId) ?? targets[0] ?? null
   const result = useMemo(
     () => (selectedTarget && transcript
-      ? matchCurriculum(selectedTarget, transcript, rules, { ignoreWorkload })
+      ? matchCurriculum(selectedTarget, transcript, rules, {
+        ignoreWorkload,
+        embeddings,
+      })
       : null),
-    [selectedTarget, transcript, rules, ignoreWorkload],
+    [selectedTarget, transcript, rules, ignoreWorkload, embeddings],
   )
 
   async function handleFile(file: File) {
@@ -124,6 +138,9 @@ export default function App() {
       historico: transcript,
       regras: rules,
       modo_ignorar_carga_horaria: ignoreWorkload,
+      vetores_ementa: embeddings
+        ? { dimensao: embeddings.dimensao, escala: embeddings.escala }
+        : null,
       resultado: result,
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })

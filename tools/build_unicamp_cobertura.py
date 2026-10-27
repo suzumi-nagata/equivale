@@ -25,6 +25,7 @@ import html
 import json
 import math
 import re
+import sys
 import time
 import unicodedata
 import urllib.request
@@ -34,6 +35,7 @@ from pathlib import Path
 BASE = "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas"
 ROOT = Path(__file__).resolve().parent.parent
 TARGET_DIR = ROOT / "data" / "targets" / "unicamp"
+CATALOG = ROOT / "data" / "catalog" / "unicamp_2026_disciplinas.json"
 OUTPUT = ROOT / "data" / "ontology" / "unicamp_2026_regras.json"
 
 # Páginas que cobrem os currículos EC/EE e as áreas de Física, Eng. Elétrica,
@@ -201,7 +203,39 @@ def fetch_page(page: str, html_dir: Path | None) -> str | None:
     return None
 
 
-def load_documents(html_dir: Path | None) -> dict[str, dict]:
+def load_catalog(path: Path) -> dict[str, dict]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    documents: dict[str, dict] = {}
+    for item in payload.get("disciplinas", []):
+        code = str(item.get("codigo") or "")
+        name = str(item.get("nome") or "")
+        if not code or not name:
+            continue
+        documents[code] = {
+            "codigo": code,
+            "nome": name,
+            "ementa": str(item.get("ementa") or ""),
+            "horas": item.get("horas"),
+            "fonte": str(item.get("fonte") or ""),
+        }
+    return documents
+
+
+def load_documents(
+    html_dir: Path | None,
+    catalog_path: Path | None = None,
+) -> dict[str, dict]:
+    """Usa o catálogo coletado pelo crawler; as páginas antigas são fallback."""
+    if catalog_path is None and html_dir is None and CATALOG.exists():
+        catalog_path = CATALOG
+    if catalog_path is not None:
+        if not catalog_path.exists():
+            raise SystemExit(f"Catálogo não encontrado: {catalog_path}")
+        documents = load_catalog(catalog_path)
+        if documents:
+            print(f"{len(documents)} ementas carregadas de {catalog_path}", file=sys.stderr)
+            return documents
+
     documents: dict[str, dict] = {}
     for page in PAGES:
         page_html = fetch_page(page, html_dir)
@@ -343,10 +377,16 @@ def pick_candidates(
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--html-dir", type=Path, default=None)
+    parser.add_argument(
+        "--catalog",
+        type=Path,
+        default=None,
+        help="catálogo JSON do crawler (default: data/catalog se existir)",
+    )
     parser.add_argument("--out", type=Path, default=OUTPUT)
     args = parser.parse_args()
 
-    documents = load_documents(args.html_dir)
+    documents = load_documents(args.html_dir, args.catalog)
     if not documents:
         raise SystemExit("Nenhuma ementa carregada.")
     vectors = build_vectors(documents)

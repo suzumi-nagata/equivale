@@ -5,8 +5,10 @@ import {
   normalize,
   pairScore,
   sequence,
+  sharedSpecificEmbeddingToken,
   sharedSpecificNameToken,
 } from './normalize'
+import { embeddingRecord, similarityBetweenRecords } from './embeddings'
 import type {
   Allocation,
   Confidence,
@@ -57,6 +59,7 @@ interface Edge {
   maxHours?: number
   ignoreSourceHours?: boolean
   priority?: number
+  metodo?: 'nome' | 'regra' | 'vetor'
   ruleId?: string
 }
 
@@ -177,6 +180,7 @@ function bestEdgeForSlot(
       conceitos: [],
       tokens: [],
       rank: FREE_ELECTIVE_SCORE,
+      metodo: 'nome',
     }
   }
 
@@ -203,6 +207,7 @@ function bestEdgeForSlot(
         conceitos: pair.conceitos,
         tokens: pair.tokens,
         rank,
+        metodo: 'nome',
       }
     }
   }
@@ -318,7 +323,7 @@ function applyRules(
           isLab(slot.nome) === isLab(source.nome) &&
           !sharedConcept &&
           !sharedSpecificToken &&
-          score < 0.755
+          score < 0.765
         ) {
           continue
         }
@@ -338,6 +343,7 @@ function applyRules(
           maxHours,
           ignoreSourceHours: Boolean(origin.ignorar_carga_horaria),
           priority: Math.max(0, Number(origin.prioridade) || 0),
+          metodo: 'regra',
           ruleId: rule.id,
         }
         const key = `${source.id}|${slot.id}`
@@ -352,6 +358,86 @@ function applyRules(
     }
   }
 
+  return [...byPair.values()]
+}
+
+const MIN_EMBEDDING_COSINE = 0.38
+
+/**
+ * Adiciona arestas de similaridade obtidas dos vetores pré-computados de
+ * ementas/títulos. O vetor só entra quando o alvo e a origem têm um documento
+ * no índice; a carga da origem continua limitando a cobertura.
+ */
+function applyEmbeddings(
+  edges: Edge[],
+  curriculum: Curriculum,
+  slots: Slot[],
+  sources: SourceDiscipline[],
+  transcript: Transcript,
+  index: MatchOptions['embeddings'],
+): Edge[] {
+  if (!index) return edges
+
+  const byPair = new Map(edges.map((edge) => [`${edge.source.id}|${edge.slot.id}`, edge]))
+  for (const source of sources) {
+    const sourceRecord = embeddingRecord(
+      index,
+      transcript.instituicao,
+      source.codigo,
+      source.nome,
+    )
+    if (!sourceRecord) continue
+
+    for (const slot of slots) {
+      if (slot.livre) continue
+      const targetRecord = embeddingRecord(
+        index,
+        curriculum.instituicao,
+        slot.codigo,
+        slot.nome,
+      )
+      if (!targetRecord) continue
+
+      const targetSequence = sequence(slot.nome)
+      const sourceSequence = sequence(source.nome)
+      if (targetSequence && sourceSequence && targetSequence !== sourceSequence) {
+        continue
+      }
+      if (isLab(slot.nome) !== isLab(source.nome)) continue
+
+      const cosine = similarityBetweenRecords(index, targetRecord, sourceRecord)
+      if (cosine < MIN_EMBEDDING_COSINE) continue
+
+      const targetConcepts = concepts(slot.nome)
+      const sourceConcepts = concepts(source.nome)
+      const specificTargetConcepts = [...targetConcepts].filter(
+        (concept) => !BROAD_CONCEPTS.has(concept),
+      )
+      const sharedSpecificConcept = specificTargetConcepts.some((concept) =>
+        sourceConcepts.has(concept),
+      )
+      const sharedSpecificToken = sharedSpecificEmbeddingToken(slot.nome, source.nome)
+      if (specificTargetConcepts.length > 0 && !sharedSpecificConcept) continue
+      if (!sharedSpecificConcept && !sharedSpecificToken) continue
+
+      const score = Math.min(0.88, 0.48 + 0.38 * cosine)
+      const key = `${source.id}|${slot.id}`
+      // Vetores complementam nome/regras; não substituem uma aresta existente
+      // (uma regra com cobertura integral poderia render mais horas).
+      if (byPair.has(key)) continue
+      byPair.set(key, {
+        source,
+        slot,
+        option: 'similaridade de ementa',
+        score,
+        confianca: cosine >= 0.65 ? 'media' : 'baixa',
+        conceitos: ['vetor_ementa'],
+        tokens: [],
+        rank: score,
+        metodo: 'vetor',
+      })
+    }
+  }
   return [...byPair.values()]
 }
 
@@ -540,13 +626,21 @@ export function matchCurriculum(
     }
   }
 
-  const edges = applyRules(
+  const ruleEdges = applyRules(
     nameEdges,
     curriculum,
     slots,
     sources,
     rules,
     transcript.instituicao,
+  )
+  const edges = applyEmbeddings(
+    ruleEdges,
+    curriculum,
+    slots,
+    sources,
+    transcript,
+    options.embeddings,
   )
 
   edges.sort((a, b) => {
@@ -579,6 +673,7 @@ export function matchCurriculum(
       horas: hours,
       conceitos: edge.conceitos,
       tokens: edge.tokens,
+      metodo: edge.metodo,
       ruleId: edge.ruleId,
     }))
 
@@ -680,6 +775,12 @@ export function matchCurriculum(
   if (usedRules.size > 0) {
     avisos.push(
       'Inclui cobertura temática gerada por ementa (TF-IDF + nome); é uma heurística, não equivalência oficial. A fonte de cada regra está no arquivo de regras.',
+    )
+  }
+
+  if (allocations.some((allocation) => allocation.metodo === 'vetor')) {
+    avisos.push(
+      'Inclui similaridade por vetores pré-computados de ementas/títulos. É uma aproximação lexical determinística, não uma decisão de equivalência.',
     )
   }
 

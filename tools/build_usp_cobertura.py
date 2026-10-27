@@ -26,6 +26,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_unicamp_cobertura as base  # noqa: E402
 
 USP_BASE = "https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis="
+USP_CATALOG = ROOT / "data" / "catalog" / "usp_jupiterweb_disciplinas.json"
 OUT = ROOT / "data" / "ontology" / "usp_2026_regras.json"
 
 
@@ -73,6 +74,28 @@ def fetch(url: str, cache: Path | None, key: str) -> str | None:
     return None
 
 
+def load_usp_catalog(path: Path) -> dict[str, dict]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    documents: dict[str, dict] = {}
+    for item in payload.get("disciplinas", []):
+        code = str(item.get("codigo") or "")
+        name = str(item.get("nome") or "")
+        if not code or not name:
+            continue
+        text = " ".join(
+            str(item.get(key) or "")
+            for key in ("ementa", "objetivos", "conteudo")
+        ).strip()
+        documents[code] = {
+            "codigo": code,
+            "nome": name,
+            "ementa": text,
+            "horas": item.get("horas"),
+            "fonte": str(item.get("fonte") or ""),
+        }
+    return documents
+
+
 def source_hours() -> dict[str, int]:
     hours: dict[str, int] = {}
     for path in (ROOT / "data" / "targets" / "usp").glob("*.json"):
@@ -87,24 +110,61 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--unicamp-html-dir", type=Path, default=None)
     parser.add_argument("--usp-html-dir", type=Path, default=None)
+    parser.add_argument(
+        "--unicamp-catalog",
+        type=Path,
+        default=None,
+        help="catálogo UNICAMP do crawler (default: data/catalog se existir)",
+    )
+    parser.add_argument(
+        "--usp-catalog",
+        type=Path,
+        default=None,
+        help="catálogo USP do crawler (default: data/catalog se existir)",
+    )
+    parser.add_argument(
+        "--all-usp-sources",
+        action="store_true",
+        help="usa todas as disciplinas do catálogo USP, não só as das grades-alvo",
+    )
+    parser.add_argument("--out", type=Path, default=OUT)
     args = parser.parse_args()
 
-    targets = base.load_documents(args.unicamp_html_dir)
+    targets = base.load_documents(args.unicamp_html_dir, args.unicamp_catalog)
     if not targets:
         raise SystemExit("Sem ementas UNICAMP.")
-    source_codes = set(source_hours())
     source_docs: dict[str, dict] = {}
     source_urls: dict[str, str] = {}
-    for code in sorted(source_codes):
-        raw = fetch(f"{USP_BASE}{code}", args.usp_html_dir, code)
-        if raw is None:
-            continue
-        doc = parse_usp_page(raw)
-        if not doc:
-            continue
-        doc["fonte"] = f"{USP_BASE}{code}"
-        source_docs[code] = doc
-        source_urls[code] = doc["fonte"]
+    catalog_path = args.usp_catalog
+    if catalog_path is None and args.usp_html_dir is None and USP_CATALOG.exists():
+        catalog_path = USP_CATALOG
+    if catalog_path is not None:
+        if not catalog_path.exists():
+            raise SystemExit(f"Catálogo USP não encontrado: {catalog_path}")
+        all_sources = load_usp_catalog(catalog_path)
+        allowed = None if args.all_usp_sources else set(source_hours())
+        source_docs = {
+            code: doc
+            for code, doc in all_sources.items()
+            if allowed is None or code in allowed
+        }
+        source_urls = {code: doc["fonte"] for code, doc in source_docs.items()}
+        print(
+            f"{len(source_docs)} ementas USP carregadas de {catalog_path}"
+            + (" (todas)" if allowed is None else " (grades-alvo)"),
+            file=sys.stderr,
+        )
+    else:
+        for code in sorted(source_hours()):
+            raw = fetch(f"{USP_BASE}{code}", args.usp_html_dir, code)
+            if raw is None:
+                continue
+            doc = parse_usp_page(raw)
+            if not doc:
+                continue
+            doc["fonte"] = f"{USP_BASE}{code}"
+            source_docs[code] = doc
+            source_urls[code] = doc["fonte"]
 
     if not source_docs:
         raise SystemExit("Sem ementas USP.")
@@ -115,7 +175,6 @@ def main() -> int:
     }
     vectors = base.build_vectors(combined)
     target_rows = base.target_components()
-    target_map = {(row["curso"], row["codigo"]): row for row in target_rows}
     source_hours_map = source_hours()
     rules = []
 
@@ -203,9 +262,15 @@ def main() -> int:
         "observacao": "Regras automáticas; a decisão final é da instituição.",
         "regras": rules,
     }
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"{OUT}: {len(rules)} regras, {sum(len(rule['origens']) for rule in rules)} origens")
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(
+        f"{args.out}: {len(rules)} regras, "
+        f"{sum(len(rule['origens']) for rule in rules)} origens"
+    )
     return 0
 
 

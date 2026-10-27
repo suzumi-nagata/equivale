@@ -174,8 +174,43 @@ export interface EquivalenceRule {
   observacao?: string
 }
 
+export interface CourseVectorRecord {
+  chave: string
+  instituicao: string
+  codigo: string | null
+  nome: string
+  nome_chave: string
+  horas: number | null
+  origem: string
+  tipo_texto: string
+  fonte: string
+  termos: number
+  vetor: string
+}
+
+export interface EmbeddingsFile {
+  schema_version: number
+  metodo: string
+  dimensao: number
+  escala: number
+  encoding: string
+  gerado_em: string
+  corpus?: Record<string, number>
+  documentos: CourseVectorRecord[]
+}
+
+export interface EmbeddingIndex {
+  dimensao: number
+  escala: number
+  byCode: Map<string, CourseVectorRecord>
+  byName: Map<string, CourseVectorRecord>
+  byAnyCode: Map<string, CourseVectorRecord[]>
+  vectors: Map<string, Float32Array>
+}
+
 export interface MatchOptions {
   ignoreWorkload?: boolean
+  embeddings?: EmbeddingIndex | null
 }
 
 export interface RulesFile {
@@ -198,6 +233,7 @@ export interface Allocation {
   horas: number
   conceitos: string[]
   tokens: string[]
+  metodo?: 'nome' | 'regra' | 'vetor'
   ruleId?: string
 }
 

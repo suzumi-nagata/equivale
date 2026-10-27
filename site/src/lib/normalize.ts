@@ -148,6 +148,31 @@ export function sharedSpecificNameToken(targetName: string, sourceName: string):
     .some((token) => sourceTokens.has(token))
 }
 
+// Termos amplos demais para autorizar sozinhos uma aresta de vetor. Eles
+// continuam válidos no match por nome (via conceito), mas não devem ligar
+// "Cálculo IV" a "Cálculo Numérico" nem "Estruturas" a "Estruturas de Dados".
+const EMBEDDING_GENERIC_NAME_TOKENS = new Set([
+  ...GENERIC_NAME_TOKENS,
+  'calculo',
+  'estrutura',
+  'estruturas',
+  'energia',
+  'redes',
+  'software',
+  'computador',
+  'computadores',
+])
+
+export function sharedSpecificEmbeddingToken(
+  targetName: string,
+  sourceName: string,
+): boolean {
+  const sourceTokens = tokenize(sourceName)
+  return [...tokenize(targetName)]
+    .filter((token) => !EMBEDDING_GENERIC_NAME_TOKENS.has(token))
+    .some((token) => sourceTokens.has(token))
+}
+
 export function concepts(text: string): Set<string> {
   const normalized = normalize(text)
   const found = new Set<string>()

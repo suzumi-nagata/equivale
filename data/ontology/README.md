@@ -103,19 +103,21 @@ Engenharia Elétrica, quando o código do componente existe no alvo.
 ## Regenerar
 
 ```bash
-# UNICAMP
+# UNICAMP: usa data/catalog automaticamente quando ele existe
 python3 -I tools/build_unicamp_cobertura.py
-python3 -I tools/build_unicamp_cobertura.py --html-dir /tmp/unicamp-ementas/cache
+python3 -I tools/build_unicamp_cobertura.py --catalog data/catalog/unicamp_2026_disciplinas.json
 
-# USP -> UNICAMP
+# USP -> UNICAMP: usa o catálogo e limita as origens às grades-alvo
 python3 -I tools/build_usp_cobertura.py
-python3 -I tools/build_usp_cobertura.py \
-  --unicamp-html-dir /tmp/unicamp-ementas/cache \
-  --usp-html-dir /tmp/usp-ementas/cache
+python3 -I tools/build_usp_cobertura.py --all-usp-sources  # todas as disciplinas do catálogo USP
 ```
 
-Os scripts usam apenas a biblioteca padrão. Se uma página falhar, avisam e
-seguem com as demais.
+Sem catálogo, os scripts caem para as páginas antigas (`--html-dir`). Os
+comandos usam apenas a biblioteca padrão. Se uma página falhar, avisam e seguem
+com as demais.
+
+O catálogo completo é produzido por `tools/crawl_catalogos.py`; ver
+[`data/catalog`](../catalog/README.md).
 
 ## Limitações
 
@@ -124,6 +126,6 @@ seguem com as demais.
 - Os limiares e o número máximo de origens são heurísticos e podem ser
   recalibrados.
 - As horas de cobertura são uma aproximação; a IES pode aceitar mais ou menos.
-- A cobertura USP usa as disciplinas das grades públicas da Poli; disciplinas
-  de outras unidades não presentes nessas grades ainda não entram.
+- A cobertura USP usa, por padrão, as disciplinas citadas nas grades-alvo da
+  Poli; `--all-usp-sources` amplia para todo o catálogo, mas aumenta o ruído.
 - A decisão final é sempre da instituição de destino.

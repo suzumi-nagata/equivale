@@ -600,6 +600,41 @@ test('modo sem carga não deixa a mesma origem cobrir dois slots', () => {
   assert.equal(result.summary.horasAbatidas, 90)
 })
 
+test('regra de ementa genérica não cobre alvo de produção sem conceito compartilhado', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [
+      ['Planejamento e Análise de Sistemas de Produção', 60, 'EA044'],
+    ]),
+  ])
+  const rules: EquivalenceRule[] = [
+    {
+      id: 'teste-ea044',
+      alvo: {
+        instituicao: 'Instituição de teste',
+        curso: 'Curso de teste',
+        codigo: 'EA044',
+      },
+      origens: [
+        {
+          codigo: 'PRO3200',
+          nome: 'Estatística',
+          horas_cobertura: 60,
+          score: 0.7613,
+          confianca: 'media',
+        },
+      ],
+    },
+  ]
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Estatística', 60, 'PRO3200']]),
+    rules,
+  )
+
+  assert.equal(result.allocations.length, 0)
+  assert.equal(result.summary.slotsAbertos, 1)
+})
+
 test('regra de ementa não cruza sequências diferentes', () => {
   const target = makeCurriculum([
     fixedGroup('Núcleo Comum', [['Física Geral IV', 60, 'F 428']]),
