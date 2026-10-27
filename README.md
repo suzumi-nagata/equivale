@@ -15,10 +15,15 @@ para nenhum servidor.
   teste não são versionados.
 - **Site:** protótipo em [`site/`](site/) com Vite + React + TypeScript,
   importação de histórico em JSON/CSV, histórico fictício de demonstração e
-  matcher **m-para-n guloso**. Deploy preparado para GitHub Pages.
+  matcher **m-para-n guloso**. Publicado em
+  <https://suzumi-nagata.github.io/equivale/>.
 - **Matcher:** o PoC Python é 1-para-1; o site usa uma heurística m-para-n. O
   modelo definitivo é **max-cost flow** (capacidade de horas + cobertura de
   conteúdo). Ver [`docs/MATCHING.md`](docs/MATCHING.md).
+- **Dados de origem:** currículos públicos UNICAMP 2026 de Engenharia de
+  Computação (habilitações AA/AB) e Engenharia Elétrica (41G), com classificação
+  de obrigatórias/eletivas/ênfases. Ver
+  [`data/sources/unicamp/README.md`](data/sources/unicamp/README.md).
 - **Spike de dados:** 5 IES privadas EAD (UNINTER, Anhanguera, Estácio, Cruzeiro
   do Sul Virtual e UNIP), somente com fontes públicas. Ver
   [`data/spike/README.md`](data/spike/README.md).
@@ -47,6 +52,12 @@ site/                    # app estático (Vite + React + TS)
 prototype/
   parse_transcripts.py   # parser UNICAMP/USP -> JSON normalizado
   match_curricula.py     # matcher PoC 1-para-1 (húngaro)
+tools/
+  extract_unicamp_2026.py # extrator dos currículos públicos UNICAMP 2026
+data/sources/unicamp/
+  README.md              # escopo, habilitações/ênfases e proveniência
+  eng_computacao_2026.json # 34G: núcleo comum + AA/AB (e AX)
+  eng_eletrica_2026.json   # 41G: núcleo comum + eletivas + certificados
 data/spike/
   README.md              # spike de IES privadas EAD
   cursos.json            # 8 cursos com status MEC, grade/PPC, ingresso etc.
@@ -54,6 +65,7 @@ data/spike/
 docs/
   MATCHING.md            # modelo 1-para-1 atual e desenho m-para-n
 .github/workflows/
+  ci.yml                 # lint + build em PRs
   deploy.yml             # build + deploy do site no GitHub Pages
 ```
 

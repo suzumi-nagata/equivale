@@ -1,0 +1,1608 @@
+{
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Computação",
+  "codigo_curso": "34G",
+  "curriculo_versao": "2026",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+  "coletado_em": "2026-10-26",
+  "nucleo_comum": [
+    {
+      "codigo": "BE310",
+      "codigo_normalizado": "BE310",
+      "nome": "Ciências do Ambiente",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE304",
+      "codigo_normalizado": "CE304",
+      "nome": "Direito",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE738",
+      "codigo_normalizado": "CE738",
+      "nome": "Economia para Engenharia",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE838",
+      "codigo_normalizado": "CE838",
+      "nome": "Contabilidade para Engenharia",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA134",
+      "codigo_normalizado": "EA134",
+      "nome": "Seminários sobre o Curso de Engenharia de Computação",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA513",
+      "codigo_normalizado": "EA513",
+      "nome": "Circuitos Elétricos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA614",
+      "codigo_normalizado": "EA614",
+      "nome": "Análise de Sinais",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA772",
+      "codigo_normalizado": "EA772",
+      "nome": "Circuitos Lógicos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE533",
+      "codigo_normalizado": "EE533",
+      "nome": "Eletrônica Básica I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE534",
+      "codigo_normalizado": "EE534",
+      "nome": "Laboratório de Eletrônica Aplicada",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EM424",
+      "codigo_normalizado": "EM424",
+      "nome": "Resistência dos Materiais",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 128",
+      "codigo_normalizado": "F128",
+      "nome": "Física Geral I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 159",
+      "codigo_normalizado": "F159",
+      "nome": "Introdução à Física Experimental I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 228",
+      "codigo_normalizado": "F228",
+      "nome": "Física Geral II",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 259",
+      "codigo_normalizado": "F259",
+      "nome": "Introdução à Física Experimental II",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 315",
+      "codigo_normalizado": "F315",
+      "nome": "Mecânica Geral I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 328",
+      "codigo_normalizado": "F328",
+      "nome": "Física Geral III",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 359",
+      "codigo_normalizado": "F359",
+      "nome": "Introdução à Física Experimental III",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 428",
+      "codigo_normalizado": "F428",
+      "nome": "Física Geral IV",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "HZ291",
+      "codigo_normalizado": "HZ291",
+      "nome": "Tópicos Especiais de Humanidades I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "LA122",
+      "codigo_normalizado": "LA122",
+      "nome": "Inglês Instrumental I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA111",
+      "codigo_normalizado": "MA111",
+      "nome": "Cálculo I",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA141",
+      "codigo_normalizado": "MA141",
+      "nome": "Geometria Analítica e Vetores",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA211",
+      "codigo_normalizado": "MA211",
+      "nome": "Cálculo II",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA311",
+      "codigo_normalizado": "MA311",
+      "nome": "Cálculo III",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA327",
+      "codigo_normalizado": "MA327",
+      "nome": "Álgebra Linear",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC102",
+      "codigo_normalizado": "MC102",
+      "nome": "Algoritmos e Programação de Computadores",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC202",
+      "codigo_normalizado": "MC202",
+      "nome": "Estruturas de Dados",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC322",
+      "codigo_normalizado": "MC322",
+      "nome": "Programação Orientada a Objetos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC358",
+      "codigo_normalizado": "MC358",
+      "nome": "Fundamentos Matemáticos da Computação",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC404",
+      "codigo_normalizado": "MC404",
+      "nome": "Organização Básica de Computadores e Linguagem de Montagem",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC458",
+      "codigo_normalizado": "MC458",
+      "nome": "Projeto e Análise de Algoritmos I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ME323",
+      "codigo_normalizado": "ME323",
+      "nome": "Introdução aos Modelos Probabilísticos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MS211",
+      "codigo_normalizado": "MS211",
+      "nome": "Cálculo Numérico",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "QG101",
+      "codigo_normalizado": "QG101",
+      "nome": "Química I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    }
+  ],
+  "variantes": [
+    {
+      "codigo": "AA",
+      "nome": "Sistemas de Computação",
+      "tipo": "habilitacao",
+      "obrigatorias": [
+        {
+          "codigo": "CE839",
+          "codigo_normalizado": "CE839",
+          "nome": "Introdução à Administração para Computação",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC030",
+          "codigo_normalizado": "MC030",
+          "nome": "Projeto Final de Graduação",
+          "horas": 180,
+          "creditos": 12,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC504",
+          "codigo_normalizado": "MC504",
+          "nome": "Sistemas Operacionais",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC536",
+          "codigo_normalizado": "MC536",
+          "nome": "Bancos de Dados: Teoria e Prática",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC558",
+          "codigo_normalizado": "MC558",
+          "nome": "Projeto e Análise de Algoritmos II",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC613",
+          "codigo_normalizado": "MC613",
+          "nome": "Laboratório de Circuitos Digitais",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC656",
+          "codigo_normalizado": "MC656",
+          "nome": "Engenharia de Software",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC714",
+          "codigo_normalizado": "MC714",
+          "nome": "Sistemas Distribuídos",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC732",
+          "codigo_normalizado": "MC732",
+          "nome": "Projeto de Sistemas Computacionais",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC750",
+          "codigo_normalizado": "MC750",
+          "nome": "Construção de Interfaces Homem-Computador",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC832",
+          "codigo_normalizado": "MC832",
+          "nome": "Redes de Computadores",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC833",
+          "codigo_normalizado": "MC833",
+          "nome": "Programação de Redes de Computadores",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "MC921",
+          "codigo_normalizado": "MC921",
+          "nome": "Projeto e Construção de Compiladores",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        }
+      ],
+      "eletivas": [
+        {
+          "grupo": "Eletivas I",
+          "creditos_exigidos": 13,
+          "disciplinas": [
+            {
+              "codigo": "EX---",
+              "codigo_normalizado": "EX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código EX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            },
+            {
+              "codigo": "MX---",
+              "codigo_normalizado": "MX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código MX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas II",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "MC019",
+              "codigo_normalizado": "MC019",
+              "nome": "Estágio Supervisionado em Ciência da Computação",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC020",
+              "codigo_normalizado": "MC020",
+              "nome": "Estágio Supervisionado em Ciência da Computação II",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC032",
+              "codigo_normalizado": "MC032",
+              "nome": "Estudo Dirigido",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC033",
+              "codigo_normalizado": "MC033",
+              "nome": "Estudo Dirigido II",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC040",
+              "codigo_normalizado": "MC040",
+              "nome": "Estágio de Iniciação Científica I",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC041",
+              "codigo_normalizado": "MC041",
+              "nome": "Estágio de Iniciação Científica II",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC050",
+              "codigo_normalizado": "MC050",
+              "nome": "Monitoria",
+              "horas": 120,
+              "creditos": 8,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC051",
+              "codigo_normalizado": "MC051",
+              "nome": "Monitoria II",
+              "horas": 120,
+              "creditos": 8,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas III",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "MC854",
+              "codigo_normalizado": "MC854",
+              "nome": "Projeto em Computação com Extensão",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MX853",
+              "codigo_normalizado": "MX853",
+              "nome": "Projeto Integrador Interdisciplinar de Extensão III",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas IV",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "MC346",
+              "codigo_normalizado": "MC346",
+              "nome": "Paradigmas de Programação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC521",
+              "codigo_normalizado": "MC521",
+              "nome": "Desafios de Programação I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC621",
+              "codigo_normalizado": "MC621",
+              "nome": "Desafios de Programação II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC646",
+              "codigo_normalizado": "MC646",
+              "nome": "Verificação, Validação e Testes de Software",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC658",
+              "codigo_normalizado": "MC658",
+              "nome": "Projeto e Análise de Algoritmos III",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC668",
+              "codigo_normalizado": "MC668",
+              "nome": "Bioinformática",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC721",
+              "codigo_normalizado": "MC721",
+              "nome": "Desafios de Programação III",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC738",
+              "codigo_normalizado": "MC738",
+              "nome": "Algoritmos Probabilísticos",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC748",
+              "codigo_normalizado": "MC748",
+              "nome": "Algoritmos de Aproximação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC758",
+              "codigo_normalizado": "MC758",
+              "nome": "Teoria dos Jogos Algorítmica",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC816",
+              "codigo_normalizado": "MC816",
+              "nome": "Aprendizado por Reforço",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC821",
+              "codigo_normalizado": "MC821",
+              "nome": "Desafios de Programação IV",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC826",
+              "codigo_normalizado": "MC826",
+              "nome": "Fundamentos de Álgebra Linear e Otimização para Aprendizado de Máquina",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC846",
+              "codigo_normalizado": "MC846",
+              "nome": "Aprendizado Supervisionado",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC847",
+              "codigo_normalizado": "MC847",
+              "nome": "Aprendizado Não-supervisionado",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC852",
+              "codigo_normalizado": "MC852",
+              "nome": "Arquiteturas Paralelas",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC858",
+              "codigo_normalizado": "MC858",
+              "nome": "Algoritmos Paralelos",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC867",
+              "codigo_normalizado": "MC867",
+              "nome": "Deep Learning",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC868",
+              "codigo_normalizado": "MC868",
+              "nome": "Linguagens Formais e Autômatos",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC878",
+              "codigo_normalizado": "MC878",
+              "nome": "Teoria e Aplicações de Grafos",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC886",
+              "codigo_normalizado": "MC886",
+              "nome": "Aprendizado de Máquina",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC887",
+              "codigo_normalizado": "MC887",
+              "nome": "Fundamentos Probabilísticos de Aprendizado de Máquina",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC889",
+              "codigo_normalizado": "MC889",
+              "nome": "Introdução à Criptografia",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC896",
+              "codigo_normalizado": "MC896",
+              "nome": "Processamento de Línguas Naturais",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC898",
+              "codigo_normalizado": "MC898",
+              "nome": "Fluxos em Redes e Programação Linear",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC900",
+              "codigo_normalizado": "MC900",
+              "nome": "Tópicos Especiais em Linguagem de Programação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC906",
+              "codigo_normalizado": "MC906",
+              "nome": "Introdução à Inteligência Artificial",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC907",
+              "codigo_normalizado": "MC907",
+              "nome": "Robótica Móvel",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC908",
+              "codigo_normalizado": "MC908",
+              "nome": "Tópicos Especiais em Teoria da Computação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC912",
+              "codigo_normalizado": "MC912",
+              "nome": "Tópicos Especiais em Arquitetura de Computadores",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC914",
+              "codigo_normalizado": "MC914",
+              "nome": "Tópicos em Sistemas Operacionais I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC918",
+              "codigo_normalizado": "MC918",
+              "nome": "Tópicos em Teoria da Computação I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC919",
+              "codigo_normalizado": "MC919",
+              "nome": "Tópicos Especiais em Processamento Gráfico",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC920",
+              "codigo_normalizado": "MC920",
+              "nome": "Introdução ao Processamento de Imagem Digital",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC922",
+              "codigo_normalizado": "MC922",
+              "nome": "Princípios de Projeto VLSI",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC923",
+              "codigo_normalizado": "MC923",
+              "nome": "Projetos de Sistemas Digitais com HDLs",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC926",
+              "codigo_normalizado": "MC926",
+              "nome": "Tópicos em Engenharia de Software I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC928",
+              "codigo_normalizado": "MC928",
+              "nome": "Tópicos em Teoria da Computação II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC936",
+              "codigo_normalizado": "MC936",
+              "nome": "Tópicos em Sistemas de Informação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC937",
+              "codigo_normalizado": "MC937",
+              "nome": "Computação Gráfica",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC938",
+              "codigo_normalizado": "MC938",
+              "nome": "Algoritmos Criptográficos",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC939",
+              "codigo_normalizado": "MC939",
+              "nome": "Algoritmos Parametrizados",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC940",
+              "codigo_normalizado": "MC940",
+              "nome": "Processamento e Análise de Imagens",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC942",
+              "codigo_normalizado": "MC942",
+              "nome": "Segurança de Redes de Computadores",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC946",
+              "codigo_normalizado": "MC946",
+              "nome": "Aprendizado de Máquina e Reconhecimento de Padrões",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC948",
+              "codigo_normalizado": "MC948",
+              "nome": "Geometria Computacional",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC949",
+              "codigo_normalizado": "MC949",
+              "nome": "Visão Computacional",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC950",
+              "codigo_normalizado": "MC950",
+              "nome": "Recuperação de Imagens por Conteúdo",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC953",
+              "codigo_normalizado": "MC953",
+              "nome": "Tópicos em Redes de Computadores I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC954",
+              "codigo_normalizado": "MC954",
+              "nome": "Tópicos em Sistemas Operacionais II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC956",
+              "codigo_normalizado": "MC956",
+              "nome": "Tópicos em Bancos de Dados",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC959",
+              "codigo_normalizado": "MC959",
+              "nome": "Tópicos em Inteligência Artificial I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC962",
+              "codigo_normalizado": "MC962",
+              "nome": "Projeto de Redes Multimídia",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC963",
+              "codigo_normalizado": "MC963",
+              "nome": "Tópicos em Redes de Computadores II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC964",
+              "codigo_normalizado": "MC964",
+              "nome": "Tópicos em Computação Distribuída",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC970",
+              "codigo_normalizado": "MC970",
+              "nome": "Introdução à Programação Paralela",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC971",
+              "codigo_normalizado": "MC971",
+              "nome": "Introdução à Programação Concorrente",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC972",
+              "codigo_normalizado": "MC972",
+              "nome": "Tópicos em Arquitetura e Hardware I",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC973",
+              "codigo_normalizado": "MC973",
+              "nome": "Tópicos em Arquitetura e Hardware II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC976",
+              "codigo_normalizado": "MC976",
+              "nome": "Tópicos em Engenharia de Software II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC979",
+              "codigo_normalizado": "MC979",
+              "nome": "Tópicos em Inteligência Artificial II",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC986",
+              "codigo_normalizado": "MC986",
+              "nome": "Tópicos em Interfaces Humano-Computador",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "MC998",
+              "codigo_normalizado": "MC998",
+              "nome": "Fluxo em Redes",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "AB",
+      "nome": "Sistemas e Processos Industriais",
+      "tipo": "habilitacao",
+      "obrigatorias": [
+        {
+          "codigo": "EA018",
+          "codigo_normalizado": "EA018",
+          "nome": "Trabalho de Fim de Curso I",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA019",
+          "codigo_normalizado": "EA019",
+          "nome": "Trabalho de Fim de Curso II",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA044",
+          "codigo_normalizado": "EA044",
+          "nome": "Planejamento e Análise de Sistemas de Produção",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA072",
+          "codigo_normalizado": "EA072",
+          "nome": "Inteligência Artificial em Aplicações Industriais",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA074",
+          "codigo_normalizado": "EA074",
+          "nome": "Introdução às Redes de Computadores",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA080",
+          "codigo_normalizado": "EA080",
+          "nome": "Laboratório de Redes de Computadores",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA202",
+          "codigo_normalizado": "EA202",
+          "nome": "Engenharia de Software: Teoria e Prática",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA550",
+          "codigo_normalizado": "EA550",
+          "nome": "Introdução a Software de Sistema",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA551",
+          "codigo_normalizado": "EA551",
+          "nome": "Laboratório de Programação de Software Básico",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA616",
+          "codigo_normalizado": "EA616",
+          "nome": "Análise Linear de Sistemas",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA619",
+          "codigo_normalizado": "EA619",
+          "nome": "Laboratório de Análise Linear",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA701",
+          "codigo_normalizado": "EA701",
+          "nome": "Introdução aos Sistemas Embarcados",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA721",
+          "codigo_normalizado": "EA721",
+          "nome": "Princípios de Controle e Servomecanismo",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA722",
+          "codigo_normalizado": "EA722",
+          "nome": "Laboratório de Controle e Servomecanismo",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA773",
+          "codigo_normalizado": "EA773",
+          "nome": "Laboratório de Circuitos Lógicos",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA801",
+          "codigo_normalizado": "EA801",
+          "nome": "Laboratório de Projetos de Sistemas Embarcados",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA960",
+          "codigo_normalizado": "EA960",
+          "nome": "Organização de Computadores",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA979",
+          "codigo_normalizado": "EA979",
+          "nome": "Introdução à Computação Gráfica e ao Processamento de Imagem",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EE400",
+          "codigo_normalizado": "EE400",
+          "nome": "Métodos da Engenharia Elétrica",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EG950",
+          "codigo_normalizado": "EG950",
+          "nome": "Processamento Digital de Sinais",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        }
+      ],
+      "eletivas": [
+        {
+          "grupo": "Eletivas I",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "EE015",
+              "codigo_normalizado": "EE015",
+              "nome": "Estágio Científico e Tecnológico I",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE016",
+              "codigo_normalizado": "EE016",
+              "nome": "Estágio Científico e Tecnológico II",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE017",
+              "codigo_normalizado": "EE017",
+              "nome": "Estágio em Empresa",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas II",
+          "creditos_exigidos": 25,
+          "disciplinas": [
+            {
+              "codigo": "EX---",
+              "codigo_normalizado": "EX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código EX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            },
+            {
+              "codigo": "IX---",
+              "codigo_normalizado": "IX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código IX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            }
+          ],
+          "observacao": "Ressaltamos a importância de cumprir os 25 créditos deste Bloco com disciplinas IX---. Caso opte por disciplinas EX---, certifique-se que a disciplina tenha toda a carga horária em extensão."
+        }
+      ]
+    },
+    {
+      "codigo": "AX",
+      "nome": "Para Matrícula Antes da Opção",
+      "tipo": "pre_opcao",
+      "obrigatorias": [
+        {
+          "codigo": "EA018",
+          "codigo_normalizado": "EA018",
+          "nome": "Trabalho de Fim de Curso I",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA019",
+          "codigo_normalizado": "EA019",
+          "nome": "Trabalho de Fim de Curso II",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA044",
+          "codigo_normalizado": "EA044",
+          "nome": "Planejamento e Análise de Sistemas de Produção",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA072",
+          "codigo_normalizado": "EA072",
+          "nome": "Inteligência Artificial em Aplicações Industriais",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA074",
+          "codigo_normalizado": "EA074",
+          "nome": "Introdução às Redes de Computadores",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA080",
+          "codigo_normalizado": "EA080",
+          "nome": "Laboratório de Redes de Computadores",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA202",
+          "codigo_normalizado": "EA202",
+          "nome": "Engenharia de Software: Teoria e Prática",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA550",
+          "codigo_normalizado": "EA550",
+          "nome": "Introdução a Software de Sistema",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA551",
+          "codigo_normalizado": "EA551",
+          "nome": "Laboratório de Programação de Software Básico",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA616",
+          "codigo_normalizado": "EA616",
+          "nome": "Análise Linear de Sistemas",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA619",
+          "codigo_normalizado": "EA619",
+          "nome": "Laboratório de Análise Linear",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA701",
+          "codigo_normalizado": "EA701",
+          "nome": "Introdução aos Sistemas Embarcados",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA721",
+          "codigo_normalizado": "EA721",
+          "nome": "Princípios de Controle e Servomecanismo",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA722",
+          "codigo_normalizado": "EA722",
+          "nome": "Laboratório de Controle e Servomecanismo",
+          "horas": 30,
+          "creditos": 2,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA773",
+          "codigo_normalizado": "EA773",
+          "nome": "Laboratório de Circuitos Lógicos",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA801",
+          "codigo_normalizado": "EA801",
+          "nome": "Laboratório de Projetos de Sistemas Embarcados",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA960",
+          "codigo_normalizado": "EA960",
+          "nome": "Organização de Computadores",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EA979",
+          "codigo_normalizado": "EA979",
+          "nome": "Introdução à Computação Gráfica e ao Processamento de Imagem",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EE400",
+          "codigo_normalizado": "EE400",
+          "nome": "Métodos da Engenharia Elétrica",
+          "horas": 60,
+          "creditos": 4,
+          "tipo": "obrigatoria_habilitacao"
+        },
+        {
+          "codigo": "EG950",
+          "codigo_normalizado": "EG950",
+          "nome": "Processamento Digital de Sinais",
+          "horas": 90,
+          "creditos": 6,
+          "tipo": "obrigatoria_habilitacao"
+        }
+      ],
+      "eletivas": [
+        {
+          "grupo": "Eletivas I",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "EE015",
+              "codigo_normalizado": "EE015",
+              "nome": "Estágio Científico e Tecnológico I",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE016",
+              "codigo_normalizado": "EE016",
+              "nome": "Estágio Científico e Tecnológico II",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE017",
+              "codigo_normalizado": "EE017",
+              "nome": "Estágio em Empresa",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas II",
+          "creditos_exigidos": 25,
+          "disciplinas": [
+            {
+              "codigo": "EX---",
+              "codigo_normalizado": "EX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código EX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            },
+            {
+              "codigo": "IX---",
+              "codigo_normalizado": "IX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código IX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            }
+          ],
+          "observacao": "Ressaltamos a importância de cumprir os 25 créditos deste Bloco com disciplinas IX---. Caso opte por disciplinas EX---, certifique-se que a disciplina tenha toda a carga horária em extensão."
+        }
+      ]
+    }
+  ],
+  "observacoes": [
+    "Currículo pleno do Catálogo 2026; os créditos de eletivas são requisitos de grupo, não disciplinas únicas.",
+    "AA e AB são habilitações distintas; não somar as listas sem escolher a habilitação.",
+    "A variante AX é a grade provisória para matrícula antes da opção por AA/AB."
+  ],
+  "certificados": [
+    {
+      "nome": "Engenharia de Algoritmos",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Tecnologias para Internet",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Computação Visual",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Engenharia de Software",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas de Informação",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Inteligência Artificial, Aprendizado de Máquina e Ciência de Dados",
+      "tipo": "certificado_ic",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+      "observacao": "Certificado de estudos do IC; não é habilitação."
+    },
+    {
+      "nome": "Fundamentos da Engenharia de Computação",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Fundamentos da Engenharia Elétrica",
+      "publico_alvo": "curso 34, habilitação AB",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Engenharia de Som",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Telecomunicações e Telemática",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas de Energia Elétrica",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Engenharia Biomédica",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas de Controle",
+      "publico_alvo": "cursos 11, 41 e 34, conforme modalidade",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas Distribuídos e Redes de Computadores",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Automação e Sistemas Inteligentes",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Otimização de Sistemas",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Técnicas de Projeto de Sistemas Embarcados",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Eletrônica, Microeletrônica e Optoeletrônica",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Aplicações de Energia Elétrica",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia Elétrica",
+  "codigo_curso": "41G",
+  "curriculo_versao": "2026",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/41g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/41g/sugestao.html",
+  "coletado_em": "2026-10-26",
+  "nucleo_comum": [
+    {
+      "codigo": "BE310",
+      "codigo_normalizado": "BE310",
+      "nome": "Ciências do Ambiente",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE304",
+      "codigo_normalizado": "CE304",
+      "nome": "Direito",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE738",
+      "codigo_normalizado": "CE738",
+      "nome": "Economia para Engenharia",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "CE838",
+      "codigo_normalizado": "CE838",
+      "nome": "Contabilidade para Engenharia",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA018",
+      "codigo_normalizado": "EA018",
+      "nome": "Trabalho de Fim de Curso I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA019",
+      "codigo_normalizado": "EA019",
+      "nome": "Trabalho de Fim de Curso II",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA044",
+      "codigo_normalizado": "EA044",
+      "nome": "Planejamento e Análise de Sistemas de Produção",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA513",
+      "codigo_normalizado": "EA513",
+      "nome": "Circuitos Elétricos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA611",
+      "codigo_normalizado": "EA611",
+      "nome": "Circuitos II",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA614",
+      "codigo_normalizado": "EA614",
+      "nome": "Análise de Sinais",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA616",
+      "codigo_normalizado": "EA616",
+      "nome": "Análise Linear de Sistemas",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA619",
+      "codigo_normalizado": "EA619",
+      "nome": "Laboratório de Análise Linear",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA701",
+      "codigo_normalizado": "EA701",
+      "nome": "Introdução aos Sistemas Embarcados",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA721",
+      "codigo_normalizado": "EA721",
+      "nome": "Princípios de Controle e Servomecanismo",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA722",
+      "codigo_normalizado": "EA722",
+      "nome": "Laboratório de Controle e Servomecanismo",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA772",
+      "codigo_normalizado": "EA772",
+      "nome": "Circuitos Lógicos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA773",
+      "codigo_normalizado": "EA773",
+      "nome": "Laboratório de Circuitos Lógicos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA801",
+      "codigo_normalizado": "EA801",
+      "nome": "Laboratório de Projetos de Sistemas Embarcados",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EA869",
+      "codigo_normalizado": "EA869",
+      "nome": "Introdução a Sistemas de Computação Digital",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE100",
+      "codigo_normalizado": "EE100",
+      "nome": "Introdução à Engenharia Elétrica",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE103",
+      "codigo_normalizado": "EE103",
+      "nome": "Laboratório de Engenharia Elétrica I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE300",
+      "codigo_normalizado": "EE300",
+      "nome": "Fundamentos da Física Moderna",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE301",
+      "codigo_normalizado": "EE301",
+      "nome": "Laboratório de Fundamentos Físicos para a Engenharia Elétrica",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE400",
+      "codigo_normalizado": "EE400",
+      "nome": "Métodos da Engenharia Elétrica",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE410",
+      "codigo_normalizado": "EE410",
+      "nome": "Introdução à Ciência dos Materiais para Engenharia Elétrica",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE522",
+      "codigo_normalizado": "EE522",
+      "nome": "Laboratório de Eletromagnetismo",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE523",
+      "codigo_normalizado": "EE523",
+      "nome": "Introdução à Teoria Eletromagnética",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE533",
+      "codigo_normalizado": "EE533",
+      "nome": "Eletrônica Básica I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE534",
+      "codigo_normalizado": "EE534",
+      "nome": "Laboratório de Eletrônica Aplicada",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE541",
+      "codigo_normalizado": "EE541",
+      "nome": "Teoria Eletromagnética",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE641",
+      "codigo_normalizado": "EE641",
+      "nome": "Laboratório de Eletrônica Básica II",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE642",
+      "codigo_normalizado": "EE642",
+      "nome": "Eletrônica II",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE833",
+      "codigo_normalizado": "EE833",
+      "nome": "Eletrônica de Potência",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE881",
+      "codigo_normalizado": "EE881",
+      "nome": "Princípios de Comunicações I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EE882",
+      "codigo_normalizado": "EE882",
+      "nome": "Laboratório de Comunicações I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EM424",
+      "codigo_normalizado": "EM424",
+      "nome": "Resistência dos Materiais",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "EM524",
+      "codigo_normalizado": "EM524",
+      "nome": "Fenômenos de Transporte",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET520",
+      "codigo_normalizado": "ET520",
+      "nome": "Princípios de Conversão de Energia",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET521",
+      "codigo_normalizado": "ET521",
+      "nome": "Laboratório de Princípios de Conversão de Energia",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET620",
+      "codigo_normalizado": "ET620",
+      "nome": "Máquinas Elétricas",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET621",
+      "codigo_normalizado": "ET621",
+      "nome": "Laboratório de Máquinas Elétricas",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET720",
+      "codigo_normalizado": "ET720",
+      "nome": "Sistemas de Energia Elétrica I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ET911",
+      "codigo_normalizado": "ET911",
+      "nome": "Projeto de instalações elétricas I (industrial)",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 128",
+      "codigo_normalizado": "F128",
+      "nome": "Física Geral I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 159",
+      "codigo_normalizado": "F159",
+      "nome": "Introdução à Física Experimental I",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 228",
+      "codigo_normalizado": "F228",
+      "nome": "Física Geral II",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 259",
+      "codigo_normalizado": "F259",
+      "nome": "Introdução à Física Experimental II",
+      "horas": 30,
+      "creditos": 2,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "F 315",
+      "codigo_normalizado": "F315",
+      "nome": "Mecânica Geral I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "LA122",
+      "codigo_normalizado": "LA122",
+      "nome": "Inglês Instrumental I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA111",
+      "codigo_normalizado": "MA111",
+      "nome": "Cálculo I",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA141",
+      "codigo_normalizado": "MA141",
+      "nome": "Geometria Analítica e Vetores",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA211",
+      "codigo_normalizado": "MA211",
+      "nome": "Cálculo II",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA311",
+      "codigo_normalizado": "MA311",
+      "nome": "Cálculo III",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MA327",
+      "codigo_normalizado": "MA327",
+      "nome": "Álgebra Linear",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MC102",
+      "codigo_normalizado": "MC102",
+      "nome": "Algoritmos e Programação de Computadores",
+      "horas": 90,
+      "creditos": 6,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "ME323",
+      "codigo_normalizado": "ME323",
+      "nome": "Introdução aos Modelos Probabilísticos",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "MS211",
+      "codigo_normalizado": "MS211",
+      "nome": "Cálculo Numérico",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    },
+    {
+      "codigo": "QG101",
+      "codigo_normalizado": "QG101",
+      "nome": "Química I",
+      "horas": 60,
+      "creditos": 4,
+      "tipo": "obrigatoria_comum"
+    }
+  ],
+  "variantes": [
+    {
+      "codigo": "41G",
+      "nome": "Engenharia Elétrica",
+      "tipo": "curriculo_pleno",
+      "obrigatorias": [],
+      "eletivas": [
+        {
+          "grupo": "Eletivas I",
+          "creditos_exigidos": 12,
+          "disciplinas": [
+            {
+              "codigo": "EE015",
+              "codigo_normalizado": "EE015",
+              "nome": "Estágio Científico e Tecnológico I",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE016",
+              "codigo_normalizado": "EE016",
+              "nome": "Estágio Científico e Tecnológico II",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE017",
+              "codigo_normalizado": "EE017",
+              "nome": "Estágio em Empresa",
+              "horas": 180,
+              "creditos": 12,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas II",
+          "creditos_exigidos": 2,
+          "disciplinas": [
+            {
+              "codigo": "GT001",
+              "codigo_normalizado": "GT001",
+              "nome": "Ciência, Tecnologia e Sociedade",
+              "horas": 45,
+              "creditos": 3,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "HG023",
+              "codigo_normalizado": "HG023",
+              "nome": "Introdução à Filosofia da Ciência",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "HZ291",
+              "codigo_normalizado": "HZ291",
+              "nome": "Tópicos Especiais de Humanidades I",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "HZ292",
+              "codigo_normalizado": "HZ292",
+              "nome": "Tópicos Especiais de Humanidades II",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "HZ293",
+              "codigo_normalizado": "HZ293",
+              "nome": "Tópicos Especiais de Humanidades III",
+              "horas": 30,
+              "creditos": 2,
+              "tipo": "eletiva"
+            }
+          ]
+        },
+        {
+          "grupo": "Eletivas III",
+          "creditos_exigidos": 26,
+          "disciplinas": [
+            {
+              "codigo": "EX---",
+              "codigo_normalizado": "EX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código EX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            },
+            {
+              "codigo": "IX---",
+              "codigo_normalizado": "IX---",
+              "nome": "Qualquer disciplina de Graduação da Unicamp com o código IX---",
+              "horas": null,
+              "creditos": null,
+              "tipo": "eletiva_livre"
+            }
+          ],
+          "observacao": "Ressaltamos a importância de cumprir os 26 créditos deste Bloco com disciplinas IX---. Caso opte por disciplinas EX---, certifique-se que a disciplina tenha toda a carga horária em extensão."
+        },
+        {
+          "grupo": "Eletivas IV",
+          "creditos_exigidos": 4,
+          "disciplinas": [
+            {
+              "codigo": "EE756",
+              "codigo_normalizado": "EE756",
+              "nome": "Linhas de Transmissão",
+              "horas": 90,
+              "creditos": 6,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE757",
+              "codigo_normalizado": "EE757",
+              "nome": "Antenas e Propagação",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            },
+            {
+              "codigo": "EE758",
+              "codigo_normalizado": "EE758",
+              "nome": "Comunicações Ópticas",
+              "horas": 60,
+              "creditos": 4,
+              "tipo": "eletiva"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "observacoes": [
+    "Currículo pleno do Catálogo 2026; os créditos de eletivas são requisitos de grupo, não disciplinas únicas.",
+    "AA e AB são habilitações distintas; não somar as listas sem escolher a habilitação.",
+    "O currículo pleno 41G não define habilitações; as ênfases/tracks aparecem como certificados de estudos da FEEC.",
+    "Para o perfil de Automação e Controle, os certificados mais próximos são 'Sistemas de Controle' e 'Automação e Sistemas Inteligentes'."
+  ],
+  "certificados": [
+    {
+      "nome": "Fundamentos da Engenharia de Computação",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Fundamentos da Engenharia Elétrica",
+      "publico_alvo": "curso 34, habilitação AB",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Engenharia de Som",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Telecomunicações e Telemática",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas de Energia Elétrica",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Engenharia Biomédica",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas de Controle",
+      "publico_alvo": "cursos 11, 41 e 34, conforme modalidade",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Sistemas Distribuídos e Redes de Computadores",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Automação e Sistemas Inteligentes",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Otimização de Sistemas",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Técnicas de Projeto de Sistemas Embarcados",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Eletrônica, Microeletrônica e Optoeletrônica",
+      "publico_alvo": "cursos 11, 41 e 34",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    },
+    {
+      "nome": "Aplicações de Energia Elétrica",
+      "publico_alvo": "cursos 11 e 41",
+      "tipo": "certificado_feec",
+      "fonte": "http://www.dac.unicamp.br/portal/storage/app/media/Certificado%20de%20Estudo/Certificado_de_Estudos_FEEC-Catalogo_2025.pdf",
+      "observacao": "Certificado de estudos da FEEC; não é habilitação."
+    }
+  ]
+}
