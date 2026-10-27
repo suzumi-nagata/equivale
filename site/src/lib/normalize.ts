@@ -66,6 +66,7 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'metricas', patterns: [/\bmetricas\b/, /\bestimativa de software\b/] },
   { concept: 'configuracao', patterns: [/\bgerencia de configuracao\b/] },
   { concept: 'visualizacao', patterns: [/\bvisualizacao de dados\b/, /\bstorytelling\b/] },
+  { concept: 'computacao_grafica', patterns: [/\bcomputacao grafica\b/, /\bprocessamento de imagens?\b/, /\bvisao computacional\b/, /\bimagens? digitais?\b/] },
   { concept: 'distribuidos', patterns: [/\bsistemas distribuidos\b/] },
   { concept: 'compiladores', patterns: [/\bcompiladores\b/, /\blinguagens formais\b/] },
   { concept: 'teoria_computacao', patterns: [/\bteoria da computacao\b/, /\bteoria dos grafos\b/] },
@@ -115,6 +116,10 @@ export function sequence(text: string): string | null {
   return null
 }
 
+export function isLab(text: string): boolean {
+  return /\b(laboratorio|laboratorios|experimental)\b/.test(normalize(text))
+}
+
 export function concepts(text: string): Set<string> {
   const normalized = normalize(text)
   const found = new Set<string>()
@@ -161,6 +166,16 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
       conceitos: [...sourceConcepts].sort(),
       tokens: sharedTokens,
       motivo: 'sequência diferente',
+    }
+  }
+
+  if (isLab(targetName) !== isLab(sourceName)) {
+    return {
+      score: 0,
+      parcial: true,
+      conceitos: [...sourceConcepts].sort(),
+      tokens: sharedTokens,
+      motivo: 'teoria/laboratório',
     }
   }
 

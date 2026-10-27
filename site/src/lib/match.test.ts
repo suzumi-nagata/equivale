@@ -343,3 +343,44 @@ test('regra de conteúdo respeita o conceito específico do alvo', () => {
   assert.equal(result.allocations.length, 0)
   assert.equal(result.summary.slotsAbertos, 1)
 })
+
+test('teoria e laboratório são pareados com o tipo certo', () => {
+  const target = makeCurriculum([
+    fixedGroup('Obrigatórias', [
+      ['Análise Linear de Sistemas', 60, 'EA001'],
+      ['Laboratório de Análise Linear', 30, 'EA619'],
+    ]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([
+      ['Análise Linear de Sistemas', 60, 'EA001'],
+      ['Laboratório de Análise Linear', 30, 'EA619'],
+    ]),
+  )
+
+  const theory = result.slots.find((slot) => slot.slot.nome === 'Análise Linear de Sistemas')
+  const lab = result.slots.find((slot) => slot.slot.nome === 'Laboratório de Análise Linear')
+  assert.equal(theory?.allocations[0]?.sourceNome, 'Análise Linear de Sistemas')
+  assert.equal(lab?.allocations[0]?.sourceNome, 'Laboratório de Análise Linear')
+  assert.equal(result.summary.slotsCobertos, 2)
+})
+
+test('computação gráfica não é coberta por programação genérica', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [
+      ['Introdução à Computação Gráfica e ao Processamento de Imagem', 60, 'MC920'],
+    ]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([
+      ['Algoritmos e Programação de Computadores', 30, 'MC102'],
+      ['Laboratório de Programação Básica de Sistemas Digitais', 30, 'EA871'],
+    ]),
+  )
+
+  assert.equal(result.allocations.length, 0)
+  assert.equal(result.summary.horasAbatidas, 0)
+  assert.equal(result.summary.slotsAbertos, 1)
+})

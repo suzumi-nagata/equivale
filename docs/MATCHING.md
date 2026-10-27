@@ -68,7 +68,11 @@ de Computação da UNICAMP cobertas por disciplinas da Engenharia Elétrica
 Embarcados com cobertura integral apesar da diferença de carga; e MC404 coberta
 por EA869. O caso de Física é m-para-n quando a origem não cobre sozinha. O
 matcher também aplica uma guarda de conceito específico: um laboratório de
-programação não cobre PAA I.
+programação não cobre PAA I, e programação genérica não cobre Computação
+Gráfica/Processamento de Imagem sem os conceitos de imagem/gráfica/visão
+computacional. Teoria e laboratório também não se misturam: “Laboratório de
+Análise Linear” só casa com outra disciplina de laboratório/experimental, e
+“Análise Linear de Sistemas” só com teoria.
 
 
 ## Por que 1-para-1 é insuficiente

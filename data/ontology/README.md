@@ -48,9 +48,13 @@ laboratório de programação cubra PAA.
   é aceita pela regra de cobertura integral.
 - Sistemas Embarcados e Laboratório de Sistemas Embarcados cobertos por EA075
   e EA076, respectivamente.
+- Teoria e laboratório não se misturam: “Análise Linear de Sistemas” é coberta
+  por EA616, enquanto “Laboratório de Análise Linear” é coberta por EA619.
 - MC404 coberta por EA869.
 - Projeto e Análise de Algoritmos I permanece aberta quando a origem não tem o
   conceito específico; o laboratório de programação não a cobre.
+- Computação Gráfica e Processamento de Imagem permanece aberta quando a origem
+  não tem imagem/gráfica/visão computacional; programação genérica não basta.
 - Física Experimental III é coberta por laboratórios com ementa compatível
   (por exemplo, EA619/EA722 no histórico de teste).
 

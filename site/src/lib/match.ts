@@ -1,4 +1,4 @@
-import { BROAD_CONCEPTS, concepts, normalize, pairScore } from './normalize'
+import { BROAD_CONCEPTS, concepts, isLab, normalize, pairScore } from './normalize'
 import type {
   Allocation,
   Confidence,
@@ -261,6 +261,7 @@ function applyRules(
       for (const origin of rule.origens) {
         const source = findSourceForOrigin(sources, origin)
         if (!source) continue
+        if (isLab(slot.nome) !== isLab(source.nome)) continue
         const targetConcepts = concepts(slot.nome)
         const specificTarget = [...targetConcepts].filter(
           (concept) => !BROAD_CONCEPTS.has(concept),
