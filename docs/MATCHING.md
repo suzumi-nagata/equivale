@@ -48,11 +48,17 @@ pode ser mais restrita.
 - Regras de ementa têm `origem_instituicao`; elas só são aplicadas quando o
   histórico importado é da mesma instituição. Isso evita que uma regra da
   UNICAMP case por nome com uma disciplina da USP.
-- Guardas gerais de nome: sequência (Cálculo I ≠ Cálculo II), teoria ×
-  laboratório e tokens genéricos (não casar “Introdução aos Sistemas de
+- Guardas gerais de nome: sequência (Cálculo I ≠ Cálculo II; A/B/C também),
+  teoria × laboratório e tokens genéricos (não casar “Introdução aos Sistemas de
   Potência” com “Introdução aos Sistemas Embarcados”). Numerais romanos curtos
   (I, II, IV) são preservados na tokenização para que “Física Geral I” case com
   “Física I”.
+- Para evitar falsos positivos, o match por tokens exige pelo menos um token
+  específico em comum (fora de palavras genéricas como “geral”, “introdução”,
+  “laboratório”, “sistemas”); conceitos específicos podem suprir essa exigência.
+- No modo sem carga horária, a cobertura integral vale para slots fixos; grupos
+  de eletivas continuam limitados pela carga real da origem para não inflar
+  optativas livres.
 
 Os testes sintéticos ficam em `site/src/lib/match.test.ts` e cobrem 1→n,
 m→1, capacidade, eletiva livre, TCC não abatível, cobertura temática, escopo

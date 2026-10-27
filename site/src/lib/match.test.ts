@@ -64,7 +64,7 @@ test('uma origem de 60h cobre dois slots de 30h', () => {
 })
 
 test('duas origens combinam para cobrir um slot de 90h', () => {
-  const target = makeCurriculum([fixedGroup('Cálculo', [['Cálculo A', 90]])])
+  const target = makeCurriculum([fixedGroup('Cálculo', [['Cálculo', 90]])])
   const result = matchCurriculum(
     target,
     makeTranscript([
@@ -346,6 +346,93 @@ test('reconhece Física Geral IV como Física IV', () => {
   assert.equal(result.summary.slotsCobertos, 1)
 })
 
+const nameCases: Array<{
+  label: string
+  target: [string, number]
+  source: [string, number]
+  expectedHours: number
+}> = [
+  {
+    label: 'Métodos da Engenharia Elétrica não é Introdução à Engenharia Elétrica',
+    target: ['Métodos da Engenharia Elétrica', 60],
+    source: ['Introdução à Engenharia Elétrica', 60],
+    expectedHours: 0,
+  },
+  {
+    label: 'lab de software básico não é lab de OOP',
+    target: ['Laboratório de Programação de Software Básico', 60],
+    source: ['Laboratório de Programação Orientada a Objetos para Engenharia Elétrica', 60],
+    expectedHours: 0,
+  },
+  {
+    label: 'Ciências do Ambiente não é o curso de energia/ambiente',
+    target: ['Ciências do Ambiente', 30],
+    source: ['Energia, Meio Ambiente e Sustentabilidade', 60],
+    expectedHours: 0,
+  },
+  {
+    label: 'Análise de Sinais casa com Sistemas e Sinais',
+    target: ['Análise de Sinais', 60],
+    source: ['Sistemas e Sinais', 60],
+    expectedHours: 60,
+  },
+  {
+    label: 'Cálculo Numérico casa com Métodos Numéricos',
+    target: ['Cálculo Numérico', 60],
+    source: ['Métodos Numéricos', 60],
+    expectedHours: 60,
+  },
+  {
+    label: 'Física Experimental I casa com Física Experimental A',
+    target: ['Introdução à Física Experimental I', 30],
+    source: ['Física Experimental A', 30],
+    expectedHours: 30,
+  },
+  {
+    label: 'Física Experimental II não casa com Física Experimental A',
+    target: ['Introdução à Física Experimental II', 30],
+    source: ['Física Experimental A', 30],
+    expectedHours: 0,
+  },
+  {
+    label: 'Física Experimental II casa com Física Experimental B',
+    target: ['Introdução à Física Experimental II', 30],
+    source: ['Física Experimental B', 30],
+    expectedHours: 30,
+  },
+  {
+    label: 'Princípios de Controle casa com Sistemas de Controle',
+    target: ['Princípios de Controle e Servomecanismo', 60],
+    source: ['Sistemas de Controle', 60],
+    expectedHours: 60,
+  },
+  {
+    label: 'Circuitos Lógicos casa com Sistemas Digitais I',
+    target: ['Circuitos Lógicos', 60],
+    source: ['Sistemas Digitais I', 60],
+    expectedHours: 60,
+  },
+  {
+    label: 'Modelos Probabilísticos casa com Probabilidade',
+    target: ['Introdução aos Modelos Probabilísticos', 60],
+    source: ['Probabilidade', 30],
+    expectedHours: 30,
+  },
+]
+
+for (const item of nameCases) {
+  test(item.label, () => {
+    const target = makeCurriculum([
+      fixedGroup('Núcleo Comum', [[item.target[0], item.target[1], 'TARGET']]),
+    ])
+    const result = matchCurriculum(
+      target,
+      makeTranscript([[item.source[0], item.source[1], 'SOURCE']]),
+    )
+    assert.equal(result.summary.horasAbatidas, item.expectedHours)
+  })
+}
+
 test('regra de conteúdo respeita o conceito específico do alvo', () => {
   const target = makeCurriculum([
     fixedGroup('Núcleo Comum', [['Projeto e Análise de Algoritmos I', 60, 'MC458']]),
@@ -474,4 +561,35 @@ test('regra gerada para UNICAMP não se aplica a histórico USP', () => {
 
   assert.equal(result.allocations.length, 0)
   assert.equal(result.summary.slotsAbertos, 1)
+})
+
+test('modo sem carga permite 60h cobrir um slot de 90h', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [['Física I', 90, 'A']]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Física I', 60, 'A']]),
+    [],
+    { ignoreWorkload: true },
+  )
+
+  assert.equal(result.summary.horasAbatidas, 90)
+})
+
+test('modo sem carga não deixa a mesma origem cobrir dois slots', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [
+      ['Física A', 90, 'A'],
+      ['Física B', 90, 'B'],
+    ]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Física', 60, 'A']]),
+    [],
+    { ignoreWorkload: true },
+  )
+
+  assert.equal(result.summary.horasAbatidas, 90)
 })

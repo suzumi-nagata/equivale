@@ -379,7 +379,7 @@ function maxCostFlow(
     if (edge.ignoreSourceHours && edge.maxHours) {
       capacity = Math.max(capacity, edge.maxHours)
     }
-    if (ignoreWorkload) {
+    if (ignoreWorkload && edge.slot.kind === 'fixa') {
       capacity = Math.max(capacity, edge.slot.horas)
     }
     sourceCapacity.set(edge.source.id, capacity)
@@ -402,7 +402,10 @@ function maxCostFlow(
     const from = sourceIndex.get(edge.source.id)
     const to = slotIndex.get(edge.slot.id)
     if (from === undefined || to === undefined || edge.score <= 0) continue
-    const cap = ignoreWorkload || edge.ignoreSourceHours
+    const ignoreHoursForEdge =
+      edge.ignoreSourceHours ||
+      (ignoreWorkload && edge.slot.kind === 'fixa')
+    const cap = ignoreHoursForEdge
       ? Math.min(edge.slot.horas, edge.maxHours ?? Number.POSITIVE_INFINITY)
       : Math.min(
         edge.source.horas,

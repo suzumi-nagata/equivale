@@ -10,7 +10,8 @@ const GENERIC_NAME_TOKENS = new Set([
   'laboratorio', 'laboratorios', 'experimental', 'projeto', 'projetos',
   'sistema', 'sistemas', 'introducao', 'fundamento', 'fundamentos',
   'basico', 'basica', 'aplicado', 'aplicada', 'teoria', 'pratica', 'geral',
-  'digital', 'linear', 'processamento', 'computacao',
+  'digital', 'linear', 'processamento', 'computacao', 'engenharia', 'eletrica',
+  'programacao', 'ambiente', 'meio',
   'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
 ])
@@ -30,7 +31,9 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'calculo_numerico', patterns: [/\bcalculo numerico\b/, /\bmetodos? numericos?\b/, /\bmetodo numerico\b/] },
   { concept: 'algebra_linear', patterns: [/\balgebra linear\b/] },
   { concept: 'geometria_analitica', patterns: [/\bgeometria analitica\b/] },
-  { concept: 'probabilidade', patterns: [/\bprobabilidade\b/, /\bprocessos estocasticos\b/] },
+  { concept: 'probabilidade', patterns: [/\bprobabilidade\b/, /\bprocessos estocasticos\b/, /\bprobabilisticos?\b/] },
+  { concept: 'controle', patterns: [/\bcontrole\b/, /\bservomecanismo\b/] },
+  { concept: 'sinais', patterns: [/\bsinais\b/] },
   { concept: 'estatistica', patterns: [/\bestatistica\b/] },
   { concept: 'pre_calculo', patterns: [/\bpre calculo\b/, /\bmatematica elementar\b/] },
   { concept: 'programacao', patterns: [/\bprogramacao\b(?!\s+matematica)/, /\balgoritmos?\b/, /\blaboratorio de programacao\b/, /\bintroducao a computacao\b/, /\bintroducao a ciencia da computacao\b/] },
@@ -114,6 +117,9 @@ const ROMAN_SEQUENCE: Record<string, string> = {
   viii: '8',
   ix: '9',
   x: '10',
+  a: '1',
+  b: '2',
+  c: '3',
 }
 
 export function sequence(text: string): string | null {
@@ -195,9 +201,25 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
   const specificTargetTokens = [...targetTokens].filter(
     (token) => !GENERIC_NAME_TOKENS.has(token),
   )
+  const specificSharedTokens = specificTargetTokens.filter((token) => sourceTokens.has(token))
+  const specificUnion = new Set([...specificTargetTokens, ...sourceTokens])
+  const specificJaccard = specificUnion.size
+    ? specificSharedTokens.length / specificUnion.size
+    : 0
+  const specificContainment = specificTargetTokens.length
+    ? specificSharedTokens.length / specificTargetTokens.length
+    : 0
+  const targetSpecificConcepts = [...targetConcepts].filter(
+    (concept) => !BROAD_CONCEPTS.has(concept),
+  )
+  const specificConceptShared = targetSpecificConcepts.some((concept) =>
+    sourceConcepts.has(concept),
+  )
+
   if (
     specificTargetTokens.length > 0 &&
-    !sharedTokens.some((token) => !GENERIC_NAME_TOKENS.has(token))
+    specificSharedTokens.length === 0 &&
+    !specificConceptShared
   ) {
     return {
       score: 0,
@@ -209,12 +231,9 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
   }
 
   if (targetConcepts.size > 0) {
-    const specificTarget = [...targetConcepts].filter(
-      (concept) => !BROAD_CONCEPTS.has(concept),
-    )
     if (
-      specificTarget.length > 0 &&
-      !specificTarget.some((concept) => sourceConcepts.has(concept))
+      targetSpecificConcepts.length > 0 &&
+      !targetSpecificConcepts.some((concept) => sourceConcepts.has(concept))
     ) {
       return {
         score: 0,
@@ -235,7 +254,7 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
         motivo: 'sem conceito em comum',
       }
     }
-    let score = Math.min(1, overlap + 0.1 * jaccard)
+    let score = Math.min(1, overlap + 0.1 * Math.max(jaccard, specificJaccard))
     if (overlap === 1) score = Math.max(score, 0.9)
     return {
       score,
@@ -256,10 +275,11 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
     }
   }
 
-  const containment = sharedTokens.length / targetTokens.size
-  if (containment >= 0.6 && jaccard >= 0.4) {
+  const containment = Math.max(sharedTokens.length / targetTokens.size, specificContainment)
+  const tokenJaccard = Math.max(jaccard, specificJaccard)
+  if (containment >= 0.6 && tokenJaccard >= 0.4) {
     return {
-      score: 0.6 * containment + 0.4 * jaccard,
+      score: 0.6 * containment + 0.4 * tokenJaccard,
       parcial: true,
       conceitos: [...sourceConcepts].sort(),
       tokens: sharedTokens,
