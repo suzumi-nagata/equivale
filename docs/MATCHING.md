@@ -248,7 +248,9 @@ modelo cai para nome + carga e a confiança é menor. Nesse caso:
    Jupiterweb, cobertura automática para a UNICAMP e para as disciplinas da
    Poli-USP, e vetores LSA pré-computados. Falta calibrar limiares e ampliar a
    cobertura para outras IES.
-2. Definir `origem.tipo` e `curriculo_versao` no schema.
+2. **Feito (parcial):** schema de alvo e conversão automática de cursos de
+   engenharia a partir do catálogo (`tools/build_targets_from_catalog.py`).
+   `origem.tipo` ainda precisa ser refinado; alvos gerados exigem auditoria.
 3. **Feito:** implementar max-cost flow no app TypeScript, com fixtures
    sintéticas e testes de regressão.
 4. **Pendente:** portar o max-cost flow para o protótipo Python, para comparar
