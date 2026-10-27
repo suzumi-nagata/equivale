@@ -1,0 +1,236 @@
+{
+  "id": "uninter-eng-software",
+  "instituicao": "UNINTER",
+  "curso": "Bacharelado em Engenharia de Software",
+  "grau": "bacharelado",
+  "modalidade": "EAD",
+  "duracao_meses": 48,
+  "carga_horaria_total": 3210,
+  "estrutura": "UCFC",
+  "fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-engenharia-de-software/",
+  "coletado_em": "2026-10-26",
+  "validacao": {
+    "soma_grupos_horas": 3210,
+    "total_declarado": 3210,
+    "confere": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Educação e Cidadania",
+      "horas": 60,
+      "disciplinas": [
+        {"nome": "Formação Inicial em Educação a Distância", "horas": 15, "tipo": "obrigatoria"},
+        {"nome": "Matemática Elementar", "horas": 15, "tipo": "obrigatoria"},
+        {"nome": "Metodologia Científica", "horas": 15, "tipo": "obrigatoria"},
+        {"nome": "Relações Étnico-raciais: Africana, Afro-brasileira e Indígena", "horas": 15, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Sistemas de Informação",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Formação Cidadã Contemporânea", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Fundamentos de Sistema de Informação", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Pré-Cálculo", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Lógica Computacional e Programação",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Lógica de Programação e Algoritmos", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Práticas em Sistemas Operacionais", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Produção Textual", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Modelagem de Sistemas",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Análise e Modelagem de Sistemas", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Cálculo Diferencial e Integral a Uma Variável", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Design de Interação", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Tecnologias para Dados e Web",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Banco de Dados Relacional", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Ferramentas de Desenvolvimento Web", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Probabilidade e Estatística", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "Engenharia de Software",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Engenharia de Software", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Programação Orientada a Objetos", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Raciocínio Lógico", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 7,
+      "nome": "Programação Aplicada e Modelagem Funcional",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Engenharia de Requisitos", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Linguagem de Programação Aplicada", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Sistema Gerenciador de Banco de Dados", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 8,
+      "nome": "Arquitetura e Interface de Sistemas",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Arquitetura de Sistemas", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Desenvolvimento Web — Front End", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Qualidade de Software", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 9,
+      "nome": "Métricas, Redes e Otimização",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Métricas e Estimativa de Software", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Modelagem de Processos e Negócios", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Redes de Computadores", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 10,
+      "nome": "Estruturação de Sistemas e Processos",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Estrutura de Dados", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Programação Aplicada", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Segurança em Sistemas de Informação", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 11,
+      "nome": "Gestão e Integração de Software",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "DevOps e Integração Contínua", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Gestão de Projetos com Métodos Ágeis", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Pesquisa Operacional", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 12,
+      "nome": "Dados, IA e Sustentabilidade",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Ciências do Ambiente e Sustentabilidade", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Inteligência Artificial Aplicada", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Visualização de Dados e Storytelling", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 13,
+      "nome": "Verificação e Avaliação de Software",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Gerência de Configuração e Evolução", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Testes de Aplicativos Móveis", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Testes de Software", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 14,
+      "nome": "Integração em Nuvem",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Arquitetura e Desenvolvimento de APIs", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Desenvolvimento Web — Back End", "horas": 45, "tipo": "obrigatoria"}
+      ],
+      "componentes": [
+        {"nome": "Eletiva I", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva I"}
+      ]
+    },
+    {
+      "ordem": 15,
+      "nome": "Legislação e Inovação de Software",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Cibersegurança para Desenvolvedores", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Governança de Tecnologia da Informação", "horas": 45, "tipo": "obrigatoria"}
+      ],
+      "componentes": [
+        {"nome": "Eletiva II", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva II"}
+      ]
+    },
+    {
+      "ordem": 16,
+      "nome": "Desenvolvimento Multiplataforma e Dados NoSQL",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Banco de Dados NoSQL", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Desenvolvimento Mobile Multiplataforma", "horas": 45, "tipo": "obrigatoria"}
+      ],
+      "componentes": [
+        {"nome": "Eletiva III", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva III"}
+      ]
+    },
+    {
+      "ordem": 17,
+      "nome": "Regulação e Ética em Sistemas Computacionais",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Direito Cibernético", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Legislação, Ética e Conformidade", "horas": 45, "tipo": "obrigatoria"}
+      ],
+      "componentes": [
+        {"nome": "Eletiva IV", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva IV"}
+      ]
+    },
+    {
+      "ordem": 18,
+      "nome": "Componentes Especiais",
+      "horas": 990,
+      "disciplinas": [
+        {"nome": "Atividades Complementares", "horas": 40, "tipo": "complementar"},
+        {"nome": "Atividades Extensionistas I", "horas": 110, "tipo": "extensao"},
+        {"nome": "Atividades Extensionistas II", "horas": 110, "tipo": "extensao"},
+        {"nome": "Atividades Extensionistas III", "horas": 110, "tipo": "extensao"},
+        {"nome": "Estágio Supervisionado", "horas": 360, "tipo": "estagio"},
+        {"nome": "Projeto Interdisciplinar I", "horas": 60, "tipo": "projeto"},
+        {"nome": "Projeto Interdisciplinar II", "horas": 60, "tipo": "projeto"},
+        {"nome": "Projeto Interdisciplinar III", "horas": 60, "tipo": "projeto"},
+        {"nome": "Trabalho de Conclusão de Curso: Projeto Final de Curso", "horas": 80, "tipo": "tcc"}
+      ]
+    }
+  ],
+  "eletivas": {
+    "Eletiva I": [
+      "Computação em Nuvem",
+      "Machine Learning",
+      "Segurança em Ambiente Web"
+    ],
+    "Eletiva II": [
+      "Big Data",
+      "Deep Learning",
+      "Ameaças, Vulnerabilidades e Ataques à Segurança Cibernética"
+    ],
+    "Eletiva III": [
+      "Natural Language Processing",
+      "Proteção e Confiabilidade de Dados: Criptografia, Certificados e Assinatura Digital",
+      "Sistemas Distribuídos"
+    ],
+    "Eletiva IV": [
+      "Banco de Dados em Nuvem",
+      "Contramedidas de Segurança Cibernética",
+      "IA Generativa Aplicada a Sistemas"
+    ]
+  }
+}

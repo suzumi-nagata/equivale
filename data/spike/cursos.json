@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "projeto": "course-credits-comparator",
+    "tipo": "spike_de_dados",
+    "data_coleta": "2026-10-26",
+    "escopo": "IES privadas, modalidade EAD, cursos de computação (Ciência da Computação, Engenharia de Software e ADS), para o caso de segunda graduação/concursos.",
+    "observacoes": [
+      "O portal de dados abertos do MEC (dadosabertos.mec.gov.br) e o CSV direto retornaram HTTP 403 (desafio Cloudflare) via WebFetch e curl neste ambiente. Não contornamos o bloqueio; o status MEC foi verificado nas páginas oficiais quando havia ato/portaria.",
+      "'nao_verificado' significa que a página oficial não exibiu ato/portaria; não significa que o curso seja irregular.",
+      "Preços são dinâmicos por polo, campanha e forma de ingresso; valores de fontes secundárias estão marcados como tal e não devem ser tratados como preço final.",
+      "Páginas com bloqueio de leitura automatizada (ex.: Cruzeiro do Sul Virtual) foram marcadas; parte dos dados veio de snippet de busca.",
+      "Nenhum dado pessoal ou histórico escolar foi usado neste spike."
+    ]
+  },
+  "cursos": [
+    {
+      "id": "uninter-ads",
+      "instituicao": "UNINTER",
+      "curso": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+      "grau": "tecnologo",
+      "modalidade": "EAD",
+      "duracao_meses": 30,
+      "carga_horaria_total": 2035,
+      "mec": {
+        "status": "reconhecido",
+        "ato": "Portaria nº 155, de 21/06/2023",
+        "conceito_curso": null,
+        "nota_mec": 4,
+        "enade": null,
+        "verificado": true,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas/",
+        "observacao": "Renovação de reconhecimento com CPC 3; cabeçalho informa Nota MEC 4."
+      },
+      "dados": {
+        "grade_disponivel": true,
+        "grade_com_carga_horaria": true,
+        "grade_fonte": "https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas/",
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "grade_com_ch"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "enem", "transferencia", "segunda_graduacao", "segunda_graduacao_egresso"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas/",
+        "observacao": "A página lista 2ª graduação e 2ª graduação para egresso, mas não detalha dispensa de vestibular."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não público na página do curso; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Valor dinâmico; a página exibe R$ XXX,xx após informar estado, polo, turno e CPF."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas/"
+      ],
+      "observacoes": [
+        "Grade organizada em UCFCs; ver curriculos/uninter_ads.json.",
+        "2.035h inclui atividades extensionistas e projetos interdisciplinares."
+      ]
+    },
+    {
+      "id": "uninter-eng-software",
+      "instituicao": "UNINTER",
+      "curso": "Bacharelado em Engenharia de Software",
+      "grau": "bacharelado",
+      "modalidade": "EAD",
+      "duracao_meses": 48,
+      "carga_horaria_total": 3210,
+      "mec": {
+        "status": "reconhecido",
+        "ato": "Portaria SERES nº 562/2025",
+        "conceito_curso": null,
+        "nota_mec": 4,
+        "enade": null,
+        "verificado": true,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-engenharia-de-software/",
+        "observacao": "Reconhecido pela SERES; Portaria publicada no D.O.U. em 25/08/2025."
+      },
+      "dados": {
+        "grade_disponivel": true,
+        "grade_com_carga_horaria": true,
+        "grade_fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-engenharia-de-software/",
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "grade_com_ch"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "enem", "transferencia", "segunda_graduacao", "segunda_graduacao_egresso", "formacao_pedagogica", "encceja"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-engenharia-de-software/",
+        "observacao": "A página lista as formas de ingresso, sem detalhar critérios de dispensa de vestibular."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não público na página do curso; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Valor dinâmico; a página exibe R$ XXX,xx após informar estado, polo, turno e CPF."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-engenharia-de-software/"
+      ],
+      "observacoes": [
+        "Grade completa com 3.210h; inclui estágio 360h, TCC 80h e extensão 330h.",
+        "Sem PPC/ementa pública na página."
+      ]
+    },
+    {
+      "id": "uninter-cc",
+      "instituicao": "UNINTER",
+      "curso": "Bacharelado em Ciência da Computação",
+      "grau": "bacharelado",
+      "modalidade": "EAD",
+      "duracao_meses": 48,
+      "carga_horaria_total": 3210,
+      "mec": {
+        "status": "em_reconhecimento",
+        "ato": null,
+        "conceito_curso": null,
+        "nota_mec": null,
+        "enade": null,
+        "verificado": true,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-ciencia-da-computacao/",
+        "observacao": "A página informa 'Aguarda Processo de Reconhecimento pelo MEC'."
+      },
+      "dados": {
+        "grade_disponivel": true,
+        "grade_com_carga_horaria": true,
+        "grade_fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-ciencia-da-computacao/",
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "grade_com_ch"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "enem", "transferencia", "segunda_graduacao", "segunda_graduacao_egresso", "formacao_pedagogica", "encceja"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-ciencia-da-computacao/",
+        "observacao": "Formas de ingresso listadas, sem regra específica de aproveitamento."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não público na página do curso; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Valor dinâmico; a página exibe R$ XXX,xx após informar estado, polo, turno e CPF."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.uninter.com/graduacao/a-distancia/bacharelado-em-ciencia-da-computacao/"
+      ],
+      "observacoes": [
+        "Risco para concurso: curso ainda não reconhecido; o diploma depende do reconhecimento.",
+        "Grade completa com 3.210h; sem PPC/ementa pública."
+      ]
+    },
+    {
+      "id": "anhanguera-ads",
+      "instituicao": "Anhanguera",
+      "curso": "Análise e Desenvolvimento de Sistemas - Tecnólogo",
+      "grau": "tecnologo",
+      "modalidade": "EAD",
+      "duracao_meses": 30,
+      "carga_horaria_total": 2000,
+      "mec": {
+        "status": "reconhecido",
+        "ato": null,
+        "conceito_curso": 4,
+        "nota_mec": null,
+        "enade": 2,
+        "verificado": false,
+        "fonte": "https://www.anhanguera.com/curso/analise_e_desenvolvimento_de_sistemas/",
+        "observacao": "A página afirma reconhecido pelo MEC, mas não traz portaria; blog oficial cita CC 4, CPC 3, Enade 2 e IDD 3 para a oferta EAD. Confirmar no e-MEC."
+      },
+      "dados": {
+        "grade_disponivel": false,
+        "grade_com_carga_horaria": false,
+        "grade_fonte": null,
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "so_marketing"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "bolsa_enem", "transferencia_externa", "segunda_graduacao", "prouni", "fies"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": true,
+        "requer_vestibular": null,
+        "fonte": "https://www.anhanguera.com/curso/analise_e_desenvolvimento_de_sistemas/",
+        "observacao": "Página oficial: 'Segunda Graduação: sem vestibular, com aproveitamento de créditos para quem já possui diploma superior.'"
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": "https://www.anhanguera.com/curso/analise_e_desenvolvimento_de_sistemas/",
+        "observacao": "A página cita aproveitamento de créditos na 2ª graduação/transferência, sem limite ou critério detalhado."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Página oficial não exibe valor; snippet de busca/portal de inscrição indica a partir de R$ 108–118. Verificar."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.anhanguera.com/curso/analise_e_desenvolvimento_de_sistemas/",
+        "https://blog.anhanguera.com/nota-curso-analise-desenvolvimento-sistemas-anhanguera-mec/"
+      ],
+      "observacoes": [
+        "Melhor lead para 'segunda graduação sem vestibular' entre as IES verificadas.",
+        "Não publica grade, PPC ou ementa na página do curso."
+      ]
+    },
+    {
+      "id": "anhanguera-cc",
+      "instituicao": "Anhanguera",
+      "curso": "Ciência da Computação",
+      "grau": "bacharelado",
+      "modalidade": "EAD",
+      "duracao_meses": 48,
+      "carga_horaria_total": null,
+      "mec": {
+        "status": "reconhecido",
+        "ato": null,
+        "conceito_curso": 4,
+        "nota_mec": null,
+        "enade": 2,
+        "verificado": false,
+        "fonte": "https://blog.anhanguera.com/nota-curso-de-ciencia-computacao-anhanguera/",
+        "observacao": "Blog oficial cita CC 4 na oferta EAD, CPC 3, Enade 2 e IDD 3; sem portaria na página. Confirmar no e-MEC."
+      },
+      "dados": {
+        "grade_disponivel": false,
+        "grade_com_carga_horaria": false,
+        "grade_fonte": null,
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "so_marketing"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "bolsa_enem", "transferencia_externa", "segunda_graduacao", "prouni", "fies"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://www.anhanguera.com/curso/analise_e_desenvolvimento_de_sistemas/",
+        "observacao": "Política institucional da Anhanguera indica 2ª graduação sem vestibular (página de ADS); confirmar para CC."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não público na página do curso; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Snippet da página oficial de cursos de tecnologia indica a partir de R$ 118,01; verificar."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.anhanguera.com/lp/graduacao/cursos-tecnologia/",
+        "https://blog.anhanguera.com/ciencia-da-computacao-ead/",
+        "https://blog.anhanguera.com/nota-curso-de-ciencia-computacao-anhanguera/"
+      ],
+      "observacoes": [
+        "EAD com 10% de presencialidade e avaliações presenciais.",
+        "Sem grade/PPC/ementa pública."
+      ]
+    },
+    {
+      "id": "estacio-ads",
+      "instituicao": "Estácio",
+      "curso": "Análise e Desenvolvimento de Sistemas",
+      "grau": "tecnologo",
+      "modalidade": "EAD",
+      "duracao_meses": 30,
+      "carga_horaria_total": 2080,
+      "mec": {
+        "status": "nao_verificado",
+        "ato": null,
+        "conceito_curso": null,
+        "nota_mec": null,
+        "enade": null,
+        "verificado": false,
+        "fonte": "https://estacio.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas",
+        "observacao": "A página oficial exibe apenas link genérico para informações e-MEC; sem portaria. Duração/CH vêm de fontes secundárias."
+      },
+      "dados": {
+        "grade_disponivel": false,
+        "grade_com_carga_horaria": false,
+        "grade_fonte": null,
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "so_marketing"
+      },
+      "ingresso": {
+        "formas": ["simplificado", "enem", "transferencia", "segunda_graduacao"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://estacio.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas",
+        "observacao": "Menu oficial lista as formas, sem critérios ou regra de dispensa."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não público na página do curso; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Página oficial não exibe valor; snippet de busca indica a partir de R$ 129. Verificar."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://estacio.br/cursos/graduacao/analise-e-desenvolvimento-de-sistemas",
+        "https://www.guiadacarreira.com.br/faculdades/estacio/cursos/analise-e-desenvolvimento-de-sistemas/fb851a80-a9ca-488e-bfe3-cd01657cca2b"
+      ],
+      "observacoes": [
+        "Duração de 30 meses e 2.080h/30 disciplinas aparecem em fontes secundárias, não na página oficial.",
+        "A grade oficial fica no SIA/portal do aluno; não há PDF oficial indexado."
+      ]
+    },
+    {
+      "id": "cruzeiro-ads",
+      "instituicao": "Cruzeiro do Sul Virtual",
+      "curso": "Análise e Desenvolvimento de Sistemas",
+      "grau": "tecnologo",
+      "modalidade": "EAD",
+      "duracao_meses": 24,
+      "carga_horaria_total": null,
+      "mec": {
+        "status": "nao_verificado",
+        "ato": null,
+        "conceito_curso": 4,
+        "nota_mec": null,
+        "enade": 3,
+        "verificado": false,
+        "fonte": "https://cursos.cruzeirodosulvirtual.com.br/grad-analise-e-desenvolvimento-de-sistemas-cruzeiro-do-sul-virtual/p",
+        "observacao": "Página oficial bloqueou leitura automatizada (HTTP 403); snippet de busca indica tecnológico EAD, 4 semestres, MEC 4 e ENADE 3, início imediato e momentos presenciais obrigatórios."
+      },
+      "dados": {
+        "grade_disponivel": false,
+        "grade_com_carga_horaria": false,
+        "grade_fonte": null,
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "minimo"
+      },
+      "ingresso": {
+        "formas": ["inicio_imediato"],
+        "segunda_graduacao": null,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://cursos.cruzeirodosulvirtual.com.br/grad-analise-e-desenvolvimento-de-sistemas-cruzeiro-do-sul-virtual/p",
+        "observacao": "Snippet de busca menciona início imediato; não foi possível confirmar a regra de ingresso na página (403)."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "Não verificado; consultar regimento/PPC."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Não verificado."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://cursos.cruzeirodosulvirtual.com.br/grad-analise-e-desenvolvimento-de-sistemas-cruzeiro-do-sul-virtual/p"
+      ],
+      "observacoes": [
+        "Lead de maior velocidade: 4 semestres (24 meses).",
+        "Página bloqueada para leitura automatizada; dados de snippet e não confirmados."
+      ]
+    },
+    {
+      "id": "unip-ads",
+      "instituicao": "UNIP",
+      "curso": "Análise e Desenvolvimento de Sistemas",
+      "grau": "tecnologo",
+      "modalidade": "EAD",
+      "duracao_meses": 30,
+      "carga_horaria_total": null,
+      "mec": {
+        "status": "reconhecido",
+        "ato": "Portaria de Renovação de Reconhecimento nº 155, de 21/06/2023",
+        "conceito_curso": null,
+        "nota_mec": null,
+        "enade": null,
+        "verificado": true,
+        "fonte": "https://www.unip.br/cursos/graduacao/tecnologicos/analise_desenvolvimento_sistemas.aspx",
+        "observacao": "Ato para a oferta EAD indicado na página oficial."
+      },
+      "dados": {
+        "grade_disponivel": false,
+        "grade_com_carga_horaria": false,
+        "grade_fonte": null,
+        "ppc_disponivel": false,
+        "ementa_disponivel": false,
+        "completude": "so_marketing"
+      },
+      "ingresso": {
+        "formas": ["vestibular_online", "enem", "transferencia", "segunda_graduacao"],
+        "segunda_graduacao": true,
+        "segunda_graduacao_sem_vestibular": null,
+        "requer_vestibular": null,
+        "fonte": "https://www.unip.br/cursos/graduacao/tecnologicos/analise_desenvolvimento_sistemas.aspx",
+        "observacao": "Formas listadas; a página não detalha dispensa de vestibular nem aproveitamento."
+      },
+      "aproveitamento": {
+        "max_pct": null,
+        "regras": null,
+        "fonte": null,
+        "observacao": "PPC existe, mas está disponível nos polos/atendimento; não há link online."
+      },
+      "preco": {
+        "mensalidade_a_partir": null,
+        "moeda": "BRL",
+        "fonte": null,
+        "observacao": "Não encontrado na página."
+      },
+      "prioridade": "core",
+      "coletado_em": "2026-10-26",
+      "fontes": [
+        "https://www.unip.br/cursos/graduacao/tecnologicos/analise_desenvolvimento_sistemas.aspx"
+      ],
+      "observacoes": [
+        "PPC não está online; a página informa que está disponível nos polos, atendimento e bibliotecas.",
+        "Grade/ementa exigem contato com a instituição ou upload local do PPC pelo usuário."
+      ]
+    }
+  ]
+}

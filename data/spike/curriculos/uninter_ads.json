@@ -1,0 +1,185 @@
+{
+  "id": "uninter-ads",
+  "instituicao": "UNINTER",
+  "curso": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+  "grau": "tecnologo",
+  "modalidade": "EAD",
+  "duracao_meses": 30,
+  "carga_horaria_total": 2035,
+  "estrutura": "UCFC",
+  "fonte": "https://www.uninter.com/graduacao/a-distancia/tecnologia-em-analise-e-desenvolvimento-de-sistemas/",
+  "coletado_em": "2026-10-26",
+  "validacao": {
+    "soma_grupos_horas": 2035,
+    "total_declarado": 2035,
+    "confere": true
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Educação e Cidadania",
+      "horas": 180,
+      "disciplinas": [
+        {"nome": "Ciências do Ambiente e Sustentabilidade", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Formação Inicial em Educação a Distância", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Pré-Cálculo", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Relações Étnico-raciais: Africana, Afro-brasileira e Indígena", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Introdução ao Desenvolvimento de Sistemas",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Ferramentas de Desenvolvimento Web", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Lógica de Programação e Algoritmos", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Produção Textual", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Modelagem de Sistemas e Persistência de Dados",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Análise e Modelagem de Sistemas", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Banco de Dados Relacional", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Formação Cidadã Contemporânea", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Engenharia de Software e Inteligência Artificial",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Engenharia de Software", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Inteligência Artificial - IA", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Programação Orientada a Objetos", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Itinerário Formativo I",
+      "horas": 135,
+      "tipo": "itinerario",
+      "componentes": [
+        {"nome": "Eletiva I", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva I"},
+        {"nome": "Eletiva II", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva II"},
+        {"nome": "Eletiva III", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva III"}
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "Programação e Design de Interação",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Design de Interação", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Estrutura de Dados", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Linguagem de Programação Aplicada", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 7,
+      "nome": "Tecnologias Modernas Aplicadas à Computação",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Big Data", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Computação em Nuvem", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Fundamentos do Desenvolvimento Mobile", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 8,
+      "nome": "Itinerário Formativo II",
+      "horas": 135,
+      "tipo": "itinerario",
+      "componentes": [
+        {"nome": "Eletiva IV", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva IV"},
+        {"nome": "Eletiva V", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva V"},
+        {"nome": "Eletiva VI", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva VI"}
+      ]
+    },
+    {
+      "ordem": 9,
+      "nome": "Segurança da Informação e Conformidade",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "Cibersegurança para Desenvolvedores", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Legislação, Ética e Conformidade", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Segurança em Banco de Dados", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 10,
+      "nome": "Itinerário Formativo III",
+      "horas": 135,
+      "tipo": "itinerario",
+      "componentes": [
+        {"nome": "Eletiva VII", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva VII"},
+        {"nome": "Eletiva VIII", "horas": 45, "tipo": "eletiva", "opcoes_ref": "Eletiva VIII"},
+        {"nome": "Programação Aplicada", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 11,
+      "nome": "Práticas Ágeis e Integração Contínua",
+      "horas": 135,
+      "disciplinas": [
+        {"nome": "DevOps e Integração Contínua", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Gestão de Projetos com Métodos Ágeis", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Redes de Computadores", "horas": 45, "tipo": "obrigatoria"}
+      ]
+    },
+    {
+      "ordem": 12,
+      "nome": "Componentes Especiais",
+      "horas": 505,
+      "disciplinas": [
+        {"nome": "Atividades Extensionistas I", "horas": 110, "tipo": "extensao"},
+        {"nome": "Atividades Extensionistas II", "horas": 110, "tipo": "extensao"},
+        {"nome": "Organização de Computadores", "horas": 45, "tipo": "obrigatoria"},
+        {"nome": "Projeto Interdisciplinar I", "horas": 60, "tipo": "projeto"},
+        {"nome": "Projeto Interdisciplinar II", "horas": 60, "tipo": "projeto"},
+        {"nome": "Projeto Interdisciplinar III", "horas": 60, "tipo": "projeto"},
+        {"nome": "Projeto Interdisciplinar IV", "horas": 60, "tipo": "projeto"}
+      ]
+    }
+  ],
+  "eletivas": {
+    "Eletiva I": [
+      "Probabilidade e Estatística",
+      "Matemática Aplicada à Computação"
+    ],
+    "Eletiva II": [
+      "Geometria Analítica e Álgebra Linear",
+      "Desenvolvimento Web - Front End",
+      "Engenharia de Requisitos"
+    ],
+    "Eletiva III": [
+      "Cálculo Diferencial e Integral a Uma Variável",
+      "Desenvolvimento Web - Back End",
+      "Coleta de Requisitos e Modelagem para Banco de Dados",
+      "Desenvolvimento Mobile Multiplataforma"
+    ],
+    "Eletiva IV": [
+      "Machine Learning",
+      "Banco de Dados NoSQL",
+      "Qualidade de Software"
+    ],
+    "Eletiva V": [
+      "Métricas e Estimativa de Software",
+      "Deep Learning"
+    ],
+    "Eletiva VI": [
+      "Natural Language Processing",
+      "Gerência de Configuração e Evolução",
+      "Teste de Software"
+    ],
+    "Eletiva VII": [
+      "Arquitetura e Desenvolvimento de APIs",
+      "Testes de Aplicativos Móveis"
+    ],
+    "Eletiva VIII": [
+      "IA Generativa Aplicada a Sistemas"
+    ]
+  }
+}

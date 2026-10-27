@@ -1,0 +1,16 @@
+# Dados pessoais e saídas locais
+private/
+transcripts/
+reports/
+data/spike/matching/
+out/
+
+# PDFs de históricos e documentos baixados
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
