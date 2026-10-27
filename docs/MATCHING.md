@@ -50,7 +50,9 @@ pode ser mais restrita.
   UNICAMP case por nome com uma disciplina da USP.
 - Guardas gerais de nome: sequência (Cálculo I ≠ Cálculo II), teoria ×
   laboratório e tokens genéricos (não casar “Introdução aos Sistemas de
-  Potência” com “Introdução aos Sistemas Embarcados”).
+  Potência” com “Introdução aos Sistemas Embarcados”). Numerais romanos curtos
+  (I, II, IV) são preservados na tokenização para que “Física Geral I” case com
+  “Física I”.
 
 Os testes sintéticos ficam em `site/src/lib/match.test.ts` e cobrem 1→n,
 m→1, capacidade, eletiva livre, TCC não abatível, cobertura temática, escopo

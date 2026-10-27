@@ -95,7 +95,11 @@ export function tokenize(text: string): Set<string> {
   return new Set(
     normalize(text)
       .split(' ')
-      .filter((token) => token.length > 2 && !STOPWORDS.has(token)),
+      .filter(
+        (token) =>
+          (token.length > 2 && !STOPWORDS.has(token)) ||
+          /^(i|ii|iii|iv|v|vi|vii|viii|ix|x|\d+)$/.test(token),
+      ),
   )
 }
 

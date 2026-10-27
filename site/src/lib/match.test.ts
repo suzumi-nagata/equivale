@@ -318,6 +318,34 @@ test('não confunde sequências diferentes de uma disciplina', () => {
   assert.equal(result.summary.slotsAbertos, 1)
 })
 
+test('reconhece Física Geral I como Física I', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [['Física Geral I', 60, 'F 128']]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Física I', 45, '4323101']]),
+  )
+
+  assert.equal(result.allocations.length, 1)
+  assert.equal(result.summary.horasAbatidas, 45)
+  assert.equal(result.summary.slotsParciais, 1)
+})
+
+test('reconhece Física Geral IV como Física IV', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [['Física Geral IV', 60, 'F 428']]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Física IV', 60, '4323204']]),
+  )
+
+  assert.equal(result.allocations.length, 1)
+  assert.equal(result.summary.horasAbatidas, 60)
+  assert.equal(result.summary.slotsCobertos, 1)
+})
+
 test('regra de conteúdo respeita o conceito específico do alvo', () => {
   const target = makeCurriculum([
     fixedGroup('Núcleo Comum', [['Projeto e Análise de Algoritmos I', 60, 'MC458']]),
