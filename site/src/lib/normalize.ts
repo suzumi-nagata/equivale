@@ -6,6 +6,15 @@ const STOPWORDS = new Set([
   'ao', 'aos', 'the', 'and', 'of', 'for', 'in', 'on', 'to',
 ])
 
+const GENERIC_NAME_TOKENS = new Set([
+  'laboratorio', 'laboratorios', 'experimental', 'projeto', 'projetos',
+  'sistema', 'sistemas', 'introducao', 'fundamento', 'fundamentos',
+  'basico', 'basica', 'aplicado', 'aplicada', 'teoria', 'pratica', 'geral',
+  'digital', 'linear', 'processamento', 'computacao',
+  'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
+  '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+])
+
 export const BROAD_CONCEPTS = new Set([
   'programacao', 'calculo', 'seguranca', 'ia', 'redes', 'direito',
   'etica', 'meio_ambiente', 'governanca',
@@ -176,6 +185,22 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
       conceitos: [...sourceConcepts].sort(),
       tokens: sharedTokens,
       motivo: 'teoria/laboratório',
+    }
+  }
+
+  const specificTargetTokens = [...targetTokens].filter(
+    (token) => !GENERIC_NAME_TOKENS.has(token),
+  )
+  if (
+    specificTargetTokens.length > 0 &&
+    !sharedTokens.some((token) => !GENERIC_NAME_TOKENS.has(token))
+  ) {
+    return {
+      score: 0,
+      parcial: true,
+      conceitos: [...sourceConcepts].sort(),
+      tokens: sharedTokens,
+      motivo: 'apenas tokens genéricos',
     }
   }
 

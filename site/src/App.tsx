@@ -33,6 +33,7 @@ export default function App() {
   const [courses, setCourses] = useState<CourseRecord[]>([])
   const [rules, setRules] = useState<EquivalenceRule[]>([])
   const [selectedId, setSelectedId] = useState('uninter-ads')
+  const [ignoreWorkload, setIgnoreWorkload] = useState(false)
   const [transcript, setTranscript] = useState<Transcript | null>(null)
   const [transcriptLabel, setTranscriptLabel] = useState('Histórico fictício')
   const [isDemo, setIsDemo] = useState(true)
@@ -88,8 +89,10 @@ export default function App() {
 
   const selectedTarget = targets.find((target) => target.id === selectedId) ?? targets[0] ?? null
   const result = useMemo(
-    () => (selectedTarget && transcript ? matchCurriculum(selectedTarget, transcript, rules) : null),
-    [selectedTarget, transcript, rules],
+    () => (selectedTarget && transcript
+      ? matchCurriculum(selectedTarget, transcript, rules, { ignoreWorkload })
+      : null),
+    [selectedTarget, transcript, rules, ignoreWorkload],
   )
 
   async function handleFile(file: File) {
@@ -120,6 +123,7 @@ export default function App() {
       alvo: selectedTarget,
       historico: transcript,
       regras: rules,
+      modo_ignorar_carga_horaria: ignoreWorkload,
       resultado: result,
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -194,6 +198,20 @@ export default function App() {
                     selectedId={selectedTarget?.id ?? ''}
                     onSelect={setSelectedId}
                   />
+                  <label className="workload-toggle">
+                    <input
+                      type="checkbox"
+                      checked={ignoreWorkload}
+                      onChange={(event) => setIgnoreWorkload(event.target.checked)}
+                    />
+                    <span>
+                      <strong>Ignorar diferença de carga horária</strong>
+                      <span className="workload-help">
+                        Modo permissivo: uma disciplina de 30h pode cobrir um componente de
+                        90h por conteúdo. A estimativa deixa de ser conservadora.
+                      </span>
+                    </span>
+                  </label>
                   <p className="section-note">
                     Status e grade vêm das fontes públicas listadas. Confirme o reconhecimento
                     do curso no e-MEC antes de qualquer decisão.

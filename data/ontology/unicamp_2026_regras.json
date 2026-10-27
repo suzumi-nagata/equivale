@@ -15,6 +15,7 @@
         "codigo": "BE310",
         "componente": "Ciências do Ambiente"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM973",
@@ -218,7 +219,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/be.html#disc-be310",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ce304",
@@ -229,6 +230,7 @@
         "codigo": "CE304",
         "componente": "Direito"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE839",
@@ -432,7 +434,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce304",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ce738",
@@ -443,6 +445,7 @@
         "codigo": "CE738",
         "componente": "Economia para Engenharia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "HZ858",
@@ -646,7 +649,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce738",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ce838",
@@ -657,6 +660,7 @@
         "codigo": "CE838",
         "componente": "Contabilidade para Engenharia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE141",
@@ -665,7 +669,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: empres, contab, contabilidade, indicador, tomad, demonstra, deciso, financeir",
+          "rotulo": "ementa: empres, contab, contabilidade, tomad, indicador, demonstra, deciso, financeir",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce141"
         },
         {
@@ -860,7 +864,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce838",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea134",
@@ -871,6 +875,7 @@
         "codigo": "EA134",
         "componente": "Seminários sobre o Curso de Engenharia de Computação"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA104",
@@ -879,7 +884,7 @@
           "score": 0.8461,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, ingressant, direcionament, visand, palestr, forma, alun",
+          "rotulo": "ementa: academic, direcionament, ingressant, visand, palestr, forma, alun",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma104"
         },
         {
@@ -1074,7 +1079,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea134",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea513",
@@ -1085,6 +1090,7 @@
         "codigo": "EA513",
         "componente": "Circuitos Elétricos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET616",
@@ -1288,7 +1294,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea513",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea614",
@@ -1299,6 +1305,7 @@
         "codigo": "EA614",
         "componente": "Análise de Sinais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE903",
@@ -1502,7 +1509,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea614",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea772",
@@ -1513,6 +1520,7 @@
         "codigo": "EA772",
         "componente": "Circuitos Lógicos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA060",
@@ -1716,7 +1724,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea772",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ee533",
@@ -1727,6 +1735,7 @@
         "codigo": "EE533",
         "componente": "Eletrônica Básica I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE530",
@@ -1885,7 +1894,7 @@
           "score": 0.7151,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: potenci, font, eletronic",
+          "rotulo": "ementa: font, potenci, eletronic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg644"
         },
         {
@@ -1930,7 +1939,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee533",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ee534",
@@ -1941,6 +1950,7 @@
         "codigo": "EE534",
         "componente": "Laboratório de Eletrônica Aplicada"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE828",
@@ -2144,7 +2154,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee534",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-em424",
@@ -2155,6 +2165,7 @@
         "codigo": "EM424",
         "componente": "Resistência dos Materiais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM423",
@@ -2358,7 +2369,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/em.html#disc-em424",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-128",
@@ -2369,6 +2380,7 @@
         "codigo": "F 128",
         "componente": "Física Geral I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM404",
@@ -2572,7 +2584,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_128",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-159",
@@ -2583,6 +2595,7 @@
         "codigo": "F 159",
         "componente": "Introdução à Física Experimental I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 129",
@@ -2706,7 +2719,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_159",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-228",
@@ -2717,6 +2730,7 @@
         "codigo": "F 228",
         "componente": "Física Geral II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 428",
@@ -2920,7 +2934,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_228",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-259",
@@ -2931,6 +2945,7 @@
         "codigo": "F 259",
         "componente": "Introdução à Física Experimental II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 640",
@@ -3074,7 +3089,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_259",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-315",
@@ -3085,6 +3100,7 @@
         "codigo": "F 315",
         "componente": "Mecânica Geral I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 313",
@@ -3288,7 +3304,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_315",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-328",
@@ -3299,6 +3315,7 @@
         "codigo": "F 328",
         "componente": "Física Geral III"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE523",
@@ -3307,7 +3324,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: magnetic, eletric, camp, indutanci, capacitanci, resistenci, potencial, gaus",
+          "rotulo": "ementa: magnetic, eletric, camp, indutanci, capacitanci, resistenci, gaus, potencial",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee523"
         },
         {
@@ -3317,7 +3334,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: magnetic, eletric, camp, indutanci, capacitanci, resistenci, potencial, gaus",
+          "rotulo": "ementa: magnetic, eletric, camp, indutanci, capacitanci, resistenci, gaus, potencial",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee521"
         },
         {
@@ -3502,7 +3519,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_328",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-359",
@@ -3513,6 +3530,7 @@
         "codigo": "F 359",
         "componente": "Introdução à Física Experimental III"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 740",
@@ -3716,7 +3734,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_359",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-f-428",
@@ -3727,6 +3745,7 @@
         "codigo": "F 428",
         "componente": "Física Geral IV"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 110",
@@ -3735,7 +3754,7 @@
           "score": 0.8211,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: relatividade, fisic, atomic, quantic, optic, nuclear, onda",
+          "rotulo": "ementa: relatividade, fisic, quantic, atomic, optic, nuclear, onda",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_110"
         },
         {
@@ -3765,7 +3784,7 @@
           "score": 0.7654,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: eletricidade, fisic, atomic, quantic, nuclear",
+          "rotulo": "ementa: eletricidade, fisic, quantic, atomic, nuclear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_106"
         },
         {
@@ -3775,7 +3794,7 @@
           "score": 0.7599,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: eletricidade, fisic, atomic, quantic, nuclear",
+          "rotulo": "ementa: eletricidade, fisic, quantic, atomic, nuclear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_107"
         },
         {
@@ -3815,7 +3834,7 @@
           "score": 0.7098,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: solid, quantic, nuclear",
+          "rotulo": "ementa: quantic, solid, nuclear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_489"
         },
         {
@@ -3930,7 +3949,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_428",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-hz291",
@@ -3941,6 +3960,7 @@
         "codigo": "HZ291",
         "componente": "Tópicos Especiais de Humanidades I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "HZ293",
@@ -4144,7 +4164,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/hz.html#disc-hz291",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-la122",
@@ -4155,6 +4175,7 @@
         "codigo": "LA122",
         "componente": "Inglês Instrumental I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "LA222",
@@ -4163,7 +4184,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: visand, realidad, express, academic, leitur, jornalistic, textu, aprimorar",
+          "rotulo": "ementa: visand, express, realidad, academic, leitur, jornalistic, textu, aprimorar",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la222"
         },
         {
@@ -4203,7 +4224,7 @@
           "score": 0.8561,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, jornalistic, textu, ingl, divulga, esfer, base, gener",
+          "rotulo": "ementa: academic, jornalistic, textu, ingl, divulga, esfer, base, critic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la094"
         },
         {
@@ -4263,7 +4284,7 @@
           "score": 0.8352,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, jornalistic, textu, divulga, esfer, base, gener, critic",
+          "rotulo": "ementa: academic, jornalistic, textu, divulga, esfer, base, critic, gener",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la093"
         },
         {
@@ -4273,7 +4294,7 @@
           "score": 0.787,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, tend, base, text, gener, critic, linguistic, cultur",
+          "rotulo": "ementa: academic, tend, base, text, critic, gener, linguistic, cultur",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la345"
         },
         {
@@ -4358,7 +4379,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la122",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ma111",
@@ -4369,6 +4390,7 @@
         "codigo": "MA111",
         "componente": "Cálculo I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE112",
@@ -4377,7 +4399,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: continuidade, derivad, limit, diferencial, funco",
+          "rotulo": "ementa: continuidade, derivad, diferencial, limit, funco",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce112"
         },
         {
@@ -4572,7 +4594,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma111",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ma141",
@@ -4583,6 +4605,7 @@
         "codigo": "MA141",
         "componente": "Geometria Analítica e Vetores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA093",
@@ -4611,7 +4634,7 @@
           "score": 0.7411,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: coordenad, produt, norm, base, espac, linear",
+          "rotulo": "ementa: coordenad, produt, base, norm, espac, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma719"
         },
         {
@@ -4641,7 +4664,7 @@
           "score": 0.7162,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: plan, esferic, cilindric",
+          "rotulo": "ementa: plan, cilindric, esferic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms590"
         },
         {
@@ -4671,7 +4694,7 @@
           "score": 0.698,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: produt, norm, base, espac",
+          "rotulo": "ementa: produt, base, norm, espac",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma453"
         },
         {
@@ -4741,7 +4764,7 @@
           "score": 0.6863,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: plan, norm, base",
+          "rotulo": "ementa: plan, base, norm",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me651"
         },
         {
@@ -4786,7 +4809,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma141",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ma211",
@@ -4797,6 +4820,7 @@
         "codigo": "MA211",
         "componente": "Cálculo II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA720",
@@ -5000,7 +5024,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma211",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ma311",
@@ -5011,6 +5035,7 @@
         "codigo": "MA311",
         "componente": "Cálculo III"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 620",
@@ -5109,7 +5134,7 @@
           "score": 0.8823,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: diferenci, equa, laplace, ordem, transformad",
+          "rotulo": "ementa: diferenci, equa, ordem, laplace, transformad",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma312"
         },
         {
@@ -5214,7 +5239,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma311",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ma327",
@@ -5225,6 +5250,7 @@
         "codigo": "MA327",
         "componente": "Álgebra Linear"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA719",
@@ -5273,7 +5299,7 @@
           "score": 0.7766,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: matriz, autovalor, autovetor, linear",
+          "rotulo": "ementa: matriz, autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms992"
         },
         {
@@ -5333,7 +5359,7 @@
           "score": 0.7325,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: autovalor, autovetor, linear",
+          "rotulo": "ementa: autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms512"
         },
         {
@@ -5373,7 +5399,7 @@
           "score": 0.7157,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: autovalor, autovetor, linear",
+          "rotulo": "ementa: autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma312"
         },
         {
@@ -5428,7 +5454,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma327",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc102",
@@ -5439,6 +5465,7 @@
         "codigo": "MC102",
         "componente": "Algoritmos e Programação de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC404",
@@ -5642,7 +5669,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc102",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc202",
@@ -5653,6 +5680,7 @@
         "codigo": "MC202",
         "componente": "Estruturas de Dados"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC102",
@@ -5781,7 +5809,7 @@
           "score": 0.7399,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: estrutur, list, manipula",
+          "rotulo": "ementa: estrutur, manipula, list",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me115"
         },
         {
@@ -5856,7 +5884,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc202",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc322",
@@ -5867,6 +5895,7 @@
         "codigo": "MC322",
         "componente": "Programação Orientada a Objetos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC302",
@@ -6070,7 +6099,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc322",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc358",
@@ -6081,6 +6110,7 @@
         "codigo": "MC358",
         "componente": "Fundamentos Matemáticos da Computação"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE600",
@@ -6284,7 +6314,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc358",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc404",
@@ -6295,6 +6325,7 @@
         "codigo": "MC404",
         "componente": "Organização Básica de Computadores e Linguagem de Montagem"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC732",
@@ -6303,7 +6334,7 @@
           "score": 0.8725,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, instru, processador, entrad, said, dispositiv, computador, organiza",
+          "rotulo": "ementa: memori, instru, processador, said, entrad, dispositiv, computador, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -6323,7 +6354,7 @@
           "score": 0.813,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, processador, entrad, said, computador, organiza",
+          "rotulo": "ementa: memori, processador, said, entrad, computador, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -6333,7 +6364,7 @@
           "score": 0.7999,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, enderecament, entrad, said, espac, organiza",
+          "rotulo": "ementa: memori, enderecament, said, entrad, espac, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504"
         },
         {
@@ -6343,7 +6374,7 @@
           "score": 0.7994,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, periferic, entrad, said, organiza, programa",
+          "rotulo": "ementa: memori, periferic, said, entrad, organiza, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -6353,7 +6384,7 @@
           "score": 0.7971,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, periferic, entrad, said, organiza",
+          "rotulo": "ementa: memori, periferic, said, entrad, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -6373,7 +6404,7 @@
           "score": 0.7618,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, enderecament, entrad, said, organiza",
+          "rotulo": "ementa: memori, enderecament, said, entrad, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -6403,7 +6434,7 @@
           "score": 0.7556,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, processador, entrad, said, programa",
+          "rotulo": "ementa: interrup, processador, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701"
         },
         {
@@ -6413,7 +6444,7 @@
           "score": 0.7538,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, processador, entrad, said, programa",
+          "rotulo": "ementa: interrup, processador, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea090"
         },
         {
@@ -6498,7 +6529,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc458",
@@ -6509,6 +6540,7 @@
         "codigo": "MC458",
         "componente": "Projeto e Análise de Algoritmos I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC521",
@@ -6712,7 +6744,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc458",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-me323",
@@ -6723,6 +6755,7 @@
         "codigo": "ME323",
         "componente": "Introdução aos Modelos Probabilísticos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG085",
@@ -6926,7 +6959,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me323",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ms211",
@@ -6937,6 +6970,7 @@
         "codigo": "MS211",
         "componente": "Cálculo Numérico"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MS213",
@@ -6945,7 +6979,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: numeric, interpola, flutuante, zero, linear, minim, quadrad, pont",
+          "rotulo": "ementa: numeric, interpola, flutuante, zero, linear, quadrad, pont, minim",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms213"
         },
         {
@@ -7015,7 +7049,7 @@
           "score": 0.7716,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: ordinari, pont, diferenci, funco, equa",
+          "rotulo": "ementa: ordinari, diferenci, pont, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms550"
         },
         {
@@ -7025,7 +7059,7 @@
           "score": 0.7702,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: ordinari, pont, diferenci, funco, equa",
+          "rotulo": "ementa: ordinari, diferenci, pont, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_520"
         },
         {
@@ -7045,7 +7079,7 @@
           "score": 0.7635,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, minim, quadrad, funco, equa",
+          "rotulo": "ementa: linear, quadrad, minim, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg293"
         },
         {
@@ -7055,7 +7089,7 @@
           "score": 0.7616,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, minim, quadrad, funco, equa",
+          "rotulo": "ementa: linear, quadrad, minim, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me919"
         },
         {
@@ -7065,7 +7099,7 @@
           "score": 0.7605,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, aritmetic, minim, quadrad, equa",
+          "rotulo": "ementa: linear, aritmetic, quadrad, minim, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma553"
         },
         {
@@ -7140,7 +7174,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms211",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-qg101",
@@ -7151,6 +7185,7 @@
         "codigo": "QG101",
         "componente": "Química I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "QG191",
@@ -7354,7 +7389,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/qg.html#disc-qg101",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ce839",
@@ -7365,6 +7400,7 @@
         "codigo": "CE839",
         "componente": "Introdução à Administração para Computação"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE641",
@@ -7568,7 +7604,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce839",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc030",
@@ -7579,6 +7615,7 @@
         "codigo": "MC030",
         "componente": "Projeto Final de Graduação"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC032",
@@ -7782,7 +7819,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc030",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc504",
@@ -7793,6 +7830,7 @@
         "codigo": "MC504",
         "componente": "Sistemas Operacionais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA550",
@@ -7801,7 +7839,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: gerenciament, escalonament, pagina, enderecament, segmenta, hierarqui, regio, arquiv",
+          "rotulo": "ementa: gerenciament, pagina, escalonament, enderecament, segmenta, hierarqui, regio, arquiv",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -7811,7 +7849,7 @@
           "score": 0.8131,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: hierarqui, entrad, said, virtual, memori, organiza",
+          "rotulo": "ementa: hierarqui, said, entrad, virtual, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -7821,7 +7859,7 @@
           "score": 0.805,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: enderecament, entrad, said, memori, espac, organiza",
+          "rotulo": "ementa: enderecament, said, entrad, memori, espac, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404"
         },
         {
@@ -7861,7 +7899,7 @@
           "score": 0.756,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -7871,7 +7909,7 @@
           "score": 0.7509,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -7891,7 +7929,7 @@
           "score": 0.7434,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -7901,7 +7939,7 @@
           "score": 0.7109,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori",
+          "rotulo": "ementa: entrad, said, memori",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -7971,7 +8009,7 @@
           "score": 0.6863,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad",
+          "rotulo": "ementa: entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg456"
         },
         {
@@ -7991,12 +8029,12 @@
           "score": 0.6841,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad",
+          "rotulo": "ementa: entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701"
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc536",
@@ -8007,6 +8045,7 @@
         "codigo": "MC536",
         "componente": "Bancos de Dados: Teoria e Prática"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC950",
@@ -8210,7 +8249,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc536",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc558",
@@ -8221,6 +8260,7 @@
         "codigo": "MC558",
         "componente": "Projeto e Análise de Algoritmos II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC898",
@@ -8424,7 +8464,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc558",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc613",
@@ -8435,6 +8475,7 @@
         "codigo": "MC613",
         "componente": "Laboratório de Circuitos Digitais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE609",
@@ -8608,7 +8649,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc613",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc656",
@@ -8619,6 +8660,7 @@
         "codigo": "MC656",
         "componente": "Engenharia de Software"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC426",
@@ -8822,7 +8864,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc656",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc714",
@@ -8833,6 +8875,7 @@
         "codigo": "MC714",
         "componente": "Sistemas Distribuídos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA082",
@@ -9036,7 +9079,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc714",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc732",
@@ -9047,6 +9090,7 @@
         "codigo": "MC732",
         "componente": "Projeto de Sistemas Computacionais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ME860",
@@ -9065,7 +9109,7 @@
           "score": 0.8989,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, instru, processador, entrad, said, dispositiv, computador, organiza",
+          "rotulo": "ementa: memori, instru, processador, said, entrad, dispositiv, computador, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404"
         },
         {
@@ -9075,7 +9119,7 @@
           "score": 0.8754,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, processador, entrad, said, arquitetur, computador, organiza",
+          "rotulo": "ementa: memori, processador, said, entrad, arquitetur, computador, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -9085,7 +9129,7 @@
           "score": 0.8585,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, pipeline, instru, entrad, said, arquitetur, computador",
+          "rotulo": "ementa: memori, pipeline, instru, said, entrad, arquitetur, computador",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -9095,7 +9139,7 @@
           "score": 0.8305,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, hierarqui, entrad, said, virtual, organiza",
+          "rotulo": "ementa: memori, hierarqui, said, entrad, virtual, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504"
         },
         {
@@ -9115,7 +9159,7 @@
           "score": 0.8117,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, hierarqui, entrad, said, virtual, organiza",
+          "rotulo": "ementa: memori, hierarqui, said, entrad, virtual, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -9125,7 +9169,7 @@
           "score": 0.7857,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, said, entrad, organiza",
+          "rotulo": "ementa: memori, entrad, said, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -9135,7 +9179,7 @@
           "score": 0.7693,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: memori, said, entrad, organiza",
+          "rotulo": "ementa: memori, entrad, said, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -9175,7 +9219,7 @@
           "score": 0.712,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701"
         },
         {
@@ -9185,7 +9229,7 @@
           "score": 0.7108,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea090"
         },
         {
@@ -9250,7 +9294,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc750",
@@ -9261,6 +9305,7 @@
         "codigo": "MC750",
         "componente": "Construção de Interfaces Homem-Computador"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC986",
@@ -9464,7 +9509,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc750",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc832",
@@ -9475,6 +9520,7 @@
         "codigo": "MC832",
         "componente": "Redes de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA074",
@@ -9678,7 +9724,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc832",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-mc921",
@@ -9689,6 +9735,7 @@
         "codigo": "MC921",
         "componente": "Projeto e Construção de Compiladores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA550",
@@ -9697,7 +9744,7 @@
           "score": 0.8202,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: codig, sintatic, otimiza, gera",
+          "rotulo": "ementa: sintatic, codig, otimiza, gera",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -9892,7 +9939,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc921",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea018",
@@ -9903,6 +9950,7 @@
         "codigo": "EA018",
         "componente": "Trabalho de Fim de Curso I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA006",
@@ -10106,7 +10154,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea018",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea019",
@@ -10117,6 +10165,7 @@
         "codigo": "EA019",
         "componente": "Trabalho de Fim de Curso II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA006",
@@ -10320,7 +10369,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea019",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea044",
@@ -10331,6 +10380,7 @@
         "codigo": "EA044",
         "componente": "Planejamento e Análise de Sistemas de Produção"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MS428",
@@ -10534,7 +10584,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea044",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea072",
@@ -10545,6 +10595,7 @@
         "codigo": "EA072",
         "componente": "Inteligência Artificial em Aplicações Industriais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "HG804",
@@ -10748,7 +10799,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea072",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea074",
@@ -10759,6 +10810,7 @@
         "codigo": "EA074",
         "componente": "Introdução às Redes de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC832",
@@ -10962,7 +11014,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea074",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea080",
@@ -10973,6 +11025,7 @@
         "codigo": "EA080",
         "componente": "Laboratório de Redes de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC715",
@@ -11096,7 +11149,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea080",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea202",
@@ -11107,6 +11160,7 @@
         "codigo": "EA202",
         "componente": "Engenharia de Software: Teoria e Prática"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM926",
@@ -11310,7 +11364,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea202",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea550",
@@ -11321,6 +11375,7 @@
         "codigo": "EA550",
         "componente": "Introdução a Software de Sistema"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA876",
@@ -11339,7 +11394,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: gerenciament, escalonament, pagina, enderecament, segmenta, hierarqui, regio, arquiv",
+          "rotulo": "ementa: gerenciament, pagina, escalonament, enderecament, segmenta, hierarqui, regio, arquiv",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504"
         },
         {
@@ -11399,7 +11454,7 @@
           "score": 0.7577,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: hierarqui, entrad, said, virtual, memori, organiza",
+          "rotulo": "ementa: hierarqui, said, entrad, virtual, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -11419,7 +11474,7 @@
           "score": 0.7327,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: enderecament, entrad, said, memori, organiza",
+          "rotulo": "ementa: enderecament, said, entrad, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404"
         },
         {
@@ -11429,7 +11484,7 @@
           "score": 0.7253,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: codig, sintatic, otimiza, gera",
+          "rotulo": "ementa: sintatic, codig, otimiza, gera",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc921"
         },
         {
@@ -11439,7 +11494,7 @@
           "score": 0.7181,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -11449,7 +11504,7 @@
           "score": 0.714,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -11469,7 +11524,7 @@
           "score": 0.708,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -11499,7 +11554,7 @@
           "score": 0.6843,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori",
+          "rotulo": "ementa: entrad, said, memori",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -11524,7 +11579,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea551",
@@ -11535,6 +11590,7 @@
         "codigo": "EA551",
         "componente": "Laboratório de Programação de Software Básico"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA872",
@@ -11553,7 +11609,7 @@
           "score": 0.7206,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad",
+          "rotulo": "ementa: entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea871"
         },
         {
@@ -11718,7 +11774,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea551",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea616",
@@ -11729,6 +11785,7 @@
         "codigo": "EA616",
         "componente": "Análise Linear de Sistemas"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG888",
@@ -11737,7 +11794,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: discret, temp, continu, transformad, linear, equa, realimenta, laplace",
+          "rotulo": "ementa: discret, continu, temp, transformad, linear, equa, realimenta, laplace",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg888"
         },
         {
@@ -11887,7 +11944,7 @@
           "score": 0.7939,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: discret, temp, continu, estad",
+          "rotulo": "ementa: discret, continu, temp, estad",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me501"
         },
         {
@@ -11932,7 +11989,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea616",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea619",
@@ -11943,6 +12000,7 @@
         "codigo": "EA619",
         "componente": "Laboratório de Análise Linear"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA722",
@@ -11951,7 +12009,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: respost, experiment, frequenci, reduzid, disponiv, controle, aquisi, escal",
+          "rotulo": "ementa: respost, experiment, frequenci, disponiv, reduzid, controle, aquisi, escal",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea722"
         },
         {
@@ -12086,7 +12144,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea619",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea701",
@@ -12097,6 +12155,7 @@
         "codigo": "EA701",
         "componente": "Introdução aos Sistemas Embarcados"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA090",
@@ -12135,7 +12194,7 @@
           "score": 0.78,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linguagem, interrup, entrad, said, programa",
+          "rotulo": "ementa: linguagem, interrup, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -12145,7 +12204,7 @@
           "score": 0.769,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, processador, entrad, said, programa",
+          "rotulo": "ementa: interrup, processador, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404"
         },
         {
@@ -12205,7 +12264,7 @@
           "score": 0.7295,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -12235,7 +12294,7 @@
           "score": 0.7143,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -12300,7 +12359,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea721",
@@ -12311,6 +12370,7 @@
         "codigo": "EA721",
         "componente": "Princípios de Controle e Servomecanismo"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM707",
@@ -12514,7 +12574,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea721",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea722",
@@ -12525,6 +12585,7 @@
         "codigo": "EA722",
         "componente": "Laboratório de Controle e Servomecanismo"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA619",
@@ -12533,7 +12594,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: reduzid, disponiv, controle, aquisi, escal, realimenta, respost, experiment",
+          "rotulo": "ementa: disponiv, reduzid, controle, aquisi, escal, realimenta, respost, experiment",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea619"
         },
         {
@@ -12648,7 +12709,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea722",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea773",
@@ -12659,6 +12720,7 @@
         "codigo": "EA773",
         "componente": "Laboratório de Circuitos Lógicos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE609",
@@ -12862,7 +12924,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea773",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea801",
@@ -12873,6 +12935,7 @@
         "codigo": "EA801",
         "componente": "Laboratório de Projetos de Sistemas Embarcados"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA091",
@@ -13006,7 +13069,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea801",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea960",
@@ -13017,6 +13080,7 @@
         "codigo": "EA960",
         "componente": "Organização de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC732",
@@ -13025,7 +13089,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, entrad, said, arquitetur, memori, computador, organiza",
+          "rotulo": "ementa: processador, said, entrad, arquitetur, memori, computador, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -13045,7 +13109,7 @@
           "score": 0.8088,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: entrad, said, arquitetur, memori, computador",
+          "rotulo": "ementa: said, entrad, arquitetur, memori, computador",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -13065,7 +13129,7 @@
           "score": 0.7925,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -13075,7 +13139,7 @@
           "score": 0.7777,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -13085,7 +13149,7 @@
           "score": 0.7769,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701"
         },
         {
@@ -13095,7 +13159,7 @@
           "score": 0.7762,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504"
         },
         {
@@ -13105,7 +13169,7 @@
           "score": 0.7752,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea090"
         },
         {
@@ -13115,7 +13179,7 @@
           "score": 0.7642,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori, organiza",
+          "rotulo": "ementa: entrad, said, memori, organiza",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -13205,7 +13269,7 @@
           "score": 0.7047,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad",
+          "rotulo": "ementa: entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg456"
         },
         {
@@ -13220,7 +13284,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ea979",
@@ -13231,6 +13295,7 @@
         "codigo": "EA979",
         "componente": "Introdução à Computação Gráfica e ao Processamento de Imagem"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 790",
@@ -13434,7 +13499,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea979",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-ee400",
@@ -13445,6 +13510,7 @@
         "codigo": "EE400",
         "componente": "Métodos da Engenharia Elétrica"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE100",
@@ -13648,7 +13714,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee400",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-de-computa-o-eg950",
@@ -13659,6 +13725,7 @@
         "codigo": "EG950",
         "componente": "Processamento Digital de Sinais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE903",
@@ -13862,7 +13929,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg950",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-be310",
@@ -13873,6 +13940,7 @@
         "codigo": "BE310",
         "componente": "Ciências do Ambiente"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM973",
@@ -14076,7 +14144,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/be.html#disc-be310",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ce304",
@@ -14087,6 +14155,7 @@
         "codigo": "CE304",
         "componente": "Direito"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE839",
@@ -14290,7 +14359,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce304",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ce738",
@@ -14301,6 +14370,7 @@
         "codigo": "CE738",
         "componente": "Economia para Engenharia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "HZ858",
@@ -14504,7 +14574,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce738",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ce838",
@@ -14515,6 +14585,7 @@
         "codigo": "CE838",
         "componente": "Contabilidade para Engenharia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE141",
@@ -14523,7 +14594,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: empres, contab, contabilidade, indicador, tomad, demonstra, deciso, financeir",
+          "rotulo": "ementa: empres, contab, contabilidade, tomad, indicador, demonstra, deciso, financeir",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce141"
         },
         {
@@ -14718,7 +14789,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce838",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea018",
@@ -14729,6 +14800,7 @@
         "codigo": "EA018",
         "componente": "Trabalho de Fim de Curso I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA006",
@@ -14932,7 +15004,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea018",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea019",
@@ -14943,6 +15015,7 @@
         "codigo": "EA019",
         "componente": "Trabalho de Fim de Curso II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA006",
@@ -15146,7 +15219,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea019",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea044",
@@ -15157,6 +15230,7 @@
         "codigo": "EA044",
         "componente": "Planejamento e Análise de Sistemas de Produção"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MS428",
@@ -15360,7 +15434,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea044",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea513",
@@ -15371,6 +15445,7 @@
         "codigo": "EA513",
         "componente": "Circuitos Elétricos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET616",
@@ -15574,7 +15649,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea513",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea611",
@@ -15585,6 +15660,7 @@
         "codigo": "EA611",
         "componente": "Circuitos II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET017",
@@ -15788,7 +15864,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea611",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea614",
@@ -15799,6 +15875,7 @@
         "codigo": "EA614",
         "componente": "Análise de Sinais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE903",
@@ -16002,7 +16079,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea614",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea616",
@@ -16013,6 +16090,7 @@
         "codigo": "EA616",
         "componente": "Análise Linear de Sistemas"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG888",
@@ -16021,7 +16099,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: discret, temp, continu, transformad, linear, equa, realimenta, laplace",
+          "rotulo": "ementa: discret, continu, temp, transformad, linear, equa, realimenta, laplace",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg888"
         },
         {
@@ -16171,7 +16249,7 @@
           "score": 0.7939,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: discret, temp, continu, estad",
+          "rotulo": "ementa: discret, continu, temp, estad",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me501"
         },
         {
@@ -16216,7 +16294,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea616",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea619",
@@ -16227,6 +16305,7 @@
         "codigo": "EA619",
         "componente": "Laboratório de Análise Linear"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA722",
@@ -16235,7 +16314,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: respost, experiment, frequenci, reduzid, disponiv, controle, aquisi, escal",
+          "rotulo": "ementa: respost, experiment, frequenci, disponiv, reduzid, controle, aquisi, escal",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea722"
         },
         {
@@ -16370,7 +16449,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea619",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea701",
@@ -16381,6 +16460,7 @@
         "codigo": "EA701",
         "componente": "Introdução aos Sistemas Embarcados"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA090",
@@ -16419,7 +16499,7 @@
           "score": 0.78,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linguagem, interrup, entrad, said, programa",
+          "rotulo": "ementa: linguagem, interrup, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869"
         },
         {
@@ -16429,7 +16509,7 @@
           "score": 0.769,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, processador, entrad, said, programa",
+          "rotulo": "ementa: interrup, processador, said, entrad, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc404"
         },
         {
@@ -16489,7 +16569,7 @@
           "score": 0.7295,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -16519,7 +16599,7 @@
           "score": 0.7143,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: processador, said, entrad",
+          "rotulo": "ementa: processador, entrad, said",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -16584,7 +16664,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea721",
@@ -16595,6 +16675,7 @@
         "codigo": "EA721",
         "componente": "Princípios de Controle e Servomecanismo"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM707",
@@ -16798,7 +16879,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea721",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea722",
@@ -16809,6 +16890,7 @@
         "codigo": "EA722",
         "componente": "Laboratório de Controle e Servomecanismo"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA619",
@@ -16817,7 +16899,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: reduzid, disponiv, controle, aquisi, escal, realimenta, respost, experiment",
+          "rotulo": "ementa: disponiv, reduzid, controle, aquisi, escal, realimenta, respost, experiment",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea619"
         },
         {
@@ -16932,7 +17014,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea722",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea772",
@@ -16943,6 +17025,7 @@
         "codigo": "EA772",
         "componente": "Circuitos Lógicos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA060",
@@ -17146,7 +17229,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea772",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea773",
@@ -17157,6 +17240,7 @@
         "codigo": "EA773",
         "componente": "Laboratório de Circuitos Lógicos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE609",
@@ -17360,7 +17444,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea773",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea801",
@@ -17371,6 +17455,7 @@
         "codigo": "EA801",
         "componente": "Laboratório de Projetos de Sistemas Embarcados"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EA091",
@@ -17504,7 +17589,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea801",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ea869",
@@ -17515,6 +17600,7 @@
         "codigo": "EA869",
         "componente": "Introdução a Sistemas de Computação Digital"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC404",
@@ -17533,7 +17619,7 @@
           "score": 0.8209,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: pipeline, instru, entrad, said, arquitetur, memori, computador",
+          "rotulo": "ementa: pipeline, instru, said, entrad, arquitetur, memori, computador",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc732"
         },
         {
@@ -17543,7 +17629,7 @@
           "score": 0.8025,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: barrament, entrad, said, liga, memori, programa, controle",
+          "rotulo": "ementa: barrament, said, entrad, liga, memori, programa, controle",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea201"
         },
         {
@@ -17553,7 +17639,7 @@
           "score": 0.7789,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: barrament, entrad, said, liga, memori",
+          "rotulo": "ementa: barrament, said, entrad, liga, memori",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea075"
         },
         {
@@ -17563,7 +17649,7 @@
           "score": 0.7617,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: entrad, said, arquitetur, memori, computador",
+          "rotulo": "ementa: said, entrad, arquitetur, memori, computador",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea960"
         },
         {
@@ -17573,7 +17659,7 @@
           "score": 0.7529,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, entrad, said, linguagem, programa",
+          "rotulo": "ementa: interrup, said, entrad, linguagem, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea701"
         },
         {
@@ -17583,7 +17669,7 @@
           "score": 0.7511,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: interrup, entrad, said, linguagem, programa",
+          "rotulo": "ementa: interrup, said, entrad, linguagem, programa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea090"
         },
         {
@@ -17623,7 +17709,7 @@
           "score": 0.7013,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori",
+          "rotulo": "ementa: entrad, said, memori",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc504"
         },
         {
@@ -17673,7 +17759,7 @@
           "score": 0.6938,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: said, entrad, memori",
+          "rotulo": "ementa: entrad, said, memori",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea550"
         },
         {
@@ -17718,7 +17804,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ea.html#disc-ea869",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee100",
@@ -17729,6 +17815,7 @@
         "codigo": "EE100",
         "componente": "Introdução à Engenharia Elétrica"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE400",
@@ -17932,7 +18019,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee100",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee103",
@@ -17943,6 +18030,7 @@
         "codigo": "EE103",
         "componente": "Laboratório de Engenharia Elétrica I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE301",
@@ -18146,7 +18234,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee103",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee300",
@@ -18157,6 +18245,7 @@
         "codigo": "EE300",
         "componente": "Fundamentos da Física Moderna"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 589",
@@ -18360,7 +18449,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee300",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee301",
@@ -18371,6 +18460,7 @@
         "codigo": "EE301",
         "componente": "Laboratório de Fundamentos Físicos para a Engenharia Elétrica"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 839",
@@ -18379,7 +18469,7 @@
           "score": 0.8171,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: polariza, refra, condutor, difra, dieletric, optic, materi, sera",
+          "rotulo": "ementa: polariza, condutor, refra, difra, dieletric, optic, materi, sera",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_839"
         },
         {
@@ -18574,7 +18664,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee301",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee400",
@@ -18585,6 +18675,7 @@
         "codigo": "EE400",
         "componente": "Métodos da Engenharia Elétrica"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE100",
@@ -18788,7 +18879,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee400",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee410",
@@ -18799,6 +18890,7 @@
         "codigo": "EE410",
         "componente": "Introdução à Ciência dos Materiais para Engenharia Elétrica"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG922",
@@ -19002,7 +19094,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee410",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee522",
@@ -19013,6 +19105,7 @@
         "codigo": "EE522",
         "componente": "Laboratório de Eletromagnetismo"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET521",
@@ -19216,7 +19309,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee522",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee523",
@@ -19227,6 +19320,7 @@
         "codigo": "EE523",
         "componente": "Introdução à Teoria Eletromagnética"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE521",
@@ -19275,7 +19369,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: forc, camp, indutanci, capacitanci, resistenci, potencial, gaus, corrente",
+          "rotulo": "ementa: forc, camp, indutanci, capacitanci, resistenci, gaus, potencial, corrente",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_328"
         },
         {
@@ -19430,7 +19524,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee523",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee533",
@@ -19441,6 +19535,7 @@
         "codigo": "EE533",
         "componente": "Eletrônica Básica I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE530",
@@ -19599,7 +19694,7 @@
           "score": 0.7151,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: potenci, font, eletronic",
+          "rotulo": "ementa: font, potenci, eletronic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg644"
         },
         {
@@ -19644,7 +19739,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee533",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee534",
@@ -19655,6 +19750,7 @@
         "codigo": "EE534",
         "componente": "Laboratório de Eletrônica Aplicada"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE828",
@@ -19858,7 +19954,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee534",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee541",
@@ -19869,6 +19965,7 @@
         "codigo": "EE541",
         "componente": "Teoria Eletromagnética"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE540",
@@ -19917,7 +20014,7 @@
           "score": 0.88,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: onda, reflexa, anten, refra, maxwell, eletromagnetic, propaga, equa",
+          "rotulo": "ementa: onda, reflexa, anten, maxwell, refra, eletromagnetic, propaga, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_602"
         },
         {
@@ -20027,7 +20124,7 @@
           "score": 0.6989,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: atenua, impedanci, dieletric, equa",
+          "rotulo": "ementa: impedanci, atenua, dieletric, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee754"
         },
         {
@@ -20072,7 +20169,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee541",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee641",
@@ -20083,6 +20180,7 @@
         "codigo": "EE641",
         "componente": "Laboratório de Eletrônica Básica II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE828",
@@ -20286,7 +20384,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee641",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee642",
@@ -20297,6 +20395,7 @@
         "codigo": "EE642",
         "componente": "Eletrônica II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE533",
@@ -20500,7 +20599,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee642",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee833",
@@ -20511,6 +20610,7 @@
         "codigo": "EE833",
         "componente": "Eletrônica de Potência"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG632",
@@ -20714,7 +20814,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee833",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee881",
@@ -20725,6 +20825,7 @@
         "codigo": "EE881",
         "componente": "Princípios de Comunicações I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG918",
@@ -20928,7 +21029,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee881",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ee882",
@@ -20939,6 +21040,7 @@
         "codigo": "EE882",
         "componente": "Laboratório de Comunicações I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE103",
@@ -21142,7 +21244,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ee.html#disc-ee882",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-em424",
@@ -21153,6 +21255,7 @@
         "codigo": "EM424",
         "componente": "Resistência dos Materiais"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM423",
@@ -21356,7 +21459,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/em.html#disc-em424",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-em524",
@@ -21367,6 +21470,7 @@
         "codigo": "EM524",
         "componente": "Fenômenos de Transporte"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 320",
@@ -21570,7 +21674,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/em.html#disc-em524",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et520",
@@ -21581,6 +21685,7 @@
         "codigo": "ET520",
         "componente": "Princípios de Conversão de Energia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET017",
@@ -21784,7 +21889,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et520",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et521",
@@ -21795,6 +21900,7 @@
         "codigo": "ET521",
         "componente": "Laboratório de Princípios de Conversão de Energia"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EE522",
@@ -21998,7 +22104,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et521",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et620",
@@ -22009,6 +22115,7 @@
         "codigo": "ET620",
         "componente": "Máquinas Elétricas"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET016",
@@ -22212,7 +22319,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et620",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et621",
@@ -22223,6 +22330,7 @@
         "codigo": "ET621",
         "componente": "Laboratório de Máquinas Elétricas"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET521",
@@ -22426,7 +22534,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et621",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et720",
@@ -22437,6 +22545,7 @@
         "codigo": "ET720",
         "componente": "Sistemas de Energia Elétrica I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET016",
@@ -22640,7 +22749,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et720",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-et911",
@@ -22651,6 +22760,7 @@
         "codigo": "ET911",
         "componente": "Projeto de instalações elétricas I (industrial)"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "ET017",
@@ -22854,7 +22964,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/et.html#disc-et911",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-f-128",
@@ -22865,6 +22975,7 @@
         "codigo": "F 128",
         "componente": "Física Geral I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EM404",
@@ -23068,7 +23179,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_128",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-f-159",
@@ -23079,6 +23190,7 @@
         "codigo": "F 159",
         "componente": "Introdução à Física Experimental I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 129",
@@ -23202,7 +23314,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_159",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-f-228",
@@ -23213,6 +23325,7 @@
         "codigo": "F 228",
         "componente": "Física Geral II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 428",
@@ -23416,7 +23529,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_228",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-f-259",
@@ -23427,6 +23540,7 @@
         "codigo": "F 259",
         "componente": "Introdução à Física Experimental II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 640",
@@ -23570,7 +23684,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_259",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-f-315",
@@ -23581,6 +23695,7 @@
         "codigo": "F 315",
         "componente": "Mecânica Geral I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 313",
@@ -23784,7 +23899,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_315",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-la122",
@@ -23795,6 +23910,7 @@
         "codigo": "LA122",
         "componente": "Inglês Instrumental I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "LA222",
@@ -23803,7 +23919,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: visand, realidad, express, academic, leitur, jornalistic, textu, aprimorar",
+          "rotulo": "ementa: visand, express, realidad, academic, leitur, jornalistic, textu, aprimorar",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la222"
         },
         {
@@ -23843,7 +23959,7 @@
           "score": 0.8561,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, jornalistic, textu, ingl, divulga, esfer, base, gener",
+          "rotulo": "ementa: academic, jornalistic, textu, ingl, divulga, esfer, base, critic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la094"
         },
         {
@@ -23903,7 +24019,7 @@
           "score": 0.8352,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, jornalistic, textu, divulga, esfer, base, gener, critic",
+          "rotulo": "ementa: academic, jornalistic, textu, divulga, esfer, base, critic, gener",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la093"
         },
         {
@@ -23913,7 +24029,7 @@
           "score": 0.787,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: academic, tend, base, text, gener, critic, linguistic, cultur",
+          "rotulo": "ementa: academic, tend, base, text, critic, gener, linguistic, cultur",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la345"
         },
         {
@@ -23998,7 +24114,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/la.html#disc-la122",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ma111",
@@ -24009,6 +24125,7 @@
         "codigo": "MA111",
         "componente": "Cálculo I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "CE112",
@@ -24017,7 +24134,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: continuidade, derivad, limit, diferencial, funco",
+          "rotulo": "ementa: continuidade, derivad, diferencial, limit, funco",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ce.html#disc-ce112"
         },
         {
@@ -24212,7 +24329,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma111",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ma141",
@@ -24223,6 +24340,7 @@
         "codigo": "MA141",
         "componente": "Geometria Analítica e Vetores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA093",
@@ -24251,7 +24369,7 @@
           "score": 0.7411,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: coordenad, produt, norm, base, espac, linear",
+          "rotulo": "ementa: coordenad, produt, base, norm, espac, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma719"
         },
         {
@@ -24281,7 +24399,7 @@
           "score": 0.7162,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: plan, esferic, cilindric",
+          "rotulo": "ementa: plan, cilindric, esferic",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms590"
         },
         {
@@ -24311,7 +24429,7 @@
           "score": 0.698,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: produt, norm, base, espac",
+          "rotulo": "ementa: produt, base, norm, espac",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma453"
         },
         {
@@ -24381,7 +24499,7 @@
           "score": 0.6863,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: plan, norm, base",
+          "rotulo": "ementa: plan, base, norm",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me651"
         },
         {
@@ -24426,7 +24544,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma141",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ma211",
@@ -24437,6 +24555,7 @@
         "codigo": "MA211",
         "componente": "Cálculo II"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA720",
@@ -24640,7 +24759,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma211",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ma311",
@@ -24651,6 +24770,7 @@
         "codigo": "MA311",
         "componente": "Cálculo III"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "F 620",
@@ -24749,7 +24869,7 @@
           "score": 0.8823,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: diferenci, equa, laplace, ordem, transformad",
+          "rotulo": "ementa: diferenci, equa, ordem, laplace, transformad",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma312"
         },
         {
@@ -24854,7 +24974,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma311",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ma327",
@@ -24865,6 +24985,7 @@
         "codigo": "MA327",
         "componente": "Álgebra Linear"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MA719",
@@ -24913,7 +25034,7 @@
           "score": 0.7766,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: matriz, autovalor, autovetor, linear",
+          "rotulo": "ementa: matriz, autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms992"
         },
         {
@@ -24973,7 +25094,7 @@
           "score": 0.7325,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: autovalor, autovetor, linear",
+          "rotulo": "ementa: autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms512"
         },
         {
@@ -25013,7 +25134,7 @@
           "score": 0.7157,
           "confianca": "baixa",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: autovalor, autovetor, linear",
+          "rotulo": "ementa: autovetor, autovalor, linear",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma312"
         },
         {
@@ -25068,7 +25189,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma327",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-mc102",
@@ -25079,6 +25200,7 @@
         "codigo": "MC102",
         "componente": "Algoritmos e Programação de Computadores"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MC404",
@@ -25282,7 +25404,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/mc.html#disc-mc102",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-me323",
@@ -25293,6 +25415,7 @@
         "codigo": "ME323",
         "componente": "Introdução aos Modelos Probabilísticos"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "EG085",
@@ -25496,7 +25619,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me323",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-ms211",
@@ -25507,6 +25630,7 @@
         "codigo": "MS211",
         "componente": "Cálculo Numérico"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "MS213",
@@ -25515,7 +25639,7 @@
           "score": 0.9,
           "confianca": "alta",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: numeric, interpola, flutuante, zero, linear, minim, quadrad, pont",
+          "rotulo": "ementa: numeric, interpola, flutuante, zero, linear, quadrad, pont, minim",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms213"
         },
         {
@@ -25585,7 +25709,7 @@
           "score": 0.7716,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: ordinari, pont, diferenci, funco, equa",
+          "rotulo": "ementa: ordinari, diferenci, pont, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms550"
         },
         {
@@ -25595,7 +25719,7 @@
           "score": 0.7702,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: ordinari, pont, diferenci, funco, equa",
+          "rotulo": "ementa: ordinari, diferenci, pont, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/f_.html#disc-f_520"
         },
         {
@@ -25615,7 +25739,7 @@
           "score": 0.7635,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, minim, quadrad, funco, equa",
+          "rotulo": "ementa: linear, quadrad, minim, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/eg.html#disc-eg293"
         },
         {
@@ -25625,7 +25749,7 @@
           "score": 0.7616,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, minim, quadrad, funco, equa",
+          "rotulo": "ementa: linear, quadrad, minim, funco, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/me.html#disc-me919"
         },
         {
@@ -25635,7 +25759,7 @@
           "score": 0.7605,
           "confianca": "media",
           "ignorar_carga_horaria": false,
-          "rotulo": "ementa: linear, aritmetic, minim, quadrad, equa",
+          "rotulo": "ementa: linear, aritmetic, quadrad, minim, equa",
           "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ma.html#disc-ma553"
         },
         {
@@ -25710,7 +25834,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/ms.html#disc-ms211",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     },
     {
       "id": "auto-engenharia-el-trica-qg101",
@@ -25721,6 +25845,7 @@
         "codigo": "QG101",
         "componente": "Química I"
       },
+      "origem_instituicao": "UNICAMP",
       "origens": [
         {
           "codigo": "QG191",
@@ -25924,7 +26049,7 @@
         }
       ],
       "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/qg.html#disc-qg101",
-      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.12."
+      "observacao": "Gerado por TF-IDF de ementas e similaridade de nomes; não é equivalência oficial. Limiares: nome >= 0.6; conteúdo >= 0.05."
     }
   ]
 }

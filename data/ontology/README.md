@@ -34,6 +34,9 @@ laboratório de programação cubra PAA.
 
 - O JSON é copiado para `site/public/data/regras.json`.
 - As arestas entram no max-cost flow junto com os matches por nome.
+- As regras têm `origem_instituicao: "UNICAMP"`; o matcher só as aplica quando o
+  histórico importado é da UNICAMP. Isso evita falsos positivos por nome com
+  históricos de outras instituições.
 - Uma regra nunca substitui um match por nome com score maior, exceto quando
   declara cobertura integral (`ignorar_carga_horaria`) para uma origem menor.
 - A UI mostra os termos/ementa que fundamentaram a cobertura e a confiança.

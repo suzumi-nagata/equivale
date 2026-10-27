@@ -374,12 +374,13 @@ def main() -> int:
                     "codigo": target["codigo"],
                     "componente": target["nome"],
                 },
+                "origem_instituicao": "UNICAMP",
                 "origens": origins,
                 "fonte": target_doc["fonte"],
                 "observacao": (
                     "Gerado por TF-IDF de ementas e similaridade de nomes; "
                     "não é equivalência oficial. Limiares: nome >= 0.6; "
-                    "conteúdo >= 0.12."
+                    "conteúdo >= 0.05."
                 ),
             }
         )

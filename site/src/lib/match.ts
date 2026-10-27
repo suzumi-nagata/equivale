@@ -4,6 +4,7 @@ import type {
   Confidence,
   Curriculum,
   EquivalenceRule,
+  MatchOptions,
   MatchResult,
   MatchSummary,
   Slot,
@@ -153,7 +154,11 @@ export function loadSources(transcript: Transcript): SourceDiscipline[] {
   return [...byCode.values()]
 }
 
-function bestEdgeForSlot(source: SourceDiscipline, slot: Slot): Edge | null {
+function bestEdgeForSlot(
+  source: SourceDiscipline,
+  slot: Slot,
+  ignoreWorkload = false,
+): Edge | null {
   if (slot.livre) {
     return {
       source,
@@ -170,7 +175,8 @@ function bestEdgeForSlot(source: SourceDiscipline, slot: Slot): Edge | null {
   let best: Edge | null = null
 
   for (const option of slot.opcoes) {
-    const pair = pairScore(option, slot.horas, source.nome, source.horas)
+    const scoreHours = ignoreWorkload ? source.horas : slot.horas
+    const pair = pairScore(option, scoreHours, source.nome, source.horas)
     if (pair.score <= 0) continue
     const optionConcepts = concepts(option)
     const specific = [...optionConcepts].some((concept) => !BROAD_CONCEPTS.has(concept))
@@ -250,12 +256,19 @@ function applyRules(
   slots: Slot[],
   sources: SourceDiscipline[],
   rules: EquivalenceRule[],
+  transcriptInstitution: string,
 ): Edge[] {
   if (rules.length === 0) return edges
 
   const byPair = new Map(edges.map((edge) => [`${edge.source.id}|${edge.slot.id}`, edge]))
 
   for (const rule of rules) {
+    if (
+      rule.origem_instituicao &&
+      normalize(rule.origem_instituicao) !== normalize(transcriptInstitution)
+    ) {
+      continue
+    }
     for (const slot of slots) {
       if (!ruleMatchesTarget(rule, curriculum, slot)) continue
       for (const origin of rule.origens) {
@@ -344,7 +357,12 @@ function addFlowEdge(
  * negativo (valor positivo) no grafo residual; portanto pode deixar
  * capacidade sem uso em vez de forçar um pareamento ruim.
  */
-function maxCostFlow(edges: Edge[], sources: SourceDiscipline[], slots: Slot[]): MatchedEdge[] {
+function maxCostFlow(
+  edges: Edge[],
+  sources: SourceDiscipline[],
+  slots: Slot[],
+  ignoreWorkload = false,
+): MatchedEdge[] {
   const sourceIndex = new Map(sources.map((source, index) => [source.id, index]))
   const slotIndex = new Map(slots.map((slot, index) => [slot.id, index]))
   const sourceOffset = 1
@@ -357,12 +375,14 @@ function maxCostFlow(edges: Edge[], sources: SourceDiscipline[], slots: Slot[]):
   const sourceCapacity = new Map(sources.map((source) => [source.id, source.horas]))
 
   for (const edge of edges) {
+    let capacity = sourceCapacity.get(edge.source.id) ?? 0
     if (edge.ignoreSourceHours && edge.maxHours) {
-      sourceCapacity.set(
-        edge.source.id,
-        Math.max(sourceCapacity.get(edge.source.id) ?? 0, edge.maxHours),
-      )
+      capacity = Math.max(capacity, edge.maxHours)
     }
+    if (ignoreWorkload) {
+      capacity = Math.max(capacity, edge.slot.horas)
+    }
+    sourceCapacity.set(edge.source.id, capacity)
   }
 
   for (let index = 0; index < sources.length; index += 1) {
@@ -382,7 +402,7 @@ function maxCostFlow(edges: Edge[], sources: SourceDiscipline[], slots: Slot[]):
     const from = sourceIndex.get(edge.source.id)
     const to = slotIndex.get(edge.slot.id)
     if (from === undefined || to === undefined || edge.score <= 0) continue
-    const cap = edge.ignoreSourceHours
+    const cap = ignoreWorkload || edge.ignoreSourceHours
       ? Math.min(edge.slot.horas, edge.maxHours ?? Number.POSITIVE_INFINITY)
       : Math.min(
         edge.source.horas,
@@ -467,19 +487,28 @@ export function matchCurriculum(
   curriculum: Curriculum,
   transcript: Transcript,
   rules: EquivalenceRule[] = [],
+  options: MatchOptions = {},
 ): MatchResult {
   const { slots, naoAbativeis } = buildSlots(curriculum)
   const sources = loadSources(transcript)
+  const ignoreWorkload = Boolean(options.ignoreWorkload)
   const nameEdges: Edge[] = []
 
   for (const source of sources) {
     for (const slot of slots) {
-      const edge = bestEdgeForSlot(source, slot)
+      const edge = bestEdgeForSlot(source, slot, ignoreWorkload)
       if (edge) nameEdges.push(edge)
     }
   }
 
-  const edges = applyRules(nameEdges, curriculum, slots, sources, rules)
+  const edges = applyRules(
+    nameEdges,
+    curriculum,
+    slots,
+    sources,
+    rules,
+    transcript.instituicao,
+  )
 
   edges.sort((a, b) => {
     if (b.rank !== a.rank) return b.rank - a.rank
@@ -487,7 +516,7 @@ export function matchCurriculum(
     return Math.min(b.source.horas, b.slot.horas) - Math.min(a.source.horas, a.slot.horas)
   })
 
-  const matched = maxCostFlow(edges, sources, slots)
+  const matched = maxCostFlow(edges, sources, slots, ignoreWorkload)
   const allocations: Allocation[] = matched
     .filter(({ edge, hours }) => {
       // Em slots fixos, evita frações pequenas que não fecham o componente.
@@ -597,6 +626,12 @@ export function matchCurriculum(
   if (slots.some((slot) => slot.livre)) {
     avisos.push(
       'Grupos de eletivas livres aceitam qualquer disciplina elegível da origem; a confiança é baixa e a regra da IES pode ser mais restrita.',
+    )
+  }
+
+  if (ignoreWorkload) {
+    avisos.push(
+      'Modo de teste ativo: a carga horária da origem não limita o componente-alvo. Uma disciplina de 30h pode cobrir um componente de 90h; use com cautela.',
     )
   }
 

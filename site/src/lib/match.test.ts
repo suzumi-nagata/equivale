@@ -33,9 +33,12 @@ function fixedGroup(name: string, disciplines: Array<[string, number, string?]>)
   }
 }
 
-function makeTranscript(items: Array<[string, number, string?]>): Transcript {
+function makeTranscript(
+  items: Array<[string, number, string?]>,
+  instituicao = 'Instituição de teste',
+): Transcript {
   return {
-    instituicao: 'Instituição de teste',
+    instituicao,
     disciplinas: items.map(([nome, horas, codigo], index) => ({
       codigo: codigo ?? `T${index}`,
       codigo_normalizado: codigo ?? `T${index}`,
@@ -382,5 +385,65 @@ test('computação gráfica não é coberta por programação genérica', () => 
 
   assert.equal(result.allocations.length, 0)
   assert.equal(result.summary.horasAbatidas, 0)
+  assert.equal(result.summary.slotsAbertos, 1)
+})
+
+test('tokens genéricos não cobrem sistemas embarcados', () => {
+  const target = makeCurriculum([
+    fixedGroup('Obrigatórias', [['Introdução aos Sistemas Embarcados', 90, 'EA701']]),
+  ])
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Introdução aos Sistemas de Potência', 60, 'PEA3301']]),
+  )
+
+  assert.equal(result.allocations.length, 0)
+  assert.equal(result.summary.slotsAbertos, 1)
+})
+
+test('modo sem carga horária permite uma origem de 30h cobrir 90h', () => {
+  const target = makeCurriculum([
+    fixedGroup('Obrigatórias', [['Processamento Digital de Sinais', 90, 'EA999']]),
+  ])
+  const transcript = makeTranscript([
+    ['Introdução ao Processamento Digital de Sinais', 30, 'PTC3361'],
+  ])
+
+  const conservative = matchCurriculum(target, transcript)
+  assert.equal(conservative.allocations.length, 1)
+  assert.equal(conservative.summary.horasAbatidas, 30)
+  assert.equal(conservative.summary.slotsParciais, 1)
+
+  const permissive = matchCurriculum(target, transcript, [], { ignoreWorkload: true })
+  assert.equal(permissive.allocations.length, 1)
+  assert.equal(permissive.summary.horasAbatidas, 90)
+  assert.equal(permissive.summary.slotsCobertos, 1)
+  assert.equal(permissive.summary.coberturaAbativel, 1)
+})
+
+test('regra gerada para UNICAMP não se aplica a histórico USP', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [['Física Geral III', 60, 'F 328']]),
+  ])
+  const rules: EquivalenceRule[] = [
+    {
+      id: 'teste-origem',
+      alvo: { instituicao: 'Instituição de teste', curso: 'Curso de teste', codigo: 'F 328' },
+      origem_instituicao: 'UNICAMP',
+      origens: [
+        {
+          codigo: 'EE540',
+          nome: 'Teoria Eletromagnética',
+          horas_cobertura: 60,
+          score: 0.8,
+          confianca: 'media',
+        },
+      ],
+    },
+  ]
+  const transcript = makeTranscript([['Teoria Eletromagnética', 60, 'EE540']], 'USP')
+  const result = matchCurriculum(target, transcript, rules)
+
+  assert.equal(result.allocations.length, 0)
   assert.equal(result.summary.slotsAbertos, 1)
 })

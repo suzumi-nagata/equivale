@@ -168,9 +168,14 @@ export interface EquivalenceRule {
     codigo?: string
     componente?: string
   }
+  origem_instituicao?: string
   origens: RuleOrigin[]
   fonte?: string
   observacao?: string
+}
+
+export interface MatchOptions {
+  ignoreWorkload?: boolean
 }
 
 export interface RulesFile {

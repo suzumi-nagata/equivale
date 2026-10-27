@@ -36,8 +36,25 @@ slot for menor). Grupos de eletivas aceitam qualquer fração, porque o requisit
 elegível da origem, com score fixo 0.6 e confiança baixa; a regra efetiva da IES
 pode ser mais restrita.
 
+### Política de carga horária e escopo
+
+- O padrão é conservador: a origem só fornece até a própria carga horária.
+- O modo opcional `ignoreWorkload` remove esse limite: a capacidade da origem
+  sobe até a carga do maior slot que ela pode cobrir, e o par é pontuado sem o
+  fator de aderência de carga. Com isso, uma disciplina de 30h pode cobrir um
+  componente de 90h. A UI expõe isso como “Ignorar diferença de carga horária”
+  e o resultado inclui um aviso; é uma estimativa permissiva, não a regra
+  oficial.
+- Regras de ementa têm `origem_instituicao`; elas só são aplicadas quando o
+  histórico importado é da mesma instituição. Isso evita que uma regra da
+  UNICAMP case por nome com uma disciplina da USP.
+- Guardas gerais de nome: sequência (Cálculo I ≠ Cálculo II), teoria ×
+  laboratório e tokens genéricos (não casar “Introdução aos Sistemas de
+  Potência” com “Introdução aos Sistemas Embarcados”).
+
 Os testes sintéticos ficam em `site/src/lib/match.test.ts` e cobrem 1→n,
-m→1, capacidade, eletiva livre, TCC não abatível e cobertura temática.
+m→1, capacidade, eletiva livre, TCC não abatível, cobertura temática, escopo
+institucional e o modo sem carga horária.
 
 ### Cobertura temática por ementas (gerada)
 

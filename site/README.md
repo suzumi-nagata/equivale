@@ -40,7 +40,11 @@ npm test
   geradas a partir de ementas adicionam arestas quando o nome não coincide.
 - Cobertura temática por ementas da UNICAMP (TF-IDF + nome, gerada offline pelo
   script `../tools/build_unicamp_cobertura.py`), com termos compartilhados,
-  confiança e URL da ementa.
+  confiança e URL da ementa. As regras são aplicadas apenas a históricos da
+  mesma instituição de origem.
+- Modo opcional **“Ignorar diferença de carga horária”** no seletor: quando
+  ligado, uma origem de 30h pode cobrir um componente de 90h por conteúdo. O
+  padrão continua conservador.
 - MEC: para a UNICAMP, o catálogo oficial é a fonte da grade, mas o ato de
   reconhecimento ainda não foi consultado no e-MEC; o seletor mostra “ato não
   consultado” e “instituição pública”, não “não reconhecido”.
