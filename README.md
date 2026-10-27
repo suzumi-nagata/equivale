@@ -27,6 +27,10 @@ para nenhum servidor.
 - **Dados-alvo:** conversão dos currículos UNICAMP 2026 para o schema do site,
   incluindo grupos de eletivas por crédito. Ver
   [`data/targets/unicamp/README.md`](data/targets/unicamp/README.md).
+- **Alvos USP:** Engenharia Elétrica (ênfase Automação e Controle, ciclo básico
+  + ênfase) e Engenharia de Computação (currículo 2012 disponível no
+  Jupiterweb), da Poli-USP. Ver
+  [`data/targets/usp/README.md`](data/targets/usp/README.md).
 - **Cobertura temática:** regras geradas automaticamente a partir das ementas
   públicas da UNICAMP (TF-IDF + similaridade de nomes, sem LLM em runtime) para
   ligar Física Geral III/IV, Física Experimental III, Resistência dos Materiais,
@@ -64,6 +68,7 @@ tools/
   extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
   build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
   build_unicamp_cobertura.py # extrai ementas e gera cobertura temática
+  extract_usp_poli.py       # extrai alvos EE/EC da Poli-USP (Jupiterweb)
 data/sources/unicamp/
   README.md              # escopo, habilitações/ênfases e proveniência
   eng_computacao_2026.json # 34G: núcleo comum + AA/AB (e AX)
@@ -73,6 +78,10 @@ data/targets/unicamp/
   unicamp-ec-2026-aa.json
   unicamp-ec-2026-ab.json
   unicamp-ee-2026.json
+data/targets/usp/
+  README.md              # proveniência e limitações das grades Poli-USP
+  usp-poli-ee-ac-2027.json
+  usp-poli-ec-2012.json
 data/ontology/
   README.md              # regras de cobertura temática por ementa
   unicamp_2026_regras.json
@@ -99,9 +108,10 @@ npm run build     # gera site/dist
 ```
 
 O `predev`/`prebuild` copia os currículos públicos de
-`data/spike/curriculos` e `data/targets/unicamp`, além das regras de
-`data/ontology`, para `site/public/data` (gerado; não versionado). O site importa
-histórico em JSON/CSV e já abre com um histórico fictício de demonstração.
+`data/spike/curriculos`, `data/targets/unicamp` e `data/targets/usp`, além das
+regras de `data/ontology`, para `site/public/data` (gerado; não versionado). O
+site importa histórico em JSON/CSV e já abre com um histórico fictício de
+demonstração.
 
 ### Testes do matcher
 

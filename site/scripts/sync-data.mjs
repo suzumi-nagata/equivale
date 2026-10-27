@@ -8,6 +8,7 @@ const repoRoot = dirname(siteRoot)
 const curriculumDirs = [
   join(repoRoot, 'data', 'spike', 'curriculos'),
   join(repoRoot, 'data', 'targets', 'unicamp'),
+  join(repoRoot, 'data', 'targets', 'usp'),
 ]
 const targetDir = join(siteRoot, 'public', 'data')
 

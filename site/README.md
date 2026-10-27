@@ -11,9 +11,9 @@ npm install
 npm run dev
 ```
 
-O `predev` copia os currículos públicos de `../data/spike/curriculos` e
-`../data/targets/unicamp`, o `cursos.json` e as regras de
-`../data/ontology` para `public/data/` (gerado; não versionado).
+O `predev` copia os currículos públicos de `../data/spike/curriculos`,
+`../data/targets/unicamp` e `../data/targets/usp`, o `cursos.json` e as regras
+de `../data/ontology` para `public/data/` (gerado; não versionado).
 
 Build de produção:
 
@@ -30,8 +30,10 @@ npm test
 
 ## O que já funciona
 
-- Seleção de curso alvo: UNINTER ADS/Engenharia de Software e UNICAMP 2026
-  (Engenharia de Computação AA/AB e Engenharia Elétrica 41G).
+- Seleção de curso alvo: UNINTER ADS/Engenharia de Software, UNICAMP 2026
+  (Engenharia de Computação AA/AB e Engenharia Elétrica 41G) e Poli-USP
+  (Engenharia Elétrica Automação e Controle 2027 e Engenharia de Computação
+  2012). O seletor tem busca e filtros por instituição, modalidade e grau.
 - Importação de histórico em **JSON** (saída do parser local) ou **CSV**.
 - Histórico fictício de demonstração.
 - Matcher **max-cost flow m-para-n** por nome + carga horária: uma origem pode
@@ -45,7 +47,7 @@ npm test
 - Modo opcional **“Ignorar diferença de carga horária”** no seletor: quando
   ligado, uma origem de 30h pode cobrir um componente de 90h por conteúdo. O
   padrão continua conservador.
-- MEC: para a UNICAMP, o catálogo oficial é a fonte da grade, mas o ato de
+- MEC: para UNICAMP e USP, o catálogo oficial é a fonte da grade, mas o ato de
   reconhecimento ainda não foi consultado no e-MEC; o seletor mostra “ato não
   consultado” e “instituição pública”, não “não reconhecido”.
 - Resumo de horas abatidas, cobertura, disciplinas restantes e semestres
