@@ -6,7 +6,13 @@ import { TranscriptPanel } from './components/TranscriptPanel'
 import { DEMO_TRANSCRIPT } from './data/demo'
 import { matchCurriculum } from './lib/match'
 import { parseTranscriptFile } from './lib/transcript'
-import type { CourseRecord, CoursesFile, Curriculum, Transcript } from './lib/types'
+import type {
+  CourseRecord,
+  CoursesFile,
+  Curriculum,
+  CurriculumIndexFile,
+  Transcript,
+} from './lib/types'
 
 function dataUrl(file: string): string {
   return `${import.meta.env.BASE_URL}data/${file}`
@@ -36,14 +42,21 @@ export default function App() {
 
     async function load() {
       try {
-        const [ads, software, courseFile] = await Promise.all([
-          fetchJson<Curriculum>('uninter_ads.json'),
-          fetchJson<Curriculum>('uninter_eng_software.json'),
+        const [index, courseFile] = await Promise.all([
+          fetchJson<CurriculumIndexFile>('index.json'),
           fetchJson<CoursesFile>('cursos.json'),
         ])
+        if (index.curriculos.length === 0) {
+          throw new Error('Nenhum currículo público encontrado.')
+        }
+        const loaded = await Promise.all(
+          index.curriculos.map((entry) => fetchJson<Curriculum>(entry.file)),
+        )
         if (cancelled) return
-        setTargets([ads, software])
+        setTargets(loaded)
         setCourses(courseFile.cursos)
+        const preferred = loaded.find((target) => target.id === 'uninter-ads') ?? loaded[0]
+        setSelectedId(preferred.id)
         setTranscript(DEMO_TRANSCRIPT)
         setTranscriptLabel('Histórico fictício')
         setIsDemo(true)

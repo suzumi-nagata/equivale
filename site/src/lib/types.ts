@@ -83,6 +83,22 @@ export interface CoursesFile {
   cursos: CourseRecord[]
 }
 
+export interface CurriculumIndexEntry {
+  file: string
+  id: string
+  instituicao: string
+  curso: string
+  grau: Grau
+  modalidade: string
+  duracao_meses: number
+  carga_horaria_total: number
+  fonte: string
+}
+
+export interface CurriculumIndexFile {
+  curriculos: CurriculumIndexEntry[]
+}
+
 export interface TranscriptDiscipline {
   codigo?: string
   codigo_normalizado?: string

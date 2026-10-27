@@ -1,4 +1,4 @@
-# Course Credits Comparator
+# Equivale
 
 Site estático e client-side para comparar currículos de cursos superiores
 brasileiros e estimar aproveitamento de estudos (equivalências) para uma segunda
