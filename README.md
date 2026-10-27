@@ -13,9 +13,12 @@ para nenhum servidor.
 - **Parser de históricos:** protótipo para UNICAMP (DAC) e USP (Júpiter), com
   extração por coordenadas (sem OCR). Validado localmente; os PDFs e JSONs de
   teste não são versionados.
-- **Matcher:** PoC 1-para-1 por nome + carga horária. O modelo definitivo é
-  **m-para-n** (capacidade de horas + cobertura de conteúdo). Ver
-  [`docs/MATCHING.md`](docs/MATCHING.md).
+- **Site:** protótipo em [`site/`](site/) com Vite + React + TypeScript,
+  importação de histórico em JSON/CSV, histórico fictício de demonstração e
+  matcher **m-para-n guloso**. Deploy preparado para GitHub Pages.
+- **Matcher:** o PoC Python é 1-para-1; o site usa uma heurística m-para-n. O
+  modelo definitivo é **max-cost flow** (capacidade de horas + cobertura de
+  conteúdo). Ver [`docs/MATCHING.md`](docs/MATCHING.md).
 - **Spike de dados:** 5 IES privadas EAD (UNINTER, Anhanguera, Estácio, Cruzeiro
   do Sul Virtual e UNIP), somente com fontes públicas. Ver
   [`data/spike/README.md`](data/spike/README.md).
@@ -35,6 +38,12 @@ para nenhum servidor.
 ## Estrutura
 
 ```text
+site/                    # app estático (Vite + React + TS)
+  src/
+    components/          # alvo, importação, resumo, resultado
+    lib/                 # normalização, matcher m-para-n, parse JSON/CSV
+    data/demo.ts         # histórico fictício
+  scripts/sync-data.mjs  # copia dados públicos para public/data
 prototype/
   parse_transcripts.py   # parser UNICAMP/USP -> JSON normalizado
   match_curricula.py     # matcher PoC 1-para-1 (húngaro)
@@ -44,9 +53,27 @@ data/spike/
   curriculos/            # grades públicas (UNINTER ADS e Eng. Software)
 docs/
   MATCHING.md            # modelo 1-para-1 atual e desenho m-para-n
+.github/workflows/
+  deploy.yml             # build + deploy do site no GitHub Pages
 ```
 
 ## Rodando os protótipos
+
+### Site
+
+```bash
+cd site
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # gera site/dist
+```
+
+O `predev`/`prebuild` copia os currículos públicos de
+`data/spike/curriculos` para `site/public/data` (gerado; não versionado). O site
+importa histórico em JSON/CSV e já abre com um histórico fictício de
+demonstração.
+
+### Parser e matcher Python
 
 ```bash
 # Parser de histórico (local; o JSON fica em /tmp)
@@ -61,6 +88,12 @@ python3 -I prototype/match_curricula.py \
 ```
 
 O parser usa `pdftotext` (poppler). Nenhum pacote Python externo é necessário.
+
+## Deploy
+
+O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builda
+`site/` e publica no GitHub Pages. No GitHub, habilite **Settings → Pages →
+Source: GitHub Actions** e faça push para `main`.
 
 ## Modelo de matching
 

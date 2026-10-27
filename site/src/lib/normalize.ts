@@ -1,0 +1,216 @@
+import type { Confidence } from './types'
+
+const STOPWORDS = new Set([
+  'a', 'as', 'o', 'os', 'de', 'da', 'das', 'do', 'dos', 'e', 'em', 'para',
+  'por', 'com', 'sem', 'um', 'uma', 'uns', 'umas', 'na', 'nas', 'no', 'nos',
+  'ao', 'aos', 'the', 'and', 'of', 'for', 'in', 'on', 'to',
+])
+
+export const BROAD_CONCEPTS = new Set([
+  'programacao', 'calculo', 'seguranca', 'ia', 'redes', 'direito',
+  'etica', 'meio_ambiente', 'governanca',
+])
+
+interface ConceptPattern {
+  concept: string
+  patterns: RegExp[]
+}
+
+const CONCEPT_PATTERNS: ConceptPattern[] = [
+  { concept: 'calculo', patterns: [/(?<!pre )\bcalculo\b(?!\s+numerico)/] },
+  { concept: 'calculo_numerico', patterns: [/\bcalculo numerico\b/, /\bmetodos? numericos?\b/, /\bmetodo numerico\b/] },
+  { concept: 'algebra_linear', patterns: [/\balgebra linear\b/] },
+  { concept: 'geometria_analitica', patterns: [/\bgeometria analitica\b/] },
+  { concept: 'probabilidade', patterns: [/\bprobabilidade\b/, /\bprocessos estocasticos\b/] },
+  { concept: 'estatistica', patterns: [/\bestatistica\b/] },
+  { concept: 'pre_calculo', patterns: [/\bpre calculo\b/, /\bmatematica elementar\b/] },
+  { concept: 'programacao', patterns: [/\bprogramacao\b(?!\s+matematica)/, /\balgoritmos?\b/, /\blaboratorio de programacao\b/, /\bintroducao a computacao\b/, /\bintroducao a ciencia da computacao\b/] },
+  { concept: 'estrutura_dados', patterns: [/\bestruturas? de dados\b/] },
+  { concept: 'poo', patterns: [/\bprogramacao orientada a objetos\b/, /\borientada a objetos\b/, /\bpoo\b/] },
+  { concept: 'banco_dados', patterns: [/\bbanco de dados\b/, /\bbanco dados\b/, /\bsgbd\b/] },
+  { concept: 'engenharia_software', patterns: [/\bengenharia de software\b/] },
+  { concept: 'sistemas_operacionais', patterns: [/\bsistemas? operacionais?\b/] },
+  { concept: 'redes', patterns: [/\bredes de computadores\b/, /\bredes e comunicacoes\b/, /\bcomunicacao de dados\b/, /\bprotocolos de redes\b/] },
+  { concept: 'ia', patterns: [/\binteligencia artificial\b/, /\binteligencia computacional\b/] },
+  { concept: 'machine_learning', patterns: [/\bmachine learning\b/, /\baprendizado de maquina\b/, /\bdeep learning\b/, /\bredes neurais\b/] },
+  { concept: 'organizacao_computadores', patterns: [/\barquitetura de computadores\b/, /\borganizacao de computadores\b/, /\bsistemas de computacao digital\b/, /\barquitetura e organizacao de computadores\b/] },
+  { concept: 'circuitos_digitais', patterns: [/\bsistemas digitais\b/, /\bcircuitos digitais\b/, /\bcircuitos logicos\b/, /\blaboratorio digital\b/] },
+  { concept: 'cloud', patterns: [/\bcomputacao em nuvem\b/, /\bcloud\b/] },
+  { concept: 'big_data', patterns: [/\bbig data\b/] },
+  { concept: 'seguranca', patterns: [/\bseguranca da informacao\b/, /\bseguranca em sistemas de informacao\b/, /\bseguranca em comunicacao de dados\b/, /\bciberseguranca\b/, /\bseguranca de sistemas\b/, /\bseguranca em banco de dados\b/, /\bseguranca de redes\b/, /\bseguranca em ambiente web\b/, /\bseguranca cibernetica\b/] },
+  { concept: 'devops', patterns: [/\bdevops\b/, /\bintegracao continua\b/] },
+  { concept: 'gestao_projetos', patterns: [/\bgestao de projetos\b/, /\bmetodos ageis\b/, /\bgerencia de projetos\b/] },
+  { concept: 'ihc', patterns: [/\bdesign de interacao\b/, /\binterface homem\b/, /\bihc\b/, /\busabilidade\b/] },
+  { concept: 'modelagem_sistemas', patterns: [/\banalise e modelagem de sistemas\b/, /\bmodelagem de sistemas\b/] },
+  { concept: 'web', patterns: [/\bdesenvolvimento web\b/, /\bferramentas de desenvolvimento web\b/, /\bfront end\b/, /\bback end\b/, /\barquitetura e desenvolvimento de apis\b/] },
+  { concept: 'mobile', patterns: [/\bdesenvolvimento mobile\b/, /\bcomputacao movel\b/, /\bmobile\b/] },
+  { concept: 'teste', patterns: [/\btestes? de software\b/, /\bqualidade de software\b/] },
+  { concept: 'governanca', patterns: [/\bgovernanca de ti\b/, /\bgovernanca\b/, /\bgestao da tecnologia da informacao\b/] },
+  { concept: 'direito_cibernetico', patterns: [/\bdireito cibernetico\b/] },
+  { concept: 'direito', patterns: [/\bdireito\b(?! cibernetico)/, /\blegislacao\b/] },
+  { concept: 'empreendedorismo', patterns: [/\bempreendedorismo\b/, /\binovacao\b/] },
+  { concept: 'metodologia', patterns: [/\bmetodologia cientifica\b/, /\bmetodologia de pesquisa\b/] },
+  { concept: 'portugues', patterns: [/\bproducao textual\b/, /\blingua portuguesa\b/, /\bcomunicacao e expressao\b/, /\bportugues\b/] },
+  { concept: 'etnico_racial', patterns: [/\brelacoes etnico\b/, /\bafricana\b/, /\bafro brasileira\b/, /\bindigena\b/] },
+  { concept: 'meio_ambiente', patterns: [/\bciencias do ambiente\b/, /\bsustentabilidade\b/] },
+  { concept: 'formacao_cidada', patterns: [/\bformacao cidada\b/] },
+  { concept: 'etica', patterns: [/\betica\b/] },
+  { concept: 'sociologia', patterns: [/\bsociologia\b/] },
+  { concept: 'ciencia_tecnologia_sociedade', patterns: [/\bciencia, tecnologia e sociedade\b/, /\bciencia tecnologia e sociedade\b/] },
+  { concept: 'logica', patterns: [/\braciocinio logico\b/, /\blogica matematica\b/] },
+  { concept: 'processos_negocios', patterns: [/\bmodelagem de processos\b/, /\bprocessos e negocios\b/] },
+  { concept: 'pesquisa_operacional', patterns: [/\bpesquisa operacional\b/] },
+  { concept: 'sistemas_informacao', patterns: [/\bsistemas? de informacao\b/, /\bfundamentos de sistema de informacao\b/] },
+  { concept: 'requisitos', patterns: [/\bengenharia de requisitos\b/, /\brequisitos\b/] },
+  { concept: 'metricas', patterns: [/\bmetricas\b/, /\bestimativa de software\b/] },
+  { concept: 'configuracao', patterns: [/\bgerencia de configuracao\b/] },
+  { concept: 'visualizacao', patterns: [/\bvisualizacao de dados\b/, /\bstorytelling\b/] },
+  { concept: 'distribuidos', patterns: [/\bsistemas distribuidos\b/] },
+  { concept: 'compiladores', patterns: [/\bcompiladores\b/, /\blinguagens formais\b/] },
+  { concept: 'teoria_computacao', patterns: [/\bteoria da computacao\b/, /\bteoria dos grafos\b/] },
+]
+
+export function normalize(text: string): string {
+  return text
+    .normalize('NFKD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+export function tokenize(text: string): Set<string> {
+  return new Set(
+    normalize(text)
+      .split(' ')
+      .filter((token) => token.length > 2 && !STOPWORDS.has(token)),
+  )
+}
+
+export function concepts(text: string): Set<string> {
+  const normalized = normalize(text)
+  const found = new Set<string>()
+  for (const { concept, patterns } of CONCEPT_PATTERNS) {
+    if (patterns.some((pattern) => pattern.test(normalized))) {
+      found.add(concept)
+    }
+  }
+  return found
+}
+
+export interface NameScore {
+  score: number
+  parcial: boolean
+  conceitos: string[]
+  tokens: string[]
+  motivo: string
+}
+
+export interface PairScore {
+  score: number
+  confianca: Confidence
+  parcial: boolean
+  conceitos: string[]
+  tokens: string[]
+  workloadFit: number
+}
+
+export function nameScore(targetName: string, sourceName: string): NameScore {
+  const targetConcepts = concepts(targetName)
+  const sourceConcepts = concepts(sourceName)
+  const targetTokens = tokenize(targetName)
+  const sourceTokens = tokenize(sourceName)
+  const sharedTokens = [...targetTokens].filter((token) => sourceTokens.has(token)).sort()
+  const union = new Set([...targetTokens, ...sourceTokens])
+  const jaccard = union.size ? sharedTokens.length / union.size : 0
+
+  if (targetConcepts.size > 0) {
+    const common = [...targetConcepts].filter((concept) => sourceConcepts.has(concept))
+    const overlap = common.length / targetConcepts.size
+    if (overlap === 0) {
+      return {
+        score: 0,
+        parcial: true,
+        conceitos: [...sourceConcepts].sort(),
+        tokens: sharedTokens,
+        motivo: 'sem conceito em comum',
+      }
+    }
+    let score = Math.min(1, overlap + 0.1 * jaccard)
+    if (overlap === 1) score = Math.max(score, 0.9)
+    return {
+      score,
+      parcial: overlap < 1,
+      conceitos: common.sort(),
+      tokens: sharedTokens,
+      motivo: 'conceito',
+    }
+  }
+
+  if (targetTokens.size === 0) {
+    return {
+      score: 0,
+      parcial: true,
+      conceitos: [...sourceConcepts].sort(),
+      tokens: sharedTokens,
+      motivo: 'nome sem tokens',
+    }
+  }
+
+  const containment = sharedTokens.length / targetTokens.size
+  if (containment >= 0.6 && jaccard >= 0.4) {
+    return {
+      score: 0.6 * containment + 0.4 * jaccard,
+      parcial: true,
+      conceitos: [...sourceConcepts].sort(),
+      tokens: sharedTokens,
+      motivo: 'tokens',
+    }
+  }
+
+  return {
+    score: 0,
+    parcial: true,
+    conceitos: [...sourceConcepts].sort(),
+    tokens: sharedTokens,
+    motivo: 'tokens insuficientes',
+  }
+}
+
+export function workloadFit(targetHours: number, sourceHours: number): number {
+  if (targetHours <= 0) return 0
+  if (sourceHours >= targetHours) return 1
+  const ratio = sourceHours / targetHours
+  if (ratio >= 0.75) return 0.8
+  if (ratio >= 0.5) return 0.5
+  return 0.2
+}
+
+export function pairScore(
+  targetName: string,
+  targetHours: number,
+  sourceName: string,
+  sourceHours: number,
+): PairScore {
+  const details = nameScore(targetName, sourceName)
+  const fit = workloadFit(targetHours, sourceHours)
+  let score = 0.8 * details.score + 0.2 * fit
+  if (details.score < 0.5 || score < 0.55) score = 0
+
+  let confianca: Confidence = 'baixa'
+  if (score >= 0.85 && !details.parcial && details.tokens.length > 0) {
+    confianca = 'alta'
+  } else if (score >= 0.7) {
+    confianca = 'media'
+  }
+
+  return {
+    score: Math.round(score * 10000) / 10000,
+    confianca,
+    parcial: details.parcial,
+    conceitos: details.conceitos,
+    tokens: details.tokens,
+    workloadFit: fit,
+  }
+}

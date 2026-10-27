@@ -14,6 +14,17 @@ O matcher atual (`prototype/match_curricula.py`) usa uma atribuição ótima
 Esse modelo é deliberadamente conservador. Ele serve para validar o fluxo e
 produz um **limite inferior** da equivalência possível.
 
+### No site
+
+O protótipo em `site/src/lib/match.ts` já usa uma heurística **m-para-n gulosa**:
+cada origem tem capacidade de horas, cada slot tem demanda, e uma origem pode
+ser dividida entre vários slots (e um slot pode receber várias origens). As
+arestas são ordenadas por score e alocadas até esgotar a capacidade/demanda.
+
+A heurística não é ótima global: uma escolha gulosa pode bloquear uma alocação
+melhor depois. O passo seguinte é substituí-la por **max-cost flow** (ou
+min-cost flow com custos negativos), mantendo as mesmas restrições.
+
 ## Por que 1-para-1 é insuficiente
 
 Na prática, a relação é **m-para-n**:
