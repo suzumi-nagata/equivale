@@ -44,6 +44,11 @@ para nenhum servidor.
   runtime). As regras da UNICAMP ligam componentes da EC/EE a disciplinas do
   catálogo; as da USP ligam componentes da UNICAMP a disciplinas das grades da
   Poli. Ver [`data/ontology/README.md`](data/ontology/README.md).
+- **Reconhecimento:** os cursos de engenharia da UNICAMP e da USP foram
+  conferidos nos atos do **CEE-SP** e recebem `mec.status =
+  "reconhecido_cee_sp"`, com ato e fonte. Universidades estaduais paulistas são
+  reguladas pelo CEE-SP; o e-MEC pode não refletir o ato de curso. Ver
+  [`data/targets/mec_status.json`](data/targets/mec_status.json).
 - **Spike de dados:** 5 IES privadas EAD (UNINTER, Anhanguera, Estácio, Cruzeiro
   do Sul Virtual e UNIP), somente com fontes públicas. Ver
   [`data/spike/README.md`](data/spike/README.md).
@@ -53,8 +58,8 @@ para nenhum servidor.
 - Sem backend: o histórico é lido localmente/no navegador.
 - O repositório **não contém** históricos escolares, nomes, RA/RG, notas ou
   resultados de matching derivados de históricos reais.
-- Só entram dados públicos: currículos, páginas institucionais, atos do MEC e
-  fontes citadas.
+- Só entram dados públicos: currículos, páginas institucionais, atos do MEC/CEE-SP
+  e fontes citadas.
 - Contribuições de adaptadores devem usar **fixtures sintéticos ou
   anonimizados**; nunca envie um histórico real.
 - O [`.gitignore`](.gitignore) cobre PDFs, `private/`, `transcripts/`,
@@ -78,6 +83,7 @@ tools/
   extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
   build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
   build_targets_from_catalog.py # currículos de engenharia -> alvos automáticos
+  apply_mec_status.py          # aplica atos CEE-SP aos alvos
   build_unicamp_cobertura.py # extrai ementas e gera cobertura temática UNICAMP
   build_usp_cobertura.py    # gera cobertura temática USP -> alvos UNICAMP
   extract_usp_poli.py       # extrai alvos EE/EC da Poli-USP (Jupiterweb)
@@ -96,6 +102,7 @@ data/targets/usp/
   usp-poli-ee-ac-2027.json
   usp-poli-ec-2012.json
   usp-poli-<codcur>-<codhab>.json # alvos gerados do catálogo
+data/targets/mec_status.json # atos CEE-SP aplicados aos alvos
 data/ontology/
   README.md              # regras de cobertura temática por ementa
   unicamp_2026_regras.json
@@ -180,6 +187,9 @@ python3 -I tools/build_course_embeddings.py
 
 # Converte os cursos de engenharia do catálogo em alvos do site
 python3 -I tools/build_targets_from_catalog.py
+
+# Reaplica os atos de reconhecimento do CEE-SP aos alvos
+python3 -I tools/apply_mec_status.py
 ```
 
 O crawler guarda o cache HTTP em `~/.cache/equivale/crawler` e só reescreve os

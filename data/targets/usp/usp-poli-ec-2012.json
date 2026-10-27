@@ -10,11 +10,12 @@
   "habilitacao": "Habilitação Engenharia de Computação",
   "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3121&codhab=10&tipo=V&print=true",
   "mec": {
-    "status": "nao_verificado",
-    "verificado": false,
+    "status": "reconhecido_cee_sp",
+    "verificado": true,
     "instituicao_publica": true,
-    "observacao": "USP é universidade pública; a grade é do Jupiterweb. O ato de reconhecimento do curso não foi consultado no e-MEC nesta versão.",
-    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3121&codhab=10&tipo=V&print=true"
+    "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Computação da Escola Politécnica da USP, publicada no DOESP em 16/10/2025.",
+    "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+    "ato": "Portaria CEE-GP 339/2025"
   },
   "dados": {
     "completude": "grade_com_ch",

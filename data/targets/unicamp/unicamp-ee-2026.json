@@ -12,11 +12,12 @@
   "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/41g/sugestao.html",
   "coletado_em": "2026-10-26",
   "mec": {
-    "status": "nao_verificado",
-    "verificado": false,
+    "status": "reconhecido_cee_sp",
+    "verificado": true,
     "instituicao_publica": true,
-    "observacao": "UNICAMP é universidade pública; o catálogo oficial é a fonte da grade. O ato de reconhecimento do curso não foi consultado no e-MEC nesta versão.",
-    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/41g/curriculo.html"
+    "observacao": "Renovação de reconhecimento de Engenharia Elétrica, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE.",
+    "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+    "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2691/2721)"
   },
   "dados": {
     "completude": "grade_com_ch",

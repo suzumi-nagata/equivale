@@ -12,11 +12,12 @@
   "proposta_fonte": null,
   "coletado_em": "2026-10-27T11:35:32+00:00",
   "mec": {
-    "status": "nao_verificado",
-    "verificado": false,
+    "status": "reconhecido_cee_sp",
+    "verificado": true,
     "instituicao_publica": true,
-    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
-    "fonte": "https://uspdigital.usp.br/jupiterweb/listarGradeCurricular?codcg=3&codcur=3191&codhab=3000&tipo=N"
+    "observacao": "Reconhecimento por três anos do curso de Engenharia Nuclear da Escola Politécnica da USP, publicado no DOESP em 27/08/2025.",
+    "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+    "ato": "Portaria CEE-GP 276/2025"
   },
   "dados": {
     "completude": "grade_com_ch",

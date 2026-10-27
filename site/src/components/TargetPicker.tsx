@@ -22,13 +22,14 @@ function formatHours(hours: number): string {
 
 function mecLabel(status: string | undefined): string {
   if (status === 'reconhecido') return 'MEC reconhecido'
+  if (status === 'reconhecido_cee_sp') return 'CEE-SP: reconhecido'
   if (status === 'em_reconhecimento') return 'MEC aguardando reconhecimento'
   if (status === 'nao_verificado') return 'MEC: ato não consultado'
   return 'MEC não informado'
 }
 
 function mecTone(status: string | undefined): string {
-  if (status === 'reconhecido') return 'tag--ok'
+  if (status === 'reconhecido' || status === 'reconhecido_cee_sp') return 'tag--ok'
   if (status === 'em_reconhecimento') return 'tag--risk'
   return 'tag--muted'
 }
@@ -152,7 +153,12 @@ export function TargetPicker({ targets, courses, selectedId, onSelect }: Props) 
           const status = record?.mec?.status ?? target.mec?.status
           const completude = record?.dados?.completude ?? target.dados?.completude
           const publica = record?.mec?.instituicao_publica ?? target.mec?.instituicao_publica
-          const mecNote = record?.mec?.observacao ?? target.mec?.observacao ?? undefined
+          const mecNote = [
+            record?.mec?.ato ?? target.mec?.ato,
+            record?.mec?.observacao ?? target.mec?.observacao,
+          ]
+            .filter(Boolean)
+            .join(' — ') || undefined
 
           return (
             <label key={target.id} className={`target-option${selected ? ' is-selected' : ''}`}>

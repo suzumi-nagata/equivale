@@ -45,9 +45,19 @@ Alvos de engenharia gerados automaticamente:
   1º–4º do ciclo básico disponível no Jupiterweb. O currículo atual aparece como
   `usp-poli-3123-3000.json`, gerado a partir da grade pública do Jupiterweb;
   ele é separado do alvo histórico 2012.
-- MEC: USP é universidade pública; o ato de reconhecimento não foi consultado
-  no e-MEC. O site mostra “ato não consultado” + “instituição pública”, não
-  “não reconhecido”.
+- Reconhecimento: os cursos de engenharia da Poli estão cobertos por atos do
+  **CEE-SP**, aplicados por
+  [`data/targets/mec_status.json`](../mec_status.json) e
+  [`tools/apply_mec_status.py`](../../../tools/apply_mec_status.py).
+  - `Portaria CEE-GP 339/2025`: renovação por cinco anos de Engenharia com as
+    habilitações Ambiental, Civil, Computação, Materiais, Minas, Petróleo,
+    Produção, Mecânica, Mecatrônica, Metalúrgica, Naval/Naval e Oceânica,
+    Química e Engenharia Elétrica com suas ênfases.
+  - `Portaria CEE-GP 276/2025`: reconhecimento por três anos de Engenharia
+    Nuclear.
+- O e-MEC pode não refletir o ato de curso de uma universidade estadual; a
+  referência é o CEE-SP. O seletor mostra “CEE-SP: reconhecido” com o ato e a
+  fonte.
 
 ## Regenerar
 
@@ -57,6 +67,9 @@ python3 -I tools/extract_usp_poli.py
 
 # As demais habilitações de engenharia com grade no catálogo
 python3 -I tools/build_targets_from_catalog.py --only-usp
+
+# Reaplica os atos de reconhecimento do CEE-SP
+python3 -I tools/apply_mec_status.py
 ```
 
 Os scripts usam apenas a biblioteca padrão e não leem históricos escolares. O

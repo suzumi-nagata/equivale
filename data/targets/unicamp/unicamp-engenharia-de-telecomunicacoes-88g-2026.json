@@ -12,11 +12,12 @@
   "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/88g/sugestao.html",
   "coletado_em": "2026-10-27T11:35:21+00:00",
   "mec": {
-    "status": "nao_verificado",
-    "verificado": false,
+    "status": "reconhecido_cee_sp",
+    "verificado": true,
     "instituicao_publica": true,
-    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
-    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/88g/curriculo.html"
+    "observacao": "Reconhecimento e renovação do curso de Engenharia de Telecomunicações da UNICAMP registrados no catálogo oficial da DAC.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2024/cursos/88g/index.html",
+    "ato": "Portaria CEE/GP 488/2017, renovada pela Portaria CEE/GP 449/2021"
   },
   "dados": {
     "completude": "grade_com_ch",

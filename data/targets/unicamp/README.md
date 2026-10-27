@@ -46,10 +46,24 @@ AX (matrícula antes da opção) não é oferecida como alvo.
 - Fonte: Catálogo dos Cursos de Graduação 2026 da UNICAMP (DAC), páginas de
   currículo e de sugestão de cumprimento.
 - Coleta: 2026-10-26.
-- `mec.status` ficou como `nao_verificado`: o catálogo é oficial, mas o ato de
-  reconhecimento não foi consultado no e-MEC nesta etapa. Isso **não** significa
-  que o curso não seja reconhecido; a UNICAMP é uma universidade pública e o
-  seletor mostra “instituição pública” e “ato não consultado”.
+- Reconhecimento: os alvos de engenharia foram conferidos nos atos do
+  **CEE-SP**, que regula os cursos da UNICAMP. O mapa
+  [`data/targets/mec_status.json`](../mec_status.json) e o script
+  [`tools/apply_mec_status.py`](../../../tools/apply_mec_status.py) aplicam
+  `status = reconhecido_cee_sp`, o número do ato e a URL da fonte.
+  - `Portaria CEE-GP 236/2025`: Engenharia Civil, de Alimentos, de Computação,
+    de Controle e Automação, de Produção, Elétrica, Mecânica e Química.
+  - `Parecer CEE 85/2023`: Engenharia Agrícola.
+  - `Parecer CEE 04/2026`: Engenharia Ambiental.
+  - `Parecer CEE 124/2026`: Engenharia de Manufatura.
+  - `Parecer CEE 315/2021`: Engenharia Física.
+  - `Portaria CEE/GP 488/2017`, renovada pela `449/2021`: Engenharia de
+    Telecomunicações.
+  - `Parecer CEE 110/2024` / `Portaria CEE/GP 118/2024`: Engenharia de
+    Transportes.
+- Em universidades estaduais paulistas, o e-MEC pode não exibir o ato de
+  reconhecimento de curso; a referência é o CEE-SP. O seletor não usa mais
+  “ato não consultado” para esses alvos.
 - `dados.completude = grade_com_ch`: há grade e carga horária; não há ementa
   nem PPC incorporados.
 
@@ -61,11 +75,14 @@ python3 -I tools/build_unicamp_targets.py
 
 # Os alvos de engenharia gerados a partir do catálogo
 python3 -I tools/build_targets_from_catalog.py --only-unicamp
+
+# Reaplica os atos de reconhecimento do CEE-SP
+python3 -I tools/apply_mec_status.py
 ```
 
 O primeiro script lê `data/sources/unicamp/*.json`; o segundo lê
 `data/catalog/unicamp_2026_cursos.json` e nunca sobrescreve 34G/41G. Nenhum
-dos dois baixa dados ou usa histórico escolar.
+deles baixa dados ou usa histórico escolar.
 
 ## Limitações
 

@@ -1,0 +1,244 @@
+{
+  "atualizado_em": "2026-10-27",
+  "observacao": "Atos de reconhecimento localizados no CEE-SP. Universidades estaduais paulistas têm os cursos regulados pelo CEE-SP; o e-MEC pode não refletir o ato de curso. Confirme a validade atual na fonte.",
+  "alvos": {
+    "unicamp-ec-2026-aa": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 2712)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia de Computação I, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-ec-2026-ab": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 2712)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia de Computação I, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-ee-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2691/2721)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia Elétrica, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-agricola-8g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 85/2023",
+      "fonte": "https://www.ceesp.sp.gov.br/ato-do-conselho/numero-2023-85-processo-2022-108/",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Agrícola da UNICAMP, homologada em 09/03/2023 e publicada no DOE em 11/03/2023."
+    },
+    "unicamp-engenharia-ambiental-89g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 04/2026",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2026/02/2025-00091-par-04-26.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Ambiental da UNICAMP, aprovada em 21/01/2026 (processo CEESP-PRC-2025/00091)."
+    },
+    "unicamp-engenharia-civil-12g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 2692)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Civil, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-de-alimentos-13g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2693/2720)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia de Alimentos, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-de-alimentos-43g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2693/2720)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia de Alimentos, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-de-controle-e-automacao-49g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 18397)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia de Controle e Automação, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-de-manufatura-101g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 124/2026",
+      "fonte": "https://www.ceesp.sp.gov.br/ato-do-conselho/par-124-2026/",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia de Manufatura da UNICAMP, aprovada em 22/04/2026 e homologada em 23/04/2026."
+    },
+    "unicamp-engenharia-de-producao-102g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 122962)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia de Produção, UNICAMP/Limeira, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-de-telecomunicacoes-88g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE/GP 488/2017, renovada pela Portaria CEE/GP 449/2021",
+      "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2024/cursos/88g/index.html",
+      "observacao": "Reconhecimento e renovação do curso de Engenharia de Telecomunicações da UNICAMP registrados no catálogo oficial da DAC."
+    },
+    "unicamp-engenharia-de-transportes-111g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 110/2024 / Portaria CEE/GP 118/2024",
+      "fonte": "https://www.ft.unicamp.br/pt-br/graduacao/cursos/etr",
+      "observacao": "Reconhecimento do curso de Engenharia de Transportes da UNICAMP aprovado em 03/04/2024 e publicado pela Portaria CEE/GP 118/2024."
+    },
+    "unicamp-engenharia-eletrica-11g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2691/2721)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia Elétrica, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-fisica-108g-2026-aa": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 315/2021",
+      "fonte": "https://www.ceesp.sp.gov.br/ato-do-conselho/numero-2021-315-processo-2021-124/",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Física da UNICAMP, homologada em 17/12/2021 e publicada no DOE em 21/12/2021."
+    },
+    "unicamp-engenharia-fisica-108g-2026-ab": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Parecer CEE 315/2021",
+      "fonte": "https://www.ceesp.sp.gov.br/ato-do-conselho/numero-2021-315-processo-2021-124/",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Física da UNICAMP, homologada em 17/12/2021 e publicada no DOE em 21/12/2021."
+    },
+    "unicamp-engenharia-mecanica-10g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (código e-MEC 2690)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento do curso de Engenharia Mecânica, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-quimica-39g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2689/2723)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia Química, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "unicamp-engenharia-quimica-9g-2026": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 236/2025 (códigos e-MEC 2689/2723)",
+      "fonte": "https://www.ceesp.sp.gov.br/wp-content/uploads/2024/11/port-236-25-enade-2023.pdf",
+      "observacao": "Renovação de reconhecimento de Engenharia Química, UNICAMP, publicada no DOESP em 02/07/2025; válida até o próximo ciclo avaliativo do ENADE."
+    },
+    "usp-poli-3023-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Civil da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3045-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Mecânica da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3053-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Minas da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3057-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Petróleo da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3063-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Metalúrgica da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3073-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Naval e Oceânica da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3084-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Produção da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3093-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Química da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3103-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Materiais da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3113-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Mecatrônica da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3123-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Computação da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3152-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Ambiental da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-3191-3000": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 276/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Reconhecimento por três anos do curso de Engenharia Nuclear da Escola Politécnica da USP, publicado no DOESP em 27/08/2025."
+    },
+    "usp-poli-ee-ac-2027": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia Elétrica com ênfase em Automação e Controle da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    },
+    "usp-poli-ec-2012": {
+      "status": "reconhecido_cee_sp",
+      "verificado": true,
+      "ato": "Portaria CEE-GP 339/2025",
+      "fonte": "https://www.poli.usp.br/wp-content/uploads/2025/11/Portarias-CEE-EPUSP.pdf",
+      "observacao": "Renovação por cinco anos do reconhecimento de Engenharia de Computação da Escola Politécnica da USP, publicada no DOESP em 16/10/2025."
+    }
+  }
+}

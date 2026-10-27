@@ -12,11 +12,12 @@
   "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/8g/sugestao.html",
   "coletado_em": "2026-10-27T11:35:21+00:00",
   "mec": {
-    "status": "nao_verificado",
-    "verificado": false,
+    "status": "reconhecido_cee_sp",
+    "verificado": true,
     "instituicao_publica": true,
-    "observacao": "Instituição pública; a grade vem do catálogo oficial. O ato de reconhecimento não foi consultado no e-MEC nesta versão.",
-    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/8g/curriculo.html"
+    "observacao": "Renovação de reconhecimento do curso de Engenharia Agrícola da UNICAMP, homologada em 09/03/2023 e publicada no DOE em 11/03/2023.",
+    "fonte": "https://www.ceesp.sp.gov.br/ato-do-conselho/numero-2023-85-processo-2022-108/",
+    "ato": "Parecer CEE 85/2023"
   },
   "dados": {
     "completude": "grade_com_ch",

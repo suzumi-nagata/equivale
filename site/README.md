@@ -54,9 +54,11 @@ npm test
 - Modo opcional **“Ignorar diferença de carga horária”** no seletor: quando
   ligado, uma origem de 30h pode cobrir um componente de 90h por conteúdo. O
   padrão continua conservador.
-- MEC: para UNICAMP e USP, o catálogo oficial é a fonte da grade, mas o ato de
-  reconhecimento ainda não foi consultado no e-MEC; o seletor mostra “ato não
-  consultado” e “instituição pública”, não “não reconhecido”.
+- Reconhecimento: os alvos de engenharia da UNICAMP e da USP têm atos do
+  **CEE-SP** aplicados aos JSONs (`data/targets/mec_status.json`). O seletor
+  mostra “CEE-SP: reconhecido” com o ato e a fonte; para universidades
+  estaduais, o e-MEC pode não refletir o ato de curso, então a consulta
+  estadual é a referência.
 - Resumo de horas abatidas, cobertura, disciplinas restantes e semestres
   estimados; tabela de matches, lacunas e componentes não abatíveis.
 - Download local do relatório em JSON.
