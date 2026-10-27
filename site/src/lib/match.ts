@@ -3,6 +3,7 @@ import type {
   Allocation,
   Confidence,
   Curriculum,
+  EquivalenceRule,
   MatchResult,
   MatchSummary,
   Slot,
@@ -19,18 +20,21 @@ const NON_WAIVABLE_NAME_PATTERNS = [
   /\bextensao\b/,
   /\bestagio\b/,
   /\btrabalho de (fim|conclusao) de curso\b/,
+  /\bprojeto final de (graduacao|curso)\b/,
   /\btcc\b/,
   /\bprojeto interdisciplinar\b/,
 ]
 const SOURCE_EXCLUDE_NAME_PATTERNS = [
   /\bestagio\b/,
   /\btrabalho de (fim|conclusao) de curso\b/,
+  /\bprojeto final de (graduacao|curso)\b/,
   /\btcc\b/,
   /\batividades? complementares?\b/,
   /\bextensao\b/,
 ]
 
 const MIN_PARTIAL_HOURS = 20
+const FREE_ELECTIVE_SCORE = 0.6
 
 interface Edge {
   source: SourceDiscipline
@@ -41,6 +45,24 @@ interface Edge {
   conceitos: string[]
   tokens: string[]
   rank: number
+  maxHours?: number
+  ignoreSourceHours?: boolean
+  priority?: number
+  ruleId?: string
+}
+
+interface MatchedEdge {
+  edge: Edge
+  hours: number
+}
+
+interface FlowEdge {
+  to: number
+  rev: number
+  cap: number
+  originalCap: number
+  cost: number
+  meta?: Edge
 }
 
 function sum(values: number[]): number {
@@ -68,6 +90,7 @@ export function buildSlots(curriculum: Curriculum): { slots: Slot[]; naoAbativei
         grupoOrdem: group.ordem,
         grupoNome: group.nome,
         nome: discipline.nome,
+        codigo: discipline.codigo ?? null,
         horas,
         opcoes: [discipline.nome],
         tipo,
@@ -93,6 +116,7 @@ export function buildSlots(curriculum: Curriculum): { slots: Slot[]; naoAbativei
         opcoes: options,
         tipo: component.tipo ?? 'eletiva',
         kind: 'eletiva',
+        livre: Boolean(component.livre),
         abativel: true,
       })
     }
@@ -130,6 +154,19 @@ export function loadSources(transcript: Transcript): SourceDiscipline[] {
 }
 
 function bestEdgeForSlot(source: SourceDiscipline, slot: Slot): Edge | null {
+  if (slot.livre) {
+    return {
+      source,
+      slot,
+      option: 'Eletiva livre',
+      score: FREE_ELECTIVE_SCORE,
+      confianca: 'baixa',
+      conceitos: [],
+      tokens: [],
+      rank: FREE_ELECTIVE_SCORE,
+    }
+  }
+
   let best: Edge | null = null
 
   for (const option of slot.opcoes) {
@@ -159,17 +196,289 @@ function bestEdgeForSlot(source: SourceDiscipline, slot: Slot): Edge | null {
   return best
 }
 
-export function matchCurriculum(curriculum: Curriculum, transcript: Transcript): MatchResult {
+function codeKey(value: string | null | undefined): string {
+  return normalize(value ?? '').replace(/\s+/g, '')
+}
+
+function ruleMatchesTarget(rule: EquivalenceRule, curriculum: Curriculum, slot: Slot): boolean {
+  const target = rule.alvo
+  if (target.instituicao && normalize(target.instituicao) !== normalize(curriculum.instituicao)) {
+    return false
+  }
+  if (target.curso && normalize(target.curso) !== normalize(curriculum.curso)) {
+    return false
+  }
+  if (target.habilitacao) {
+    const habilitacao = normalize(curriculum.habilitacao ?? '')
+    if (!habilitacao.includes(normalize(target.habilitacao))) return false
+  }
+  if (target.codigo) {
+    if (!slot.codigo || codeKey(slot.codigo) !== codeKey(target.codigo)) return false
+  }
+  if (target.componente && normalize(slot.nome) !== normalize(target.componente)) {
+    return false
+  }
+  return Boolean(target.codigo || target.componente)
+}
+
+function findSourceForOrigin(
+  sources: SourceDiscipline[],
+  origin: EquivalenceRule['origens'][number],
+): SourceDiscipline | undefined {
+  if (origin.codigo) {
+    const key = codeKey(origin.codigo)
+    const byCode = sources.find(
+      (source) => codeKey(source.codigo) === key || codeKey(source.id) === key,
+    )
+    if (byCode) return byCode
+  }
+  if (origin.nome) {
+    const key = normalize(origin.nome)
+    return sources.find((source) => normalize(source.nome) === key)
+  }
+  return undefined
+}
+
+/**
+ * Adiciona arestas de cobertura temática geradas a partir de ementas. Elas não
+ * substituem o match por nome quando este é melhor, e cada origem declara
+ * quantas horas pode cobrir do componente-alvo (cobertura parcial).
+ */
+function applyRules(
+  edges: Edge[],
+  curriculum: Curriculum,
+  slots: Slot[],
+  sources: SourceDiscipline[],
+  rules: EquivalenceRule[],
+): Edge[] {
+  if (rules.length === 0) return edges
+
+  const byPair = new Map(edges.map((edge) => [`${edge.source.id}|${edge.slot.id}`, edge]))
+
+  for (const rule of rules) {
+    for (const slot of slots) {
+      if (!ruleMatchesTarget(rule, curriculum, slot)) continue
+      for (const origin of rule.origens) {
+        const source = findSourceForOrigin(sources, origin)
+        if (!source) continue
+        const targetConcepts = concepts(slot.nome)
+        const specificTarget = [...targetConcepts].filter(
+          (concept) => !BROAD_CONCEPTS.has(concept),
+        )
+        if (
+          specificTarget.length > 0 &&
+          !specificTarget.some((concept) => concepts(source.nome).has(concept))
+        ) {
+          continue
+        }
+        const score = Math.min(1, Math.max(0, Number(origin.score) || 0))
+        const maxHours = Math.max(0, Number(origin.horas_cobertura) || 0)
+        if (score <= 0 || maxHours <= 0) continue
+        const confianca: Confidence =
+          origin.confianca ?? (score >= 0.85 ? 'alta' : score >= 0.7 ? 'media' : 'baixa')
+        const edge: Edge = {
+          source,
+          slot,
+          option: origin.rotulo ?? 'Cobertura temática por ementa',
+          score,
+          confianca,
+          conceitos: ['cobertura_tematica'],
+          tokens: [],
+          rank: score,
+          maxHours,
+          ignoreSourceHours: Boolean(origin.ignorar_carga_horaria),
+          priority: Math.max(0, Number(origin.prioridade) || 0),
+          ruleId: rule.id,
+        }
+        const key = `${source.id}|${slot.id}`
+        const current = byPair.get(key)
+        // Uma regra de cobertura integral (carga da origem não limita) vence
+        // um match por nome que só cobriria parte da carga do alvo.
+        const fullCoverageRule = edge.ignoreSourceHours && !current?.ignoreSourceHours
+        if (!current || edge.score > current.score || fullCoverageRule) {
+          byPair.set(key, edge)
+        }
+      }
+    }
+  }
+
+  return [...byPair.values()]
+}
+
+function addFlowEdge(
+  graph: FlowEdge[][],
+  from: number,
+  to: number,
+  cap: number,
+  cost: number,
+  meta?: Edge,
+): FlowEdge {
+  const forward: FlowEdge = {
+    to,
+    rev: graph[to].length,
+    cap,
+    originalCap: cap,
+    cost,
+    meta,
+  }
+  const backward: FlowEdge = {
+    to: from,
+    rev: graph[from].length,
+    cap: 0,
+    originalCap: 0,
+    cost: -cost,
+  }
+  graph[from].push(forward)
+  graph[to].push(backward)
+  return forward
+}
+
+/**
+ * Fluxo de custo mínimo / máximo valor.
+ *
+ * Cada origem tem capacidade de horas; cada slot-alvo tem demanda de horas.
+ * A aresta origem -> slot recebe valor `score + 0.01` por hora, de modo que
+ * o fluxo maximize primeiro a qualidade do pareamento e, em empate, as horas
+ * aproveitadas. O algoritmo augmenta enquanto houver caminho de custo
+ * negativo (valor positivo) no grafo residual; portanto pode deixar
+ * capacidade sem uso em vez de forçar um pareamento ruim.
+ */
+function maxCostFlow(edges: Edge[], sources: SourceDiscipline[], slots: Slot[]): MatchedEdge[] {
+  const sourceIndex = new Map(sources.map((source, index) => [source.id, index]))
+  const slotIndex = new Map(slots.map((slot, index) => [slot.id, index]))
+  const sourceOffset = 1
+  const slotOffset = sourceOffset + sources.length
+  const sink = slotOffset + slots.length
+  const nodeCount = sink + 1
+  const sourceNode = 0
+  const graph: FlowEdge[][] = Array.from({ length: nodeCount }, () => [])
+  const pairEdges: FlowEdge[] = []
+  const sourceCapacity = new Map(sources.map((source) => [source.id, source.horas]))
+
+  for (const edge of edges) {
+    if (edge.ignoreSourceHours && edge.maxHours) {
+      sourceCapacity.set(
+        edge.source.id,
+        Math.max(sourceCapacity.get(edge.source.id) ?? 0, edge.maxHours),
+      )
+    }
+  }
+
+  for (let index = 0; index < sources.length; index += 1) {
+    addFlowEdge(
+      graph,
+      sourceNode,
+      sourceOffset + index,
+      sourceCapacity.get(sources[index].id) ?? sources[index].horas,
+      0,
+    )
+  }
+  for (let index = 0; index < slots.length; index += 1) {
+    addFlowEdge(graph, slotOffset + index, sink, slots[index].horas, 0)
+  }
+
+  for (const edge of edges) {
+    const from = sourceIndex.get(edge.source.id)
+    const to = slotIndex.get(edge.slot.id)
+    if (from === undefined || to === undefined || edge.score <= 0) continue
+    const cap = edge.ignoreSourceHours
+      ? Math.min(edge.slot.horas, edge.maxHours ?? Number.POSITIVE_INFINITY)
+      : Math.min(
+        edge.source.horas,
+        edge.slot.horas,
+        edge.maxHours ?? Number.POSITIVE_INFINITY,
+      )
+    if (cap <= 0) continue
+    pairEdges.push(
+      addFlowEdge(
+        graph,
+        sourceOffset + from,
+        slotOffset + to,
+        cap,
+        -(edge.score + 0.01 + (edge.priority ?? 0)),
+        edge,
+      ),
+    )
+  }
+
+  const maxAugmentations = Math.max(100, pairEdges.length * 2 + 10)
+
+  for (let iteration = 0; iteration < maxAugmentations; iteration += 1) {
+    const dist = Array<number>(nodeCount).fill(Number.POSITIVE_INFINITY)
+    const inQueue = Array<boolean>(nodeCount).fill(false)
+    const prevNode = Array<number>(nodeCount).fill(-1)
+    const prevEdge = Array<number>(nodeCount).fill(-1)
+    const queue = [sourceNode]
+    dist[sourceNode] = 0
+    inQueue[sourceNode] = true
+
+    for (let head = 0; head < queue.length; head += 1) {
+      const node = queue[head]
+      inQueue[node] = false
+      const base = dist[node]
+      const adjacency = graph[node]
+      for (let index = 0; index < adjacency.length; index += 1) {
+        const edge = adjacency[index]
+        if (edge.cap <= 1e-9) continue
+        const candidate = base + edge.cost
+        if (candidate >= dist[edge.to] - 1e-9) continue
+        dist[edge.to] = candidate
+        prevNode[edge.to] = node
+        prevEdge[edge.to] = index
+        if (!inQueue[edge.to]) {
+          queue.push(edge.to)
+          inQueue[edge.to] = true
+        }
+      }
+    }
+
+    // Só vale a pena augmentar se o caminho tem valor positivo.
+    if (!Number.isFinite(dist[sink]) || dist[sink] >= -1e-9) break
+
+    let amount = Number.POSITIVE_INFINITY
+    for (let node = sink; node !== sourceNode; node = prevNode[node]) {
+      if (prevNode[node] < 0) {
+        amount = 0
+        break
+      }
+      amount = Math.min(amount, graph[prevNode[node]][prevEdge[node]].cap)
+    }
+    if (amount <= 1e-9 || !Number.isFinite(amount)) break
+
+    for (let node = sink; node !== sourceNode; node = prevNode[node]) {
+      const from = prevNode[node]
+      const edge = graph[from][prevEdge[node]]
+      edge.cap -= amount
+      graph[node][edge.rev].cap += amount
+    }
+  }
+
+  const matched: MatchedEdge[] = []
+  for (const edge of pairEdges) {
+    const hours = edge.originalCap - edge.cap
+    if (hours <= 1e-9 || !edge.meta) continue
+    matched.push({ edge: edge.meta, hours })
+  }
+  return matched
+}
+
+export function matchCurriculum(
+  curriculum: Curriculum,
+  transcript: Transcript,
+  rules: EquivalenceRule[] = [],
+): MatchResult {
   const { slots, naoAbativeis } = buildSlots(curriculum)
   const sources = loadSources(transcript)
-  const edges: Edge[] = []
+  const nameEdges: Edge[] = []
 
   for (const source of sources) {
     for (const slot of slots) {
       const edge = bestEdgeForSlot(source, slot)
-      if (edge) edges.push(edge)
+      if (edge) nameEdges.push(edge)
     }
   }
+
+  const edges = applyRules(nameEdges, curriculum, slots, sources, rules)
 
   edges.sort((a, b) => {
     if (b.rank !== a.rank) return b.rank - a.rank
@@ -177,22 +486,17 @@ export function matchCurriculum(curriculum: Curriculum, transcript: Transcript):
     return Math.min(b.source.horas, b.slot.horas) - Math.min(a.source.horas, a.slot.horas)
   })
 
-  const sourceRemaining = new Map(sources.map((source) => [source.id, source.horas]))
-  const slotRemaining = new Map(slots.map((slot) => [slot.id, slot.horas]))
-  const allocations: Allocation[] = []
-
-  for (const edge of edges) {
-    const sourceLeft = sourceRemaining.get(edge.source.id) ?? 0
-    const slotLeft = slotRemaining.get(edge.slot.id) ?? 0
-    const amount = Math.min(sourceLeft, slotLeft)
-    // Slots de 15h podem ser cobertos integralmente; para slots maiores,
-    // evita frações pequenas que não ajudam a fechar o componente.
-    const minimum = Math.min(MIN_PARTIAL_HOURS, edge.slot.horas)
-    if (amount < minimum) continue
-
-    sourceRemaining.set(edge.source.id, sourceLeft - amount)
-    slotRemaining.set(edge.slot.id, slotLeft - amount)
-    allocations.push({
+  const matched = maxCostFlow(edges, sources, slots)
+  const allocations: Allocation[] = matched
+    .filter(({ edge, hours }) => {
+      // Em slots fixos, evita frações pequenas que não fecham o componente.
+      // Em grupos de eletivas, qualquer fração ajuda a somar os créditos.
+      const minimum = edge.slot.kind === 'fixa'
+        ? Math.min(MIN_PARTIAL_HOURS, edge.slot.horas)
+        : 0
+      return hours >= minimum
+    })
+    .map(({ edge, hours }) => ({
       sourceId: edge.source.id,
       sourceCodigo: edge.source.codigo,
       sourceNome: edge.source.nome,
@@ -203,11 +507,11 @@ export function matchCurriculum(curriculum: Curriculum, transcript: Transcript):
       opcao: edge.option,
       score: edge.score,
       confianca: edge.confianca,
-      horas: amount,
+      horas: hours,
       conceitos: edge.conceitos,
       tokens: edge.tokens,
-    })
-  }
+      ruleId: edge.ruleId,
+    }))
 
   allocations.sort(
     (a, b) =>
@@ -216,19 +520,27 @@ export function matchCurriculum(curriculum: Curriculum, transcript: Transcript):
       b.score - a.score,
   )
 
+  const allocatedBySlot = new Map<string, number>()
+  for (const allocation of allocations) {
+    allocatedBySlot.set(
+      allocation.slotId,
+      (allocatedBySlot.get(allocation.slotId) ?? 0) + allocation.horas,
+    )
+  }
+
   const slotResults: SlotResult[] = slots
     .map((slot) => {
-      const remaining = slotRemaining.get(slot.id) ?? slot.horas
-      const alocado = slot.horas - remaining
+      const alocado = allocatedBySlot.get(slot.id) ?? 0
+      const restante = Math.max(0, slot.horas - alocado)
       const allocationsForSlot = allocations
         .filter((allocation) => allocation.slotId === slot.id)
         .sort((a, b) => b.score - a.score)
       const status: SlotResult['status'] =
-        remaining === 0 ? 'coberto' : alocado > 0 ? 'parcial' : 'aberto'
+        restante <= 1e-9 ? 'coberto' : alocado > 0 ? 'parcial' : 'aberto'
       return {
         slot,
         alocado,
-        restante: remaining,
+        restante,
         status,
         allocations: allocationsForSlot,
       }
@@ -275,11 +587,26 @@ export function matchCurriculum(curriculum: Curriculum, transcript: Transcript):
 
   const avisos = [
     'Estimativa por nome + carga horária; não há ementa neste protótipo.',
-    'Heurística m-para-n gulosa: uma origem pode cobrir vários alvos e um alvo pode combinar várias origens. O modelo final é fluxo de custo mínimo.',
+    'Fluxo de custo mínimo m-para-n: uma origem pode cobrir vários alvos e um alvo pode combinar várias origens.',
     'Estágio, TCC, extensão, atividades complementares e projetos foram separados como não abatíveis.',
-    'A estimativa de semestres ignora pré-requisitos, oferta, limite de aproveitamento e optativa livre.',
+    'A estimativa de semestres ignora pré-requisitos, oferta, limite de aproveitamento e regras específicas de optativa livre.',
     'Não é uma decisão oficial de equivalência; a IES de destino decide.',
   ]
+
+  if (slots.some((slot) => slot.livre)) {
+    avisos.push(
+      'Grupos de eletivas livres aceitam qualquer disciplina elegível da origem; a confiança é baixa e a regra da IES pode ser mais restrita.',
+    )
+  }
+
+  const usedRules = new Set(
+    allocations.map((allocation) => allocation.ruleId).filter((ruleId): ruleId is string => Boolean(ruleId)),
+  )
+  if (usedRules.size > 0) {
+    avisos.push(
+      'Inclui cobertura temática gerada por ementa (TF-IDF + nome); é uma heurística, não equivalência oficial. A fonte de cada regra está no arquivo de regras.',
+    )
+  }
 
   if (Math.abs(horasTotal - curriculum.carga_horaria_total) > 0) {
     avisos.push(

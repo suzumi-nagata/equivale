@@ -25,6 +25,7 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'estatistica', patterns: [/\bestatistica\b/] },
   { concept: 'pre_calculo', patterns: [/\bpre calculo\b/, /\bmatematica elementar\b/] },
   { concept: 'programacao', patterns: [/\bprogramacao\b(?!\s+matematica)/, /\balgoritmos?\b/, /\blaboratorio de programacao\b/, /\bintroducao a computacao\b/, /\bintroducao a ciencia da computacao\b/] },
+  { concept: 'projeto_algoritmos', patterns: [/\bprojeto e analise de algoritmos\b/, /\bprojeto de algoritmos\b/, /\banalise de algoritmos\b/] },
   { concept: 'estrutura_dados', patterns: [/\bestruturas? de dados\b/] },
   { concept: 'poo', patterns: [/\bprogramacao orientada a objetos\b/, /\borientada a objetos\b/, /\bpoo\b/] },
   { concept: 'banco_dados', patterns: [/\bbanco de dados\b/, /\bbanco dados\b/, /\bsgbd\b/] },
@@ -33,7 +34,7 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'redes', patterns: [/\bredes de computadores\b/, /\bredes e comunicacoes\b/, /\bcomunicacao de dados\b/, /\bprotocolos de redes\b/] },
   { concept: 'ia', patterns: [/\binteligencia artificial\b/, /\binteligencia computacional\b/] },
   { concept: 'machine_learning', patterns: [/\bmachine learning\b/, /\baprendizado de maquina\b/, /\bdeep learning\b/, /\bredes neurais\b/] },
-  { concept: 'organizacao_computadores', patterns: [/\barquitetura de computadores\b/, /\borganizacao de computadores\b/, /\bsistemas de computacao digital\b/, /\barquitetura e organizacao de computadores\b/] },
+  { concept: 'organizacao_computadores', patterns: [/\barquitetura de computadores\b/, /\borganizacao de computadores\b/, /\borganizacao basica de computadores\b/, /\blinguagem de montagem\b/, /\bsistemas de computacao digital\b/, /\barquitetura e organizacao de computadores\b/] },
   { concept: 'circuitos_digitais', patterns: [/\bsistemas digitais\b/, /\bcircuitos digitais\b/, /\bcircuitos logicos\b/, /\blaboratorio digital\b/] },
   { concept: 'cloud', patterns: [/\bcomputacao em nuvem\b/, /\bcloud\b/] },
   { concept: 'big_data', patterns: [/\bbig data\b/] },
@@ -88,6 +89,32 @@ export function tokenize(text: string): Set<string> {
   )
 }
 
+const ROMAN_SEQUENCE: Record<string, string> = {
+  i: '1',
+  ii: '2',
+  iii: '3',
+  iv: '4',
+  v: '5',
+  vi: '6',
+  vii: '7',
+  viii: '8',
+  ix: '9',
+  x: '10',
+}
+
+export function sequence(text: string): string | null {
+  const tokens = normalize(text).split(' ')
+  for (let index = tokens.length - 1; index >= 0; index -= 1) {
+    const token = tokens[index]
+    if (ROMAN_SEQUENCE[token]) return ROMAN_SEQUENCE[token]
+    if (/^\d+$/.test(token)) {
+      const value = Number(token)
+      if (value >= 1 && value <= 10) return String(value)
+    }
+  }
+  return null
+}
+
 export function concepts(text: string): Set<string> {
   const normalized = normalize(text)
   const found = new Set<string>()
@@ -124,8 +151,35 @@ export function nameScore(targetName: string, sourceName: string): NameScore {
   const sharedTokens = [...targetTokens].filter((token) => sourceTokens.has(token)).sort()
   const union = new Set([...targetTokens, ...sourceTokens])
   const jaccard = union.size ? sharedTokens.length / union.size : 0
+  const targetSequence = sequence(targetName)
+  const sourceSequence = sequence(sourceName)
+
+  if (targetSequence && sourceSequence && targetSequence !== sourceSequence) {
+    return {
+      score: 0,
+      parcial: true,
+      conceitos: [...sourceConcepts].sort(),
+      tokens: sharedTokens,
+      motivo: 'sequência diferente',
+    }
+  }
 
   if (targetConcepts.size > 0) {
+    const specificTarget = [...targetConcepts].filter(
+      (concept) => !BROAD_CONCEPTS.has(concept),
+    )
+    if (
+      specificTarget.length > 0 &&
+      !specificTarget.some((concept) => sourceConcepts.has(concept))
+    ) {
+      return {
+        score: 0,
+        parcial: true,
+        conceitos: [...sourceConcepts].sort(),
+        tokens: sharedTokens,
+        motivo: 'conceito específico ausente',
+      }
+    }
     const common = [...targetConcepts].filter((concept) => sourceConcepts.has(concept))
     const overlap = common.length / targetConcepts.size
     if (overlap === 0) {

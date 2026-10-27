@@ -82,11 +82,12 @@ export function SummaryPanel({ result, target }: Props) {
 
       <p className="summary-footnote">
         Estimativa bruta por nome + carga horária. Não considera pré-requisitos, oferta,
-        teto de aproveitamento ou optativa livre. O score médio é uma heurística, não uma
-        probabilidade de aceite.
+        teto de aproveitamento ou regras específicas de optativa livre. O score médio é
+        uma heurística, não uma probabilidade de aceite.
       </p>
       <p className="summary-target">
         Alvo: {target.instituicao}, {target.curso}
+        {target.habilitacao ? `, ${target.habilitacao}` : ''}
       </p>
     </aside>
   )

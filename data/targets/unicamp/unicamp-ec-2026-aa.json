@@ -1,0 +1,477 @@
+{
+  "id": "unicamp-ec-2026-aa",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Computação",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3645,
+  "curriculo_versao": "2026",
+  "habilitacao": "AA — Sistemas de Computação",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+  "coletado_em": "2026-10-26",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "UNICAMP é universidade pública; o catálogo oficial é a fonte da grade. O ato de reconhecimento do curso não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": false
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 2010,
+      "disciplinas": [
+        {
+          "codigo": "BE310",
+          "nome": "Ciências do Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE304",
+          "nome": "Direito",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE738",
+          "nome": "Economia para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE838",
+          "nome": "Contabilidade para Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA134",
+          "nome": "Seminários sobre o Curso de Engenharia de Computação",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA513",
+          "nome": "Circuitos Elétricos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA614",
+          "nome": "Análise de Sinais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA772",
+          "nome": "Circuitos Lógicos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE533",
+          "nome": "Eletrônica Básica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE534",
+          "nome": "Laboratório de Eletrônica Aplicada",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM424",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 128",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 159",
+          "nome": "Introdução à Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 228",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 259",
+          "nome": "Introdução à Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 315",
+          "nome": "Mecânica Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 328",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 359",
+          "nome": "Introdução à Física Experimental III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 428",
+          "nome": "Física Geral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "HZ291",
+          "nome": "Tópicos Especiais de Humanidades I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LA122",
+          "nome": "Inglês Instrumental I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA111",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA141",
+          "nome": "Geometria Analítica e Vetores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA211",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA311",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA327",
+          "nome": "Álgebra Linear",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC102",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC202",
+          "nome": "Estruturas de Dados",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC322",
+          "nome": "Programação Orientada a Objetos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC358",
+          "nome": "Fundamentos Matemáticos da Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC404",
+          "nome": "Organização Básica de Computadores e Linguagem de Montagem",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC458",
+          "nome": "Projeto e Análise de Algoritmos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ME323",
+          "nome": "Introdução aos Modelos Probabilísticos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MS211",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG101",
+          "nome": "Química I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Obrigatórias AA",
+      "horas": 900,
+      "disciplinas": [
+        {
+          "codigo": "CE839",
+          "nome": "Introdução à Administração para Computação",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC030",
+          "nome": "Projeto Final de Graduação",
+          "horas": 180,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC504",
+          "nome": "Sistemas Operacionais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC536",
+          "nome": "Bancos de Dados: Teoria e Prática",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC558",
+          "nome": "Projeto e Análise de Algoritmos II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC613",
+          "nome": "Laboratório de Circuitos Digitais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC656",
+          "nome": "Engenharia de Software",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC714",
+          "nome": "Sistemas Distribuídos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC732",
+          "nome": "Projeto de Sistemas Computacionais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC750",
+          "nome": "Construção de Interfaces Homem-Computador",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC832",
+          "nome": "Redes de Computadores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC833",
+          "nome": "Programação de Redes de Computadores",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC921",
+          "nome": "Projeto e Construção de Compiladores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Eletivas I (13 créditos)",
+      "horas": 195,
+      "componentes": [
+        {
+          "nome": "Eletivas I",
+          "horas": 195,
+          "tipo": "eletiva",
+          "opcoes_ref": "AA-E1",
+          "livre": true
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Eletivas II (12 créditos)",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Eletivas II",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "AA-E2",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 5,
+      "nome": "Eletivas III (12 créditos)",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Eletivas III",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "AA-E3",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 6,
+      "nome": "Eletivas IV (12 créditos)",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Eletivas IV",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "AA-E4",
+          "livre": false
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "AA-E1": [
+      "Qualquer disciplina elegível"
+    ],
+    "AA-E2": [
+      "Estágio Supervisionado em Ciência da Computação",
+      "Estágio Supervisionado em Ciência da Computação II",
+      "Estudo Dirigido",
+      "Estudo Dirigido II",
+      "Estágio de Iniciação Científica I",
+      "Estágio de Iniciação Científica II",
+      "Monitoria",
+      "Monitoria II"
+    ],
+    "AA-E3": [
+      "Projeto em Computação com Extensão",
+      "Projeto Integrador Interdisciplinar de Extensão III"
+    ],
+    "AA-E4": [
+      "Paradigmas de Programação",
+      "Desafios de Programação I",
+      "Desafios de Programação II",
+      "Verificação, Validação e Testes de Software",
+      "Projeto e Análise de Algoritmos III",
+      "Bioinformática",
+      "Desafios de Programação III",
+      "Algoritmos Probabilísticos",
+      "Algoritmos de Aproximação",
+      "Teoria dos Jogos Algorítmica",
+      "Aprendizado por Reforço",
+      "Desafios de Programação IV",
+      "Fundamentos de Álgebra Linear e Otimização para Aprendizado de Máquina",
+      "Aprendizado Supervisionado",
+      "Aprendizado Não-supervisionado",
+      "Arquiteturas Paralelas",
+      "Algoritmos Paralelos",
+      "Deep Learning",
+      "Linguagens Formais e Autômatos",
+      "Teoria e Aplicações de Grafos",
+      "Aprendizado de Máquina",
+      "Fundamentos Probabilísticos de Aprendizado de Máquina",
+      "Introdução à Criptografia",
+      "Processamento de Línguas Naturais",
+      "Fluxos em Redes e Programação Linear",
+      "Tópicos Especiais em Linguagem de Programação",
+      "Introdução à Inteligência Artificial",
+      "Robótica Móvel",
+      "Tópicos Especiais em Teoria da Computação",
+      "Tópicos Especiais em Arquitetura de Computadores",
+      "Tópicos em Sistemas Operacionais I",
+      "Tópicos em Teoria da Computação I",
+      "Tópicos Especiais em Processamento Gráfico",
+      "Introdução ao Processamento de Imagem Digital",
+      "Princípios de Projeto VLSI",
+      "Projetos de Sistemas Digitais com HDLs",
+      "Tópicos em Engenharia de Software I",
+      "Tópicos em Teoria da Computação II",
+      "Tópicos em Sistemas de Informação",
+      "Computação Gráfica",
+      "Algoritmos Criptográficos",
+      "Algoritmos Parametrizados",
+      "Processamento e Análise de Imagens",
+      "Segurança de Redes de Computadores",
+      "Aprendizado de Máquina e Reconhecimento de Padrões",
+      "Geometria Computacional",
+      "Visão Computacional",
+      "Recuperação de Imagens por Conteúdo",
+      "Tópicos em Redes de Computadores I",
+      "Tópicos em Sistemas Operacionais II",
+      "Tópicos em Bancos de Dados",
+      "Tópicos em Inteligência Artificial I",
+      "Projeto de Redes Multimídia",
+      "Tópicos em Redes de Computadores II",
+      "Tópicos em Computação Distribuída",
+      "Introdução à Programação Paralela",
+      "Introdução à Programação Concorrente",
+      "Tópicos em Arquitetura e Hardware I",
+      "Tópicos em Arquitetura e Hardware II",
+      "Tópicos em Engenharia de Software II",
+      "Tópicos em Inteligência Artificial II",
+      "Tópicos em Interfaces Humano-Computador",
+      "Fluxo em Redes"
+    ]
+  },
+  "observacoes": [
+    "Currículo público UNICAMP 2026 convertido para o schema de alvo do site.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não slots fixos.",
+    "AA e AB são habilitações distintas; o alvo escolhido é uma única variante."
+  ]
+}

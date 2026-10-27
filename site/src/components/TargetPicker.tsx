@@ -21,7 +21,7 @@ function formatHours(hours: number): string {
 function mecLabel(status: string | undefined): string {
   if (status === 'reconhecido') return 'MEC reconhecido'
   if (status === 'em_reconhecimento') return 'MEC aguardando reconhecimento'
-  if (status === 'nao_verificado') return 'MEC não verificado'
+  if (status === 'nao_verificado') return 'MEC: ato não consultado'
   return 'MEC não informado'
 }
 
@@ -46,7 +46,10 @@ export function TargetPicker({ targets, courses, selectedId, onSelect }: Props) 
       {targets.map((target) => {
         const record = courses.find((course) => course.id === target.id)
         const selected = target.id === selectedId
-        const status = record?.mec?.status
+        const status = record?.mec?.status ?? target.mec?.status
+        const completude = record?.dados?.completude ?? target.dados?.completude
+        const publica = record?.mec?.instituicao_publica ?? target.mec?.instituicao_publica
+        const mecNote = record?.mec?.observacao ?? target.mec?.observacao ?? undefined
 
         return (
           <label key={target.id} className={`target-option${selected ? ' is-selected' : ''}`}>
@@ -60,13 +63,22 @@ export function TargetPicker({ targets, courses, selectedId, onSelect }: Props) 
             <span className="target-radio" aria-hidden="true" />
             <span className="target-copy">
               <span className="target-title">{target.curso}</span>
+              {target.habilitacao && (
+                <span className="target-variant">{target.habilitacao}</span>
+              )}
               <span className="target-meta">
                 {target.instituicao}, {degreeLabel(target.grau)}, {target.modalidade},{' '}
                 {target.duracao_meses} meses, {formatHours(target.carga_horaria_total)}
               </span>
               <span className="target-tags">
-                <span className={`tag ${mecTone(status)}`}>{mecLabel(status)}</span>
-                <span className="tag tag--muted">{completudeLabel(record?.dados?.completude)}</span>
+                <span className={`tag ${mecTone(status)}`} title={mecNote}>
+                  {mecLabel(status)}
+                </span>
+                {publica && <span className="tag tag--muted">instituição pública</span>}
+                <span className="tag tag--muted">{completudeLabel(completude)}</span>
+                {target.curriculo_versao && (
+                  <span className="tag tag--muted">catálogo {target.curriculo_versao}</span>
+                )}
                 {record?.ingresso?.segunda_graduacao_sem_vestibular === true && (
                   <span className="tag tag--ok">2ª graduação sem vestibular</span>
                 )}

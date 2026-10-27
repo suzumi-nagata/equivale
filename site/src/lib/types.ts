@@ -1,6 +1,7 @@
 export type Grau = 'tecnologo' | 'bacharelado' | 'licenciatura' | string
 
 export interface CurriculumDiscipline {
+  codigo?: string | null
   nome: string
   horas: number
   tipo?: string
@@ -11,6 +12,7 @@ export interface CurriculumComponent {
   horas: number
   tipo?: string
   opcoes_ref?: string
+  livre?: boolean
 }
 
 export interface CurriculumGroup {
@@ -31,6 +33,10 @@ export interface Curriculum {
   duracao_meses: number
   carga_horaria_total: number
   fonte: string
+  curriculo_versao?: string
+  habilitacao?: string | null
+  mec?: MecInfo
+  dados?: DadosInfo
   grupos: CurriculumGroup[]
   eletivas: Record<string, string[]>
 }
@@ -39,6 +45,7 @@ export interface MecInfo {
   status?: string
   ato?: string | null
   verificado?: boolean
+  instituicao_publica?: boolean
   observacao?: string | null
   fonte?: string | null
 }
@@ -93,6 +100,8 @@ export interface CurriculumIndexEntry {
   duracao_meses: number
   carga_horaria_total: number
   fonte: string
+  habilitacao?: string | null
+  curriculo_versao?: string | null
 }
 
 export interface CurriculumIndexFile {
@@ -129,11 +138,43 @@ export interface Slot {
   grupoOrdem: number
   grupoNome: string
   nome: string
+  codigo?: string | null
   horas: number
   opcoes: string[]
   tipo: string
   kind: 'fixa' | 'eletiva'
+  livre?: boolean
   abativel: boolean
+}
+
+export interface RuleOrigin {
+  codigo?: string
+  nome?: string
+  horas_cobertura: number
+  score: number
+  confianca?: Confidence
+  rotulo?: string
+  fonte?: string
+  ignorar_carga_horaria?: boolean
+  prioridade?: number
+}
+
+export interface EquivalenceRule {
+  id: string
+  alvo: {
+    instituicao?: string
+    curso?: string
+    habilitacao?: string | null
+    codigo?: string
+    componente?: string
+  }
+  origens: RuleOrigin[]
+  fonte?: string
+  observacao?: string
+}
+
+export interface RulesFile {
+  regras: EquivalenceRule[]
 }
 
 export type Confidence = 'alta' | 'media' | 'baixa'
@@ -152,6 +193,7 @@ export interface Allocation {
   horas: number
   conceitos: string[]
   tokens: string[]
+  ruleId?: string
 }
 
 export interface SlotResult {

@@ -11,8 +11,9 @@ npm install
 npm run dev
 ```
 
-O `predev` copia os currículos públicos de `../data/spike/curriculos` e o
-`cursos.json` para `public/data/` (gerado; não versionado).
+O `predev` copia os currículos públicos de `../data/spike/curriculos` e
+`../data/targets/unicamp`, o `cursos.json` e as regras de
+`../data/ontology` para `public/data/` (gerado; não versionado).
 
 Build de produção:
 
@@ -21,13 +22,28 @@ npm run build
 npm run preview
 ```
 
+Testes do matcher:
+
+```bash
+npm test
+```
+
 ## O que já funciona
 
-- Seleção de curso alvo: UNINTER ADS e Engenharia de Software.
+- Seleção de curso alvo: UNINTER ADS/Engenharia de Software e UNICAMP 2026
+  (Engenharia de Computação AA/AB e Engenharia Elétrica 41G).
 - Importação de histórico em **JSON** (saída do parser local) ou **CSV**.
 - Histórico fictício de demonstração.
-- Matcher **m-para-n guloso** por nome + carga horária: uma origem pode cobrir
-  vários componentes e um componente pode combinar várias origens.
+- Matcher **max-cost flow m-para-n** por nome + carga horária: uma origem pode
+  cobrir vários componentes, um componente pode combinar várias origens e
+  grupos de eletivas aceitam alocações parciais. Regras de cobertura temática
+  geradas a partir de ementas adicionam arestas quando o nome não coincide.
+- Cobertura temática por ementas da UNICAMP (TF-IDF + nome, gerada offline pelo
+  script `../tools/build_unicamp_cobertura.py`), com termos compartilhados,
+  confiança e URL da ementa.
+- MEC: para a UNICAMP, o catálogo oficial é a fonte da grade, mas o ato de
+  reconhecimento ainda não foi consultado no e-MEC; o seletor mostra “ato não
+  consultado” e “instituição pública”, não “não reconhecido”.
 - Resumo de horas abatidas, cobertura, disciplinas restantes e semestres
   estimados; tabela de matches, lacunas e componentes não abatíveis.
 - Download local do relatório em JSON.
@@ -35,9 +51,12 @@ npm run preview
 Ainda não incluso:
 
 - Adaptador PDF no navegador (por enquanto, use o parser em `../prototype`).
-- Ementas/PPC e matching por conteúdo.
-- Fluxo de custo mínimo (o matcher atual é uma heurística gulosa).
-- Regras por IES (teto de aproveitamento, optativa livre, pré-requisitos).
+- Ementas para outras IES e matching semântico mais profundo; o pipeline atual
+  é TF-IDF para a UNICAMP.
+- Upload local de PPC/ementa pelo usuário.
+- Regras por IES (teto de aproveitamento, optativa livre específica,
+  pré-requisitos, nota mínima, validade temporal).
+
 
 ## Privacidade
 
@@ -71,7 +90,8 @@ src/
     ResultLedger.tsx       # tabela de matches, lacunas, não abatíveis
   lib/
     normalize.ts           # normalização, conceitos, score
-    match.ts               # alocação m-para-n gulosa
+    match.ts               # max-cost flow m-para-n
+    match.test.ts          # testes sintéticos do matcher
     transcript.ts          # parse JSON/CSV
     types.ts
   data/demo.ts             # histórico fictício
@@ -81,6 +101,6 @@ scripts/sync-data.mjs      # copia dados públicos para public/data
 ## Próximos passos
 
 - Portar o parser de PDF para `pdf.js` em Web Worker.
-- Trocar a heurística gulosa por max-cost flow.
 - Adicionar ementas/PPC e upload local de PPC.
 - Adicionar mais cursos/IES com dados públicos e proveniência.
+- Expor regras institucionais configuráveis no matching.

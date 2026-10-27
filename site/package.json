@@ -10,6 +10,7 @@
     "prebuild": "npm run sync:data",
     "build": "tsc -b && vite build",
     "lint": "oxlint src",
+    "test": "tsx --test src/lib/match.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "oxlint": "^1.88.0",
+    "tsx": "^4.20.6",
     "typescript": "~6.0.3",
     "vite": "^8.3.4"
   }

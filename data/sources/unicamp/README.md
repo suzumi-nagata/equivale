@@ -2,8 +2,10 @@
 
 Dados públicos do **Catálogo dos Cursos de Graduação 2026** da UNICAMP (DAC),
 usados para classificar disciplinas de origem como obrigatórias, eletivas ou
-dependentes de habilitação/ênfase. Eles ficam separados dos currículos-alvo do
-site (`data/spike/curriculos`) e **não** entram no índice de cursos alvo.
+dependentes de habilitação/ênfase. Os JSONs desta pasta continuam sendo dados
+de **origem**; a conversão para o schema de alvo do site fica em
+[`data/targets/unicamp`](../../targets/unicamp/README.md) e é gerada pelo
+script [`tools/build_unicamp_targets.py`](../../../tools/build_unicamp_targets.py).
 
 ## Arquivos
 
@@ -121,8 +123,10 @@ Estes dados são para o **lado de origem** do matching:
 - comparar um histórico com variantes específicas (ex.: EC AA vs. EC AB), sem
   misturar as grades.
 
-O site atualmente lê apenas `data/spike/curriculos` para os cursos-alvo. Estes
-JSONs não são servidos nem aparecem no seletor de alvo.
+O site lê os alvos convertidos de `data/targets/unicamp` além dos currículos
+UNINTER de `data/spike/curriculos`. Estes JSONs de origem não são servidos
+diretamente no seletor de alvo; a conversão preserva a separação AA/AB e trata
+os grupos de eletivas como requisitos de crédito.
 
 ## Regenerar
 
@@ -130,6 +134,9 @@ JSONs não são servidos nem aparecem no seletor de alvo.
 python3 -I tools/extract_unicamp_2026.py
 # ou, usando HTMLs já baixados:
 python3 -I tools/extract_unicamp_2026.py --html-dir /tmp/unicamp-curriculos
+
+# converte as variantes AA/AB e o currículo 41G para alvos do site:
+python3 -I tools/build_unicamp_targets.py
 ```
 
 O extrator usa somente a biblioteca padrão e registra a URL de cada página.
@@ -138,6 +145,9 @@ O extrator usa somente a biblioteca padrão e registra a URL de cada página.
 
 - **Versão 2026:** históricos antigos podem ter sido cumpridos sob outro
   catálogo; a classificação é específica da versão.
+- **MEC:** o catálogo é oficial e a UNICAMP é universidade pública, mas o ato de
+  reconhecimento não foi consultado no e-MEC; a UI mostra “ato não consultado”,
+  não “não reconhecido”.
 - Grupos de eletivas são requisitos de crédito, não slots fixos de 45h.
 - Os certificados tiveram apenas os nomes extraídos; a lista completa de
   disciplinas de cada certificado está no PDF da FEEC e pode ser adicionada

@@ -29,6 +29,10 @@ jobs:
         working-directory: site
         run: npm run lint
 
+      - name: Test matcher
+        working-directory: site
+        run: npm test
+
       - name: Build
         working-directory: site
         run: npm run build

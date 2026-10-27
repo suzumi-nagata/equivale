@@ -15,15 +15,23 @@ para nenhum servidor.
   teste não são versionados.
 - **Site:** protótipo em [`site/`](site/) com Vite + React + TypeScript,
   importação de histórico em JSON/CSV, histórico fictício de demonstração e
-  matcher **m-para-n guloso**. Publicado em
+  matcher **max-cost flow m-para-n**. Publicado em
   <https://suzumi-nagata.github.io/equivale/>.
-- **Matcher:** o PoC Python é 1-para-1; o site usa uma heurística m-para-n. O
-  modelo definitivo é **max-cost flow** (capacidade de horas + cobertura de
-  conteúdo). Ver [`docs/MATCHING.md`](docs/MATCHING.md).
+- **Matcher:** o PoC Python é 1-para-1; o site implementa **max-cost flow**
+  (capacidade de horas + cobertura de conteúdo), com testes sintéticos. Ver
+  [`docs/MATCHING.md`](docs/MATCHING.md).
 - **Dados de origem:** currículos públicos UNICAMP 2026 de Engenharia de
   Computação (habilitações AA/AB) e Engenharia Elétrica (41G), com classificação
   de obrigatórias/eletivas/ênfases. Ver
   [`data/sources/unicamp/README.md`](data/sources/unicamp/README.md).
+- **Dados-alvo:** conversão dos currículos UNICAMP 2026 para o schema do site,
+  incluindo grupos de eletivas por crédito. Ver
+  [`data/targets/unicamp/README.md`](data/targets/unicamp/README.md).
+- **Cobertura temática:** regras geradas automaticamente a partir das ementas
+  públicas da UNICAMP (TF-IDF + similaridade de nomes, sem LLM em runtime) para
+  ligar Física Geral III/IV, Física Experimental III, Resistência dos Materiais,
+  Sistemas Embarcados e MC404 da EC a disciplinas da EE. Ver
+  [`data/ontology/README.md`](data/ontology/README.md).
 - **Spike de dados:** 5 IES privadas EAD (UNINTER, Anhanguera, Estácio, Cruzeiro
   do Sul Virtual e UNIP), somente com fontes públicas. Ver
   [`data/spike/README.md`](data/spike/README.md).
@@ -46,26 +54,36 @@ para nenhum servidor.
 site/                    # app estático (Vite + React + TS)
   src/
     components/          # alvo, importação, resumo, resultado
-    lib/                 # normalização, matcher m-para-n, parse JSON/CSV
+    lib/                 # normalização, matcher max-cost flow, parse JSON/CSV
     data/demo.ts         # histórico fictício
   scripts/sync-data.mjs  # copia dados públicos para public/data
 prototype/
   parse_transcripts.py   # parser UNICAMP/USP -> JSON normalizado
   match_curricula.py     # matcher PoC 1-para-1 (húngaro)
 tools/
-  extract_unicamp_2026.py # extrator dos currículos públicos UNICAMP 2026
+  extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
+  build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
+  build_unicamp_cobertura.py # extrai ementas e gera cobertura temática
 data/sources/unicamp/
   README.md              # escopo, habilitações/ênfases e proveniência
   eng_computacao_2026.json # 34G: núcleo comum + AA/AB (e AX)
   eng_eletrica_2026.json   # 41G: núcleo comum + eletivas + certificados
+data/targets/unicamp/
+  README.md              # conversão para o schema de alvo
+  unicamp-ec-2026-aa.json
+  unicamp-ec-2026-ab.json
+  unicamp-ee-2026.json
+data/ontology/
+  README.md              # regras de cobertura temática por ementa
+  unicamp_2026_regras.json
 data/spike/
   README.md              # spike de IES privadas EAD
   cursos.json            # 8 cursos com status MEC, grade/PPC, ingresso etc.
   curriculos/            # grades públicas (UNINTER ADS e Eng. Software)
 docs/
-  MATCHING.md            # modelo 1-para-1 atual e desenho m-para-n
+  MATCHING.md            # 1-para-1, max-cost flow e desenho do modelo
 .github/workflows/
-  ci.yml                 # lint + build em PRs
+  ci.yml                 # lint + testes + build em PRs
   deploy.yml             # build + deploy do site no GitHub Pages
 ```
 
@@ -81,9 +99,16 @@ npm run build     # gera site/dist
 ```
 
 O `predev`/`prebuild` copia os currículos públicos de
-`data/spike/curriculos` para `site/public/data` (gerado; não versionado). O site
-importa histórico em JSON/CSV e já abre com um histórico fictício de
-demonstração.
+`data/spike/curriculos` e `data/targets/unicamp`, além das regras de
+`data/ontology`, para `site/public/data` (gerado; não versionado). O site importa
+histórico em JSON/CSV e já abre com um histórico fictício de demonstração.
+
+### Testes do matcher
+
+```bash
+cd site
+npm test
+```
 
 ### Parser e matcher Python
 
@@ -109,21 +134,30 @@ Source: GitHub Actions** e faça push para `main`.
 
 ## Modelo de matching
 
-O PoC atual é uma atribuição ótima **1-para-1**: cada disciplina de origem ocupa
-no máximo um componente do currículo alvo. Isso é um **limite inferior** — na
-prática, uma disciplina pode cobrir vários componentes (por exemplo, uma
+O PoC Python é uma atribuição ótima **1-para-1**: cada disciplina de origem
+ocupa no máximo um componente do currículo alvo. Isso é um **limite inferior** —
+na prática, uma disciplina pode cobrir vários componentes (por exemplo, uma
 disciplina ampla de física ou matemática) e vários componentes podem ser
 cobertos pela combinação de mais de uma disciplina de origem.
 
-O modelo definitivo é **m-para-n**:
+O site implementa **max-cost flow m-para-n**:
 
-- cada disciplina de origem tem capacidade de horas e uma cobertura de tópicos;
-- cada componente do alvo tem demanda de horas e tópicos exigidos;
-- o pareamento vira um fluxo (max-cost flow / min-cost flow), permitindo
-  dividir uma origem entre vários alvos e combinar várias origens em um alvo;
-- regras institucionais (1-para-1 administrativo, teto de aproveitamento,
-  optativa livre, pré-requisitos) entram como restrições;
+- cada disciplina de origem tem capacidade de horas;
+- cada componente do alvo tem demanda de horas;
+- uma origem pode ser dividida entre vários alvos e vários alvos podem combinar
+  origens;
+- o fluxo maximiza `Σ score × horas`, com um bônus mínimo para aproveitar mais
+  horas em caso de empate;
+- grupos de eletivas por crédito são slots de demanda; grupos livres aceitam
+  qualquer disciplina elegível com confiança baixa;
+- regras de cobertura temática geradas a partir de ementas (`data/ontology`)
+  adicionam arestas quando o nome não coincide, como Física III/IV da EC
+  cobertas por disciplinas da EE;
+- regras institucionais mais específicas (1-para-1 administrativo, teto de
+  aproveitamento, optativa restrita, pré-requisitos) ainda não são configuráveis;
 - sem ementa, o matching cai para nome + carga, com confiança menor.
+
+Os testes sintéticos do site ficam em `site/src/lib/match.test.ts`.
 
 Além disso, o histórico sozinho não diz se uma disciplina era obrigatória,
 optativa ou dependente de ênfase. Essa classificação precisa vir do currículo

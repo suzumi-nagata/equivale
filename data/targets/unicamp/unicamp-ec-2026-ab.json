@@ -1,0 +1,417 @@
+{
+  "id": "unicamp-ec-2026-ab",
+  "instituicao": "UNICAMP",
+  "curso": "Engenharia de Computação",
+  "grau": "bacharelado",
+  "modalidade": "presencial",
+  "duracao_meses": 60,
+  "carga_horaria_total": 3705,
+  "curriculo_versao": "2026",
+  "habilitacao": "AB — Sistemas e Processos Industriais",
+  "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/curriculo.html",
+  "proposta_fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/sugestao.html",
+  "coletado_em": "2026-10-26",
+  "mec": {
+    "status": "nao_verificado",
+    "verificado": false,
+    "instituicao_publica": true,
+    "observacao": "UNICAMP é universidade pública; o catálogo oficial é a fonte da grade. O ato de reconhecimento do curso não foi consultado no e-MEC nesta versão.",
+    "fonte": "https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/cursos/34g/curriculo.html"
+  },
+  "dados": {
+    "completude": "grade_com_ch",
+    "grade_disponivel": true,
+    "grade_com_carga_horaria": true,
+    "ppc_disponivel": false,
+    "ementa_disponivel": false
+  },
+  "grupos": [
+    {
+      "ordem": 1,
+      "nome": "Núcleo Comum",
+      "horas": 2010,
+      "disciplinas": [
+        {
+          "codigo": "BE310",
+          "nome": "Ciências do Ambiente",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE304",
+          "nome": "Direito",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE738",
+          "nome": "Economia para Engenharia",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "CE838",
+          "nome": "Contabilidade para Engenharia",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA134",
+          "nome": "Seminários sobre o Curso de Engenharia de Computação",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA513",
+          "nome": "Circuitos Elétricos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA614",
+          "nome": "Análise de Sinais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA772",
+          "nome": "Circuitos Lógicos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE533",
+          "nome": "Eletrônica Básica I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE534",
+          "nome": "Laboratório de Eletrônica Aplicada",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EM424",
+          "nome": "Resistência dos Materiais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 128",
+          "nome": "Física Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 159",
+          "nome": "Introdução à Física Experimental I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 228",
+          "nome": "Física Geral II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 259",
+          "nome": "Introdução à Física Experimental II",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 315",
+          "nome": "Mecânica Geral I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 328",
+          "nome": "Física Geral III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 359",
+          "nome": "Introdução à Física Experimental III",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "F 428",
+          "nome": "Física Geral IV",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "HZ291",
+          "nome": "Tópicos Especiais de Humanidades I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "LA122",
+          "nome": "Inglês Instrumental I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA111",
+          "nome": "Cálculo I",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA141",
+          "nome": "Geometria Analítica e Vetores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA211",
+          "nome": "Cálculo II",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA311",
+          "nome": "Cálculo III",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MA327",
+          "nome": "Álgebra Linear",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC102",
+          "nome": "Algoritmos e Programação de Computadores",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC202",
+          "nome": "Estruturas de Dados",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC322",
+          "nome": "Programação Orientada a Objetos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC358",
+          "nome": "Fundamentos Matemáticos da Computação",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC404",
+          "nome": "Organização Básica de Computadores e Linguagem de Montagem",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MC458",
+          "nome": "Projeto e Análise de Algoritmos I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "ME323",
+          "nome": "Introdução aos Modelos Probabilísticos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "MS211",
+          "nome": "Cálculo Numérico",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "QG101",
+          "nome": "Química I",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 2,
+      "nome": "Obrigatórias AB",
+      "horas": 1140,
+      "disciplinas": [
+        {
+          "codigo": "EA018",
+          "nome": "Trabalho de Fim de Curso I",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA019",
+          "nome": "Trabalho de Fim de Curso II",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA044",
+          "nome": "Planejamento e Análise de Sistemas de Produção",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA072",
+          "nome": "Inteligência Artificial em Aplicações Industriais",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA074",
+          "nome": "Introdução às Redes de Computadores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA080",
+          "nome": "Laboratório de Redes de Computadores",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA202",
+          "nome": "Engenharia de Software: Teoria e Prática",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA550",
+          "nome": "Introdução a Software de Sistema",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA551",
+          "nome": "Laboratório de Programação de Software Básico",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA616",
+          "nome": "Análise Linear de Sistemas",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA619",
+          "nome": "Laboratório de Análise Linear",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA701",
+          "nome": "Introdução aos Sistemas Embarcados",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA721",
+          "nome": "Princípios de Controle e Servomecanismo",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA722",
+          "nome": "Laboratório de Controle e Servomecanismo",
+          "horas": 30,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA773",
+          "nome": "Laboratório de Circuitos Lógicos",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA801",
+          "nome": "Laboratório de Projetos de Sistemas Embarcados",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA960",
+          "nome": "Organização de Computadores",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EA979",
+          "nome": "Introdução à Computação Gráfica e ao Processamento de Imagem",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EE400",
+          "nome": "Métodos da Engenharia Elétrica",
+          "horas": 60,
+          "tipo": "obrigatoria"
+        },
+        {
+          "codigo": "EG950",
+          "nome": "Processamento Digital de Sinais",
+          "horas": 90,
+          "tipo": "obrigatoria"
+        }
+      ]
+    },
+    {
+      "ordem": 3,
+      "nome": "Eletivas I (12 créditos)",
+      "horas": 180,
+      "componentes": [
+        {
+          "nome": "Eletivas I",
+          "horas": 180,
+          "tipo": "eletiva",
+          "opcoes_ref": "AB-E1",
+          "livre": false
+        }
+      ]
+    },
+    {
+      "ordem": 4,
+      "nome": "Eletivas II (25 créditos)",
+      "horas": 375,
+      "componentes": [
+        {
+          "nome": "Eletivas II",
+          "horas": 375,
+          "tipo": "eletiva",
+          "opcoes_ref": "AB-E2",
+          "livre": true
+        }
+      ]
+    }
+  ],
+  "eletivas": {
+    "AB-E1": [
+      "Estágio Científico e Tecnológico I",
+      "Estágio Científico e Tecnológico II",
+      "Estágio em Empresa"
+    ],
+    "AB-E2": [
+      "Qualquer disciplina elegível"
+    ]
+  },
+  "observacoes": [
+    "Currículo público UNICAMP 2026 convertido para o schema de alvo do site.",
+    "Grupos de eletivas são requisitos de crédito (1 crédito = 15h), não slots fixos.",
+    "AA e AB são habilitações distintas; o alvo escolhido é uma única variante."
+  ]
+}

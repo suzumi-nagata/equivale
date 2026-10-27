@@ -11,6 +11,8 @@ import type {
   CoursesFile,
   Curriculum,
   CurriculumIndexFile,
+  EquivalenceRule,
+  RulesFile,
   Transcript,
 } from './lib/types'
 
@@ -29,6 +31,7 @@ async function fetchJson<T>(file: string): Promise<T> {
 export default function App() {
   const [targets, setTargets] = useState<Curriculum[]>([])
   const [courses, setCourses] = useState<CourseRecord[]>([])
+  const [rules, setRules] = useState<EquivalenceRule[]>([])
   const [selectedId, setSelectedId] = useState('uninter-ads')
   const [transcript, setTranscript] = useState<Transcript | null>(null)
   const [transcriptLabel, setTranscriptLabel] = useState('Histórico fictício')
@@ -42,9 +45,13 @@ export default function App() {
 
     async function load() {
       try {
-        const [index, courseFile] = await Promise.all([
+        const ruleRequest = fetchJson<RulesFile>('regras.json').catch(
+          (): RulesFile => ({ regras: [] }),
+        )
+        const [index, courseFile, ruleFile] = await Promise.all([
           fetchJson<CurriculumIndexFile>('index.json'),
           fetchJson<CoursesFile>('cursos.json'),
+          ruleRequest,
         ])
         if (index.curriculos.length === 0) {
           throw new Error('Nenhum currículo público encontrado.')
@@ -55,6 +62,7 @@ export default function App() {
         if (cancelled) return
         setTargets(loaded)
         setCourses(courseFile.cursos)
+        setRules(ruleFile.regras)
         const preferred = loaded.find((target) => target.id === 'uninter-ads') ?? loaded[0]
         setSelectedId(preferred.id)
         setTranscript(DEMO_TRANSCRIPT)
@@ -80,8 +88,8 @@ export default function App() {
 
   const selectedTarget = targets.find((target) => target.id === selectedId) ?? targets[0] ?? null
   const result = useMemo(
-    () => (selectedTarget && transcript ? matchCurriculum(selectedTarget, transcript) : null),
-    [selectedTarget, transcript],
+    () => (selectedTarget && transcript ? matchCurriculum(selectedTarget, transcript, rules) : null),
+    [selectedTarget, transcript, rules],
   )
 
   async function handleFile(file: File) {
@@ -111,6 +119,7 @@ export default function App() {
       gerado_em: new Date().toISOString(),
       alvo: selectedTarget,
       historico: transcript,
+      regras: rules,
       resultado: result,
     }
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
@@ -231,8 +240,8 @@ export default function App() {
             <strong>Equivale</strong> é um protótipo de comparador de currículos.
           </p>
           <p>
-            Dados públicos: UNINTER ADS e Engenharia de Software. Fontes nas páginas dos
-            cursos.
+            Dados públicos: UNINTER ADS/Eng. Software e UNICAMP 2026 (EC AA/AB, EE). Fontes
+            nas páginas dos cursos.
           </p>
         </div>
         <div>

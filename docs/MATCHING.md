@@ -1,29 +1,75 @@
 # Modelo de matching: de 1-para-1 para m-para-n
 
-## Estado atual (PoC)
+## Estado atual
 
-O matcher atual (`prototype/match_curricula.py`) usa uma atribuição ótima
-**1-para-1** (algoritmo húngaro):
+Há duas implementações complementares:
 
-- cada disciplina de origem ocupa no máximo um slot do currículo alvo;
-- cada slot recebe no máximo uma disciplina de origem;
-- o score combina nome/conceitos + aderência de carga horária;
-- estágio, TCC, extensão, atividades complementares e projetos são separados
-  como não abatíveis.
+- **PoC Python** (`prototype/match_curricula.py`): atribuição ótima
+  **1-para-1** (algoritmo húngaro), usada como limite inferior e para validar o
+  parser. Cada disciplina de origem ocupa no máximo um slot; cada slot recebe no
+  máximo uma origem.
+- **Site** (`site/src/lib/match.ts`): **max-cost flow** m-para-n. Cada origem tem
+  capacidade de horas, cada slot-alvo tem demanda, e o fluxo divide/combina
+  origens e slots. É a implementação usada em produção no site.
 
-Esse modelo é deliberadamente conservador. Ele serve para validar o fluxo e
-produz um **limite inferior** da equivalência possível.
+O PoC 1-para-1 continua deliberadamente conservador; o site implementa a
+relação real m-para-n descrita abaixo.
 
-### No site
+### Max-cost flow no site
 
-O protótipo em `site/src/lib/match.ts` já usa uma heurística **m-para-n gulosa**:
-cada origem tem capacidade de horas, cada slot tem demanda, e uma origem pode
-ser dividida entre vários slots (e um slot pode receber várias origens). As
-arestas são ordenadas por score e alocadas até esgotar a capacidade/demanda.
+O grafo é:
 
-A heurística não é ótima global: uma escolha gulosa pode bloquear uma alocação
-melhor depois. O passo seguinte é substituí-la por **max-cost flow** (ou
-min-cost flow com custos negativos), mantendo as mesmas restrições.
+- nó-fonte → nó de cada disciplina de origem, com capacidade = horas da
+  disciplina;
+- origem → slot, com capacidade = `min(horas_origem, horas_slot)` e valor por
+  hora = `score_do_par + 0.01`;
+- slot → nó-sumidouro, com capacidade = horas do slot.
+
+O algoritmo augmenta por caminhos de custo negativo no grafo residual
+(SPFA/sucessivos caminhos mais curtos). O `+0.01` faz com que, empatado o score,
+o fluxo prefira aproveitar mais horas. Ele para quando não há caminho com valor
+positivo — não força um pareamento ruim só para preencher o slot.
+
+Slots fixos aceitam alocações parciais a partir de 20h (ou da carga total, se o
+slot for menor). Grupos de eletivas aceitam qualquer fração, porque o requisito
+é a soma de créditos. Grupos marcados como `livre` aceitam qualquer disciplina
+elegível da origem, com score fixo 0.6 e confiança baixa; a regra efetiva da IES
+pode ser mais restrita.
+
+Os testes sintéticos ficam em `site/src/lib/match.test.ts` e cobrem 1→n,
+m→1, capacidade, eletiva livre, TCC não abatível e cobertura temática.
+
+### Cobertura temática por ementas (gerada)
+
+Quando o nome da disciplina de origem não coincide com o componente-alvo, o
+matcher pode usar regras geradas por `tools/build_unicamp_cobertura.py` em
+`data/ontology/`. O script extrai as ementas públicas do catálogo, calcula
+TF-IDF e similaridade de nomes (com guardas de sequência e de laboratório) e
+grava as arestas candidatas; não há exceções de curso digitadas à mão.
+
+Cada regra liga um componente-alvo a uma ou mais origens e declara:
+
+- `horas_cobertura`: capacidade daquela origem para aquele alvo (cobertura
+  parcial, não a carga inteira da disciplina);
+- `score` e `confianca`;
+- `ignorar_carga_horaria`: permite cobertura integral mesmo quando a origem tem
+  menos horas (ex.: EM423 45h cobrindo EM424 60h);
+- `prioridade`: desempata quando a mesma origem pode cobrir mais de um alvo
+  (ex.: EA869 em MC404 vs. EA960);
+- `rotulo` e URL da ementa que fundamenta a regra.
+
+Essas arestas entram no mesmo fluxo que as arestas por nome. Uma regra não
+substitui um match por nome com score maior. Elas são uma estimativa temática
+conservadora e não uma equivalência oficial.
+
+Primeiro conjunto: Física Geral III/IV e Física Experimental III da Engenharia
+de Computação da UNICAMP cobertas por disciplinas da Engenharia Elétrica
+(EE521, EE300, EA619/EA722 etc.); Resistência dos Materiais e Sistemas
+Embarcados com cobertura integral apesar da diferença de carga; e MC404 coberta
+por EA869. O caso de Física é m-para-n quando a origem não cobre sozinha. O
+matcher também aplica uma guarda de conceito específico: um laboratório de
+programação não cobre PAA I.
+
 
 ## Por que 1-para-1 é insuficiente
 
@@ -133,8 +179,8 @@ Fluxo: 45h (o restante da origem não é usado)
 
 ## Sem ementa
 
-Sem ementa, a cobertura de tópicos é desconhecida. O modelo cai para nome +
-carga e a confiança é menor. Nesse caso:
+Sem ementa e sem cobertura gerada, a cobertura de tópicos é desconhecida. O
+modelo cai para nome + carga e a confiança é menor. Nesse caso:
 
 - use 1-para-1 como limite inferior;
 - mostre “dados insuficientes” quando o nome não for claro;
@@ -143,14 +189,20 @@ carga e a confiança é menor. Nesse caso:
 
 ## Plano de implementação
 
-1. Extrair tópicos/cobertura das ementas (ontologia curada + NLP clássico;
-   LLM apenas offline, uma vez, com revisão humana).
+1. **Parcial:** extrair tópicos/cobertura das ementas (TF-IDF e NLP clássico;
+   LLM apenas offline, uma vez, com revisão humana). O pipeline já gera
+   cobertura automática para a UNICAMP; falta ampliar a base de ementas e
+   calibrar limiares.
 2. Definir `origem.tipo` e `curriculo_versao` no schema.
-3. Implementar max-cost flow no protótipo Python (para testes sintéticos).
-4. Portar para TypeScript/Web Worker no app final.
-5. Criar fixtures sintéticas m-para-n e testes de regressão.
-6. Comparar o resultado 1-para-1 (limite inferior) com o m-para-n.
-7. Expor no dossiê as propostas agrupadas e a confiança.
+3. **Feito:** implementar max-cost flow no app TypeScript, com fixtures
+   sintéticas e testes de regressão.
+4. **Pendente:** portar o max-cost flow para o protótipo Python, para comparar
+   com o 1-para-1 em testes sintéticos.
+5. **Parcial:** comparar o resultado 1-para-1 (limite inferior) com o m-para-n
+   no site; falta automatizar essa comparação.
+6. Expor no dossiê as propostas agrupadas e a confiança.
+7. Adicionar restrições institucionais configuráveis (1-para-1 administrativo,
+   teto de aproveitamento, nota mínima, validade temporal, tipo de optativa).
 
 ## Limitações e decisões abertas
 

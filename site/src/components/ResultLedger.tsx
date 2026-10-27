@@ -83,17 +83,24 @@ export function ResultLedger({ result, onDownload }: Props) {
                 </td>
               </tr>
             )}
-            {matched.map((slot) =>
-              slot.allocations.map((allocation, index) => (
+            {matched.map((slot) => {
+              const optionNotes = [
+                ...new Set(
+                  slot.allocations
+                    .map((allocation) => allocation.opcao)
+                    .filter((option) => option && option !== slot.slot.nome),
+                ),
+              ]
+              return slot.allocations.map((allocation, index) => (
                 <tr key={`${slot.slot.id}-${allocation.sourceId}-${index}`} className={index > 0 ? 'is-continuation' : ''}>
                   {index === 0 && (
                     <td rowSpan={slot.allocations.length} className="target-cell">
                       <span className="target-group">{slot.slot.grupoNome}</span>
                       <span className="target-name">{slot.slot.nome}</span>
                       {slot.status === 'parcial' && <span className="tag tag--risk">parcial</span>}
-                      {allocation.opcao !== slot.slot.nome && (
-                        <span className="target-option-note">opção: {allocation.opcao}</span>
-                      )}
+                      {optionNotes.map((option) => (
+                        <span className="target-option-note" key={option}>opção: {option}</span>
+                      ))}
                     </td>
                   )}
                   <td className="source-cell">
@@ -108,8 +115,8 @@ export function ResultLedger({ result, onDownload }: Props) {
                     <span className={`tag tag--${allocation.confianca}`}>{allocation.confianca}</span>
                   </td>
                 </tr>
-              )),
-            )}
+              ))
+            })}
           </tbody>
         </table>
       </div>
