@@ -40,10 +40,11 @@ npm test
   cobrir vários componentes, um componente pode combinar várias origens e
   grupos de eletivas aceitam alocações parciais. Regras de cobertura temática
   geradas a partir de ementas adicionam arestas quando o nome não coincide.
-- Cobertura temática por ementas da UNICAMP (TF-IDF + nome, gerada offline pelo
-  script `../tools/build_unicamp_cobertura.py`), com termos compartilhados,
-  confiança e URL da ementa. As regras são aplicadas apenas a históricos da
-  mesma instituição de origem.
+- Cobertura temática por ementas da UNICAMP e da Poli-USP (TF-IDF + nome,
+  gerada offline por `../tools/build_unicamp_cobertura.py` e
+  `../tools/build_usp_cobertura.py`), com termos compartilhados, confiança e URL
+  da ementa. As regras são aplicadas apenas a históricos da mesma instituição
+  de origem.
 - Modo opcional **“Ignorar diferença de carga horária”** no seletor: quando
   ligado, uma origem de 30h pode cobrir um componente de 90h por conteúdo. O
   padrão continua conservador.
@@ -58,7 +59,7 @@ Ainda não incluso:
 
 - Adaptador PDF no navegador (por enquanto, use o parser em `../prototype`).
 - Ementas para outras IES e matching semântico mais profundo; o pipeline atual
-  é TF-IDF para a UNICAMP.
+  é TF-IDF para a UNICAMP e para as disciplinas da Poli-USP.
 - Upload local de PPC/ementa pelo usuário.
 - Regras por IES (teto de aproveitamento, optativa livre específica,
   pré-requisitos, nota mínima, validade temporal).

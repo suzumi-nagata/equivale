@@ -1,4 +1,12 @@
-import { BROAD_CONCEPTS, concepts, isLab, normalize, pairScore } from './normalize'
+import {
+  BROAD_CONCEPTS,
+  concepts,
+  isLab,
+  normalize,
+  pairScore,
+  sequence,
+  sharedSpecificNameToken,
+} from './normalize'
 import type {
   Allocation,
   Confidence,
@@ -274,18 +282,46 @@ function applyRules(
       for (const origin of rule.origens) {
         const source = findSourceForOrigin(sources, origin)
         if (!source) continue
-        if (isLab(slot.nome) !== isLab(source.nome)) continue
-        const targetConcepts = concepts(slot.nome)
-        const specificTarget = [...targetConcepts].filter(
-          (concept) => !BROAD_CONCEPTS.has(concept),
-        )
+        const targetSequence = sequence(slot.nome)
+        const sourceSequence = sequence(source.nome)
         if (
-          specificTarget.length > 0 &&
-          !specificTarget.some((concept) => concepts(source.nome).has(concept))
+          targetSequence &&
+          sourceSequence &&
+          targetSequence !== sourceSequence
         ) {
           continue
         }
+        const targetConcepts = concepts(slot.nome)
+        const sourceConcepts = concepts(source.nome)
+        const specificTargetConcepts = [...targetConcepts].filter(
+          (concept) => !BROAD_CONCEPTS.has(concept),
+        )
+        const sharedSpecificConcept = specificTargetConcepts.some((concept) =>
+          sourceConcepts.has(concept),
+        )
+        const sharedConcept = [...targetConcepts].some((concept) =>
+          sourceConcepts.has(concept),
+        )
+        const sharedSpecificToken = sharedSpecificNameToken(slot.nome, source.nome)
         const score = Math.min(1, Math.max(0, Number(origin.score) || 0))
+
+        if (isLab(slot.nome) !== isLab(source.nome) && !sharedSpecificConcept) {
+          continue
+        }
+        if (
+          specificTargetConcepts.length > 0 &&
+          !sharedSpecificConcept
+        ) {
+          continue
+        }
+        if (
+          isLab(slot.nome) === isLab(source.nome) &&
+          !sharedConcept &&
+          !sharedSpecificToken &&
+          score < 0.755
+        ) {
+          continue
+        }
         const maxHours = Math.max(0, Number(origin.horas_cobertura) || 0)
         if (score <= 0 || maxHours <= 0) continue
         const confianca: Confidence =
@@ -619,7 +655,7 @@ export function matchCurriculum(
   }
 
   const avisos = [
-    'Estimativa por nome + carga horária; não há ementa neste protótipo.',
+    'Estimativa por nome + carga horária, complementada por cobertura temática gerada de ementas quando disponível.',
     'Fluxo de custo mínimo m-para-n: uma origem pode cobrir vários alvos e um alvo pode combinar várias origens.',
     'Estágio, TCC, extensão, atividades complementares e projetos foram separados como não abatíveis.',
     'A estimativa de semestres ignora pré-requisitos, oferta, limite de aproveitamento e regras específicas de optativa livre.',

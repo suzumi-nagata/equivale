@@ -1,48 +1,62 @@
-# Cobertura temática por ementas — UNICAMP 2026
+# Cobertura temática por ementas — UNICAMP e USP
 
-Regras geradas **automaticamente** a partir das ementas públicas do Catálogo
-dos Cursos de Graduação 2026 da UNICAMP (DAC). Não há exceções de curso
-digitadas à mão: o pipeline extrai as ementas, compara tópicos e nomes, e grava
-as arestas de cobertura que o matcher consome.
+Regras geradas **automaticamente** a partir de ementas públicas. Não há
+exceções de curso digitadas à mão: os scripts extraem códigos, nomes, cargas e
+ementas, comparam tópicos e nomes, e gravam as arestas de cobertura que o
+matcher consome. Nenhum LLM é usado na geração nem no runtime.
 
-Arquivo gerado: [`unicamp_2026_regras.json`](unicamp_2026_regras.json)
+Arquivos gerados:
 
-Gerador: [`tools/build_unicamp_cobertura.py`](../../tools/build_unicamp_cobertura.py)
+- [`unicamp_2026_regras.json`](unicamp_2026_regras.json) — origens UNICAMP
+  (catálogo DAC) para componentes UNICAMP.
+- [`usp_2026_regras.json`](usp_2026_regras.json) — origens USP (Jupiterweb,
+  grades da Poli) para componentes UNICAMP.
+
+Geradores:
+
+- [`tools/build_unicamp_cobertura.py`](../../tools/build_unicamp_cobertura.py)
+- [`tools/build_usp_cobertura.py`](../../tools/build_usp_cobertura.py)
 
 ## Método
 
-1. Coleta as páginas de disciplinas do catálogo (lista em `PAGES` no script).
+1. Coleta as páginas públicas de disciplinas:
+   - UNICAMP: Catálogo dos Cursos de Graduação 2026 (DAC);
+   - USP: Jupiterweb, a partir das grades públicas da Poli e das páginas
+     `obterDisciplina`.
 2. Extrai código, nome, carga horária e ementa de cada disciplina.
 3. Normaliza o português (acentos, stopwords, plurais simples) e calcula
    TF-IDF sobre as ementas.
-4. Para cada componente-alvo com código, compara com as disciplinas do
-   catálogo:
+4. Para cada componente-alvo com código, compara com as disciplinas de origem:
    - **similaridade de ementa**: cobertura dos termos do alvo, precisão e
      cosseno;
    - **similaridade de nome**: contenção/Jaccard dos tokens, com guardas para
      numeral de sequência (Cálculo I ≠ Cálculo II) e para teoria × laboratório;
-   - candidatos com nome >= 0.6 ou conteúdo >= 0.05; até 20 origens por alvo.
+   - candidatos com nome >= 0.6 ou conteúdo >= 0.05; até 20 origens por alvo na
+     UNICAMP e 30 na USP.
 5. Gera uma aresta com `horas_cobertura`, `score`, `confianca`, termos
-   compartilhados e URLs das duas ementas.
+   compartilhados, `ignorar_carga_horaria` quando aplicável e URLs das duas
+   ementas.
 
-O matcher aplica ainda uma guarda de conceito específico: um alvo como
-“Projeto e Análise de Algoritmos” só aceita uma regra de conteúdo se a origem
-também tiver o conceito de projeto/análise de algoritmos. Isso evita que um
-laboratório de programação cubra PAA.
+O matcher aplica ainda guardas de conceito específico, sequência e tipo
+(teoria/laboratório). Isso evita que um laboratório de programação cubra
+“Projeto e Análise de Algoritmos”, que “Física III” cubra “Física Geral IV” ou
+que programação genérica cubra Computação Gráfica.
 
 ## O que o site faz com isso
 
-- O JSON é copiado para `site/public/data/regras.json`.
+- Os JSONs são mesclados em `site/public/data/regras.json`.
 - As arestas entram no max-cost flow junto com os matches por nome.
-- As regras têm `origem_instituicao: "UNICAMP"`; o matcher só as aplica quando o
-  histórico importado é da UNICAMP. Isso evita falsos positivos por nome com
-  históricos de outras instituições.
-- Uma regra nunca substitui um match por nome com score maior, exceto quando
+- Cada regra declara `origem_instituicao`; o matcher só a aplica quando o
+  histórico importado é da mesma instituição. Isso evita falsos positivos entre
+  históricos USP e UNICAMP.
+- Uma regra não substitui um match por nome com score maior, exceto quando
   declara cobertura integral (`ignorar_carga_horaria`) para uma origem menor.
 - A UI mostra os termos/ementa que fundamentaram a cobertura e a confiança.
 - Tudo é uma estimativa: a decisão final é da instituição.
 
 ## Exemplos encontrados automaticamente
+
+UNICAMP → UNICAMP:
 
 - Física Geral III (F 328) coberta por EE521 pela ementa de eletromagnetismo.
 - Física Geral IV (F 428) coberta por EE300 pela ementa de relatividade/física
@@ -61,6 +75,19 @@ laboratório de programação cubra PAA.
 - Física Experimental III é coberta por laboratórios com ementa compatível
   (por exemplo, EA619/EA722 no histórico de teste).
 
+USP → UNICAMP:
+
+- Ciências do Ambiente (BE310) coberta por Energia, Meio Ambiente e
+  Sustentabilidade (PEA3100).
+- Programação Orientada a Objetos (MC302) coberta pela disciplina equivalente
+  da Poli, quando a ementa e o conceito coincidem.
+- Química I coberta por Química Geral, quando a ementa é compatível.
+- Análise Linear de Sistemas e Laboratório de Análise Linear cobertos por
+  disciplinas de teoria e laboratório correspondentes, sem cruzamento entre os
+  dois tipos.
+- Métodos da Engenharia Elétrica coberto pela introdução à engenharia elétrica
+  da Poli.
+
 As regras valem para as variantes AA e AB de Engenharia de Computação e para
 Engenharia Elétrica, quando o código do componente existe no alvo.
 
@@ -68,26 +95,35 @@ Engenharia Elétrica, quando o código do componente existe no alvo.
 
 - Catálogo UNICAMP 2026, disciplinas:
   <https://www.dac.unicamp.br/sistemas/catalogos/grad/catalogo2026/disciplinas/>
+- Jupiterweb, disciplinas:
+  <https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D&codmnu=6755>
 - Cada origem e cada alvo no JSON aponta para a âncora da sua ementa.
-- Coleta: 2026-10-26.
+- Coleta: 2026-10-26 (UNICAMP) e 2026-10-27 (USP).
 
 ## Regenerar
 
 ```bash
+# UNICAMP
 python3 -I tools/build_unicamp_cobertura.py
-# ou usando páginas já baixadas:
 python3 -I tools/build_unicamp_cobertura.py --html-dir /tmp/unicamp-ementas/cache
+
+# USP -> UNICAMP
+python3 -I tools/build_usp_cobertura.py
+python3 -I tools/build_usp_cobertura.py \
+  --unicamp-html-dir /tmp/unicamp-ementas/cache \
+  --usp-html-dir /tmp/usp-ementas/cache
 ```
 
-O script usa apenas a biblioteca padrão. Se uma página falhar, ele avisa e
-segue com as demais.
+Os scripts usam apenas a biblioteca padrão. Se uma página falhar, avisam e
+seguem com as demais.
 
 ## Limitações
 
 - TF-IDF de ementa não é compreensão semântica; nomes e ementas genéricas
   (especialmente laboratórios) podem gerar candidatos ruins.
-- Os limiares e o top 20 são heurísticos e podem ser recalibrados.
+- Os limiares e o número máximo de origens são heurísticos e podem ser
+  recalibrados.
 - As horas de cobertura são uma aproximação; a IES pode aceitar mais ou menos.
-- O catálogo cobre as páginas listadas no script, não necessariamente todas as
-  disciplinas da universidade.
+- A cobertura USP usa as disciplinas das grades públicas da Poli; disciplinas
+  de outras unidades não presentes nessas grades ainda não entram.
 - A decisão final é sempre da instituição de destino.

@@ -52,8 +52,8 @@ export function ResultLedger({ result, onDownload }: Props) {
 
       <div className="ledger-note">
         <p>
-          Estimativa m-para-n por nome + carga horária, sem ementa. A decisão final é da
-          instituição de destino.
+          Estimativa m-para-n por nome + carga horária, com cobertura temática por
+          ementas quando disponível. A decisão final é da instituição de destino.
         </p>
         <details>
           <summary>Ver premissas</summary>

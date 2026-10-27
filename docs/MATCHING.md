@@ -67,10 +67,11 @@ institucional e o modo sem carga horária.
 ### Cobertura temática por ementas (gerada)
 
 Quando o nome da disciplina de origem não coincide com o componente-alvo, o
-matcher pode usar regras geradas por `tools/build_unicamp_cobertura.py` em
-`data/ontology/`. O script extrai as ementas públicas do catálogo, calcula
-TF-IDF e similaridade de nomes (com guardas de sequência e de laboratório) e
-grava as arestas candidatas; não há exceções de curso digitadas à mão.
+matcher pode usar regras geradas por `tools/build_unicamp_cobertura.py` e
+`tools/build_usp_cobertura.py` em `data/ontology/`. Os scripts extraem as
+ementas públicas do catálogo da UNICAMP e do Jupiterweb, calculam TF-IDF e
+similaridade de nomes (com guardas de sequência e de laboratório) e gravam as
+arestas candidatas; não há exceções de curso digitadas à mão.
 
 Cada regra liga um componente-alvo a uma ou mais origens e declara:
 
@@ -220,8 +221,8 @@ modelo cai para nome + carga e a confiança é menor. Nesse caso:
 
 1. **Parcial:** extrair tópicos/cobertura das ementas (TF-IDF e NLP clássico;
    LLM apenas offline, uma vez, com revisão humana). O pipeline já gera
-   cobertura automática para a UNICAMP; falta ampliar a base de ementas e
-   calibrar limiares.
+   cobertura automática para a UNICAMP e para as disciplinas da Poli-USP; falta
+   ampliar a base de ementas e calibrar limiares.
 2. Definir `origem.tipo` e `curriculo_versao` no schema.
 3. **Feito:** implementar max-cost flow no app TypeScript, com fixtures
    sintéticas e testes de regressão.

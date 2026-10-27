@@ -11,7 +11,7 @@ const GENERIC_NAME_TOKENS = new Set([
   'sistema', 'sistemas', 'introducao', 'fundamento', 'fundamentos',
   'basico', 'basica', 'aplicado', 'aplicada', 'teoria', 'pratica', 'geral',
   'digital', 'linear', 'processamento', 'computacao', 'engenharia', 'eletrica',
-  'programacao', 'ambiente', 'meio',
+  'programacao',
   'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
   '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
 ])
@@ -33,6 +33,8 @@ const CONCEPT_PATTERNS: ConceptPattern[] = [
   { concept: 'geometria_analitica', patterns: [/\bgeometria analitica\b/] },
   { concept: 'probabilidade', patterns: [/\bprobabilidade\b/, /\bprocessos estocasticos\b/, /\bprobabilisticos?\b/] },
   { concept: 'controle', patterns: [/\bcontrole\b/, /\bservomecanismo\b/] },
+  { concept: 'sistemas_lineares', patterns: [/\banalise linear de sistemas\b/, /\bsistemas e sinais\b/, /\bsistemas de controle\b/, /\bmodelagem e simulacao\b/, /\bfuncoes de transferencia\b/] },
+  { concept: 'metodos_engenharia', patterns: [/\bmetodos da engenharia eletrica\b/, /\bintroducao a engenharia eletrica\b/] },
   { concept: 'resistencia_materiais', patterns: [/\bresistencia dos materiais\b/, /\bengenharia dos materiais\b/, /\bciencia e engenharia dos materiais\b/] },
   { concept: 'sinais', patterns: [/\bsinais\b/] },
   { concept: 'estatistica', patterns: [/\bestatistica\b/] },
@@ -125,19 +127,25 @@ const ROMAN_SEQUENCE: Record<string, string> = {
 
 export function sequence(text: string): string | null {
   const tokens = normalize(text).split(' ')
-  for (let index = tokens.length - 1; index >= 0; index -= 1) {
-    const token = tokens[index]
-    if (ROMAN_SEQUENCE[token]) return ROMAN_SEQUENCE[token]
-    if (/^\d+$/.test(token)) {
-      const value = Number(token)
-      if (value >= 1 && value <= 10) return String(value)
-    }
+  const token = tokens[tokens.length - 1]
+  if (!token) return null
+  if (ROMAN_SEQUENCE[token]) return ROMAN_SEQUENCE[token]
+  if (/^\d+$/.test(token)) {
+    const value = Number(token)
+    if (value >= 1 && value <= 10) return String(value)
   }
   return null
 }
 
 export function isLab(text: string): boolean {
   return /\b(laboratorio|laboratorios|experimental)\b/.test(normalize(text))
+}
+
+export function sharedSpecificNameToken(targetName: string, sourceName: string): boolean {
+  const sourceTokens = tokenize(sourceName)
+  return [...tokenize(targetName)]
+    .filter((token) => !GENERIC_NAME_TOKENS.has(token))
+    .some((token) => sourceTokens.has(token))
 }
 
 export function concepts(text: string): Set<string> {

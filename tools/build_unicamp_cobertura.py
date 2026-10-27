@@ -116,12 +116,15 @@ ROMAN_SEQUENCE = {
 
 
 def sequence(text: str) -> str | None:
-    """Extrai o numeral de sequência (Cálculo I, Física IV, ...)."""
-    for token in reversed(normalize_words(text)):
-        if token in ROMAN_SEQUENCE:
-            return ROMAN_SEQUENCE[token]
-        if token.isdigit() and 1 <= int(token) <= 10:
-            return str(int(token))
+    """Extrai o numeral de sequência final (Cálculo I, Física IV, ...)."""
+    tokens = normalize_words(text)
+    if not tokens:
+        return None
+    token = tokens[-1]
+    if token in ROMAN_SEQUENCE:
+        return ROMAN_SEQUENCE[token]
+    if token.isdigit() and 1 <= int(token) <= 10:
+        return str(int(token))
     return None
 
 

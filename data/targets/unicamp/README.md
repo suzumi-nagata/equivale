@@ -58,4 +58,6 @@ regras de cobertura temática por ementa (geradas automaticamente) ficam em
 [`data/ontology`](../../ontology/README.md).
 - Grupos de eletivas livres podem ser mais restritos na regra real da IES.
 - A grade de 2026 pode não corresponder ao catálogo de quem se formou antes.
-- Sem ementa, o matching usa nome + carga horária.
+- As ementas usadas nas regras de cobertura são coletadas à parte pelo
+  catálogo da UNICAMP e ficam em [`data/ontology`](../../ontology/README.md);
+  sem uma regra aplicável, o matching usa nome + carga horária.

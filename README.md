@@ -32,10 +32,10 @@ para nenhum servidor.
   Jupiterweb), da Poli-USP. Ver
   [`data/targets/usp/README.md`](data/targets/usp/README.md).
 - **Cobertura temática:** regras geradas automaticamente a partir das ementas
-  públicas da UNICAMP (TF-IDF + similaridade de nomes, sem LLM em runtime) para
-  ligar Física Geral III/IV, Física Experimental III, Resistência dos Materiais,
-  Sistemas Embarcados e MC404 da EC a disciplinas da EE. Ver
-  [`data/ontology/README.md`](data/ontology/README.md).
+  públicas da UNICAMP e da Poli-USP (TF-IDF + similaridade de nomes, sem LLM em
+  runtime). As regras da UNICAMP ligam componentes da EC/EE a disciplinas do
+  catálogo; as da USP ligam componentes da UNICAMP a disciplinas das grades da
+  Poli. Ver [`data/ontology/README.md`](data/ontology/README.md).
 - **Spike de dados:** 5 IES privadas EAD (UNINTER, Anhanguera, Estácio, Cruzeiro
   do Sul Virtual e UNIP), somente com fontes públicas. Ver
   [`data/spike/README.md`](data/spike/README.md).
@@ -67,7 +67,8 @@ prototype/
 tools/
   extract_unicamp_2026.py   # extrai currículos públicos UNICAMP 2026
   build_unicamp_targets.py  # converte origem UNICAMP -> alvos do site
-  build_unicamp_cobertura.py # extrai ementas e gera cobertura temática
+  build_unicamp_cobertura.py # extrai ementas e gera cobertura temática UNICAMP
+  build_usp_cobertura.py    # gera cobertura temática USP -> alvos UNICAMP
   extract_usp_poli.py       # extrai alvos EE/EC da Poli-USP (Jupiterweb)
 data/sources/unicamp/
   README.md              # escopo, habilitações/ênfases e proveniência
@@ -85,6 +86,7 @@ data/targets/usp/
 data/ontology/
   README.md              # regras de cobertura temática por ementa
   unicamp_2026_regras.json
+  usp_2026_regras.json
 data/spike/
   README.md              # spike de IES privadas EAD
   cursos.json            # 8 cursos com status MEC, grade/PPC, ingresso etc.
@@ -162,7 +164,8 @@ O site implementa **max-cost flow m-para-n**:
   qualquer disciplina elegível com confiança baixa;
 - regras de cobertura temática geradas a partir de ementas (`data/ontology`)
   adicionam arestas quando o nome não coincide, como Física III/IV da EC
-  cobertas por disciplinas da EE;
+  cobertas por disciplinas da EE ou disciplinas da Poli-USP cobrindo
+  componentes da UNICAMP;
 - regras institucionais mais específicas (1-para-1 administrativo, teto de
   aproveitamento, optativa restrita, pré-requisitos) ainda não são configuráveis;
 - sem ementa, o matching cai para nome + carga, com confiança menor.

@@ -353,10 +353,10 @@ const nameCases: Array<{
   expectedHours: number
 }> = [
   {
-    label: 'Métodos da Engenharia Elétrica não é Introdução à Engenharia Elétrica',
+    label: 'Métodos da Engenharia Elétrica casa com Introdução à Engenharia Elétrica',
     target: ['Métodos da Engenharia Elétrica', 60],
     source: ['Introdução à Engenharia Elétrica', 60],
-    expectedHours: 0,
+    expectedHours: 60,
   },
   {
     label: 'lab de software básico não é lab de OOP',
@@ -365,10 +365,10 @@ const nameCases: Array<{
     expectedHours: 0,
   },
   {
-    label: 'Ciências do Ambiente não é o curso de energia/ambiente',
+    label: 'Ciências do Ambiente casa com o curso de energia/ambiente',
     target: ['Ciências do Ambiente', 30],
     source: ['Energia, Meio Ambiente e Sustentabilidade', 60],
-    expectedHours: 0,
+    expectedHours: 30,
   },
   {
     label: 'Análise de Sinais casa com Sistemas e Sinais',
@@ -598,4 +598,34 @@ test('modo sem carga não deixa a mesma origem cobrir dois slots', () => {
   )
 
   assert.equal(result.summary.horasAbatidas, 90)
+})
+
+test('regra de ementa não cruza sequências diferentes', () => {
+  const target = makeCurriculum([
+    fixedGroup('Núcleo Comum', [['Física Geral IV', 60, 'F 428']]),
+  ])
+  const rules: EquivalenceRule[] = [
+    {
+      id: 'teste-fisica-iv',
+      alvo: { instituicao: 'Instituição de teste', curso: 'Curso de teste', codigo: 'F 428' },
+      origem_instituicao: 'Instituição de teste',
+      origens: [
+        {
+          codigo: 'F315',
+          nome: 'Física III',
+          horas_cobertura: 60,
+          score: 0.8,
+          confianca: 'alta',
+        },
+      ],
+    },
+  ]
+  const result = matchCurriculum(
+    target,
+    makeTranscript([['Física III', 60, 'F315']]),
+    rules,
+  )
+
+  assert.equal(result.allocations.length, 0)
+  assert.equal(result.summary.slotsAbertos, 1)
 })
